@@ -427,11 +427,14 @@ details.acc-item summary:hover{background:#EAEAEA}
   function chevron() {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('width', '20');
+    svg.setAttribute('height', '20');
     svg.setAttribute('fill', 'none');
     svg.setAttribute('stroke', 'currentColor');
     svg.setAttribute('stroke-width', '1.8');
     svg.setAttribute('stroke-linecap', 'round');
     svg.setAttribute('stroke-linejoin', 'round');
+    svg.style.cssText = 'flex-shrink:0;transition:transform .22s ease;color:#555';
     svg.classList.add('acc-chevron');
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', 'M6 9l6 6 6-6');
@@ -485,6 +488,11 @@ details.acc-item summary:hover{background:#EAEAEA}
 
       const summary = document.createElement('summary');
       summary.textContent = sec.title;
+      // Rotation du chevron via JS (le CSS scopé Astro ne s'applique pas aux éléments créés dynamiquement)
+      details.addEventListener('toggle', () => {
+        const ch = summary.querySelector('svg') as SVGElement | null;
+        if (ch) ch.style.transform = details.open ? 'rotate(180deg)' : '';
+      });
       summary.appendChild(chevron());
       details.appendChild(summary);
 
