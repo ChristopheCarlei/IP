@@ -207,12 +207,15 @@ function getAxisVar(cat?: string | null): string {
       </div>
       <div class="cards">
         {featured.map(p => {
-          const facVar = getFacVar(p.data.faculty);
-          const light  = isLightFac(p.data.faculty);
-          const axeVar = getAxisVar(p.data.category);
+          const facVar  = getFacVar(p.data.faculty);
+          const light   = !p.data.photo && isLightFac(p.data.faculty);
+          const hasPhoto = !!p.data.photo;
           return (
             <article class="card" style={`--fac:${facVar}`}>
-              <div class={`cover${light ? ' light' : ''}`}>
+              <div
+                class={`cover${hasPhoto ? ' has-photo' : (light ? ' light' : '')}`}
+                style={hasPhoto ? `background-image:url(${p.data.photo})` : ''}
+              >
                 {p.data.faculty && <span class="fac">{p.data.faculty}</span>}
                 {p.data.award && (
                   <span class="award">

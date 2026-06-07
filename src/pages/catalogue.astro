@@ -109,8 +109,9 @@ function isLightFac(fac?: string | null): boolean {
   <!-- Grille -->
   <div class="cards" id="grid">
     {allProjects.map(p => {
-      const facVar = getFacVar(p.data.faculty);
-      const light  = isLightFac(p.data.faculty);
+      const facVar   = getFacVar(p.data.faculty);
+      const hasPhoto = !!p.data.photo;
+      const light    = !hasPhoto && isLightFac(p.data.faculty);
       const searchStr = [
         p.data.title,
         p.data.author,
@@ -128,7 +129,10 @@ function isLightFac(fac?: string | null): boolean {
           data-search={searchStr}
           style={`--fac:${facVar}`}
         >
-          <div class={`cover${light ? ' light' : ''}`}>
+          <div
+            class={`cover${hasPhoto ? ' has-photo' : (light ? ' light' : '')}`}
+            style={hasPhoto ? `background-image:url(${p.data.photo})` : ''}
+          >
             {p.data.faculty && <span class="fac">{p.data.faculty}</span>}
             {p.data.award && (
               <span class="award">

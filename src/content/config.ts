@@ -19,6 +19,7 @@ const projects = defineCollection({
     observation_accepted: z.boolean().default(false),
     description_short: z.string().optional(),
     youtube: z.string().optional(),
+    photo: z.string().optional(),
     images: z.array(z.string()).optional(),
     featured: z.boolean().default(false),
     status: z.enum(['actif', 'archivé', 'supprimé']).default('actif'),

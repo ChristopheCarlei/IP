@@ -134,9 +134,14 @@ const facVar = getFacVar(d.faculty);
 
     <h1>{d.title}</h1>
     {d.author && (
-      <p class="author">
-        {d.author}{d.faculty ? ` · ${d.faculty}` : ''}
-      </p>
+      <div style="display:flex;align-items:center;gap:14px;margin-top:14px">
+        {d.photo && (
+          <img src={d.photo} alt={d.author} class="avatar-lg" />
+        )}
+        <p class="author" style="margin:0">
+          {d.author}{d.faculty ? ` · ${d.faculty}` : ''}
+        </p>
+      </div>
     )}
   </div>
 </div>
@@ -182,7 +187,12 @@ const facVar = getFacVar(d.faculty);
         {d.author && (
           <>
             <dt>Responsable</dt>
-            <dd>{d.author}</dd>
+            <dd style="display:flex;align-items:center;gap:10px">
+              {d.photo && (
+                <img src={d.photo} alt={d.author} class="avatar" />
+              )}
+              <span>{d.author}</span>
+            </dd>
             {d.contact && (
               <dd class="sub"><a href={`mailto:${d.contact}`}>{d.contact}</a></dd>
             )}

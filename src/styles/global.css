@@ -103,6 +103,9 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,84px) 0}
 .cover .axe-name{color:#fff;font-size:17px;font-weight:800;letter-spacing:-.01em;text-shadow:0 1px 8px rgba(0,0,0,.18)}
 .cover.light .fac{color:var(--ink);background:rgba(0,0,0,.12);border-color:rgba(0,0,0,.18)}
 .cover.light .axe-name{color:var(--ink);text-shadow:none}
+/* Couverture photo enseignant */
+.cover.has-photo{background-size:cover;background-position:center 15%}
+.cover.has-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.06) 0%,rgba(0,0,0,.48) 100%)}
 .card-body{padding:20px;display:flex;flex:1;flex-direction:column}
 .card-body h3{font-size:18px;line-height:1.25;font-weight:700;letter-spacing:-.01em;margin-bottom:8px;color:var(--ink)}
 .card-body h3 a{text-decoration:none;color:inherit}
@@ -123,6 +126,10 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,84px) 0}
 .footer ul a:hover{color:var(--rose)}
 .footer a.mail{color:var(--rose);font-weight:700}
 .footer-base{border-top:1px solid var(--line-strong);padding-top:20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13px}
+
+/* ---- Avatar enseignant ----------------------------------- */
+.avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center 15%;border:2px solid var(--line);flex-shrink:0}
+.avatar-lg{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center 15%;border:3px solid var(--line);flex-shrink:0}
 
 /* ---- Responsive ------------------------------------------ */
 @media(max-width:1080px){.cards{grid-template-columns:repeat(2,1fr)}}
