@@ -97,17 +97,30 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,84px) 0}
 .card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .18s,box-shadow .18s,transform .18s;text-decoration:none;color:inherit}
 .card:hover{border-color:var(--line-strong);box-shadow:var(--shadow);transform:translateY(-3px)}
 .card:focus-within{box-shadow:var(--shadow);border-color:var(--rose)}
-.cover{position:relative;height:120px;display:flex;align-items:flex-end;padding:16px 18px;background:var(--fac,var(--rose));border-bottom:3px solid rgba(255,255,255,.5)}
-.cover .fac{position:absolute;top:14px;left:18px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.32);color:#fff;border-radius:999px;padding:4px 11px;font-size:11.5px;font-weight:800;letter-spacing:.02em}
-.cover .award{position:absolute;top:13px;right:16px;background:#fff;color:var(--fac,var(--rose));border-radius:999px;padding:4px 11px;font-size:11.5px;font-weight:800;display:inline-flex;align-items:center;gap:5px}
-.cover .axe-name{color:#fff;font-size:17px;font-weight:800;letter-spacing:-.01em;text-shadow:0 1px 8px rgba(0,0,0,.18)}
-.cover.light .fac{color:var(--ink);background:rgba(0,0,0,.12);border-color:rgba(0,0,0,.18)}
-.cover.light .axe-name{color:var(--ink);text-shadow:none}
-/* Couverture photo enseignant */
-.cover.has-photo{background-size:cover;background-position:center 15%}
-.cover.has-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.06) 0%,rgba(0,0,0,.48) 100%)}
-.card-body{padding:20px;display:flex;flex:1;flex-direction:column}
-.card-body h3{font-size:18px;line-height:1.25;font-weight:700;letter-spacing:-.01em;margin-bottom:8px;color:var(--ink)}
+
+/* Photo principale — grande et bien visible */
+.cover{position:relative;height:200px;background:var(--fac,var(--rose));background-size:cover;background-position:center top;overflow:hidden}
+/* Dégradé en bas pour lisibilité des badges */
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.55) 100%);pointer-events:none}
+/* Badge faculté — en bas à gauche, sur le dégradé */
+.cover .fac{position:absolute;bottom:12px;left:14px;z-index:2;background:var(--fac,var(--rose));color:#fff;border-radius:999px;padding:4px 12px;font-size:11.5px;font-weight:800;letter-spacing:.02em;white-space:nowrap}
+/* Badge prix — en haut à droite */
+.cover .award{position:absolute;top:12px;right:14px;z-index:2;background:#fff;color:var(--ink);border-radius:999px;padding:4px 11px;font-size:11px;font-weight:800;display:inline-flex;align-items:center;gap:5px}
+/* Badge axe (optionnel, caché sur les cartes avec photo) */
+.cover .axe-name{display:none}
+/* Couverture couleur faculté (sans photo) */
+.cover.no-photo{display:flex;align-items:center;justify-content:center}
+.cover.no-photo::after{display:none}
+.cover.no-photo .fac{position:absolute;bottom:12px;left:14px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.3)}
+/* Faculté jaune → texte sombre */
+.cover.light .fac{color:var(--ink);background:rgba(0,0,0,.14)}
+
+/* Initiales au centre si pas de photo */
+.cover-initials{font-size:48px;font-weight:800;color:rgba(255,255,255,.35);letter-spacing:-.02em;line-height:1;z-index:1}
+
+/* Corps de carte */
+.card-body{padding:16px 18px 18px;display:flex;flex:1;flex-direction:column;gap:0}
+.card-body h3{font-size:16px;line-height:1.3;font-weight:700;letter-spacing:-.01em;margin:0 0 10px;color:var(--ink)}
 .card-body h3 a{text-decoration:none;color:inherit}
 .card-body h3 a::after{content:"";position:absolute;inset:0;z-index:5}
 .card-body>p{color:var(--muted);font-size:14.5px;margin:0}
