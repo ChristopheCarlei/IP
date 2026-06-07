@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+
+const accompagnements_enseignants = [
+  { titre: 'Policy brief', auteur: 'Jorg Balsiger', faculte: 'SDS', type: 'Interview vidéo' },
+  { titre: 'Pratique de la traduction', auteur: 'Gabrielle Rivier', faculte: 'FTI', type: 'Interview vidéo' },
+  { titre: 'Psychothérapie', auteur: 'Gabriel Thorens', faculte: 'Médecine', type: 'Entretien thérapeutique' },
+  { titre: 'Anamnèse clinique', auteur: 'Heidi Cleverley', faculte: 'Médecine', type: 'Entretien médical' },
+  { titre: 'Émotions dans l\'apprentissage', auteur: 'David Sander', faculte: 'FPSE', type: 'Conférences sur fond vert' },
+  { titre: 'Biographie d\'un moulage en cire', auteur: 'Alexandre Wenger', faculte: 'Médecine', type: 'Documentaire' },
+  { titre: 'Biologie & Sexualité', auteur: 'Céline Brockmann', faculte: 'Médecine', type: 'Présentation e-learning' },
+  { titre: 'Soutien doctoral', auteur: 'Christophe Carlei', faculte: 'SEA', type: 'Présentation et animations' },
+];
+
+const accompagnements_etudiants = [
+  { titre: 'Des ordures et des bouées', auteur: 'Mathilde Foehr et al.', faculte: 'SDS', type: 'Film documentaire' },
+  { titre: 'La couleur des murs', auteur: 'Jasmine Miles & Laetitia Keller', faculte: 'FPSE', type: 'Film documentaire' },
+];
+---
+<Base title="Soutien pédagogique">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-4">Soutien pédagogique</h1>
+    <p class="text-lg text-gray-600 mb-10">
+      Notre équipe accompagne les enseignant·es et étudiant·es dans la création de vidéos pédagogiques
+      et d'espaces de formation. Nous pouvons être sollicité·es pour des projets internes sur mandat.
+    </p>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-5">Accompagnement des enseignant·es</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        {accompagnements_enseignants.map(a => (
+          <div class="bg-gray-50 rounded-xl p-5">
+            <p class="font-semibold text-gray-900">{a.titre}</p>
+            <p class="text-sm text-gray-500">{a.auteur} — {a.faculte}</p>
+            <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{a.type}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold mb-5">Accompagnement des étudiant·es</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        {accompagnements_etudiants.map(a => (
+          <div class="bg-gray-50 rounded-xl p-5">
+            <p class="font-semibold text-gray-900">{a.titre}</p>
+            <p class="text-sm text-gray-500">{a.auteur} — {a.faculte}</p>
+            <span class="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{a.type}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <div class="mt-10 p-6 bg-unige-red/5 border border-unige-red/20 rounded-xl">
+      <h3 class="font-semibold mb-2">Faire appel à notre équipe</h3>
+      <p class="text-sm text-gray-600 mb-3">
+        Vous souhaitez bénéficier d'un accompagnement pour votre projet pédagogique ?
+      </p>
+      <a href="mailto:sea@unige.ch" class="inline-block bg-unige-red text-white text-sm px-4 py-2 rounded-lg hover:bg-red-800 transition">
+        Contacter le SEA
+      </a>
+    </div>
+  </div>
+</Base>

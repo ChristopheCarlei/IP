@@ -1,0 +1,67 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "Plateforme des innovations pédagogiques de l'Université de Genève" } = Astro.props;
+---
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — Innovations Pédagogiques UNIGE</title>
+  <meta name="description" content={description} />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-sans bg-white text-gray-900">
+  <header class="border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/images/unige-logo.svg" alt="UNIGE" class="h-8" />
+        <span class="font-semibold text-sm text-gray-700">Innovations Pédagogiques</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="/catalogue" class="hover:text-unige-red transition-colors">Catalogue</a>
+        <a href="/ia" class="hover:text-unige-red transition-colors">IA</a>
+        <a href="/videos" class="hover:text-unige-red transition-colors">Vidéos</a>
+        <a href="/soutien" class="hover:text-unige-red transition-colors">Soutien</a>
+        <a href="/observation" class="hover:text-unige-red transition-colors">Observation</a>
+        <a href="/prix" class="hover:text-unige-red transition-colors">Prix</a>
+        <a href="/commission" class="hover:text-unige-red transition-colors">Commission</a>
+        <a href="/contact" class="hover:text-unige-red transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm">
+      <div>
+        <p class="font-semibold text-white mb-2">Innovations Pédagogiques</p>
+        <p>Service d'enseignement et d'apprentissage (SEA)</p>
+        <p>Université de Genève</p>
+      </div>
+      <div>
+        <p class="font-semibold text-white mb-2">Contact</p>
+        <p>24 rue du Général-Dufour</p>
+        <p>1211 Genève 4</p>
+        <p><a href="mailto:sea@unige.ch" class="underline hover:text-white">sea@unige.ch</a></p>
+      </div>
+      <div>
+        <p class="font-semibold text-white mb-2">Liens utiles</p>
+        <ul class="space-y-1">
+          <li><a href="https://www.unige.ch" class="hover:text-white">unige.ch</a></li>
+          <li><a href="/admin/" class="hover:text-white">Administration CMS</a></li>
+        </ul>
+        <p class="mt-4 text-xs text-gray-500">CC BY-NC-SA 4.0</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

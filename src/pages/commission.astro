@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+
+const equipe = [
+  { nom: 'Mallory Schaub', role: 'Chef de service', service: 'SEA', platformRole: 'Comité de pilotage' },
+  { nom: 'Patrick Roth', role: 'Informaticien de développement (E-Learning)', service: 'SEA', platformRole: 'Comité de pilotage' },
+  { nom: 'Christophe Carlei', role: 'Adjoint scientifique', service: 'SEA', platformRole: 'Chef de projet' },
+  { nom: 'Lucie Colpaert', role: 'Secrétaire', service: 'SEA', platformRole: 'Rédactrice projets' },
+  { nom: 'Julien Da Costa', role: 'Adjoint scientifique', service: 'Médecine', platformRole: 'Développeur et designer' },
+  { nom: 'Alexandre Bourquin', role: 'Technicien de production', service: 'FPSE', platformRole: 'Photographe' },
+  { nom: 'Vjollca Ahmeti', role: 'Organisatrice', service: 'SEA', platformRole: 'Coordinatrice prix enseignement' },
+];
+---
+<Base title="Commission d'Innovation Pédagogique">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-4">Commission d'Innovation Pédagogique (CIP)</h1>
+
+    <p class="text-lg text-gray-600 mb-8">
+      Commission interfacultaire dont la mission est de soutenir les innovations pédagogiques
+      selon trois axes : <strong>réflexion</strong>, <strong>communication</strong> et <strong>soutien</strong> aux projets innovants.
+    </p>
+
+    <h2 class="text-xl font-bold mb-6">Équipe de la plateforme</h2>
+    <div class="grid md:grid-cols-2 gap-4 mb-12">
+      {equipe.map(m => (
+        <div class="bg-gray-50 rounded-xl p-5">
+          <p class="font-semibold text-gray-900">{m.nom}</p>
+          <p class="text-sm text-gray-500">{m.role} — {m.service}</p>
+          <p class="text-sm text-unige-red mt-1 font-medium">{m.platformRole}</p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-xl font-bold mb-4">Membres de la commission (26)</h2>
+    <p class="text-gray-600 mb-4">
+      La commission réunit des professeur·es, chargé·es d'enseignement et collaborateur·rices
+      scientifiques de toutes les facultés (GSEM, FPSE, Médecine, Sciences, FTI, Théologie, Droit, Lettres)
+      et services universitaires (Rectorat, DISTIC, CFCD).
+    </p>
+
+    <div class="bg-blue-50 rounded-xl p-6 mt-8">
+      <h3 class="font-semibold mb-2">Proposer un projet</h3>
+      <p class="text-sm text-gray-600 mb-3">
+        Les enseignant·es de l'UNIGE peuvent proposer leurs projets d'innovation pédagogique pour publication sur la plateforme.
+      </p>
+      <a href="mailto:sea@unige.ch" class="inline-block bg-unige-red text-white text-sm px-4 py-2 rounded-lg hover:bg-red-800 transition">
+        Contacter la commission
+      </a>
+    </div>
+  </div>
+</Base>

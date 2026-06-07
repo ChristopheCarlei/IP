@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects', p => !!p.data.youtube);
+---
+<Base title="Vidéos de promotion">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-2">Vidéos de promotion</h1>
+    <p class="text-gray-500 mb-8">
+      Nous réalisons régulièrement des vidéos afin de mettre davantage en lumière les projets innovants.
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map(p => (
+        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <div class="aspect-video bg-black">
+            <iframe
+              src={p.data.youtube}
+              class="w-full h-full"
+              allowfullscreen
+              loading="lazy"
+              title={p.data.title}
+            />
+          </div>
+          <div class="p-4">
+            <h2 class="font-semibold text-gray-900">{p.data.title}</h2>
+            {p.data.author && <p class="text-sm text-gray-500 mt-1">{p.data.author}</p>}
+            {p.data.description_short && (
+              <p class="text-sm text-gray-600 mt-2 line-clamp-2">{p.data.description_short}</p>
+            )}
+            <a href={`/projets/${p.slug}`} class="inline-block mt-3 text-sm text-unige-red hover:underline">
+              Voir le projet →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {projects.length === 0 && (
+      <p class="text-gray-500 italic">Les vidéos seront disponibles après migration des données des projets.</p>
+    )}
+  </div>
+</Base>

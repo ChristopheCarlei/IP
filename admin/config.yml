@@ -1,0 +1,93 @@
+backend:
+  name: github
+  repo: OWNER/IP
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+locale: fr
+
+collections:
+  - name: projects
+    label: Projets
+    folder: src/content/projects
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Titre (FR), name: title, widget: string }
+      - { label: Titre (EN), name: title_en, widget: string, required: false }
+      - { label: Responsable, name: author, widget: string, required: false }
+      - label: Membres
+        name: members
+        widget: list
+        required: false
+      - label: Faculté
+        name: faculty
+        widget: select
+        options: [Sciences, Médecine, Lettres, SDS, GSEM, Droit, Théologie, FPSE, FTI, SEA, DISTIC, Rectorat, Autre]
+        required: false
+      - { label: Cours, name: course, widget: string, required: false }
+      - { label: Code cours, name: course_code, widget: string, required: false }
+      - label: Niveau
+        name: level
+        widget: select
+        options: [Bachelor, Master, Doctorat, Formation continue, Tous]
+        required: false
+      - label: Nombre d'étudiants
+        name: students
+        widget: select
+        options: ["Moins de 25", "25-75", "75-150", "Plus de 150"]
+        required: false
+      - { label: Année de mise en place, name: year, widget: string, required: false }
+      - label: Catégorie pédagogique
+        name: category
+        widget: select
+        options: [Préparer, Rendre actif, Responsabiliser, Faire créer]
+        required: false
+      - { label: Type d'innovation, name: innovation_type, widget: string, required: false }
+      - label: Statut
+        name: status
+        widget: select
+        default: actif
+        options: [actif, archivé, supprimé]
+      - { label: Description courte (FR), name: description_short, widget: text, required: false }
+      - { label: Description courte (EN), name: description_short_en, widget: text, required: false }
+      - { label: Vidéo YouTube (URL embed), name: youtube, widget: string, required: false }
+      - label: Images
+        name: images
+        widget: list
+        field: { label: Image, name: image, widget: image }
+        required: false
+      - { label: Observation acceptée, name: observation_accepted, widget: boolean, default: false }
+      - { label: Prix, name: award, widget: string, required: false }
+      - { label: Année du prix, name: award_year, widget: string, required: false }
+      - { label: Projet en vedette, name: featured, widget: boolean, default: false }
+      - label: Contenu (FR)
+        name: body
+        widget: markdown
+
+  - name: team
+    label: Équipe
+    folder: src/content/team
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Nom, name: name, widget: string }
+      - { label: Rôle, name: role, widget: string }
+      - { label: Service, name: service, widget: string, required: false }
+      - { label: Rôle sur la plateforme, name: platform_role, widget: string, required: false }
+      - { label: Email, name: email, widget: string, required: false }
+      - { label: Photo, name: photo, widget: image, required: false }
+      - { label: Ordre d'affichage, name: order, widget: number, default: 99 }
+      - { label: Bio, name: body, widget: markdown, required: false }
+
+  - name: pages
+    label: Pages statiques
+    folder: src/content/pages
+    create: false
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Titre EN, name: title_en, widget: string, required: false }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Contenu, name: body, widget: markdown }

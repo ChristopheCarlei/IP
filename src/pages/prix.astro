@@ -1,0 +1,91 @@
+---
+import Base from '../layouts/Base.astro';
+
+const laureats = [
+  { projet: 'Fiches médicales', responsables: 'Priscilla Soulie, Monica Didier', annee: '2024', faculte: 'Médecine' },
+  { projet: 'Interventions formatives', responsables: 'Simon Flandin (et équipe)', annee: '2023', faculte: 'FPSE' },
+  { projet: 'Improvisation théâtrale', responsables: 'Pauline Hämmerli (et équipe)', annee: '2022', faculte: 'Médecine' },
+  { projet: 'Professionnalisation & jeu sérieux', responsables: 'Rita Trigo Trindade', annee: '2021', faculte: 'Droit' },
+  { projet: 'Head to Toe', responsables: 'Ido Zamberg, Olivier Windisch', annee: '2020', faculte: 'Médecine' },
+  { projet: 'Projet institutionnel', responsables: 'Marcel Paulssen', annee: '2019', faculte: 'GSEM' },
+  { projet: 'Exerciseur en statistiques', responsables: 'Matthias Studer', annee: '2018', faculte: 'SDS' },
+  { projet: 'Podcast environnemental', responsables: 'Juliet Fall', annee: '2017', faculte: 'SDS' },
+];
+
+const criteres = [
+  'Impact pédagogique', 'Clarté pédagogique', 'Engagement étudiant',
+  'Originalité', 'Durabilité', 'Transférabilité', 'Diffusion',
+];
+---
+<Base title="Prix de la Pédagogie Universitaire">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-4">Prix de la Pédagogie Universitaire</h1>
+
+    <!-- Édition 2026 -->
+    <div class="bg-unige-red text-white rounded-xl p-8 mb-10">
+      <h2 class="text-xl font-bold mb-3">Édition 2026 — 10 000 CHF à remporter</h2>
+      <div class="grid md:grid-cols-3 gap-4 mb-6">
+        {[['1er prix', '5 000 CHF'], ['2e prix', '3 000 CHF'], ['3e prix', '2 000 CHF']].map(([rang, montant]) => (
+          <div class="bg-white/10 rounded-lg p-4 text-center">
+            <p class="font-semibold">{rang}</p>
+            <p class="text-2xl font-bold">{montant}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-sm opacity-90 mb-4">
+        Date limite de candidature : <strong>15 avril 2026</strong>.
+        Envoyez votre dossier de candidature et lettre d'accompagnement à{' '}
+        <a href="mailto:sea@unige.ch" class="underline">sea@unige.ch</a>
+      </p>
+    </div>
+
+    <!-- Critères -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold mb-4">Critères d'évaluation</h2>
+      <div class="grid md:grid-cols-2 gap-3">
+        {criteres.map((c, i) => (
+          <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+            <span class="w-7 h-7 rounded-full bg-unige-red text-white text-sm flex items-center justify-center font-bold shrink-0">{i+1}</span>
+            <span class="text-sm font-medium">{c}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Jury -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold mb-3">Jury</h2>
+      <p class="text-gray-600">
+        Le jury comprend au minimum 8 membres de la Commission d'Innovation Pédagogique (CIP),
+        un expert externe et un étudiant·e UNIGE sensibilisé·e aux enjeux pédagogiques.
+      </p>
+    </div>
+
+    <!-- Lauréats -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Lauréat·es précédent·es</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-100 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-600">Projet</th>
+              <th class="px-4 py-3 font-semibold text-gray-600">Responsable(s)</th>
+              <th class="px-4 py-3 font-semibold text-gray-600">Faculté</th>
+              <th class="px-4 py-3 font-semibold text-gray-600">Année</th>
+            </tr>
+          </thead>
+          <tbody>
+            {laureats.map((l, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-4 py-3 font-medium">{l.projet}</td>
+                <td class="px-4 py-3 text-gray-600">{l.responsables}</td>
+                <td class="px-4 py-3 text-gray-600">{l.faculte}</td>
+                <td class="px-4 py-3 text-gray-600">{l.annee}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</Base>
