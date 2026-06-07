@@ -2,11 +2,29 @@
 interface Props {
   title: string;
   description?: string;
+  lang?: 'fr' | 'en';
 }
-const { title, description = "Plateforme des innovations pédagogiques de l'Université de Genève" } = Astro.props;
+const {
+  title,
+  description = "Plateforme des innovations pédagogiques de l'Université de Genève",
+  lang = 'fr',
+} = Astro.props;
+
+const navItems = [
+  { href: '/catalogue',   fr: 'Catalogue',    en: 'Catalogue' },
+  { href: '/ia',          fr: 'IA',            en: 'AI' },
+  { href: '/videos',      fr: 'Vidéos',        en: 'Videos' },
+  { href: '/soutien',     fr: 'Soutien',       en: 'Support' },
+  { href: '/observation', fr: 'Observation',   en: 'Observation' },
+  { href: '/prix',        fr: 'Prix',          en: 'Awards' },
+  { href: '/commission',  fr: 'Commission',    en: 'Committee' },
+  { href: '/contact',     fr: 'Contact',       en: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
 ---
 <!doctype html>
-<html lang="fr">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,54 +32,139 @@ const { title, description = "Plateforme des innovations pédagogiques de l'Univ
   <meta name="description" content={description} />
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 </head>
-<body class="font-sans bg-white text-gray-900">
-  <header class="border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3">
-        <img src="/images/unige-logo.svg" alt="UNIGE" class="h-8" />
-        <span class="font-semibold text-sm text-gray-700">Innovations Pédagogiques</span>
+<body class="font-sans bg-white text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Barre institutionnelle UNIGE -->
+  <div class="bg-[#1a1a2e] text-white text-xs py-1.5 shrink-0">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <a href="https://www.unige.ch" target="_blank" rel="noopener" class="opacity-75 hover:opacity-100 transition hover:underline">
+        Université de Genève
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="/catalogue" class="hover:text-unige-red transition-colors">Catalogue</a>
-        <a href="/ia" class="hover:text-unige-red transition-colors">IA</a>
-        <a href="/videos" class="hover:text-unige-red transition-colors">Vidéos</a>
-        <a href="/soutien" class="hover:text-unige-red transition-colors">Soutien</a>
-        <a href="/observation" class="hover:text-unige-red transition-colors">Observation</a>
-        <a href="/prix" class="hover:text-unige-red transition-colors">Prix</a>
-        <a href="/commission" class="hover:text-unige-red transition-colors">Commission</a>
-        <a href="/contact" class="hover:text-unige-red transition-colors">Contact</a>
+      <div class="hidden sm:flex items-center gap-4 opacity-60">
+        <a href="https://www.unige.ch/facultes" target="_blank" rel="noopener" class="hover:opacity-100 transition">Facultés</a>
+        <a href="https://www.unige.ch/etudes" target="_blank" rel="noopener" class="hover:opacity-100 transition">Études</a>
+        <a href="https://www.unige.ch/services" target="_blank" rel="noopener" class="hover:opacity-100 transition">Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- En-tête principal -->
+  <header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50 shrink-0">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- Ligne logo + langue -->
+      <div class="flex items-center justify-between py-3 border-b border-gray-100">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/images/unige-logo.svg" alt="Université de Genève" class="h-9" />
+          <div class="border-l border-gray-200 pl-3 leading-tight">
+            <span class="block text-[13px] font-semibold text-gray-800">Innovations</span>
+            <span class="block text-[13px] font-semibold text-unige-red">Pédagogiques</span>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-3">
+          <!-- Bascule langue -->
+          <div class="flex items-center border border-gray-200 rounded overflow-hidden text-xs font-medium">
+            <a href="/" class={`px-3 py-1.5 transition ${lang === 'fr' ? 'bg-unige-red text-white' : 'text-gray-500 hover:bg-gray-50'}`}>FR</a>
+            <a href="/en" class={`px-3 py-1.5 transition ${lang === 'en' ? 'bg-unige-red text-white' : 'text-gray-500 hover:bg-gray-50'}`}>EN</a>
+          </div>
+          <!-- Bouton menu mobile -->
+          <button id="mobile-menu-btn" class="md:hidden p-1.5 text-gray-500 hover:text-gray-900 rounded" aria-label="Menu navigation">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation principale (desktop) -->
+      <nav class="hidden md:flex items-center -mb-px overflow-x-auto" aria-label="Navigation principale">
+        {navItems.map(item => {
+          const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+          return (
+            <a
+              href={item.href}
+              class={`px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${
+                isActive
+                  ? 'border-unige-red text-unige-red'
+                  : 'border-transparent text-gray-600 hover:text-unige-red hover:border-gray-300'
+              }`}
+            >
+              {lang === 'en' ? item.en : item.fr}
+            </a>
+          );
+        })}
       </nav>
     </div>
+
+    <!-- Navigation mobile -->
+    <nav id="mobile-nav" class="hidden md:hidden border-t border-gray-100 bg-white" aria-label="Navigation mobile">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class="flex items-center px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-unige-red border-b border-gray-100 last:border-0"
+        >
+          {lang === 'en' ? item.en : item.fr}
+        </a>
+      ))}
+    </nav>
   </header>
 
-  <main>
+  <!-- Contenu principal -->
+  <main class="flex-1">
     <slot />
   </main>
 
-  <footer class="bg-gray-900 text-gray-300 mt-16">
-    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm">
-      <div>
-        <p class="font-semibold text-white mb-2">Innovations Pédagogiques</p>
-        <p>Service d'enseignement et d'apprentissage (SEA)</p>
-        <p>Université de Genève</p>
+  <!-- Pied de page -->
+  <footer class="bg-[#1a1a2e] text-gray-400 shrink-0">
+    <div class="max-w-7xl mx-auto px-4 pt-10 pb-6">
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-8">
+        <div class="sm:col-span-2 md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/images/unige-logo.svg" alt="UNIGE" class="h-8 brightness-0 invert opacity-60" />
+            <span class="text-white font-semibold text-sm">Innovations Pédagogiques</span>
+          </div>
+          <p class="leading-relaxed text-gray-400">
+            Plateforme de recensement et de valorisation des projets d'innovation
+            pédagogique de l'Université de Genève.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-3 text-sm">Contact</p>
+          <address class="not-italic space-y-1 text-gray-400">
+            <p>Service d'enseignement et d'apprentissage (SEA)</p>
+            <p>24 rue du Général-Dufour</p>
+            <p>1211 Genève 4</p>
+            <p class="mt-2">
+              <a href="mailto:sea@unige.ch" class="text-unige-red hover:text-red-400 transition">sea@unige.ch</a>
+            </p>
+          </address>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-3 text-sm">Liens</p>
+          <ul class="space-y-2">
+            <li><a href="https://www.unige.ch" target="_blank" rel="noopener" class="hover:text-white transition">unige.ch</a></li>
+            <li><a href="/catalogue" class="hover:text-white transition">Catalogue des projets</a></li>
+            <li><a href="/observation" class="hover:text-white transition">Observation entre pairs</a></li>
+            <li><a href="/admin/" class="hover:text-white transition">Administration CMS</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <p class="font-semibold text-white mb-2">Contact</p>
-        <p>24 rue du Général-Dufour</p>
-        <p>1211 Genève 4</p>
-        <p><a href="mailto:sea@unige.ch" class="underline hover:text-white">sea@unige.ch</a></p>
-      </div>
-      <div>
-        <p class="font-semibold text-white mb-2">Liens utiles</p>
-        <ul class="space-y-1">
-          <li><a href="https://www.unige.ch" class="hover:text-white">unige.ch</a></li>
-          <li><a href="/admin/" class="hover:text-white">Administration CMS</a></li>
-        </ul>
-        <p class="mt-4 text-xs text-gray-500">CC BY-NC-SA 4.0</p>
+      <div class="border-t border-white/10 pt-5 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-500">
+        <p>© {new Date().getFullYear()} Université de Genève</p>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" class="hover:text-gray-300 transition">
+          CC BY-NC-SA 4.0
+        </a>
       </div>
     </div>
   </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const nav = document.getElementById('mobile-nav');
+    btn?.addEventListener('click', () => nav?.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
