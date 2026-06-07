@@ -48,11 +48,18 @@ const light  = isLightFac(d.faculty);
 /* ---- Bloc résumé (style fiche UNIGE) ---- */
 .proj-card{width:var(--content);margin:clamp(24px,3vw,40px) auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 
-/* En-tête : badge faculté + titre */
-.proj-card-head{padding:18px 24px 14px;border-bottom:1px solid var(--line)}
-.fac-badge{display:inline-block;background:var(--fac,var(--rose));color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:6px;margin-bottom:12px}
-.fac-badge.light{color:var(--ink)}
-.proj-card-head h1{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:0}
+/* ---- En-tête projet (photo + titre + équipe) ---- */
+.proj-header{display:flex;align-items:flex-start;gap:28px;padding:28px 28px 24px;border-bottom:1px solid var(--line);position:relative}
+.proj-header-photo{width:160px;height:160px;flex-shrink:0;border-radius:var(--radius-sm);object-fit:cover;object-position:center 15%;border:1px solid var(--line)}
+.proj-header-photo-placeholder{width:160px;height:160px;flex-shrink:0;border-radius:var(--radius-sm);background:var(--fac,var(--rose));display:flex;align-items:center;justify-content:center}
+.proj-header-photo-placeholder span{font-size:52px;font-weight:800;color:rgba(255,255,255,.28);letter-spacing:-.02em}
+.proj-header-text{flex:1;min-width:0;padding-top:4px}
+.proj-header-text h1{font-size:clamp(26px,3.5vw,42px);font-weight:800;letter-spacing:-.025em;line-height:1.05;margin:0 0 10px;color:var(--ink)}
+.proj-header-text h1 .word1{color:var(--rose)}
+.proj-header-text .author-main{font-size:17px;font-weight:800;color:var(--ink);margin:0 0 5px}
+.proj-header-text .author-team{font-size:15px;color:var(--muted);margin:0}
+.proj-header-btn{position:absolute;bottom:18px;right:24px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:9px 16px;border-radius:6px;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.proj-header-btn:hover{background:var(--rose)}
 
 /* Tags (axe, prix, archivé) */
 .tagrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px}
@@ -177,24 +184,49 @@ details.acc-item summary:hover{background:#EAEAEA}
 <div style={`--fac:${facVar}`}>
 <div class="proj-card">
 
-  <!-- En-tête -->
-  <div class="proj-card-head">
-    {d.faculty && (
-      <div class={`fac-badge${light ? ' light' : ''}`}>{d.faculty}</div>
-    )}
-    <h1>{d.title}</h1>
-    <div class="tagrow">
-      {d.category && <span class="tag axe">{d.category}</span>}
-      {d.award && (
-        <span class="tag prix">
-          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-            <path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/>
-          </svg>
-          {d.award}
-        </span>
-      )}
-      {d.status === 'archivé' && <span class="tag archive">Archivé</span>}
+  <!-- En-tête : photo + titre + responsables -->
+  <div class="proj-header">
+    {/* Photo enseignant·e */}
+    {d.photo
+      ? <img src={d.photo} alt={d.author ?? d.title} class="proj-header-photo" />
+      : <div class="proj-header-photo-placeholder">
+          <span>{(d.author ?? d.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase()}</span>
+        </div>
+    }
+
+    {/* Texte */}
+    <div class="proj-header-text">
+      <h1>
+        {(() => {
+          const words = d.title.split(' ');
+          if (words.length <= 1) return d.title;
+          return <>{<span class="word1">{words[0]}</span>}{' '}{words.slice(1).join(' ')}</>;
+        })()}
+      </h1>
+      {d.author && <p class="author-main">{d.author}</p>}
+      {d.team  && <p class="author-team">{d.team}</p>}
+
+      <div class="tagrow">
+        {d.category && <span class="tag axe">{d.category}</span>}
+        {d.award && (
+          <span class="tag prix">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+              <path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/>
+            </svg>
+            {d.award}
+          </span>
+        )}
+        {d.status === 'archivé' && <span class="tag archive">Archivé</span>}
+      </div>
     </div>
+
+    {/* Bouton retour catalogue */}
+    <a class="proj-header-btn" href="/catalogue">
+      Tous les projets
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </a>
   </div>
 
   <!-- Corps : galerie + description -->
