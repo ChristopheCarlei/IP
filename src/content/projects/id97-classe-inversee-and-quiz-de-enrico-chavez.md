@@ -2,6 +2,7 @@
 id: 97
 title: "Classe inversée & quiz de Enrico Chavez"
 author: Enrico Chavez
+photo: /images/projet/Enrico_Chavez_format_carre.jpg
 contact: "Enrico.Chavez@unige.ch"
 faculty: GSEM
 course: Statistics I

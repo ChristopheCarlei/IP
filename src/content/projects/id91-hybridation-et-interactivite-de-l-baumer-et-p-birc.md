@@ -2,6 +2,7 @@
 id: 91
 title: Hybridation et interactivité de L. Baumer et P. Birchler Emery
 author: Lorenz Baumer et Patrizia Birchler Emery
+photo: /images/projet/Birchler-Emery_Baumer.jpg
 contact: "Patrizia.Birchler@unige.ch"
 faculty: Lettres
 course: "Modules CAS “Archéologie classique: une introduction”"

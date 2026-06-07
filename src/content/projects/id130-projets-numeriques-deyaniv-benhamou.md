@@ -2,6 +2,7 @@
 id: 130
 title: Projets numériques de Yaniv Benhamou
 author: Yaniv Benhamou et Seth Mediateur Tuyisabe
+photo: /images/projet/Yaniv_Benhamou_2023.jpg
 contact: "comprendre-le-numerique@unige.ch"
 faculty: Toutes
 course: "Comprendre le numérique: cours transversal"

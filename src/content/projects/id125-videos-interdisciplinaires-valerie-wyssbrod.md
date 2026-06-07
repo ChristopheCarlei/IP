@@ -2,6 +2,7 @@
 id: 125
 title: Vidéos interdisciplinaires Valérie Wyssbrod
 author: Valérie Wyssbrod
+photo: /images/projet/Wyssbrod.jpg
 contact: "valerie.wyssbrod@unine.ch"
 faculty: Droit
 course: Introduction to the Law of Biodiversity Conservation

@@ -2,6 +2,7 @@
 id: 34
 title: Apprentissage coopératif de Céline Buchs
 author: ""
+photo: /images/projet/Celine_Buchs.jpg
 faculty: ""
 course: ""
 level: ""

@@ -2,6 +2,7 @@
 id: 16
 title: Tutorat de Ines Chaieb
 author: ""
+photo: /images/projet/Ines_Chaieb.jpg
 faculty: ""
 course: ""
 level: ""

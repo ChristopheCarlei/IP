@@ -2,6 +2,7 @@
 id: 132
 title: Penser (par) la voix de Noémi Michel
 author: Noémi Michel
+photo: /images/projet/Noemi_Michel.jpg
 contact: "noemi.michel@unige.ch"
 faculty: SDS
 course: "Théories critiques de la \"race\" et de la postcolonialité"

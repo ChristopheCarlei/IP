@@ -2,6 +2,7 @@
 id: 127
 title: Improvisation théâtrale de Pauline Haemmerli et collègues
 author: Pauline Hämmerli
+photo: /images/projet/Haemmerli_et_collegues.jpg
 contact: "pauline.haemmerli@etu.unige.ch"
 faculty: Médecine
 course: "Sexisme et harcèlement sexuel en milieu clinique : formation par improvisation théâtrale"

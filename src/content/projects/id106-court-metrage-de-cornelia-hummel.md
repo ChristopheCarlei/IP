@@ -2,6 +2,7 @@
 id: 106
 title: Court-métrage de Cornelia Hummel
 author: Cornelia Hummel
+photo: /images/projet/Cornelia_Hummel.jpg
 contact: "Cornelia.Hummel@unige.ch"
 faculty: SDS
 course: Epistémologie des sciences sociales

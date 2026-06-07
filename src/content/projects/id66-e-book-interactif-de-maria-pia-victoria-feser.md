@@ -2,6 +2,7 @@
 id: 66
 title: E-book interactif de Maria-Pia Victoria-Feser
 author: ""
+photo: /images/projet/Maria-Pia_Victoria-Feser.jpg
 faculty: ""
 course: ""
 level: ""

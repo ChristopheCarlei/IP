@@ -2,6 +2,7 @@
 id: 43
 title: Analyse de films de Gérard Calzada
 author: ""
+photo: /images/projet/Gerard_Calzada.jpg
 faculty: ""
 course: ""
 level: ""

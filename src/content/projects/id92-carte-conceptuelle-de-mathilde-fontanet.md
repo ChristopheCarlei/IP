@@ -2,6 +2,7 @@
 id: 92
 title: Carte conceptuelle de Mathilde Fontanet
 author: ""
+photo: /images/projet/Mathilde_Fontanet.jpg
 faculty: ""
 course: ""
 level: ""

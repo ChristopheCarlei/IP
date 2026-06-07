@@ -2,6 +2,7 @@
 id: 14
 title: "Applications R&D de Léonardo Scapozza"
 author: ""
+photo: /images/projet/Leonardo_Scapozza.jpg
 faculty: ""
 course: ""
 level: ""

@@ -2,6 +2,7 @@
 id: 169
 title: Video Learning Lab de Valérie Lussi Borer
 author: Valérie Lussi Borer
+photo: /images/projet/Valerie_Lussi_Borer.jpg
 contact: "valerie.lussi@unige.ch"
 faculty: FPSE
 course: "Apprentissage et développement professionnel dans les métiers de l'enseignement"

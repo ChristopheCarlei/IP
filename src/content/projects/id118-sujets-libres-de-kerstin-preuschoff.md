@@ -2,6 +2,7 @@
 id: 118
 title: Sujets libres de Kerstin Preuschoff
 author: Kerstin Preuschoff
+photo: /images/projet/Kerstin_Preuschoff.jpg
 contact: "Kerstin.preuschoff@unige.ch"
 faculty: GSEM
 course: Introduction of neuroeconomics and neurofinance / Psychology in finance

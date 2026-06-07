@@ -2,6 +2,7 @@
 id: 153
 title: Conception de capteurs de Jérôme Kasparian
 author: ""
+photo: /images/projet/Jerome_Kasparian.jpg
 faculty: ""
 course: ""
 level: ""

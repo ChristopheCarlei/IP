@@ -2,6 +2,7 @@
 id: 113
 title: Interactions simulées de Barbara Kaiser
 author: Barbara Kaiser
+photo: /images/projet/Barbara_Kaiser.jpg
 contact: "Barbara.kaiser@unige.ch"
 faculty: FPSE
 course: "Accompagnement et intervention en psychologie clinique des situations de handicap ; Couple et famille : interventions thérapeutiques ; Evaluation et prise en charge en neuropsychologie du langage chez l’adulte ; Evaluation et rééducation en neuropsychologie clinique de l’adulte ; Formation à la pratique de l’entretien motivationnel en santé ; Sensibilisation professionnelle"

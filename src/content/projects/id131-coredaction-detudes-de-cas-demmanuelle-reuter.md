@@ -2,6 +2,7 @@
 id: 131
 title: Corédaction d’études de cas d’Emmanuelle Reuter
 author: Emmanuelle Reuter
+photo: /images/projet/Reuter_Emmanuelle.jpg
 contact: "Emmanuelle.reuter@unine.ch"
 faculty: GSEM
 course: Différents cours - Unine

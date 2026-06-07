@@ -2,6 +2,7 @@
 id: 53
 title: "Communauté d'apprentissage de Pamela Ohen-Nyako"
 author: ""
+photo: /images/projet/Pamela_Ohene-Nyako.jpg
 faculty: ""
 course: ""
 level: ""

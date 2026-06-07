@@ -2,6 +2,7 @@
 id: 42
 title: Round robin de Jörg Balsiger
 author: ""
+photo: /images/projet/Jorg_Balsiger.jpg
 faculty: ""
 course: ""
 level: ""

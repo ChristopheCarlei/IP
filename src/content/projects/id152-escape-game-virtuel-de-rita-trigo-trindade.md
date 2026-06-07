@@ -2,6 +2,7 @@
 id: 152
 title: Escape Game Virtuel de Rita Trigo Trindade
 author: Rita Trigo Trindade
+photo: /images/projet/Rita_Trigo_Trindade.jpg
 contact: "Rita.TrigoTrindade@unige.ch"
 faculty: Droit
 course: Droit des sociétés

@@ -2,6 +2,7 @@
 id: 138
 title: Ecole préparatoire en ligne de Oumaima Ajmi
 author: Oumaima Ajmi
+photo: /images/projet/Oumaima_Ajmi_31.jpg
 contact: "oumaima.ajmi@unige.ch"
 faculty: GSEM
 course: Ecole Préparatoire de Mathématiques

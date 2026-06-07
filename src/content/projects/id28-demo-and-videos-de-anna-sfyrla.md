@@ -2,6 +2,7 @@
 id: 28
 title: "Démo & vidéos de Anna Sfyrla"
 author: ""
+photo: /images/projet/Anna_Sfyrla.jpg
 faculty: ""
 course: ""
 level: ""

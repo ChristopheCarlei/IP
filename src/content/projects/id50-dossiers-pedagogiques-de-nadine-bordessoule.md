@@ -2,6 +2,7 @@
 id: 50
 title: Dossiers pédagogiques de Nadine Bordessoule
 author: ""
+photo: /images/projet/Nadine_Bordessoule.jpg
 faculty: ""
 course: ""
 level: ""

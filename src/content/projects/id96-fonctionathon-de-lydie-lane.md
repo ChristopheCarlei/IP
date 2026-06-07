@@ -2,6 +2,7 @@
 id: 96
 title: Fonctionathon de Lydie Lane
 author: Priscilla Soulié et Monica Didier
+photo: /images/projet/Lydie_Lane_copie.jpg
 contact: "Monica.Didier@unige.ch"
 faculty: Médecine
 course: "Communication scientifique : expression écrite/orale"

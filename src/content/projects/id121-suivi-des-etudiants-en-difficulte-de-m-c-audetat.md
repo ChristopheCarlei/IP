@@ -2,6 +2,7 @@
 id: 121
 title: Suivi des étudiants en difficulté de M-C Audétat
 author: Marie-Claude Audétat
+photo: /images/projet/C69A1180.jpg
 contact: "Marie‐claude.audetat@unige.ch"
 faculty: Médecine
 course: 3 programmes de la faculté de médecine (médecine humaine, médecine dentaire, biomédical)

@@ -2,6 +2,7 @@
 id: 166
 title: Apprentissage par le corps de Appoline Torregrosa
 author: Appoline Torregrosa
+photo: /images/projet/Apolline_Torregrosa_.jpg
 contact: "apolline.torregrosa@unige.ch"
 faculty: FPSE
 course: Corporéité, art et développement

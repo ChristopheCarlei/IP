@@ -2,6 +2,7 @@
 id: 128
 title: Fiches médicales de Priscilla Soulié et Monica Didier
 author: Priscilla Soulié et Monica Didier
+photo: /images/projet/Monica_Didier.jpg
 contact: "Priscilla.Soulie@unige.ch"
 faculty: Médecine
 course: Création de fiches Orphanet (22BM083)

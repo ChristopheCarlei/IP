@@ -2,6 +2,7 @@
 id: 81
 title: Mur végétal de Emilie Demarsy
 author: ""
+photo: /images/projet/Emilie_Demarsy.jpg
 faculty: ""
 course: ""
 level: ""

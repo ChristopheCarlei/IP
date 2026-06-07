@@ -2,6 +2,7 @@
 id: 85
 title: Bande dessinée de Juliet Fall
 author: ""
+photo: /images/projet/Juliet_Fall.jpg
 faculty: ""
 course: ""
 level: ""

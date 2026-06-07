@@ -2,6 +2,7 @@
 id: 52
 title: "Implication & transfert de Isabel Voirol-Rubido"
 author: ""
+photo: /images/projet/Maria-Isabel_Voirol.jpg
 faculty: ""
 course: ""
 level: ""

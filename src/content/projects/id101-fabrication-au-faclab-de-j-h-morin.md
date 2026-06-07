@@ -2,6 +2,7 @@
 id: 101
 title: Fabrication au Faclab de J-H Morin
 author: Jean-Henry Morin
+photo: /images/projet/Jean-Henry_Morin.jpg
 contact: "jean-henry.morin@unige.ch"
 faculty: SDS
 course: "Service Innovation Lab; Service to the Public : A Design Approach"

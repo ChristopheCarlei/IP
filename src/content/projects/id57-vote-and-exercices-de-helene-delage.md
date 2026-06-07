@@ -2,6 +2,7 @@
 id: 57
 title: "Vote & exercices de Hélène Delage"
 author: ""
+photo: /images/projet/Helene_Delage.jpg
 faculty: ""
 course: ""
 level: ""

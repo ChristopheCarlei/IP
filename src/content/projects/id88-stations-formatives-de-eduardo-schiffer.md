@@ -2,6 +2,7 @@
 id: 88
 title: Stations formatives de Eduardo Schiffer
 author: Eduardo Schiffer
+photo: /images/projet/Eduardo_Schiffer.jpg
 contact: "Eduardo.Schiffer@hcuge.ch"
 faculty: Médecine
 course: Transversal

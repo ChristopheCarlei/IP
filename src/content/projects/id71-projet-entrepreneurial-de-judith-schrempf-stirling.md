@@ -2,6 +2,7 @@
 id: 71
 title: Projet entrepreneurial de Judith Schrempf-Stirling
 author: ""
+photo: /images/projet/Judith_Schrempf-Stirling.jpg
 faculty: ""
 course: ""
 level: ""

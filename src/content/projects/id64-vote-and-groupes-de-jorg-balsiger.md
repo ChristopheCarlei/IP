@@ -2,6 +2,7 @@
 id: 64
 title: "Vote & groupes de Jörg Balsiger"
 author: ""
+photo: /images/projet/Jorg_Balsiger.jpg
 faculty: ""
 course: ""
 level: ""

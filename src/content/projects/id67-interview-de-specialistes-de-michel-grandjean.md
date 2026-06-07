@@ -2,6 +2,7 @@
 id: 67
 title: Interview de spécialistes de Michel Grandjean
 author: ""
+photo: /images/projet/Grandjean_Michel.jpg
 faculty: ""
 course: ""
 level: ""

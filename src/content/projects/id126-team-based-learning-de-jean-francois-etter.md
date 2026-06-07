@@ -2,6 +2,7 @@
 id: 126
 title: Team-based Learning de Jean-François Etter
 author: Jean-François Etter et Daniel Scherly
+photo: /images/projet/Jean-Francois_Etter.jpg
 contact: "Jean-Francois.Etter@unige.ch"
 faculty: Médecine
 course: Cours de santé publique, santé globale et médecine du travail

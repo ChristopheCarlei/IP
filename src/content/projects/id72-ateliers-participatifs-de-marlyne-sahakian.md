@@ -2,6 +2,7 @@
 id: 72
 title: Ateliers participatifs de Marlyne Sahakian
 author: ""
+photo: /images/projet/Marlyne_Sahakian_petite.jpg
 faculty: ""
 course: ""
 level: ""

@@ -2,6 +2,7 @@
 id: 7
 title: Head to Toe de Ido Zamberg
 author: ""
+photo: /images/projet/Zamberg_Ido_petite.jpg
 faculty: ""
 course: ""
 level: ""

@@ -2,6 +2,7 @@
 id: 162
 title: Lightboard de Jérôme Lacour
 author: Jérôme Lacour
+photo: /images/projet/Jerome_Lacour.jpg
 contact: "Jerome.Lacour@unige.ch"
 faculty: Sciences
 course: Chimie organique pour étudiant-es en biologie et sciences pharmaceutiques

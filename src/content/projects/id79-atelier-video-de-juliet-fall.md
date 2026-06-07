@@ -2,6 +2,7 @@
 id: 79
 title: Atelier vidéo de Juliet Fall
 author: ""
+photo: /images/projet/Juliet_Fall.jpg
 faculty: ""
 course: ""
 level: ""

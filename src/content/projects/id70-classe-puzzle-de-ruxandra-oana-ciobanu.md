@@ -2,6 +2,7 @@
 id: 70
 title: Classe puzzle de Ruxandra Oana Ciobanu
 author: ""
+photo: /images/projet/Oana_Ciobanu.jpg
 faculty: ""
 course: ""
 level: ""

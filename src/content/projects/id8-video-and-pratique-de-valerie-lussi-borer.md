@@ -2,6 +2,7 @@
 id: 8
 title: "Vidéo & pratique de Valérie Lussi Borer"
 author: ""
+photo: /images/projet/Valerie_Lussi_Borer.jpg
 faculty: ""
 course: ""
 level: ""

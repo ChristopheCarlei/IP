@@ -2,6 +2,7 @@
 id: 59
 title: Vidéo recherche de Rovena Troqe
 author: ""
+photo: /images/projet/Rovena_Troqe.jpg
 faculty: ""
 course: ""
 level: ""

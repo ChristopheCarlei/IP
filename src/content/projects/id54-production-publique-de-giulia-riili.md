@@ -2,6 +2,7 @@
 id: 54
 title: Production publique de Giulia Riili
 author: ""
+photo: /images/projet/Giulia_Riili.jpg
 faculty: ""
 course: ""
 level: ""

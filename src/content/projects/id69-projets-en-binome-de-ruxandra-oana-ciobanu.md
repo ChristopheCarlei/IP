@@ -2,6 +2,7 @@
 id: 69
 title: Projets en binôme de Ruxandra Oana Ciobanu
 author: ""
+photo: /images/projet/Oana_Ciobanu.jpg
 faculty: ""
 course: ""
 level: ""

@@ -2,6 +2,7 @@
 id: 120
 title: Musée fictif de Silvia Naef
 author: Silvia Naef et Maddalena Zaglio
+photo: /images/projet/Zaglio_2022.jpg
 contact: "Maddalena.Zaglio@unige.ch"
 faculty: Lettres
 course: "Globalisation et enjeux culturels au Moyen-Orient : l’essor d’une scène artistique et muséale"

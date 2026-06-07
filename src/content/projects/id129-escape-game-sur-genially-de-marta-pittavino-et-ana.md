@@ -2,6 +2,7 @@
 id: 129
 title: Escape Game sur Genially de Marta Pittavino et Anastasia Floru
 author: Marta Pittavino; Anastasia Floru
+photo: /images/projet/Marta_Pittavino.jpg
 contact: "Marta.Pittavino@unige.ch"
 faculty: GSEM
 course: Forecasting with Applications in Business, Statistical Modelling

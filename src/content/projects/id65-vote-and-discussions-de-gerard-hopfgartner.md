@@ -2,6 +2,7 @@
 id: 65
 title: "Vote & discussions de Gérard Hopfgartner"
 author: ""
+photo: /images/projet/Gerard_Hopfgartner.jpg
 faculty: ""
 course: ""
 level: ""

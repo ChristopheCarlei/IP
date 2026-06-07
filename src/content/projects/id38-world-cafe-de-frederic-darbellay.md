@@ -2,6 +2,7 @@
 id: 38
 title: World café de Fréderic Darbellay
 author: ""
+photo: /images/projet/Frederic_Darbellay.jpg
 faculty: ""
 course: ""
 level: ""

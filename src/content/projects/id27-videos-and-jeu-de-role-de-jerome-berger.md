@@ -2,6 +2,7 @@
 id: 27
 title: "Vidéos & jeu de rôle de Jérôme Berger"
 author: Jérôme Berger et Damien Cateau
+photo: /images/projet/SEA_Berger.jpg
 contact: "Jerome.Berger@unige.ch"
 faculty: Sciences
 course: "Introduction aux prestations pharmaceutiques : 12H700"

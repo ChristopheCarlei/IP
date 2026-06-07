@@ -2,6 +2,7 @@
 id: 41
 title: "Policy brief & débat de Jörg Balsiger"
 author: ""
+photo: /images/projet/Jorg_Balsiger.jpg
 faculty: ""
 course: ""
 level: ""

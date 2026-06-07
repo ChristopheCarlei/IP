@@ -2,6 +2,7 @@
 id: 9
 title: Plateforme financière de Tony Berrada
 author: ""
+photo: /images/projet/Tony_Berrada.jpg
 faculty: ""
 course: ""
 level: ""

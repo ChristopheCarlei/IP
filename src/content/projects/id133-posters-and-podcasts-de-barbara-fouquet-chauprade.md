@@ -2,6 +2,7 @@
 id: 133
 title: "Posters & podcasts de Barbara Fouquet-Chauprade"
 author: Barbara Fouquet-Chauprade et Kristine Balslev
+photo: /images/projet/Barbara_Fouquet-Chauprade.jpg
 contact: "barbara.fouquet-chauprade@unige.ch"
 faculty: FPSE
 course: Analyse et intervention dans les systèmes éducatifs

@@ -2,6 +2,7 @@
 id: 30
 title: Auto-évaluation de Michele Pellizzari
 author: ""
+photo: /images/projet/Michele_Pellizzari.jpg
 faculty: ""
 course: ""
 level: ""

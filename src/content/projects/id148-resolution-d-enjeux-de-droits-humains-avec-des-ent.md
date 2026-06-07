@@ -2,6 +2,7 @@
 id: 148
 title: "Résolution d'enjeux de droits humains avec des entreprises de Dorothée Baumann"
 author: "Dorothée Baumann-Pauly & Berit Knaak"
+photo: /images/projet/Baumann-Pauly-Knaak.jpg
 contact: "Pascale.chavaz@unige.ch"
 faculty: GSEM
 course: Business and Human Rights Clinic

@@ -2,6 +2,7 @@
 id: 39
 title: Projet interdisciplinaire de Fréderic Darbellay
 author: ""
+photo: /images/projet/Frederic_Darbellay.jpg
 faculty: ""
 course: ""
 level: ""

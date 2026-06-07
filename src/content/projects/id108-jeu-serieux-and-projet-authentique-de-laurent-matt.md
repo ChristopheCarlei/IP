@@ -2,6 +2,7 @@
 id: 108
 title: "Jeu sérieux & projet authentique de Laurent Matthey"
 author: Laurent Matthey et Marta Alonso
+photo: /images/projet/Matthey_Alonso.jpg
 contact: "Laurent.Matthey@unige.ch"
 faculty: SDS
 course: Atelier de projet urbain

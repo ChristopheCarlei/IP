@@ -2,6 +2,7 @@
 id: 83
 title: "Colloque & feedback de Sergio Gonzalez"
 author: ""
+photo: /images/projet/Sergio_Gonzalez_Sevilla.jpg
 faculty: ""
 course: ""
 level: ""

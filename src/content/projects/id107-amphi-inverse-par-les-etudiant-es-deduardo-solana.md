@@ -2,6 +2,7 @@
 id: 107
 title: Amphi inversé par les étudiant-es d’Eduardo Solana
 author: Eduardo Solana, Alexandre-Quentin Berger
+photo: /images/projet/Eduardo_Solana_Alexandre-Quentin_Berger.jpg
 contact: "eduardo.solana@unige.ch"
 faculty: Département d’Informatique, Faculté des Sciences
 course: Information Systems Security

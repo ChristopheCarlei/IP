@@ -2,6 +2,7 @@
 id: 163
 title: Expériences d’apprentissage de Christophe Carlei
 author: Christophe Carlei
+photo: /images/projet/Christophe_Carlei.jpg
 contact: "Christophe.carlei@unige.ch"
 faculty: FPSE
 course: "Professionnalisations et intervention dans les formations aux métiers de l'éducation et de la formation"

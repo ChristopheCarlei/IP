@@ -2,6 +2,7 @@
 id: 20
 title: Entrepreneuriat de Roni Michaely
 author: ""
+photo: /images/projet/Roni_MICHAELY.jpeg
 faculty: ""
 course: ""
 level: ""

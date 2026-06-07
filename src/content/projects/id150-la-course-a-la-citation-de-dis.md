@@ -2,6 +2,7 @@
 id: 150
 title: La course à la citation de DIS
 author: Bibliothèque de l’université de Genève
+photo: /images/projet/Mellifluo_Escape_the_lab_plateau_de_jeu_profil.jpg
 contact: "biblio-formation@unige.ch"
 faculty: Toutes
 course: "-"

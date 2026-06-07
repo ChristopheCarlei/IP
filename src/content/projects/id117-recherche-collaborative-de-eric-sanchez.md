@@ -2,6 +2,7 @@
 id: 117
 title: Recherche collaborative de Éric Sanchez
 author: Éric Sanchez
+photo: /images/projet/Sanchez_Eric.jpg
 contact: "Eric.sanchez@unige.ch"
 faculty: FPSE
 course: Conduite de la recherche sur les technologies numériques en éducation

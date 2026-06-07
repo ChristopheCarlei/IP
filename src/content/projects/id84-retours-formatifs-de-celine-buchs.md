@@ -2,6 +2,7 @@
 id: 84
 title: Retours formatifs de Céline Buchs
 author: ""
+photo: /images/projet/Celine_Buchs.jpg
 faculty: ""
 course: ""
 level: ""

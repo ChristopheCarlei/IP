@@ -2,6 +2,7 @@
 id: 123
 title: Wikipédia de Simon-Pierre Chevarie-Cossette
 author: Simon-Pierre Chevarie-Cossette et Antoine Vuille
+photo: /images/projet/JTR_profilAvecLunettes.jpg
 contact: "Simon-pierre.chevarie-cossette@unine.ch"
 faculty: Lettres
 course: Mensonge, bêtise et foutaise

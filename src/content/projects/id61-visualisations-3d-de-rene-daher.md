@@ -2,6 +2,7 @@
 id: 61
 title: Visualisations 3D de René Daher
 author: ""
+photo: /images/projet/Rene_Daher.jpg
 faculty: ""
 course: ""
 level: ""

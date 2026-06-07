@@ -2,6 +2,7 @@
 id: 116
 title: Mandat professionnel de Aurélie Picton
 author: Aurélie Picton
+photo: /images/projet/Aurelie_Picton.jpg
 contact: "aurelie.picton@unige.ch"
 faculty: FTI
 course: Terminologie

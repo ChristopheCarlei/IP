@@ -2,6 +2,7 @@
 id: 35
 title: "Interactivité & vidéos de Kléa Faniko"
 author: ""
+photo: /images/projet/Klea_Faniko.jpg
 faculty: ""
 course: ""
 level: ""

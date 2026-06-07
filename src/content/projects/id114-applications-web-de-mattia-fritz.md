@@ -2,6 +2,7 @@
 id: 114
 title: Applications Web de Mattia Fritz
 author: Mattia Fritz
+photo: /images/projet/Mattia_Fritz.jpg
 contact: "Mattia.fritz@unige.ch"
 faculty: FPSE
 course: Sciences et Technologies de l’Information et de la Communication I

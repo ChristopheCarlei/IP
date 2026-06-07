@@ -2,6 +2,7 @@
 id: 151
 title: Data Science for All de Elsa-Line Huwyler
 author: Elsa-Line Huwyler
+photo: /images/projet/Elsa-Line_Huwyler_Guive_Khan_Mohammad.jpg
 contact: "Elsa-Line.Huwyler@unige.ch"
 faculty: Toutes
 course: Tous

@@ -2,6 +2,7 @@
 id: 93
 title: "Site web pédagogique & quiz de Mucyo Karemera"
 author: Mucyo Karemera
+photo: /images/projet/Mucyo_Karemera.jpg
 contact: "Mucyo.Karemera@unige.ch"
 faculty: GSEM
 course: Mathématiques I

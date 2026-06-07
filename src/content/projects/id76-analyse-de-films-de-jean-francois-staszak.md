@@ -2,6 +2,7 @@
 id: 76
 title: Analyse de films de Jean-François Staszak
 author: ""
+photo: /images/projet/Jean-Francois_Stassen.jpg
 faculty: ""
 course: ""
 level: ""

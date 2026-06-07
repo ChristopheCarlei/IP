@@ -2,6 +2,7 @@
 id: 77
 title: Science forensique de Ghislain Patrick Lessène
 author: ""
+photo: /images/projet/Ghislain_Patrick_Lessene.jpg
 faculty: ""
 course: ""
 level: ""

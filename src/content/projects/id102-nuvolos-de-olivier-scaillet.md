@@ -2,6 +2,7 @@
 id: 102
 title: Nuvolos de Olivier Scaillet
 author: Olivier Scaillet
+photo: /images/projet/Olivier_Scaillet.jpg
 contact: "olivier.scaillet@unige.ch"
 faculty: GSEM / GFRI
 course: Financial Econometrics

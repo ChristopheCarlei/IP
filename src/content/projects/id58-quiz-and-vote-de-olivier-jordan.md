@@ -2,6 +2,7 @@
 id: 58
 title: "Quiz & vote de Olivier Jordan"
 author: ""
+photo: /images/projet/Olivier_Jordan.jpg
 faculty: ""
 course: ""
 level: ""

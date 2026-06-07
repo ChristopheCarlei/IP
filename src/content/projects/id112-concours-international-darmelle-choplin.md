@@ -2,6 +2,7 @@
 id: 112
 title: Concours international d’Armelle Choplin
 author: Claudia Berger
+photo: /images/projet/Mallory.jpg
 contact: "claudia.berger@unige.ch"
 faculty: Lettres
 course: "Cours eTandem Wuhan - Genève & Paris"

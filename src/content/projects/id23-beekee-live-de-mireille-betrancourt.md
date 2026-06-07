@@ -2,6 +2,7 @@
 id: 23
 title: Beekee Live de Mireille Bétrancourt
 author: ""
+photo: /images/projet/Mireille_Betrancourt.jpg
 faculty: ""
 course: ""
 level: ""
