@@ -33,3 +33,4 @@ Pour le passage en ligne du contenu, il y a eu un travail important sur les vid�
 « Les objectifs de l'école préparatoire ont très bien été remplis dans mon cas. Elle m'a été très utile et m'a permis de me remettre à niveau pour débuter plus sereinement mon début de formation. Petit bémol sur la compatibilité de la plateforme avec safari. » « Continuez cette école préparatoire de mathématiques car elle est vraiment utile ! » « Permet de revoir certaines notions vues il y a très longtemps et oubliées, aide dans l’exécution des exercices. » « La plateforme de l'école de préparation je la trouve très utile et très importante, seulement je trouve que la mise en place ou l'accès nous a été donné très tard, personnellement j'aurai aimé avoir accès depuis juillet, comme ça nous donne le temps de bien réviser. C'était trop court. »
 
 
+

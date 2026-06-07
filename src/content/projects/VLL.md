@@ -1,4 +1,4 @@
----
+﻿---
 title: Video Learning Lab
 title_en: Video Learning Lab
 author: Valérie Lussi Borer
@@ -18,13 +18,11 @@ year: 2025
 category: Faire créer
 innovation_type: Faire réaliser une production originale
 status: archivé
-description_short: >
-  Le projet engage les apprenants dans l'analyse de situations authentiques d'enseignement filmées
-  et la conception de scénarios de formation favorisant l'articulation théorie-pratique et la posture réflexive.
-youtube: https://www.youtube.com/embed/1dAgT87F-0E
+description_short: "Le projet engage les apprenants dans l'analyse de situations authentiques d'enseignement filmées et la conception de scénarios de formation favorisant l'articulation théorie-pratique et la posture réflexive."
+youtube: "https://www.youtube.com/embed/1dAgT87F-0E"
 observation_accepted: true
 featured: false
-url: https://www.unige.ch/innovations-pedagogiques/project-list/VLL
+url: "https://www.unige.ch/innovations-pedagogiques/project-list/VLL"
 ---
 
 ## Situation problématique
@@ -60,3 +58,4 @@ L'évaluation repose principalement sur les productions réalisées par les étu
 Le dispositif représente un investissement important, à la fois sur les plans technique, audiovisuel et pédagogique. Il nécessite une préparation pédagogique importante, notamment dans la sélection des situations filmées et dans la structuration des activités d'analyse.
 
 **Potentiel de transfert** — Le dispositif présente un fort potentiel de transfert dans d'autres formations centrées sur l'analyse des pratiques professionnelles.
+

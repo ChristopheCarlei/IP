@@ -28,3 +28,4 @@ La semaine d’interprofessionnalité regroupe 600 étudiant-es de 7 filières d
 ’ un tel projet L’év aluation effectuée auprès des étudiant -e s et formateurs /trices révèle un bilan mitigé à la suite de l’activité . Les é tudiant -e s pensent de façon générale que la modalité est pertinente , ludique , originale et attractive . Elle permet de se rencontrer entre filières . Cependant, le jeu a été jugé comme n’étant pas suffisamment immersif . Certain-es étudiant-es n’ont pas compris l’histoire de la patiente disparue dans sa globalité. Chaque mission ne donnait pas un indice suffisamment important pour avancer dans l’enquête. L e bilan de l ’équipe de pilotage souligne quant à elle que cette activité o blige les formateurs /trices à articuler les missions et à travailler en interprofessionnalité . Elle a d’autre part permis de mobiliser m oins de ressources enseignantes pour le déploiement de la journée que le rallye . L’équipe note également que le m
 
 
+

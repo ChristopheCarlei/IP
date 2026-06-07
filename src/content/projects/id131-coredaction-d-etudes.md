@@ -30,3 +30,4 @@ Concrètement, l’équipe enseignante cible d’abord une organisation présent
 La participation des étudiant-es dans la co-construction d’études de cas a de nombreux avantages . Elle permet de développer le ur s connaissances et l eur intérêt pour des organisations locales ainsi que de susciter la motivation dans l’apprentissage. De plus , des synergies peuvent émergées et être exploitées par les étudiant-es dans leurs travaux de recherche dans le cadre de leur mémoire ou thèse de doctorat. Pour l’équipe enseignante, ces études de cas permettent une meilleure connaissance des détails de l’ entreprise , de la complexité de s problématique s mais aussi une plus grande flexibilité dans l’utilisation d’ étude de cas au sein des cours en impliquant , par exemple, des acteurs/trices du terrain dans l’enseignement. L a rédaction de cas demande un temps d‘investissement évidemment plus conséquent que de se servir d e cas disponibles
 
 
+

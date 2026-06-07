@@ -29,3 +29,4 @@ L es étudiant-es sont reparti-es en groupes de 7-8 . Cha cun-e apporte ainsi le
 ’ un tel projet Les responsables de la formation interprofessionnelle relèvent la complexité logistique de l’organisation de cette semaine, mais le très grand intérêt qu’elle représente, tant pour les étudiant-es que pour les formateurs et formatrices. L’intégration des patient-es partenaires dans la conception des scénarios de simulation est une innovation très riche, qui permet aux étudiant-es d’avoir un accès direct au feedback des patient-es sur leur vécu dans l’équipe. Av is des étudiant-es
 
 
+

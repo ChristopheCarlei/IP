@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "preview",
+      "runtimeExecutable": "PowerShell",
+      "runtimeArgs": ["-Command", "Start-Process 'E:\\OneDrive - unige.ch\\PROJETS\\Plateforme IP\\GitHub\\IP\\preview.html'"],
+      "port": 8765
+    }
+  ]
+}

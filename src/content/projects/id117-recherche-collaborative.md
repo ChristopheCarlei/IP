@@ -28,3 +28,4 @@ Le cours comprend 6 périodes de 4 semaines traitant chacune d’une thématique
 ’ un tel projet L’intérêt de l’approche réside dans le fait que les étudiant-es sont engagé-es dans une situation d’apprentissage qui consiste en un projet de recherche international authentique. Ils / elles rencontrent des professionnels engagés dans le projet, participent à l’activité scientifique en cours et leurs travaux constituent une contribution au projet des chercheur-es. Le revers de la médaille de cette authenticité est la complexité des travaux à mener.
 
 
+

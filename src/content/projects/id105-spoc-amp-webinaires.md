@@ -34,3 +34,4 @@ L’enseignant attire l’attention sur le fait qu’un cours de ce format requi
 -e s “Cette formation pour la maîtrise des marchés financiers est idéale pour plonger dans l’univers complexe de la finance et y acquérir une base solide de manière ludique et flexible à travers le format très pratique des cours par vidéos. Bien qu’introductive, cette formation aborde plusieurs thématiques clés qui vous permettent de donner du sens à l’actualité économique et son impact sur les marchés financiers.”
 
 
+

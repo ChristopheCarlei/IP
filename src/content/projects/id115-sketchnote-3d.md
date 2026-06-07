@@ -12,7 +12,7 @@ category: "Rendre actif"
 innovation_type: "Démontrer"
 status: actif
 observation_accepted: false
-description_short: "Les travaux pratiques d'anatomie en médecine ont adopté la classe inversée avec des modules e-learning préalables . P our enrichir cette méthode, l'outil web \"SketchNote 3D\" a été développé pour annoter et visualiser des modèles anatomiques 3D interactifs dans l'enseignemen"
+description_short: "Les travaux pratiques d'anatomie en médecine ont adopté la classe inversée avec des modules e-learning préalables . P our enrichir cette méthode, l'outil web \\\\\"SketchNote 3D\\\\\" a été développé pour annoter et visualiser des modèles anatomiques 3D interactifs dans l'enseignemen"
 youtube: "https://www.youtube.com/embed/wqddan7BFHs?si=Plw0smesaYM5N5sN"
 featured: false
 ---
@@ -28,6 +28,7 @@ Le s travaux pratiques d’anatomie ont été redéveloppés selon le format de 
 ## Retour et conseils
 
 La réussite du projet a été permise par une définition claire des besoins et des fonctionnalités attendues, des interactions fréquentes au sein de l’équipe du projet et des cycles de test et d’optimisation internes et à l’aide de collaborateurs externes. Sur le court terme, les principaux défis sont technologiques. Sur le long terme, les défis sont la maintenance de l’outil et la pérennisation des compétences au sein de l’institution. Sketch N ote 3D permet à un-e enseignant-e de générer et de mettre en ligne des modèles 3D, de les enrichir d’annotations multimédia (textes, images, liens web) dans un navigateur et d’obtenir un lien de partage à intégrer dans son enseignement (sur Moodle, sur un site internet, ou via des outils de création de contenu externes comme Scenari). Sket c h N ote 3D peut être utilisé dans différents scénarii d’enseignement, comme la préparation d’e-learning dans une optique de classe inversée/TBL, la réalisation démonstrations lors de TP ou de cours, les révisions après les enseignements, la mises en place d’enseignement en mode hybride ou HyFlex, la réalisation d’examens de TP écrits intégrant la 3D, la mise en place de plateformes de modèles 3D « modélothèques » pour l’autoapprentissage, la création de musées virtuels et le partage de modèles 3D à visée pédagogique. Cet outil peut être rendu accessible à d’autres département de l’institution. Son développement se poursuit afin de l’optimiser et de lui ajouter de nouvelles fonctionnalités.
+
 
 
 

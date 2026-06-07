@@ -33,3 +33,4 @@ C ette capsule prépare les étudiant-es à la prise en charge des patients en o
 « C’est super ! C’est très motivant de penser que notre molécule pourra peut-être faire avancer la science. C’est un projet qui nous donne de la valeur et c’est très gratifiant. Cela nous rapproche aussi plus de notre domaine (pour la recherche) et c’est donc très intéressant et pertinent. » « Formule très intéressante et plus motivante. Les professeurs et assistant-es ont l’air plus impliqués que pour un TP « normal » et je trouve cela bien. Ce genre de TP permet un meilleur contact enseignant/élève. »
 
 
+

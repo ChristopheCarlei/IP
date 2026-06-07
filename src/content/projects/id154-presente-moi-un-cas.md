@@ -5,7 +5,7 @@ author: "Clara Noble & Sébastien de Kostine"
 contact: "sebdeko@outlook.com Claranoble29@gmail.com"
 faculty: "Médecine"
 course: "Compétences cliniques"
-course_code: "\"
+course_code: "\\\\"
 level: "Master et Internat de médecine"
 students: "300-500"
 year: "2024"
@@ -32,5 +32,6 @@ La présentation orale de cas requiert non seulement une compétence en raisonne
 ## Avis des étudiant·es
 
 « E-learning très complet et compréhensible qui permet de bien comprendre de quoi il s'agit et de centraliser toutes les notions nécessaires à une bonne présentation de cas . » « Le e-learning est top, très clair, joli, nous permet de nous mettre vraiment en situation, surtout avec les 3 échanges audio à la fin de la première partie. Ce que je trouve aussi vraiment bien sont les deux documents en format pdf, car c'est quelque chose qu'on peut enregistrer sans avoir à refaire tout le e-learning. Ils sont clairs, structurés et c'est vrai que nous avons eu seulement qu'une heure de cours sur la présentation de cas, alors que, comme vous l'expliquez, c'est vraiment utile. » « S uper super génial (je me réjouis d'avoir les aides-mémoire de poche), très utile d'avoir cet e-learning, j'ai le sentiment que c'est pas assez vu avant et pendant le début des stages alors que ces moments de présentation peuvent être terrifiants . »
+
 
 

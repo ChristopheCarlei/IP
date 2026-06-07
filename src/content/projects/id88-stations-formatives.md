@@ -29,3 +29,4 @@ Les stations formatives permettent aux étudiant-es de s’entraîner aux compé
 ’ un tel projet Les stations formatives sont très utilisées dans les formations des professions de santé. Les patient-es standardisé-es suivent des formations dispensées par des professionnel-les, apprennent des scénarios et les réponses et réactions type. Ses éventuelles interactions restituent toutes les dimensions et la complexité d’une consultation. Le réalisme est renforcé par l’aménagement de l’environnement physique. Ce format d’enseignement est apprécié par l’ensemble des acteurs/trices que ce soit les étudiant-es, les superviseurs, les patient-es standardisé-es ou instructeurs/trices et les praticien-nes. Les superviseurs font souvent partie des HUG ou des cabinets de ville. Ils/elles sont formé-es pendant plusieurs jours sur la façon de donner un feedback constructif aux étudiant-es. Av is des étudiant-es
 
 
+

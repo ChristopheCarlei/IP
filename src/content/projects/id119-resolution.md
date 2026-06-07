@@ -33,3 +33,4 @@ Cette approche de résolution de problèmes par les étudiant-es peut facilement
 « La correction de certains exercices est très utile ainsi que le temps mis à disposition afin de travailler sur les exercices en petits groupes. » « Les exercices sont stimulants. Avoir des devoirs à faire permet de garder la concentration sur le cours. » « Mélange de la théorie et des exercices, ce qui aide à assimiler et développer notre manière de penser. » « Donner un minimum de documentations de référence, pas seulement la résolution des exercices. Il me semble que les résolutions pourraient être plus détaillées. »
 
 
+

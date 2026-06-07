@@ -4,7 +4,7 @@ title: "Penser (par) la voix"
 author: "Noémi Michel"
 contact: "noemi.michel@unige.ch"
 faculty: "SDS"
-course: "Théories critiques de la \"race\" et de la postcolonialité"
+course: "Théories critiques de la \\\\\"race\\\\\" et de la postcolonialité"
 level: "Master"
 students: "25-50"
 year: "2020"
@@ -12,7 +12,7 @@ category: "Faire créer"
 innovation_type: "Faire réaliser une vidéo, un podcast"
 status: actif
 observation_accepted: false
-description_short: "Ce cours explore le concept de la \"politique de la voix\" à travers des interactions et des créations audio, en mettant l'accent sur la question de la représentativité dans les collectivités politiques et académiques. Les étudiant -e s forment des groupes pour créer des essais audios basés sur des présentations orales"
+description_short: "Ce cours explore le concept de la \\\\\"politique de la voix\\\\\" à travers des interactions et des créations audio, en mettant l'accent sur la question de la représentativité dans les collectivités politiques et académiques. Les étudiant -e s forment des groupes pour créer des essais audios basés sur des présentations orales"
 featured: false
 ---
 
@@ -31,5 +31,6 @@ Pour l’enseignante, il est important de garder une résonnance entre le fond e
 ## Avis des étudiant·es
 
 « Il n'y a aucun cours auquel j'ai assisté avec autant de plaisir. Les thématiques abordées permettent de m'engager sur des questions qui me mobilisent, tant dans mon travail universitaire que dans mes engagements personnels. Le format hybride est particulièrement stimulant : même quand j'ai pas la forme, je suis obligée de participer et je ressors toujours de ce cours en ayant appris quelque chose. En nous poussant à être tout le temps active on retiens davantage les concepts. LE format du rendu laissant libre cours à la créativité me permet de sortir de ma zone de confort. Je me suis vraiment étonnée à participer autant à la production de l'essai audio. Thématiques, énergie, format du rendu, je crois que c'est exactement ce que je recherchais en reprenant mes études, merci. » « L'enseignante arrive à très bien synthétiser les thèmes et apporte des manières ludiques les sujets et enjeux traité. » « Le modèle d'évaluation permet de travailler les notions du cours tout en nous poussant à être créatif. » « La discussion à chaque cours, le côté participatif. Extrêmement intéressant. Et encore une fois c'est le seul cours à l'Unige spécifiquement pour les théories critiques de la postcolonialité. Les modes d'évaluations sont différents de ceux qu'on a l'habitude de faire, ce qui est extrêmement enrichissant. » « Les modalités d'évaluation multiples, bien que représentant une grosse charge de travail, sont variées et très cohérentes avec le contenu du cours (politique de la voix > podcast). Elles permettent une immersion dans les concepts et une réappropriation des théories étudiées et encouragent une créativité rarement mobilisée dans un parcours académique "classique". » « Ce format nous plait énormément et ça change vraiment des autres cours et séminaires. C'est très enrichissant de pouvoir expérimenter avec nos voix et d'utiliser les compétences, centres d'intérêts des différentes personnes du groupe. Après, c'est un travail très conséquent et je pense pas qu'on s'attendait à une telle charge de travail. » « Je remercie No e mi Michel pour ce cours et aussi pour sa disponibilité. Elle passe beaucoup de temps à nous accompagner, à répondre à nos questions, à proposer des exercices interactifs pour valoriser l'échange et le plaisir d'apprendre. J'ai pris un réel plaisir de participer à ce cours avec une professeure aussi imaginative et qui cherche constamment d'autres manières d'enseigner innovantes. C'est un format de cours qui m'a beaucoup marqué! merci! » « Certains textes sont très denses et difficiles à lire. Mais en même temps c'est des fondamentaux alors je comprends les choix de lecture. » « Le cours semble difficilement adapté à un enseignement à distance (discussion, présentation orale, débats, exercice question-réponse). » « Très très bons ateliers, qui permettent de se mettre progressivement en marche pour la réalisation de l'essai audio. Les intervenant.e.x.s étaient tousxtes très intéressant.e.x.s et nous ont permis de prendre conscience des différentes dimensions auxquelles nous devrions faire attention dans la réalisation des essais audios. »
+
 
 

@@ -7,10 +7,10 @@ const featured = allProjects.filter(p => p.data.featured).slice(0, 6);
 const activeCount = allProjects.filter(p => p.data.status === 'actif').length;
 
 const axes = [
-  { slug: 'preparer', label: 'Préparer', description: 'Demander aux étudiant·es d'effectuer une tâche avant le cours', color: 'bg-blue-100 text-blue-800' },
+  { slug: 'preparer', label: 'Préparer', description: "Demander aux étudiant·es d'effectuer une tâche avant le cours", color: 'bg-blue-100 text-blue-800' },
   { slug: 'rendre-actif', label: 'Rendre actif', description: 'Engager les étudiant·es pendant la séance', color: 'bg-green-100 text-green-800' },
-  { slug: 'responsabiliser', label: 'Responsabiliser', description: 'Développer l'autonomie et la responsabilité', color: 'bg-yellow-100 text-yellow-800' },
-  { slug: 'faire-creer', label: 'Faire créer', description: 'Inviter les étudiant·es à produire quelque chose d'original', color: 'bg-purple-100 text-purple-800' },
+  { slug: 'responsabiliser', label: 'Responsabiliser', description: "Développer l'autonomie et la responsabilité", color: 'bg-yellow-100 text-yellow-800' },
+  { slug: 'faire-creer', label: 'Faire créer', description: "Inviter les étudiant·es à produire quelque chose d'original", color: 'bg-purple-100 text-purple-800' },
 ];
 ---
 <Base title="Accueil">
