@@ -1,6 +1,6 @@
----
+﻿---
 id: 71
-title: Projet entrepreneurial de Judith Schrempf-Stirling
+title: Projet entrepreneurial
 author: ""
 photo: /images/projet/Judith_Schrempf-Stirling.jpg
 faculty: ""

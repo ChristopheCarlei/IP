@@ -1,6 +1,6 @@
----
+﻿---
 id: 100
-title: Start-up Training de Lan Zuo Gillet
+title: Start-up Training
 author: Bettina Palazzo
 contact: "bettina.palazzo@unige.ch"
 faculty: GSEM

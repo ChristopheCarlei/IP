@@ -1,6 +1,6 @@
----
+﻿---
 id: 25
-title: Forum de discussion de Philip Jaffé
+title: Forum
 author: ""
 faculty: ""
 course: ""

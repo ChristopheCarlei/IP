@@ -1,6 +1,6 @@
----
+﻿---
 id: 49
-title: Zoom en présentiel de Priscilla Soulie
+title: Zoom en présentiel
 author: ""
 faculty: ""
 course: ""

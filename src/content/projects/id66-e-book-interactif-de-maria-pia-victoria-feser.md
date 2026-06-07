@@ -1,6 +1,6 @@
----
+﻿---
 id: 66
-title: E-book interactif de Maria-Pia Victoria-Feser
+title: E-book interactif
 author: ""
 photo: /images/projet/Maria-Pia_Victoria-Feser.jpg
 faculty: ""

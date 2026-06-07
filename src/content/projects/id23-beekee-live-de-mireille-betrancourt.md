@@ -1,6 +1,6 @@
----
+﻿---
 id: 23
-title: Beekee Live de Mireille Bétrancourt
+title: Beekee Live
 author: ""
 photo: /images/projet/Mireille_Betrancourt.jpg
 faculty: ""

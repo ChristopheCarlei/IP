@@ -1,6 +1,6 @@
----
+﻿---
 id: 39
-title: Projet interdisciplinaire de Fréderic Darbellay
+title: Projet interdisciplinaire
 author: ""
 photo: /images/projet/Frederic_Darbellay.jpg
 faculty: ""

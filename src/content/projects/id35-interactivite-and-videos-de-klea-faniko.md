@@ -1,6 +1,6 @@
----
+﻿---
 id: 35
-title: "Interactivité & vidéos de Kléa Faniko"
+title: "Interactivité & vidéos"
 author: ""
 photo: /images/projet/Klea_Faniko.jpg
 faculty: ""

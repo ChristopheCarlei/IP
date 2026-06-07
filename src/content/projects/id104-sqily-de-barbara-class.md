@@ -1,6 +1,6 @@
----
+﻿---
 id: 104
-title: Sqily de Barbara Class
+title: Sqily
 author: ""
 faculty: ""
 course: ""

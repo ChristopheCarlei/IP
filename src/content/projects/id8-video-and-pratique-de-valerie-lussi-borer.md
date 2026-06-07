@@ -1,6 +1,6 @@
----
+﻿---
 id: 8
-title: "Vidéo & pratique de Valérie Lussi Borer"
+title: "Vidéo & pratique"
 author: ""
 photo: /images/projet/Valerie_Lussi_Borer.jpg
 faculty: ""

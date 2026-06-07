@@ -1,6 +1,6 @@
----
+﻿---
 id: 97
-title: "Classe inversée & quiz de Enrico Chavez"
+title: "Classe inversée & quiz"
 author: Enrico Chavez
 photo: /images/projet/Enrico_Chavez_format_carre.jpg
 contact: "Enrico.Chavez@unige.ch"

@@ -1,6 +1,6 @@
----
+﻿---
 id: 158
-title: InteractLab de Nicolas Burra
+title: InteractLab
 author: Nicolas Burra
 photo: /images/projet/Nicolas_Burra.jpeg
 contact: "Nicolas.Burra@unige.ch"

@@ -1,6 +1,6 @@
----
+﻿---
 id: 65
-title: "Vote & discussions de Gérard Hopfgartner"
+title: "Vote & discussions"
 author: ""
 photo: /images/projet/Gerard_Hopfgartner.jpg
 faculty: ""

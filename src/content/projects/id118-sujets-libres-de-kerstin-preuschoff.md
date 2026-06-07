@@ -1,6 +1,6 @@
----
+﻿---
 id: 118
-title: Sujets libres de Kerstin Preuschoff
+title: Sujets libres
 author: Kerstin Preuschoff
 photo: /images/projet/Kerstin_Preuschoff.jpg
 contact: "Kerstin.preuschoff@unige.ch"

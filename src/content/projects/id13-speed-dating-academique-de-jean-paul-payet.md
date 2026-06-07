@@ -1,6 +1,6 @@
----
+﻿---
 id: 13
-title: Speed dating académique de Jean-Paul Payet
+title: Speed dating académique
 author: ""
 faculty: ""
 course: ""

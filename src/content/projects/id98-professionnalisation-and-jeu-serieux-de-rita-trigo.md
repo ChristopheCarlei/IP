@@ -1,6 +1,6 @@
----
+﻿---
 id: 98
-title: "Professionnalisation & jeu sérieux de Rita Trigo Trindade"
+title: "Professionnalisation & jeu sérieux"
 author: ""
 faculty: ""
 course: ""

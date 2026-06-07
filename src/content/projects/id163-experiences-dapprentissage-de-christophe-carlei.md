@@ -1,6 +1,6 @@
----
+﻿---
 id: 163
-title: Expériences d’apprentissage de Christophe Carlei
+title: Expériences d’apprentissage
 author: Christophe Carlei
 photo: /images/projet/Christophe_Carlei.jpg
 contact: "Christophe.carlei@unige.ch"

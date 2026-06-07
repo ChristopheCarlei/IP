@@ -1,6 +1,6 @@
----
+﻿---
 id: 2
-title: Vidéo thématique de Rita Trigo Trindade
+title: Vidéo thématique
 author: ""
 faculty: ""
 course: ""

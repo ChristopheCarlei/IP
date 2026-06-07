@@ -1,6 +1,6 @@
----
+﻿---
 id: 139
-title: "E-book interactif & Piazza  de Stéphane Guerrier"
+title: "E-book interactif & Piazza"
 author: ""
 faculty: ""
 course: ""

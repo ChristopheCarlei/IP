@@ -1,6 +1,6 @@
----
+﻿---
 id: 126
-title: Team-based Learning de Jean-François Etter
+title: Team-based Learning
 author: Jean-François Etter et Daniel Scherly
 photo: /images/projet/Jean-Francois_Etter.jpg
 contact: "Jean-Francois.Etter@unige.ch"

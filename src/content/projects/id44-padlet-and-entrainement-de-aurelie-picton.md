@@ -1,6 +1,6 @@
----
+﻿---
 id: 44
-title: "Padlet & entrainement de Aurélie Picton"
+title: "Padlet & entrainement"
 author: ""
 photo: /images/projet/Aurelie_Picton.jpg
 faculty: ""

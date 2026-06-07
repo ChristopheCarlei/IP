@@ -1,6 +1,6 @@
----
+﻿---
 id: 69
-title: Projets en binôme de Ruxandra Oana Ciobanu
+title: Projets en binôme
 author: ""
 photo: /images/projet/Oana_Ciobanu.jpg
 faculty: ""

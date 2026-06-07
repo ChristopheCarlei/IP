@@ -1,6 +1,6 @@
----
+﻿---
 id: 169
-title: Video Learning Lab de Valérie Lussi Borer
+title: Video Learning Lab
 author: Valérie Lussi Borer
 photo: /images/projet/Valerie_Lussi_Borer.jpg
 contact: "valerie.lussi@unige.ch"

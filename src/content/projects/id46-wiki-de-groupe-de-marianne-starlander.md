@@ -1,6 +1,6 @@
----
+﻿---
 id: 46
-title: Wiki de groupe de Marianne Starlander
+title: Wiki
 author: ""
 photo: /images/projet/Susan_Pickford_Marianne_Starlander.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 143
-title: Portfolio électronique de Frédéric Geoffroy
+title: Portfolio électronique
 author: Frédéric Geoffroy
 photo: /images/projet/Frederic_Geoffroy.jpg
 contact: "Frederic.Geoffroy@unige.ch"

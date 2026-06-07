@@ -1,6 +1,6 @@
----
+﻿---
 id: 117
-title: Recherche collaborative de Éric Sanchez
+title: Recherche collaborative
 author: Éric Sanchez
 photo: /images/projet/Sanchez_Eric.jpg
 contact: "Eric.sanchez@unige.ch"

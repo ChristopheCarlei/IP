@@ -1,6 +1,6 @@
----
+﻿---
 id: 74
-title: "Pratique & quiz de Aurélie Picton"
+title: "Pratique & quiz"
 author: ""
 photo: /images/projet/Aurelie_Picton.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 68
-title: "Interactivité & outils Moodle de Claudia Berger"
+title: "Interactivité & outils Moodle"
 author: ""
 photo: /images/projet/Claudia_Berger.jpg
 faculty: ""

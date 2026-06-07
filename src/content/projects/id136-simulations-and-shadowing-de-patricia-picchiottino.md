@@ -1,6 +1,6 @@
----
+﻿---
 id: 136
-title: "Simulations & Shadowing de Patricia Picchiottino"
+title: "Simulations & Shadowing"
 author: Patricia Picchiottino, Thomas Fassier, Marie-Paule Schneider
 photo: /images/projet/Soulie_Didier.jpg
 contact: "patricia.picchiottino@hesge.ch"

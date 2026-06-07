@@ -1,6 +1,6 @@
----
+﻿---
 id: 85
-title: Bande dessinée de Juliet Fall
+title: Bande dessinée
 author: ""
 photo: /images/projet/Juliet_Fall.jpg
 faculty: ""

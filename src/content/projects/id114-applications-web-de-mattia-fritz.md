@@ -1,6 +1,6 @@
----
+﻿---
 id: 114
-title: Applications Web de Mattia Fritz
+title: Applications Web
 author: Mattia Fritz
 photo: /images/projet/Mattia_Fritz.jpg
 contact: "Mattia.fritz@unige.ch"

@@ -1,6 +1,6 @@
----
+﻿---
 id: 15
-title: "Vidéos & questions de Jérôme Kasparian"
+title: "Vidéos & questions"
 author: ""
 photo: /images/projet/Jerome_Kasparian.jpg
 faculty: ""

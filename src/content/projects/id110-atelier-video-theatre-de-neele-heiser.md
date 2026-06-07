@@ -1,6 +1,6 @@
----
+﻿---
 id: 110
-title: Atelier vidéo théâtre de Neele Heiser
+title: Atelier vidéo théâtre
 author: Neele Heiser
 photo: /images/projet/Neele_Heiser.jpg
 contact: "Neele.Heiser@unige.ch"

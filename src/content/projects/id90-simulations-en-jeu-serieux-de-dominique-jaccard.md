@@ -1,6 +1,6 @@
----
+﻿---
 id: 90
-title: Simulations en jeu sérieux de Dominique Jaccard
+title: Simulations en jeu sérieux
 author: Dominique Jaccard
 contact: "Dominique.Jaccard@heig-vd.ch"
 faculty: GSEM

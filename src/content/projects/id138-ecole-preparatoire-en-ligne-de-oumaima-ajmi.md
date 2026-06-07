@@ -1,6 +1,6 @@
----
+﻿---
 id: 138
-title: Ecole préparatoire en ligne de Oumaima Ajmi
+title: Ecole préparatoire en ligne
 author: Oumaima Ajmi
 photo: /images/projet/Oumaima_Ajmi_31.jpg
 contact: "oumaima.ajmi@unige.ch"

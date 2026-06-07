@@ -1,6 +1,6 @@
----
+﻿---
 id: 56
-title: Classe inversée de Julie Franck
+title: Classe inversée
 author: ""
 photo: /images/projet/Julie_Franck.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 24
-title: Exerciseur en statistiques de Matthias Studer
+title: Exerciseur en statistiques
 author: ""
 photo: /images/projet/Matthias_Studer.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 21
-title: Compétences génériques de Lammert Vrieling
+title: Compétences génériques
 author: ""
 faculty: ""
 course: ""

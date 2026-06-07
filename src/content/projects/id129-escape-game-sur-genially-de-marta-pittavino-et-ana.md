@@ -1,6 +1,6 @@
----
+﻿---
 id: 129
-title: Escape Game sur Genially de Marta Pittavino et Anastasia Floru
+title: Escape Game sur Genially
 author: Marta Pittavino; Anastasia Floru
 photo: /images/projet/Marta_Pittavino.jpg
 contact: "Marta.Pittavino@unige.ch"

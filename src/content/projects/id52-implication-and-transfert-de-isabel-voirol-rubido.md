@@ -1,6 +1,6 @@
----
+﻿---
 id: 52
-title: "Implication & transfert de Isabel Voirol-Rubido"
+title: "Implication & transfert"
 author: ""
 photo: /images/projet/Maria-Isabel_Voirol.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 127
-title: Improvisation théâtrale de Pauline Haemmerli et collègues
+title: Improvisation théâtrale
 author: Pauline Hämmerli
 photo: /images/projet/Haemmerli_et_collegues.jpg
 contact: "pauline.haemmerli@etu.unige.ch"

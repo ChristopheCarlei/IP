@@ -1,6 +1,6 @@
----
+﻿---
 id: 75
-title: Simulation de marché de Frédéric Robert Nicoud
+title: Simulation
 author: ""
 photo: /images/projet/Frederic_Robert-Nicoud.jpg
 faculty: ""

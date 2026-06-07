@@ -1,6 +1,6 @@
----
+﻿---
 id: 131
-title: Corédaction d’études de cas d’Emmanuelle Reuter
+title: Corédaction d’études
 author: Emmanuelle Reuter
 photo: /images/projet/Reuter_Emmanuelle.jpg
 contact: "Emmanuelle.reuter@unine.ch"

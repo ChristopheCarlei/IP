@@ -1,6 +1,6 @@
----
+﻿---
 id: 135
-title: "Simulations & décisions partagées de Patricia Picchiottino"
+title: "Simulations & décisions partagées"
 author: Patricia Picchiottino, Thomas Fassier, Marie-Paule Schneider
 photo: /images/projet/Soulie_Didier.jpg
 contact: "patricia.picchiottino@hesge.ch"

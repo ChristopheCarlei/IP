@@ -1,6 +1,6 @@
----
+﻿---
 id: 37
-title: Marche-transect de Pauline Plagnat
+title: Marche-transect
 author: ""
 photo: /images/projet/Pauline_Plagnat.jpg
 faculty: ""

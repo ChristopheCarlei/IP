@@ -1,6 +1,6 @@
----
+﻿---
 id: 83
-title: "Colloque & feedback de Sergio Gonzalez"
+title: "Colloque & feedback"
 author: ""
 photo: /images/projet/Sergio_Gonzalez_Sevilla.jpg
 faculty: ""

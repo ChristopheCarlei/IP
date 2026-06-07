@@ -1,6 +1,6 @@
----
+﻿---
 id: 32
-title: Encadrement de mémoire de Lucile Davier
+title: Encadrement
 author: ""
 photo: /images/projet/Lucile_Davier.jpg
 faculty: ""

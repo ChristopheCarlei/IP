@@ -1,6 +1,6 @@
----
+﻿---
 id: 137
-title: Pursuit Game de Patricia Picchiottino
+title: Pursuit Game
 author: Patricia Picchiottino, Thomas Fassier, Marie-Paule Schneider
 photo: /images/projet/Soulie_Didier.jpg
 contact: "patricia.picchiottino@hesge.ch"

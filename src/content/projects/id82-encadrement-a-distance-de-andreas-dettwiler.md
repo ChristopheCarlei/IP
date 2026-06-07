@@ -1,6 +1,6 @@
----
+﻿---
 id: 82
-title: Encadrement à distance de Andréas Dettwiler
+title: Encadrement à distance
 author: ""
 faculty: ""
 course: ""

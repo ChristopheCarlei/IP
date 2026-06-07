@@ -1,6 +1,6 @@
----
+﻿---
 id: 27
-title: "Vidéos & jeu de rôle de Jérôme Berger"
+title: "Vidéos & jeu"
 author: Jérôme Berger et Damien Cateau
 photo: /images/projet/SEA_Berger.jpg
 contact: "Jerome.Berger@unige.ch"

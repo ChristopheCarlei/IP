@@ -1,6 +1,6 @@
----
+﻿---
 id: 14
-title: "Applications R&D de Léonardo Scapozza"
+title: "Applications R&D"
 author: ""
 photo: /images/projet/Leonardo_Scapozza.jpg
 faculty: ""

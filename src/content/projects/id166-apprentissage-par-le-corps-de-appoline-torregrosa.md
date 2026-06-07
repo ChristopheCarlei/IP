@@ -1,6 +1,6 @@
----
+﻿---
 id: 166
-title: Apprentissage par le corps de Appoline Torregrosa
+title: Apprentissage par le corps
 author: Appoline Torregrosa
 photo: /images/projet/Apolline_Torregrosa_.jpg
 contact: "apolline.torregrosa@unige.ch"

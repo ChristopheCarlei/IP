@@ -1,6 +1,6 @@
----
+﻿---
 id: 40
-title: Film documentaire de Nicolas Senn
+title: Film documentaire
 author: ""
 photo: /images/projet/Nicolas_senn_2022.jpg
 faculty: ""

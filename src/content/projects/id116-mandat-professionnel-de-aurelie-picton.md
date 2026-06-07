@@ -1,6 +1,6 @@
----
+﻿---
 id: 116
-title: Mandat professionnel de Aurélie Picton
+title: Mandat professionnel
 author: Aurélie Picton
 photo: /images/projet/Aurelie_Picton.jpg
 contact: "aurelie.picton@unige.ch"

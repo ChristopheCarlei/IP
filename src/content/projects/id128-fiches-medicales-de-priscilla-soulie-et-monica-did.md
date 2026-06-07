@@ -1,6 +1,6 @@
----
+﻿---
 id: 128
-title: Fiches médicales de Priscilla Soulié et Monica Didier
+title: Fiches médicales
 author: Priscilla Soulié et Monica Didier
 photo: /images/projet/Monica_Didier.jpg
 contact: "Priscilla.Soulie@unige.ch"

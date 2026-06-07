@@ -1,6 +1,6 @@
----
+﻿---
 id: 20
-title: Entrepreneuriat de Roni Michaely
+title: Entrepreneuriat
 author: ""
 photo: /images/projet/Roni_MICHAELY.jpeg
 faculty: ""

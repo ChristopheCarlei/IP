@@ -1,6 +1,6 @@
----
+﻿---
 id: 147
-title: Projets partenaires de Raphaël Thézé
+title: Projets partenaires
 author: Raphaël Thézé
 photo: /images/projet/Raphael_Theze.jpg
 contact: "Raphael.theze@unige.ch"

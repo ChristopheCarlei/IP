@@ -1,6 +1,6 @@
----
+﻿---
 id: 53
-title: "Communauté d'apprentissage de Pamela Ohen-Nyako"
+title: "Communauté d'apprentissage"
 author: ""
 photo: /images/projet/Pamela_Ohene-Nyako.jpg
 faculty: ""

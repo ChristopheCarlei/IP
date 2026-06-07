@@ -1,6 +1,6 @@
----
+﻿---
 id: 115
-title: SketchNote 3D de Christophe Lamy
+title: SketchNote 3D
 author: Christophe Lamy, Julien DaCosta
 photo: /images/projet/Lamy-DaCosta.jpg
 contact: "Christophe.Lamy@unige.ch"

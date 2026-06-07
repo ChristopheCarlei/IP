@@ -1,6 +1,6 @@
----
+﻿---
 id: 134
-title: Interprofessionnalité de Thomas Fassier
+title: Interprofessionnalité
 author: Thomas Fassier, Patricia Picchiottino, Marie-Paule Schneider
 photo: /images/projet/Thomas_Fassier_et_equipe.jpg
 contact: "thomas.fassier@unige.ch"

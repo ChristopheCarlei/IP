@@ -1,6 +1,6 @@
----
+﻿---
 id: 113
-title: Interactions simulées de Barbara Kaiser
+title: Interactions simulées
 author: Barbara Kaiser
 photo: /images/projet/Barbara_Kaiser.jpg
 contact: "Barbara.kaiser@unige.ch"

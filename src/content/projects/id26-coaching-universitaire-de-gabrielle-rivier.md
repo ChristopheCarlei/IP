@@ -1,6 +1,6 @@
----
+﻿---
 id: 26
-title: Coaching universitaire de Gabrielle Rivier
+title: Coaching universitaire
 author: ""
 faculty: ""
 course: ""

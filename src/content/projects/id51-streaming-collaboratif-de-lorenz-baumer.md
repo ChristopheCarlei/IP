@@ -1,6 +1,6 @@
----
+﻿---
 id: 51
-title: Streaming collaboratif de Lorenz Baumer
+title: Streaming collaboratif
 author: ""
 faculty: ""
 course: ""

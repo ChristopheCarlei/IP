@@ -1,6 +1,6 @@
----
+﻿---
 id: 9
-title: Plateforme financière de Tony Berrada
+title: Plateforme financière
 author: ""
 photo: /images/projet/Tony_Berrada.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 76
-title: Analyse de films de Jean-François Staszak
+title: Analyse
 author: ""
 photo: /images/projet/Jean-Francois_Stassen.jpg
 faculty: ""

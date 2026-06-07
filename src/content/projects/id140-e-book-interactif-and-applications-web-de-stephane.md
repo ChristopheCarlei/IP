@@ -1,6 +1,6 @@
----
+﻿---
 id: 140
-title: "E-book interactif & applications web de Stéphane Guerrier"
+title: "E-book interactif & applications web"
 author: Stéphane Guerrier, Francesco Luigi Gervasio
 contact: "stephane.guerrier@unige.ch"
 faculty: Sciences

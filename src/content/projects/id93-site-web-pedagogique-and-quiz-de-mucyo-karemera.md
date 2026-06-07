@@ -1,6 +1,6 @@
----
+﻿---
 id: 93
-title: "Site web pédagogique & quiz de Mucyo Karemera"
+title: "Site web pédagogique & quiz"
 author: Mucyo Karemera
 photo: /images/projet/Mucyo_Karemera.jpg
 contact: "Mucyo.Karemera@unige.ch"

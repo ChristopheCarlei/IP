@@ -1,6 +1,6 @@
----
+﻿---
 id: 89
-title: "MOOC & cas pratiques de Michel Hottelier"
+title: "MOOC & cas pratiques"
 author: ""
 photo: /images/projet/Michel_Hottelier_2_petite.jpg
 faculty: ""

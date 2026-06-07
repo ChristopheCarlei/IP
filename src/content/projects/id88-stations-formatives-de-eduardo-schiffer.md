@@ -1,6 +1,6 @@
----
+﻿---
 id: 88
-title: Stations formatives de Eduardo Schiffer
+title: Stations formatives
 author: Eduardo Schiffer
 photo: /images/projet/Eduardo_Schiffer.jpg
 contact: "Eduardo.Schiffer@hcuge.ch"

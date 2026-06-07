@@ -1,6 +1,6 @@
----
+﻿---
 id: 133
-title: "Posters & podcasts de Barbara Fouquet-Chauprade"
+title: "Posters & podcasts"
 author: Barbara Fouquet-Chauprade et Kristine Balslev
 photo: /images/projet/Barbara_Fouquet-Chauprade.jpg
 contact: "barbara.fouquet-chauprade@unige.ch"

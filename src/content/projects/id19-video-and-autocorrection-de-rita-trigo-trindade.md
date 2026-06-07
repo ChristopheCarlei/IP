@@ -1,6 +1,6 @@
----
+﻿---
 id: 19
-title: "Vidéo & autocorrection de Rita Trigo Trindade"
+title: "Vidéo & autocorrection"
 author: ""
 faculty: ""
 course: ""

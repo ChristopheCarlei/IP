@@ -1,6 +1,6 @@
----
+﻿---
 id: 34
-title: Apprentissage coopératif de Céline Buchs
+title: Apprentissage coopératif
 author: ""
 photo: /images/projet/Celine_Buchs.jpg
 faculty: ""

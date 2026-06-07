@@ -1,6 +1,6 @@
----
+﻿---
 id: 103
-title: Jeux vidéo pédagogiques de Nicolas Szilas
+title: Jeux vidéo pédagogiques
 author: Nicolas Szilas
 photo: /images/projet/Kim__Le_Nicolas_Szilas_2023.jpg
 contact: "nicolas.szilas@unige.ch"

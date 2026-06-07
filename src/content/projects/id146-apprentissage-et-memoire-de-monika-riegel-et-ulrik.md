@@ -1,6 +1,6 @@
----
+﻿---
 id: 146
-title: Apprentissage et mémoire de Monika Riegel et Ulrike Rimmele
+title: Apprentissage et mémoire
 author: Monika Riegel et Ulrike Rimmele
 photo: /images/projet/Ulrike_Rimmele_Monika_Riegel.jpg
 contact: "ulrike.rimmele@unige.ch"

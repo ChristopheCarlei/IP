@@ -1,6 +1,6 @@
----
+﻿---
 id: 6
-title: "MOOC & coaching de Isabelle Bolon"
+title: "MOOC & coaching"
 author: ""
 faculty: ""
 course: ""

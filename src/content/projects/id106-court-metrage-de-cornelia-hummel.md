@@ -1,6 +1,6 @@
----
+﻿---
 id: 106
-title: Court-métrage de Cornelia Hummel
+title: Court-métrage
 author: Cornelia Hummel
 photo: /images/projet/Cornelia_Hummel.jpg
 contact: "Cornelia.Hummel@unige.ch"

@@ -1,6 +1,6 @@
----
+﻿---
 id: 108
-title: "Jeu sérieux & projet authentique de Laurent Matthey"
+title: "Jeu sérieux & projet authentique"
 author: Laurent Matthey et Marta Alonso
 photo: /images/projet/Matthey_Alonso.jpg
 contact: "Laurent.Matthey@unige.ch"

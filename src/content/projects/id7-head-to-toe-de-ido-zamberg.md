@@ -1,6 +1,6 @@
----
+﻿---
 id: 7
-title: Head to Toe de Ido Zamberg
+title: Head to Toe
 author: ""
 photo: /images/projet/Zamberg_Ido_petite.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 33
-title: "Interactivité & synthèse de Lucile Davier"
+title: "Interactivité & synthèse"
 author: ""
 photo: /images/projet/Lucile_Davier.jpg
 faculty: ""

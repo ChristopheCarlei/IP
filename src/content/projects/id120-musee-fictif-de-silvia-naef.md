@@ -1,6 +1,6 @@
----
+﻿---
 id: 120
-title: Musée fictif de Silvia Naef
+title: Musée fictif
 author: Silvia Naef et Maddalena Zaglio
 photo: /images/projet/Zaglio_2022.jpg
 contact: "Maddalena.Zaglio@unige.ch"

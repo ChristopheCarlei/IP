@@ -1,6 +1,6 @@
----
+﻿---
 id: 47
-title: "Quiz & feedback de Marianne Starlander"
+title: "Quiz & feedback"
 author: ""
 photo: /images/projet/Susan_Pickford_Marianne_Starlander.jpg
 faculty: ""

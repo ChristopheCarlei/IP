@@ -1,6 +1,6 @@
----
+﻿---
 id: 29
-title: Réplication d’article de Michele Pellizzari
+title: Réplication d’article
 author: ""
 photo: /images/projet/Michele_Pellizzari.jpg
 faculty: ""

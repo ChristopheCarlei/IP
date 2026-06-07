@@ -1,6 +1,6 @@
----
+﻿---
 id: 145
-title: Reportage en direct de Nicolas Szilas
+title: Reportage en direct
 author: Nicolas Szilas
 photo: /images/projet/Kim__Le_Nicolas_Szilas_2023.jpg
 contact: "nicolas.szilas@unige.ch"

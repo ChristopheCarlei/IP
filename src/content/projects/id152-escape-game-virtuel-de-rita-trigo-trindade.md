@@ -1,6 +1,6 @@
----
+﻿---
 id: 152
-title: Escape Game Virtuel de Rita Trigo Trindade
+title: Escape Game Virtuel
 author: Rita Trigo Trindade
 photo: /images/projet/Rita_Trigo_Trindade.jpg
 contact: "Rita.TrigoTrindade@unige.ch"

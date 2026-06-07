@@ -1,6 +1,6 @@
----
+﻿---
 id: 4
-title: Projet responsable de Michelle Bergadaa
+title: Projet responsable
 author: ""
 faculty: ""
 course: ""

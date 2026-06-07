@@ -1,6 +1,6 @@
----
+﻿---
 id: 78
-title: "Fiches techniques & logiciel interactif de Evelina Trutnevyte"
+title: "Fiches techniques & logiciel interactif"
 author: ""
 faculty: ""
 course: ""

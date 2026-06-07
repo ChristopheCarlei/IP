@@ -1,6 +1,6 @@
----
+﻿---
 id: 61
-title: Visualisations 3D de René Daher
+title: Visualisations 3D
 author: ""
 photo: /images/projet/Rene_Daher.jpg
 faculty: ""

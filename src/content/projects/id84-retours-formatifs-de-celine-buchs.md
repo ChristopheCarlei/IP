@@ -1,6 +1,6 @@
----
+﻿---
 id: 84
-title: Retours formatifs de Céline Buchs
+title: Retours formatifs
 author: ""
 photo: /images/projet/Celine_Buchs.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 30
-title: Auto-évaluation de Michele Pellizzari
+title: Auto-évaluation
 author: ""
 photo: /images/projet/Michele_Pellizzari.jpg
 faculty: ""

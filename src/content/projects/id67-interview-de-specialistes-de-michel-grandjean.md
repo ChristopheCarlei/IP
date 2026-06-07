@@ -1,6 +1,6 @@
----
+﻿---
 id: 67
-title: Interview de spécialistes de Michel Grandjean
+title: Interview
 author: ""
 photo: /images/projet/Grandjean_Michel.jpg
 faculty: ""

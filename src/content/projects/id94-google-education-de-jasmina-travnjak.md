@@ -1,6 +1,6 @@
----
+﻿---
 id: 94
-title: Google Education de Jasmina Travnjak
+title: Google Education
 author: Jasmina Travnjak
 contact: "Jasmina.Travnjak@unige.ch"
 faculty: IUFE

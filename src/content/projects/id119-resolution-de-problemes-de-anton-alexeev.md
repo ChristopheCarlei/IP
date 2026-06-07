@@ -1,6 +1,6 @@
----
+﻿---
 id: 119
-title: Résolution de problèmes de Anton Alexeev
+title: Résolution
 author: Anton Alexeev
 contact: "Anton.Alekseev@unige.ch"
 faculty: Sciences

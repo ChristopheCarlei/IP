@@ -1,6 +1,6 @@
----
+﻿---
 id: 162
-title: Lightboard de Jérôme Lacour
+title: Lightboard
 author: Jérôme Lacour
 photo: /images/projet/Jerome_Lacour.jpg
 contact: "Jerome.Lacour@unige.ch"

@@ -1,6 +1,6 @@
----
+﻿---
 id: 58
-title: "Quiz & vote de Olivier Jordan"
+title: "Quiz & vote"
 author: ""
 photo: /images/projet/Olivier_Jordan.jpg
 faculty: ""

@@ -1,6 +1,6 @@
----
+﻿---
 id: 1
-title: "Démo & vote de Jérémy Lucchetti"
+title: "Démo & vote"
 author: Frédéric Esposito
 contact: "frederic.esposito@unige.ch"
 faculty: GSEM / GSI

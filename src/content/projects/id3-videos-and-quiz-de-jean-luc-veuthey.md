@@ -1,6 +1,6 @@
----
+﻿---
 id: 3
-title: "Vidéos & quiz de Jean-Luc Veuthey"
+title: "Vidéos & quiz"
 author: ""
 faculty: ""
 course: ""

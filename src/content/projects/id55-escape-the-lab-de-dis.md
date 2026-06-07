@@ -1,6 +1,6 @@
----
+﻿---
 id: 55
-title: Escape the lab de DIS
+title: Escape the lab
 author: ""
 faculty: ""
 course: ""

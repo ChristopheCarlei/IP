@@ -1,6 +1,6 @@
----
+﻿---
 id: 73
-title: "Théâtre théorique & posters de Marlyne Sahakian"
+title: "Théâtre théorique & posters"
 author: ""
 photo: /images/projet/Marlyne_Sahakian_petite.jpg
 faculty: ""

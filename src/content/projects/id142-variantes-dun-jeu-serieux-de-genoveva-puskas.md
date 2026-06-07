@@ -1,6 +1,6 @@
----
+﻿---
 id: 142
-title: Variantes d’un jeu sérieux de Genoveva Puskas
+title: Variantes d’un jeu sérieux
 author: Genoveva Puskas et Margherita Pallottino
 photo: /images/projet/Genoveva_Puskas_Margherita_Pallotino.jpg
 contact: "Genoveva.puskas@unige.ch"
