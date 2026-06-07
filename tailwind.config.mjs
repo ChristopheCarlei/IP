@@ -4,26 +4,33 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Couleur institutionnelle UNIGE (Pantone 214C) — remplace l'ancien #C8102E
         unige: {
-          red:    '#C8102E',
-          dark:   '#1a1a2e',
-          gray:   '#f5f5f5',
+          rose:       '#CF0063',
+          'rose-deep':'#A8004F',
+          ink:        '#172033',
+          soft:       '#F6F7F9',
         },
+        // Couleurs facultaires officielles (Pantone)
         faculty: {
-          fpse:   '#4B0B71',
-          gsem:   '#465F7F',
-          fti:    '#FF5C00',
-          sc:     '#007E64',
-          medecine: '#96004B',
-          droit:  '#0067C5',
-          lettres:'#F1AB00',
-          sds:    '#00b1ae',
-          theologie: '#CF0063',
-          default:'#6B7280',
+          lettres:   '#0067C5',
+          droit:     '#BA0C2F',
+          sciences:  '#007E64',
+          medecine:  '#96004B',
+          theologie: '#4B0B71',
+          gsem:      '#465F7F',
+          sds:       '#F1AB00',
+          fti:       '#FF5C00',
+          fapse:     '#00B1AE',
+          default:   '#6B7280',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"TheSans"', 'system-ui', '-apple-system', '"Segoe UI"', 'sans-serif'],
+      },
+      borderRadius: {
+        card: '14px',
+        sm:   '10px',
       },
     },
   },

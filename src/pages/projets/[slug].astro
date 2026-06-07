@@ -11,232 +11,262 @@ const { project } = Astro.props;
 const { Content } = await render(project);
 const d = project.data;
 
-// Couleurs par faculté
-const facultyColors: Record<string, string> = {
-  FPSE:      '#4B0B71',
-  GSEM:      '#465F7F',
-  FTI:       '#FF5C00',
-  Sciences:  '#007E64',
-  Médecine:  '#96004B',
-  Droit:     '#0067C5',
-  Lettres:   '#F1AB00',
-  SdS:       '#00b1ae',
-  Théologie: '#CF0063',
-};
-function facultyColor(fac?: string): string {
-  if (!fac) return '#6B7280';
-  for (const [key, val] of Object.entries(facultyColors)) {
-    if (fac.toUpperCase().includes(key.toUpperCase())) return val;
-  }
-  return '#6B7280';
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE') || f.includes('PSYCH')) return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                                               return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD'))                        return 'var(--fac-fti)';
+  if (f.includes('SCIEN') && !f.includes('SOC'))                       return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))                         return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))                         return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                                              return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))                         return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO'))                        return 'var(--fac-theologie)';
+  return 'var(--rose)';
 }
-const fc = facultyColor(d.faculty);
+
+const facVar = getFacVar(d.faculty);
 ---
 <Base title={d.title} description={d.description_short}>
+<style>
+/* ---- Fiche projet ---------------------------------------- */
+.fac-band{height:6px;width:100%}
+.proj-head{background:#fff;border-bottom:1px solid var(--line)}
+.proj-head-inner{width:var(--content);margin:auto;padding:24px 0 30px}
+.crumb{font-size:13px;color:var(--faint);display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.crumb a{text-decoration:none;color:inherit}
+.crumb a:hover{color:var(--rose)}
+.crumb .sep{opacity:.6}
+.crumb .cur{color:var(--muted);font-weight:600}
+.tagrow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:16px}
+.tag{font-size:12.5px;font-weight:800;padding:5px 13px;border-radius:999px;white-space:nowrap}
+.tag.fac{color:#fff}
+.tag.axe{color:var(--rose-ink);background:var(--bg-rose)}
+.tag.prix{color:#fff;display:inline-flex;align-items:center;gap:6px;background:var(--ink)}
+.tag.archive{color:var(--ink);background:#FEF3C7;border:1px solid #FDE68A}
+.proj-head h1{font-size:clamp(30px,4.2vw,50px);line-height:1.04;letter-spacing:-.025em;font-weight:800;max-width:20ch;margin:0}
+.proj-head .author{color:var(--muted);font-size:18px;margin-top:12px;font-weight:600}
 
-  <!-- Bande couleur faculté -->
-  <div class="h-1.5 w-full" style={`background-color: ${fc}`} />
+.body-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,56px) 0;display:grid;grid-template-columns:1fr 340px;gap:clamp(32px,4vw,56px);align-items:start}
+.lead-text{font-size:21px;line-height:1.5;color:var(--ink);font-weight:400;margin:0 0 32px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.media{aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:var(--bg-soft);border:1px solid var(--line);margin-bottom:36px;position:relative}
+.media iframe{width:100%;height:100%;border:0;display:block}
+.media-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+.media-placeholder .play{width:64px;height:64px;border-radius:50%;background:var(--fac,var(--rose));display:grid;place-items:center;color:#fff}
+.media-placeholder .play svg{width:26px;height:26px;margin-left:3px}
 
-  <!-- En-tête projet -->
-  <div class="bg-white border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 py-6">
+/* Prose (contenu markdown) */
+.prose h2{font-size:24px;font-weight:800;letter-spacing:-.01em;margin:36px 0 12px;line-height:1.2}
+.prose h2:first-child{margin-top:0}
+.prose h3{font-size:18px;font-weight:700;margin:24px 0 8px}
+.prose p{color:var(--muted);font-size:16.5px;line-height:1.7;margin:0 0 16px}
+.prose ul{margin:0 0 16px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.prose ul li{position:relative;padding-left:26px;color:var(--muted);font-size:16.5px;line-height:1.6}
+.prose ul li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:2px;background:var(--fac,var(--rose))}
+.prose blockquote{margin:24px 0;padding:4px 0 4px 22px;border-left:3px solid var(--fac,var(--rose));font-size:18px;line-height:1.55;color:var(--ink);font-style:italic}
+.prose blockquote p{color:var(--ink);font-size:18px;font-style:italic}
 
-      <!-- Breadcrumb -->
-      <nav class="text-xs text-gray-400 mb-4 flex items-center gap-1.5" aria-label="Fil d'Ariane">
-        <a href="/" class="hover:text-gray-700 transition">Accueil</a>
-        <span>/</span>
-        <a href="/catalogue" class="hover:text-gray-700 transition">Catalogue</a>
-        <span>/</span>
-        <span class="text-gray-600 truncate max-w-xs">{d.title}</span>
-      </nav>
+/* Sidebar */
+.sidebar{position:sticky;top:96px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.sidebar .sb-head{padding:14px 20px;font-size:14px;font-weight:800;letter-spacing:.02em;color:#fff}
+.sidebar dl{margin:0;padding:8px 20px 4px}
+.sidebar dt{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:16px 0 3px}
+.sidebar dd{margin:0;font-size:15px;color:var(--ink);font-weight:600}
+.sidebar dd.sub{font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+.sidebar dd a{color:var(--rose);font-weight:700;font-size:14px;text-decoration:none}
+.sidebar dd a:hover{text-decoration:underline}
+.sidebar .sb-foot{border-top:1px solid var(--line);padding:16px 20px;margin-top:14px}
+.sidebar .sb-foot a{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none}
+.sidebar .sb-foot a:hover{color:var(--rose)}
 
-      <!-- Tags faculté + statut -->
-      <div class="flex items-center gap-2 flex-wrap mb-3">
-        {d.faculty && (
-          <span class="text-xs font-semibold px-2.5 py-1 rounded-full text-white" style={`background-color: ${fc}`}>
-            {d.faculty}
-          </span>
-        )}
-        {d.category && (
-          <span class="text-xs font-medium text-gray-500 border border-gray-200 px-2.5 py-1 rounded-full">
-            {d.category}
-          </span>
-        )}
-        {d.status === 'archivé' && (
-          <span class="text-xs bg-amber-100 text-amber-700 font-medium px-2.5 py-1 rounded-full">
-            Archivé
-          </span>
-        )}
-        {d.award && (
-          <span class="text-xs bg-yellow-50 text-yellow-700 font-medium px-2.5 py-1 rounded-full border border-yellow-200">
-            🏆 {d.award}
-          </span>
-        )}
-      </div>
+/* Encart observation */
+.obs{margin-top:12px;border-radius:var(--radius);padding:20px 22px;background:color-mix(in srgb,var(--fac-sciences) 7%,#fff);border:1px solid color-mix(in srgb,var(--fac-sciences) 28%,#fff)}
+.obs strong{display:flex;align-items:center;gap:9px;color:var(--fac-sciences);font-size:15px;font-weight:800;margin-bottom:6px}
+.obs strong svg{width:18px;height:18px;flex-shrink:0}
+.obs p{color:var(--muted);font-size:14.5px;margin:0}
+.obs p a{color:var(--fac-sciences);font-weight:700}
 
-      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">{d.title}</h1>
-      {d.author && <p class="text-gray-500 mt-1.5">{d.author}</p>}
+/* Images */
+.images-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:36px}
+.images-grid.single{grid-template-columns:1fr}
+.images-grid img{border-radius:var(--radius-sm);width:100%;object-fit:cover;border:1px solid var(--line)}
+
+@media(max-width:880px){
+  .body-wrap{grid-template-columns:1fr}
+  .sidebar{position:static;order:-1}
+}
+</style>
+
+<!-- Bande couleur faculté -->
+<div class="fac-band" style={`background:${facVar}`}></div>
+
+<!-- En-tête projet -->
+<div class="proj-head">
+  <div class="proj-head-inner">
+    <nav class="crumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a>
+      <span class="sep">/</span>
+      <a href="/catalogue">Catalogue</a>
+      <span class="sep">/</span>
+      <span class="cur">{d.title}</span>
+    </nav>
+
+    <div class="tagrow">
+      {d.faculty && (
+        <span class="tag fac" style={`background:${facVar}`}>{d.faculty}</span>
+      )}
+      {d.category && (
+        <span class="tag axe">{d.category}</span>
+      )}
+      {d.award && (
+        <span class="tag prix">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/>
+          </svg>
+          {d.award}
+        </span>
+      )}
+      {d.status === 'archivé' && (
+        <span class="tag archive">Archivé</span>
+      )}
     </div>
+
+    <h1>{d.title}</h1>
+    {d.author && (
+      <p class="author">
+        {d.author}{d.faculty ? ` · ${d.faculty}` : ''}
+      </p>
+    )}
   </div>
+</div>
 
-  <!-- Corps -->
-  <div class="max-w-7xl mx-auto px-4 py-8">
+<!-- Corps : grille main + sidebar -->
+<div class="body-wrap" style={`--fac:${facVar}`}>
 
-    {d.status === 'archivé' && (
-      <div class="bg-amber-50 border-l-4 border-amber-400 rounded-r p-4 mb-8 text-sm text-amber-800">
-        <strong class="font-semibold">Projet archivé.</strong> L'enseignement a pu évoluer depuis la publication de cette fiche.
+  <!-- Colonne principale -->
+  <div>
+    {d.description_short && (
+      <p class="lead-text">{d.description_short}</p>
+    )}
+
+    {d.youtube && (
+      <div class="media">
+        <iframe
+          src={d.youtube}
+          allowfullscreen
+          loading="lazy"
+          title={`Vidéo — ${d.title}`}
+        />
       </div>
     )}
 
-    <div class="grid md:grid-cols-3 gap-10">
-
-      <!-- Colonne principale -->
-      <div class="md:col-span-2">
-
-        {d.description_short && (
-          <p class="text-lg text-gray-600 leading-relaxed mb-8 pb-8 border-b border-gray-100">
-            {d.description_short}
-          </p>
-        )}
-
-        <!-- Vidéo YouTube -->
-        {d.youtube && (
-          <div class="aspect-video mb-8 rounded-lg overflow-hidden shadow-md bg-black">
-            <iframe
-              src={d.youtube}
-              class="w-full h-full"
-              allowfullscreen
-              loading="lazy"
-              title={`Vidéo — ${d.title}`}
-            />
-          </div>
-        )}
-
-        <!-- Images -->
-        {d.images && d.images.length > 0 && (
-          <div class={`grid gap-3 mb-8 ${d.images.length === 1 ? '' : 'grid-cols-2'}`}>
-            {d.images.map((img: string) => (
-              <img src={img} alt={d.title} class="rounded-lg w-full object-cover shadow-sm" loading="lazy" />
-            ))}
-          </div>
-        )}
-
-        <!-- Contenu Markdown -->
-        <div class="prose prose-gray prose-headings:text-gray-900 prose-h2:text-xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-3 prose-p:leading-relaxed prose-blockquote:border-l-unige-red prose-blockquote:text-gray-600 max-w-none">
-          <Content />
-        </div>
-
-        <!-- Lien observation -->
-        {d.observation_accepted && (
-          <div class="mt-10 p-5 bg-green-50 border border-green-200 rounded-lg">
-            <p class="text-sm font-semibold text-green-800 flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-              </svg>
-              Observation entre pairs acceptée
-            </p>
-            <p class="text-sm text-green-700 mt-1">
-              Cet·te enseignant·e accepte que des collègues observent son cours.
-              <a href="/observation" class="underline ml-1 font-medium">En savoir plus →</a>
-            </p>
-          </div>
-        )}
+    {d.images && d.images.length > 0 && (
+      <div class={`images-grid${d.images.length === 1 ? ' single' : ''}`}>
+        {d.images.map((img: string) => (
+          <img src={img} alt={d.title} loading="lazy" />
+        ))}
       </div>
+    )}
 
-      <!-- Sidebar métadonnées -->
-      <aside>
-        <div class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden sticky top-28">
-          <!-- En-tête sidebar couleur faculté -->
-          <div class="px-5 py-3 text-white text-sm font-semibold" style={`background-color: ${fc}`}>
-            Fiche du projet
-          </div>
-
-          <dl class="px-5 py-4 space-y-4 text-sm">
-            {d.author && (
-              <div>
-                <dt class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Responsable</dt>
-                <dd class="text-gray-900">{d.author}</dd>
-                {d.contact && (
-                  <dd class="mt-0.5">
-                    <a href={`mailto:${d.contact}`} class="text-xs text-unige-red hover:underline">{d.contact}</a>
-                  </dd>
-                )}
-              </div>
-            )}
-
-            {d.faculty && (
-              <div>
-                <dt class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Faculté</dt>
-                <dd>
-                  <span class="inline-block text-xs font-semibold px-2 py-0.5 rounded-full text-white" style={`background-color: ${fc}`}>
-                    {d.faculty}
-                  </span>
-                </dd>
-              </div>
-            )}
-
-            {d.course && (
-              <div>
-                <dt class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Cours</dt>
-                <dd class="text-gray-900">{d.course}</dd>
-                {d.course_code && <dd class="text-xs text-gray-500 mt-0.5">Code : {d.course_code}</dd>}
-              </div>
-            )}
-
-            {d.level && (
-              <div>
-                <dt class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Niveau</dt>
-                <dd class="text-gray-900">{d.level}</dd>
-              </div>
-            )}
-
-            {d.students && (
-              <div>
-                <dt class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Nb d'étudiants</dt>
-                <dd class="text-gray-900">{d.students}</dd>
-              </div>
-            )}
-
-            {d.year && (
-              <div>
-                <dt class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Mise en place</dt>
-                <dd class="text-gray-900">{d.year}</dd>
-              </div>
-            )}
-
-            {d.category && (
-              <div>
-                <dt class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Axe pédagogique</dt>
-                <dd>
-                  <span class="inline-block bg-red-50 text-unige-red text-xs px-2.5 py-1 rounded-full font-medium border border-red-100">
-                    {d.category}
-                  </span>
-                </dd>
-              </div>
-            )}
-
-            {d.innovation_type && (
-              <div>
-                <dt class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Type d'innovation</dt>
-                <dd class="text-gray-700 text-xs leading-relaxed">{d.innovation_type}</dd>
-              </div>
-            )}
-          </dl>
-
-          <!-- Actions -->
-          <div class="px-5 py-4 border-t border-gray-200 space-y-2">
-            <a href="/catalogue" class="flex items-center gap-1.5 text-sm text-gray-600 hover:text-unige-red transition">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-              </svg>
-              Retour au catalogue
-            </a>
-          </div>
-        </div>
-      </aside>
-
+    <div class="prose">
+      <Content />
     </div>
   </div>
 
+  <!-- Sidebar -->
+  <aside>
+    <div class="sidebar">
+      <div class="sb-head" style={`background:${facVar}`}>Fiche du projet</div>
+      <dl>
+        {d.author && (
+          <>
+            <dt>Responsable</dt>
+            <dd>{d.author}</dd>
+            {d.contact && (
+              <dd class="sub"><a href={`mailto:${d.contact}`}>{d.contact}</a></dd>
+            )}
+          </>
+        )}
+
+        {d.faculty && (
+          <>
+            <dt>Faculté</dt>
+            <dd>{d.faculty}</dd>
+          </>
+        )}
+
+        {d.course && (
+          <>
+            <dt>Cours</dt>
+            <dd>{d.course}</dd>
+            {d.course_code && <dd class="sub">Code : {d.course_code}</dd>}
+          </>
+        )}
+
+        {d.level && (
+          <>
+            <dt>Niveau</dt>
+            <dd>{d.level}</dd>
+          </>
+        )}
+
+        {d.students && (
+          <>
+            <dt>Étudiant·es</dt>
+            <dd>{d.students}</dd>
+          </>
+        )}
+
+        {d.year && (
+          <>
+            <dt>Mise en place</dt>
+            <dd>Depuis {d.year}</dd>
+          </>
+        )}
+
+        {d.category && (
+          <>
+            <dt>Axe pédagogique</dt>
+            <dd>{d.category}</dd>
+          </>
+        )}
+
+        {d.innovation_type && (
+          <>
+            <dt>Type d'innovation</dt>
+            <dd class="sub">{d.innovation_type}</dd>
+          </>
+        )}
+      </dl>
+      <div class="sb-foot">
+        <a href="/catalogue">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+               stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 19l-7-7 7-7"/>
+          </svg>
+          Retour au catalogue
+        </a>
+      </div>
+    </div>
+
+    {d.observation_accepted && (
+      <div class="obs">
+        <strong>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.5 12C4 7.9 7.7 5 12 5s8 2.9 9.5 7c-1.5 4.1-5.2 7-9.5 7s-8-2.9-9.5-7z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          Observation entre pairs
+        </strong>
+        <p>
+          Cet·te enseignant·e accepte que des collègues observent son cours.
+          <a href="/observation">En savoir plus →</a>
+        </p>
+      </div>
+    )}
+  </aside>
+
+</div>
 </Base>

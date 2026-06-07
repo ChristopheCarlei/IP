@@ -3,250 +3,250 @@ import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
 const allProjects = await getCollection('projects');
-const activeProjects = allProjects.filter(p => p.data.status === 'actif');
 const featured = allProjects.filter(p => p.data.featured).slice(0, 6);
-const activeCount = activeProjects.length;
+const activeCount = allProjects.filter(p => p.data.status === 'actif').length;
+const awardCount  = allProjects.filter(p => p.data.award).length;
 
-// Couleurs par faculté
-const facultyColors: Record<string, string> = {
-  FPSE:      '#4B0B71',
-  GSEM:      '#465F7F',
-  FTI:       '#FF5C00',
-  Sciences:  '#007E64',
-  Médecine:  '#96004B',
-  Droit:     '#0067C5',
-  Lettres:   '#F1AB00',
-  SdS:       '#00b1ae',
-  Théologie: '#CF0063',
-};
-
-function facultyColor(fac?: string): string {
-  if (!fac) return '#6B7280';
-  for (const [key, val] of Object.entries(facultyColors)) {
-    if (fac.toUpperCase().includes(key.toUpperCase())) return val;
-  }
-  return '#6B7280';
+// Couleur CSS variable par faculté
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE') || f.includes('PSYCH')) return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                                               return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD'))                        return 'var(--fac-fti)';
+  if (f.includes('SCIEN') && !f.includes('SOC'))                       return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))                         return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))                         return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                                              return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))                         return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO'))                        return 'var(--fac-theologie)';
+  return 'var(--rose)';
 }
-
-// 4 axes pédagogiques
-const axes = [
-  {
-    slug: 'preparer',
-    label: 'Préparer',
-    description: "Demander aux étudiant·es d'effectuer une tâche avant le cours",
-    icon: '📖',
-    color: '#0067C5',
-  },
-  {
-    slug: 'rendre-actif',
-    label: 'Rendre actif',
-    description: 'Engager les étudiant·es pendant la séance',
-    icon: '⚡',
-    color: '#007E64',
-  },
-  {
-    slug: 'responsabiliser',
-    label: 'Responsabiliser',
-    description: "Développer l'autonomie et la responsabilité",
-    icon: '🎯',
-    color: '#F1AB00',
-  },
-  {
-    slug: 'faire-creer',
-    label: 'Faire créer',
-    description: "Inviter les étudiant·es à produire quelque chose d'original",
-    icon: '✨',
-    color: '#CF0063',
-  },
-];
+function isLightFac(fac?: string | null): boolean {
+  const f = fac?.toUpperCase() ?? '';
+  return f.includes('SOC') || f.includes('SDS');
+}
+function getAxisVar(cat?: string | null): string {
+  if (!cat) return 'var(--rose)';
+  const c = cat.toLowerCase();
+  if (c.includes('préparer') || c.includes('preparer')) return 'var(--fac-lettres)';
+  if (c.includes('actif'))                               return 'var(--fac-sciences)';
+  if (c.includes('responsabi'))                          return '#C28A00';
+  if (c.includes('créer') || c.includes('creer'))        return 'var(--rose)';
+  return 'var(--rose)';
+}
 ---
 <Base title="Accueil">
+<style>
+/* ---- Hero ------------------------------------------------ */
+.hero{background:var(--rose-deep);color:#fff;position:relative;overflow:hidden;width:auto;padding:0;margin:0}
+.hero::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
+.hero-inner{width:var(--content);margin:auto;padding:clamp(56px,7vw,104px) 0 clamp(48px,6vw,80px);position:relative;z-index:1}
+.hero .eyebrow{color:#fff;border-left:3px solid #fff;padding-left:12px;opacity:.92;margin-bottom:24px}
+.hero h1{font-size:clamp(36px,5.4vw,66px);line-height:1.02;letter-spacing:-.025em;font-weight:800;max-width:17ch;margin:0}
+.hero .lead{font-size:clamp(17px,1.7vw,21px);color:rgba(255,255,255,.9);max-width:60ch;margin:24px 0 0;font-weight:400}
+.hero .lead strong{font-weight:700;color:#fff}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin:34px 0 0}
+.hero .actions .btn.primary{background:#fff;color:var(--rose-deep)}
+.hero .actions .btn.primary:hover{background:var(--bg-rose)}
+.hero .actions .btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.hero .actions .btn.secondary:hover{border-color:#fff;background:rgba(255,255,255,.08)}
 
-  <!-- Bannière hero UNIGE -->
-  <section class="bg-unige-red text-white">
-    <div class="max-w-7xl mx-auto px-4 py-14 md:py-20">
-      <div class="max-w-2xl">
-        <p class="text-sm font-semibold uppercase tracking-widest opacity-80 mb-3">
-          Université de Genève
-        </p>
-        <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
-          Bienvenue sur la plateforme d'Innovations Pédagogiques
-        </h1>
-        <p class="text-lg opacity-90 mb-8 leading-relaxed">
-          Découvrez <strong class="font-semibold">{activeCount}+ projets</strong> d'enseignants qui innovent
-          dans leurs cours à l'Université de Genève.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a href="/catalogue"
-             class="bg-white text-unige-red font-semibold px-6 py-3 rounded hover:bg-gray-100 transition text-sm">
-            Explorer le catalogue
-          </a>
-          <a href="/videos"
-             class="border border-white/60 px-6 py-3 rounded hover:bg-white/10 transition text-sm font-medium">
-            Voir les vidéos
-          </a>
-        </div>
+/* ---- 3 espaces ------------------------------------------- */
+.steps-wrap{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);width:var(--content);margin:auto}
+.step{padding:clamp(34px,4vw,52px) clamp(20px,2.5vw,40px)}
+.step:not(:last-child){border-right:1px solid var(--line)}
+.step .n{width:38px;height:38px;border-radius:50%;background:var(--rose);color:#fff;display:grid;place-items:center;font-weight:800;font-size:16px;margin-bottom:18px;flex-shrink:0}
+.step h3{font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:9px}
+.step p{color:var(--muted);font-size:15px;margin:0 0 16px}
+.step .pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.step .pill{font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;color:#fff}
+
+/* ---- 4 axes ---------------------------------------------- */
+.axes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.axe{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;border-top:3px solid var(--ax);transition:border-color .18s,box-shadow .18s,transform .18s;text-decoration:none;color:inherit}
+.axe:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.axe .ic{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px;background:color-mix(in srgb,var(--ax) 12%,#fff);color:var(--ax)}
+.axe .ic svg{width:24px;height:24px}
+.axe h3{font-size:19px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+.axe p{color:var(--muted);font-size:14.5px;margin:0 0 16px;line-height:1.5}
+.axe .go{font-size:13px;font-weight:800;color:var(--ax);display:inline-flex;align-items:center;gap:5px}
+
+/* ---- Featured -------------------------------------------- */
+.featured-wrap{background:var(--bg-soft);border-top:1px solid var(--line)}
+
+/* ---- Chiffres clés --------------------------------------- */
+.figures{background:var(--rose-deep);color:#fff}
+.figures-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.fig strong{display:block;font-size:clamp(38px,4.5vw,54px);font-weight:800;letter-spacing:-.02em;line-height:1}
+.fig span{display:block;font-size:14.5px;color:rgba(255,255,255,.82);margin-top:8px}
+.fig:not(:last-child){border-right:1px solid rgba(255,255,255,.18)}
+
+@media(max-width:1080px){.axes{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+  .steps,.axes,.figures-inner{grid-template-columns:1fr}
+  .step:not(:last-child){border-right:0;border-bottom:1px solid var(--line)}
+  .fig:not(:last-child){border-right:0;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:24px}
+}
+@media(prefers-reduced-motion:reduce){.axe{transition:none}}
+</style>
+
+<!-- HÉROS -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Université de Genève · Pôle SEA</span>
+    <h1>L'innovation pédagogique, recensée et partagée</h1>
+    <p class="lead">
+      Découvrez <strong>{activeCount}+ projets</strong> d'enseignant·es qui réinventent
+      leurs cours à l'Université de Genève — et puisez-y de quoi transformer les vôtres.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="/catalogue">Explorer le catalogue</a>
+      <a class="btn secondary" href="#axes">Découvrir les 4 axes</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3 ESPACES -->
+<div class="steps-wrap">
+  <div class="steps">
+    <div class="step">
+      <div class="n">1</div>
+      <h3>Découvrir</h3>
+      <p>Parcourez les projets recensés à l'UNIGE. Filtrez par faculté, axe pédagogique ou type d'innovation.</p>
+      <a class="sec-link" href="/catalogue">Aller au catalogue →</a>
+    </div>
+    <div class="step">
+      <div class="n">2</div>
+      <h3>Explorer</h3>
+      <p>Approfondissez un des 4 axes qui structurent les innovations pédagogiques de l'Université.</p>
+      <div class="pills">
+        <span class="pill" style="background:var(--fac-lettres)">Préparer</span>
+        <span class="pill" style="background:var(--fac-sciences)">Rendre actif</span>
+        <span class="pill" style="background:#C28A00;color:#fff">Responsabiliser</span>
+        <span class="pill" style="background:var(--rose)">Faire créer</span>
       </div>
     </div>
-  </section>
+    <div class="step">
+      <div class="n">3</div>
+      <h3>Réaliser</h3>
+      <p>Bénéficiez du soutien du Pôle SEA pour concevoir et mettre en œuvre votre propre projet d'innovation.</p>
+      <a class="sec-link" href="/soutien">En savoir plus →</a>
+    </div>
+  </div>
+</div>
 
-  <!-- Trois espaces : Découvrir / Explorer / Réaliser -->
-  <section class="border-b border-gray-100 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
-        <!-- Découvrir -->
-        <div class="py-10 md:pr-8">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="w-8 h-8 rounded-full bg-unige-red text-white flex items-center justify-center text-sm font-bold">1</span>
-            <h2 class="text-lg font-bold text-gray-900">Découvrir</h2>
-          </div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            Parcourez les projets d'innovation pédagogique recensés à l'UNIGE.
-            Filtrez par faculté, axe pédagogique ou type d'innovation.
-          </p>
-          <a href="/catalogue" class="text-sm font-semibold text-unige-red hover:underline inline-flex items-center gap-1">
-            Aller au catalogue
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
+<!-- 4 AXES -->
+<section id="axes">
+  <div class="head head-row">
+    <div>
+      <span class="eyebrow">Cadre pédagogique</span>
+      <h2>Quatre axes d'innovation</h2>
+    </div>
+    <a class="sec-link" href="/catalogue" style="white-space:nowrap;padding-bottom:8px">Voir tous les projets →</a>
+  </div>
+  <div class="axes">
+    <a class="axe" href="/axes/preparer" style="--ax:var(--fac-lettres)">
+      <span class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 5h7a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4z"/>
+          <path d="M20 5h-7a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h7z"/>
+        </svg>
+      </span>
+      <h3>Préparer</h3>
+      <p>Demander aux étudiant·es d'effectuer une tâche avant le cours.</p>
+      <span class="go">Explorer →</span>
+    </a>
+    <a class="axe" href="/axes/rendre-actif" style="--ax:var(--fac-sciences)">
+      <span class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13 2 4 14h7l-1 8 9-12h-7z"/>
+        </svg>
+      </span>
+      <h3>Rendre actif</h3>
+      <p>Engager les étudiant·es pendant la séance, en présence comme à distance.</p>
+      <span class="go">Explorer →</span>
+    </a>
+    <a class="axe" href="/axes/responsabiliser" style="--ax:#C28A00">
+      <span class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="12" cy="12" r="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <h3>Responsabiliser</h3>
+      <p>Développer l'autonomie et la responsabilité dans l'apprentissage.</p>
+      <span class="go">Explorer →</span>
+    </a>
+    <a class="axe" href="/axes/faire-creer" style="--ax:var(--rose)">
+      <span class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/>
+          <circle cx="12" cy="12" r="4"/>
+        </svg>
+      </span>
+      <h3>Faire créer</h3>
+      <p>Inviter les étudiant·es à produire quelque chose d'original et d'utile.</p>
+      <span class="go">Explorer →</span>
+    </a>
+  </div>
+</section>
 
-        <!-- Explorer -->
-        <div class="py-10 md:px-8">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="w-8 h-8 rounded-full bg-unige-red text-white flex items-center justify-center text-sm font-bold">2</span>
-            <h2 class="text-lg font-bold text-gray-900">Explorer</h2>
-          </div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            Approfondissez un axe pédagogique parmi les 4 approches qui structurent
-            les innovations : Préparer, Rendre actif, Responsabiliser, Faire créer.
-          </p>
-          <div class="flex flex-wrap gap-2 mt-3">
-            {axes.map(axe => (
-              <a
-                href={`/axes/${axe.slug}`}
-                class="text-xs font-semibold px-3 py-1.5 rounded-full text-white transition hover:opacity-80"
-                style={`background-color: ${axe.color}`}
-              >
-                {axe.label}
-              </a>
-            ))}
-          </div>
+<!-- PROJETS EN VEDETTE -->
+{featured.length > 0 && (
+  <div class="featured-wrap">
+    <section>
+      <div class="head head-row">
+        <div>
+          <span class="eyebrow">Sélection</span>
+          <h2>Projets mis en avant</h2>
         </div>
-
-        <!-- Réaliser -->
-        <div class="py-10 md:pl-8">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="w-8 h-8 rounded-full bg-unige-red text-white flex items-center justify-center text-sm font-bold">3</span>
-            <h2 class="text-lg font-bold text-gray-900">Réaliser</h2>
-          </div>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            Bénéficiez du soutien du SEA pour concevoir et mettre en œuvre
-            votre propre projet d'innovation pédagogique.
-          </p>
-          <a href="/soutien" class="text-sm font-semibold text-unige-red hover:underline inline-flex items-center gap-1">
-            En savoir plus
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
+        <a class="sec-link" href="/catalogue" style="white-space:nowrap;padding-bottom:8px">Tous les projets →</a>
       </div>
-    </div>
-  </section>
-
-  <!-- 4 axes pédagogiques -->
-  <section class="max-w-7xl mx-auto px-4 py-14">
-    <div class="flex items-baseline justify-between mb-8">
-      <h2 class="text-2xl font-bold text-gray-900">4 axes pédagogiques</h2>
-      <a href="/catalogue" class="text-sm text-unige-red font-medium hover:underline">Voir tous les projets →</a>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      {axes.map(axe => (
-        <a
-          href={`/axes/${axe.slug}`}
-          class="group block bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
-          style={`border-top: 3px solid ${axe.color}`}
-        >
-          <span class="text-2xl mb-3 block">{axe.icon}</span>
-          <h3 class="font-bold text-gray-900 mb-2 group-hover:text-unige-red transition-colors">
-            {axe.label}
-          </h3>
-          <p class="text-sm text-gray-500 leading-relaxed">{axe.description}</p>
-          <span class="mt-4 inline-block text-xs font-semibold" style={`color: ${axe.color}`}>
-            Explorer →
-          </span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <!-- Projets en vedette -->
-  {featured.length > 0 && (
-    <section class="bg-gray-50 py-14 border-t border-gray-100">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex items-baseline justify-between mb-8">
-          <h2 class="text-2xl font-bold text-gray-900">Projets mis en avant</h2>
-          <a href="/catalogue" class="text-sm text-unige-red font-medium hover:underline">Tous les projets →</a>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featured.map(p => {
-            const fc = facultyColor(p.data.faculty);
-            return (
-              <a
-                href={`/projets/${p.slug}`}
-                class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow flex flex-col"
-              >
-                {p.data.images?.[0] ? (
-                  <img src={p.data.images[0]} alt={p.data.title} class="w-full h-44 object-cover" loading="lazy" />
-                ) : (
-                  <div class="w-full h-2" style={`background-color: ${fc}`} />
+      <div class="cards">
+        {featured.map(p => {
+          const facVar = getFacVar(p.data.faculty);
+          const light  = isLightFac(p.data.faculty);
+          const axeVar = getAxisVar(p.data.category);
+          return (
+            <article class="card" style={`--fac:${facVar}`}>
+              <div class={`cover${light ? ' light' : ''}`}>
+                {p.data.faculty && <span class="fac">{p.data.faculty}</span>}
+                {p.data.award && (
+                  <span class="award">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                      <path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/>
+                    </svg>
+                    {p.data.award}
+                  </span>
                 )}
-                <div class="p-5 flex-1 flex flex-col">
-                  <div class="flex items-center gap-2 mb-2">
-                    {p.data.faculty && (
-                      <span class="text-xs font-semibold px-2 py-0.5 rounded-full text-white" style={`background-color: ${fc}`}>
-                        {p.data.faculty}
-                      </span>
-                    )}
-                    {p.data.category && (
-                      <span class="text-xs text-gray-500">{p.data.category}</span>
-                    )}
-                  </div>
-                  <h3 class="font-semibold text-gray-900 group-hover:text-unige-red transition-colors leading-snug mb-1">
-                    {p.data.title}
-                  </h3>
-                  {p.data.author && (
-                    <p class="text-sm text-gray-500 mt-auto pt-2">{p.data.author}</p>
-                  )}
+                {p.data.category && <span class="axe-name">{p.data.category}</span>}
+              </div>
+              <div class="card-body">
+                <h3><a href={`/projets/${p.slug}`}>{p.data.title}</a></h3>
+                {p.data.description_short && <p>{p.data.description_short}</p>}
+                <div class="meta">
+                  <span>{p.data.author ?? ''}</span>
+                  {p.data.year && <span>{p.data.year}</span>}
                 </div>
-              </a>
-            );
-          })}
-        </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
-  )}
+  </div>
+)}
 
-  <!-- Bandeau chiffres clés -->
-  <section class="bg-unige-red text-white py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <p class="text-4xl font-bold">{activeCount}+</p>
-          <p class="text-sm opacity-80 mt-1">projets actifs</p>
-        </div>
-        <div>
-          <p class="text-4xl font-bold">11</p>
-          <p class="text-sm opacity-80 mt-1">facultés</p>
-        </div>
-        <div>
-          <p class="text-4xl font-bold">4</p>
-          <p class="text-sm opacity-80 mt-1">axes pédagogiques</p>
-        </div>
-        <div>
-          <p class="text-4xl font-bold">∞</p>
-          <p class="text-sm opacity-80 mt-1">idées à partager</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<!-- CHIFFRES CLÉS -->
+<div class="figures">
+  <div class="figures-inner">
+    <div class="fig"><strong>{activeCount}+</strong><span>projets recensés</span></div>
+    <div class="fig"><strong>9</strong><span>facultés représentées</span></div>
+    <div class="fig"><strong>4</strong><span>axes pédagogiques</span></div>
+    <div class="fig"><strong>{awardCount || 8}</strong><span>lauréat·es du Prix</span></div>
+  </div>
+</div>
 </Base>

@@ -6,223 +6,198 @@ const allProjects = await getCollection('projects');
 
 const faculties  = [...new Set(allProjects.map(p => p.data.faculty).filter(Boolean))].sort() as string[];
 const categories = [...new Set(allProjects.map(p => p.data.category).filter(Boolean))].sort() as string[];
-const years      = [...new Set(allProjects.map(p => p.data.year ? String(p.data.year) : null).filter(Boolean))].sort((a, b) => Number(b) - Number(a)) as string[];
+const years      = [...new Set(
+  allProjects.map(p => p.data.year ? String(p.data.year) : null).filter(Boolean)
+)].sort((a, b) => Number(b) - Number(a)) as string[];
 
-// Couleur par faculté
-const facultyColors: Record<string, string> = {
-  FPSE:      '#4B0B71',
-  GSEM:      '#465F7F',
-  FTI:       '#FF5C00',
-  Sciences:  '#007E64',
-  Médecine:  '#96004B',
-  Droit:     '#0067C5',
-  Lettres:   '#F1AB00',
-  SdS:       '#00b1ae',
-  Théologie: '#CF0063',
-};
-
-function facultyColor(fac?: string | null): string {
-  if (!fac) return '#6B7280';
-  for (const [key, val] of Object.entries(facultyColors)) {
-    if (fac.toUpperCase().includes(key.toUpperCase())) return val;
-  }
-  return '#6B7280';
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE') || f.includes('PSYCH')) return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                                               return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD'))                        return 'var(--fac-fti)';
+  if (f.includes('SCIEN') && !f.includes('SOC'))                       return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))                         return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))                         return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                                              return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))                         return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO'))                        return 'var(--fac-theologie)';
+  return 'var(--rose)';
+}
+function isLightFac(fac?: string | null): boolean {
+  const f = fac?.toUpperCase() ?? '';
+  return f.includes('SOC') || f.includes('SDS');
 }
 ---
 <Base title="Catalogue des projets">
+<style>
+.page-head{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.page-head-inner{width:var(--content);margin:auto;padding:clamp(36px,5vw,56px) 0 clamp(28px,4vw,40px)}
+.page-head .eyebrow{margin-bottom:10px}
+.page-head h1{font-size:clamp(30px,4vw,46px);line-height:1.04;letter-spacing:-.025em;font-weight:800;margin:0}
+.page-head p{color:var(--muted);font-size:17px;margin:12px 0 0}
 
-  <!-- En-tête page -->
-  <div class="bg-gray-50 border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 py-8">
-      <h1 class="text-2xl font-bold text-gray-900 mb-1">Catalogue des projets</h1>
-      <p class="text-gray-500 text-sm">{allProjects.length} projets répertoriés</p>
-    </div>
+.wrap{width:var(--content);margin:auto;padding:clamp(32px,4vw,48px) 0}
+
+.filters{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:28px;box-shadow:var(--shadow)}
+.filters .legend{font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);margin:0 0 16px}
+.filter-grid{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:16px;align-items:end}
+.filter{display:flex;flex-direction:column;gap:7px;min-width:0}
+.filter label{font-size:12.5px;font-weight:800;letter-spacing:.03em;color:var(--ink)}
+.filter select,.filter input{width:100%;border:1.5px solid var(--line-strong);border-radius:var(--radius-sm);padding:11px 12px;font:inherit;font-size:15px;background:#fff;color:var(--ink);outline:none;transition:border-color .15s}
+.filter select:hover,.filter input:hover{border-color:var(--rose)}
+.filter select:focus,.filter input:focus{border-color:var(--rose);outline:3px solid rgba(207,0,99,.25);outline-offset:0}
+.reset{border:1.5px solid var(--line-strong);background:#fff;color:var(--rose);border-radius:999px;padding:11px 18px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--font);white-space:nowrap;transition:border-color .15s}
+.reset:hover{border-color:var(--rose)}
+.result-count{color:var(--muted);font-weight:700;font-size:15px;margin-bottom:18px}
+
+.cards{grid-template-columns:repeat(auto-fill,minmax(288px,1fr))}
+.empty{display:none;padding:48px 32px;text-align:center;border:1px dashed var(--line-strong);border-radius:var(--radius);background:var(--bg-soft);color:var(--muted)}
+.empty svg{width:44px;height:44px;margin:0 auto 14px;opacity:.4;display:block}
+.empty p{font-size:18px;font-weight:700;color:var(--ink);margin:0 0 12px}
+.empty button{background:none;border:0;color:var(--rose);font-weight:700;font-size:15px;cursor:pointer;font-family:var(--font);text-decoration:underline}
+
+@media(max-width:880px){.filter-grid{grid-template-columns:1fr 1fr}.reset{grid-column:1/-1}}
+@media(max-width:760px){.filter-grid{grid-template-columns:1fr}}
+</style>
+
+<!-- En-tête page -->
+<div class="page-head">
+  <div class="page-head-inner">
+    <span class="eyebrow">Catalogue</span>
+    <h1>Tous les projets d'innovation</h1>
+    <p>Parcourez les démarches recensées à l'Université de Genève. Filtrez par faculté, axe pédagogique ou année.</p>
   </div>
+</div>
 
-  <div class="max-w-7xl mx-auto px-4 py-8">
-
-    <!-- Filtres -->
-    <div class="bg-white border border-gray-200 rounded-lg p-5 mb-8 shadow-sm">
-      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Filtrer les projets</p>
-      <div class="flex flex-wrap gap-4 items-end">
-
-        <div class="flex flex-col gap-1 min-w-[160px]">
-          <label for="filter-faculty" class="text-xs font-medium text-gray-600">Faculté</label>
-          <select id="filter-faculty" class="border border-gray-300 rounded px-3 py-2 text-sm bg-white focus:ring-1 focus:ring-unige-red focus:border-unige-red outline-none">
-            <option value="">Toutes les facultés</option>
-            {faculties.map(f => <option value={f}>{f}</option>)}
-          </select>
-        </div>
-
-        <div class="flex flex-col gap-1 min-w-[180px]">
-          <label for="filter-category" class="text-xs font-medium text-gray-600">Axe pédagogique</label>
-          <select id="filter-category" class="border border-gray-300 rounded px-3 py-2 text-sm bg-white focus:ring-1 focus:ring-unige-red focus:border-unige-red outline-none">
-            <option value="">Tous les axes</option>
-            {categories.map(c => <option value={c}>{c}</option>)}
-          </select>
-        </div>
-
-        <div class="flex flex-col gap-1 min-w-[130px]">
-          <label for="filter-year" class="text-xs font-medium text-gray-600">Année</label>
-          <select id="filter-year" class="border border-gray-300 rounded px-3 py-2 text-sm bg-white focus:ring-1 focus:ring-unige-red focus:border-unige-red outline-none">
-            <option value="">Toutes</option>
-            {years.map(y => <option value={y}>{y}</option>)}
-          </select>
-        </div>
-
-        <div class="flex flex-col gap-1 flex-1 min-w-[200px]">
-          <label for="filter-search" class="text-xs font-medium text-gray-600">Recherche libre</label>
-          <input
-            id="filter-search"
-            type="search"
-            placeholder="Titre, auteur, cours…"
-            class="border border-gray-300 rounded px-3 py-2 text-sm bg-white focus:ring-1 focus:ring-unige-red focus:border-unige-red outline-none"
-          />
-        </div>
-
-        <div class="flex gap-2 items-end pb-0.5">
-          <button id="filter-reset" class="px-4 py-2 text-sm text-gray-600 border border-gray-300 rounded hover:bg-gray-50 transition">
-            Réinitialiser
-          </button>
-        </div>
+<div class="wrap">
+  <!-- Filtres -->
+  <div class="filters">
+    <p class="legend">Filtrer les projets</p>
+    <div class="filter-grid">
+      <div class="filter">
+        <label for="f-fac">Faculté</label>
+        <select id="f-fac">
+          <option value="">Toutes les facultés</option>
+          {faculties.map(f => <option value={f}>{f}</option>)}
+        </select>
       </div>
+      <div class="filter">
+        <label for="f-axe">Axe pédagogique</label>
+        <select id="f-axe">
+          <option value="">Tous les axes</option>
+          {categories.map(c => <option value={c}>{c}</option>)}
+        </select>
+      </div>
+      <div class="filter">
+        <label for="f-year">Année</label>
+        <select id="f-year">
+          <option value="">Toutes</option>
+          {years.map(y => <option value={y}>{y}</option>)}
+        </select>
+      </div>
+      <button class="reset" id="reset" type="button">Réinitialiser</button>
     </div>
-
-    <!-- Résultats -->
-    <div class="flex items-center justify-between mb-4">
-      <p id="result-count" class="text-sm text-gray-500"></p>
-    </div>
-
-    <!-- Grille projets -->
-    <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      {allProjects.map(p => {
-        const fc = facultyColor(p.data.faculty);
-        return (
-          <a
-            href={`/projets/${p.slug}`}
-            class="project-card group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow flex flex-col"
-            data-faculty={p.data.faculty ?? ''}
-            data-category={p.data.category ?? ''}
-            data-year={p.data.year ? String(p.data.year) : ''}
-            data-title={(p.data.title ?? '').toLowerCase()}
-            data-author={(p.data.author ?? '').toLowerCase()}
-            data-innovation={(p.data.innovation_type ?? '').toLowerCase()}
-          >
-            <!-- Bande couleur faculté ou image -->
-            {p.data.images?.[0] ? (
-              <img src={p.data.images[0]} alt={p.data.title} class="w-full h-40 object-cover" loading="lazy" />
-            ) : (
-              <div class="h-1.5 w-full" style={`background-color: ${fc}`} />
-            )}
-
-            <div class="p-4 flex-1 flex flex-col">
-              <!-- Tags -->
-              <div class="flex items-center gap-2 mb-2 flex-wrap">
-                {p.data.faculty && (
-                  <span
-                    class="text-[11px] font-semibold px-2 py-0.5 rounded-full text-white leading-tight"
-                    style={`background-color: ${fc}`}
-                  >
-                    {p.data.faculty}
-                  </span>
-                )}
-                {p.data.status === 'archivé' && (
-                  <span class="text-[11px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full leading-tight">
-                    Archivé
-                  </span>
-                )}
-              </div>
-
-              <!-- Titre -->
-              <h2 class="font-semibold text-gray-900 group-hover:text-unige-red transition-colors leading-snug text-sm mb-1">
-                {p.data.title}
-              </h2>
-
-              <!-- Auteur -->
-              {p.data.author && (
-                <p class="text-xs text-gray-500 mt-0.5">{p.data.author}</p>
-              )}
-
-              <!-- Description courte -->
-              {p.data.description_short && (
-                <p class="text-xs text-gray-500 mt-2 line-clamp-2 leading-relaxed">
-                  {p.data.description_short}
-                </p>
-              )}
-
-              <!-- Bas de carte : axe + année -->
-              <div class="flex items-center justify-between mt-auto pt-3 gap-2">
-                {p.data.category && (
-                  <span class="text-[11px] text-gray-400 italic truncate">{p.data.category}</span>
-                )}
-                {p.data.year && (
-                  <span class="text-[11px] text-gray-400 shrink-0">{p.data.year}</span>
-                )}
-              </div>
-            </div>
-          </a>
-        );
-      })}
-    </div>
-
-    <!-- Message aucun résultat -->
-    <div id="no-results" class="hidden text-center py-20 text-gray-400">
-      <svg class="w-12 h-12 mx-auto mb-4 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-      </svg>
-      <p class="text-lg font-medium text-gray-500">Aucun projet ne correspond à ces filtres.</p>
-      <button id="reset-btn-2" class="mt-4 text-sm text-unige-red hover:underline">Réinitialiser les filtres</button>
+    <div class="filter" style="margin-top:16px">
+      <label for="f-q">Recherche libre</label>
+      <input id="f-q" type="search" placeholder="Titre, enseignant·e, mot-clé…" />
     </div>
   </div>
 
-  <script>
-    const cards     = document.querySelectorAll<HTMLElement>('.project-card');
-    const facultyEl = document.getElementById('filter-faculty')   as HTMLSelectElement;
-    const categoryEl= document.getElementById('filter-category')  as HTMLSelectElement;
-    const yearEl    = document.getElementById('filter-year')      as HTMLSelectElement;
-    const searchEl  = document.getElementById('filter-search')    as HTMLInputElement;
-    const resetBtn  = document.getElementById('filter-reset');
-    const resetBtn2 = document.getElementById('reset-btn-2');
-    const countEl   = document.getElementById('result-count');
-    const noResults = document.getElementById('no-results');
+  <p class="result-count" id="count"></p>
 
-    function resetAll() {
-      facultyEl.value  = '';
-      categoryEl.value = '';
-      yearEl.value     = '';
-      searchEl.value   = '';
-      applyFilters();
-    }
+  <!-- Grille -->
+  <div class="cards" id="grid">
+    {allProjects.map(p => {
+      const facVar = getFacVar(p.data.faculty);
+      const light  = isLightFac(p.data.faculty);
+      const searchStr = [
+        p.data.title,
+        p.data.author,
+        p.data.category,
+        p.data.innovation_type,
+        p.data.faculty,
+      ].filter(Boolean).join(' ').toLowerCase();
 
-    function applyFilters() {
-      const faculty  = facultyEl.value;
-      const category = categoryEl.value;
-      const year     = yearEl.value;
-      const search   = searchEl.value.trim().toLowerCase();
-      let visible = 0;
+      return (
+        <article
+          class="card"
+          data-faculty={p.data.faculty ?? ''}
+          data-axe={p.data.category ?? ''}
+          data-year={p.data.year ? String(p.data.year) : ''}
+          data-search={searchStr}
+          style={`--fac:${facVar}`}
+        >
+          <div class={`cover${light ? ' light' : ''}`}>
+            {p.data.faculty && <span class="fac">{p.data.faculty}</span>}
+            {p.data.award && (
+              <span class="award">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/>
+                </svg>
+                {p.data.award}
+              </span>
+            )}
+            {p.data.category && <span class="axe-name">{p.data.category}</span>}
+          </div>
+          <div class="card-body">
+            <h3><a href={`/projets/${p.slug}`}>{p.data.title}</a></h3>
+            {p.data.description_short && <p>{p.data.description_short}</p>}
+            <div class="meta">
+              <span>{p.data.author ?? ''}</span>
+              {p.data.year && <span>{p.data.year}</span>}
+            </div>
+          </div>
+        </article>
+      );
+    })}
+  </div>
 
-      cards.forEach(card => {
-        const match =
-          (!faculty  || card.dataset.faculty === faculty) &&
-          (!category || card.dataset.category === category) &&
-          (!year     || card.dataset.year === year) &&
-          (!search   ||
-            card.dataset.title!.includes(search) ||
-            card.dataset.author!.includes(search) ||
-            card.dataset.innovation!.includes(search));
+  <div class="empty" id="empty">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 21l-6-6"/><circle cx="10" cy="10" r="7"/>
+    </svg>
+    <p>Aucun projet ne correspond à ces filtres.</p>
+    <button id="reset2" type="button">Réinitialiser les filtres</button>
+  </div>
+</div>
 
-        card.style.display = match ? '' : 'none';
-        if (match) visible++;
-      });
+<script>
+/* Menu mobile géré par Base.astro */
 
-      if (countEl) countEl.textContent = `${visible} projet${visible !== 1 ? 's' : ''} affiché${visible !== 1 ? 's' : ''}`;
-      if (noResults) noResults.classList.toggle('hidden', visible > 0);
-    }
+/* Filtres catalogue */
+(function () {
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.card'));
+  const fac   = document.getElementById('f-fac')  as HTMLSelectElement;
+  const axe   = document.getElementById('f-axe')  as HTMLSelectElement;
+  const yr    = document.getElementById('f-year') as HTMLSelectElement;
+  const q     = document.getElementById('f-q')    as HTMLInputElement;
+  const count = document.getElementById('count')!;
+  const empty = document.getElementById('empty')!;
 
-    [facultyEl, categoryEl, yearEl, searchEl].forEach(el => el?.addEventListener('input', applyFilters));
-    resetBtn?.addEventListener('click', resetAll);
-    resetBtn2?.addEventListener('click', resetAll);
+  function apply() {
+    const fv = fac.value, av = axe.value, yv = yr.value;
+    const qv = q.value.trim().toLowerCase();
+    let shown = 0;
+    cards.forEach(c => {
+      const ok =
+        (!fv || c.dataset.faculty === fv) &&
+        (!av || c.dataset.axe === av) &&
+        (!yv || c.dataset.year === yv) &&
+        (!qv || (c.dataset.search ?? '').includes(qv));
+      c.style.display = ok ? 'flex' : 'none';
+      if (ok) shown++;
+    });
+    count.textContent = shown + ' projet' + (shown !== 1 ? 's' : '') + ' affiché' + (shown !== 1 ? 's' : '');
+    empty.style.display = shown ? 'none' : 'block';
+  }
 
-    applyFilters();
-  </script>
+  function reset() { fac.value = ''; axe.value = ''; yr.value = ''; q.value = ''; apply(); }
+
+  [fac, axe, yr, q].forEach(el => el.addEventListener('input', apply));
+  document.getElementById('reset')!.addEventListener('click', reset);
+  document.getElementById('reset2')!.addEventListener('click', reset);
+  apply();
+})();
+</script>
 </Base>
