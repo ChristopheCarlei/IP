@@ -1,0 +1,24 @@
+---
+id: 52
+title: "Involvement & transfer of Isabel Voirol-Rubido"
+description_short: "This course uses various pedagogical tools, such as press articles and role plays, to facilitate the transfer of theoretical knowledge in professional contexts and promote students' learning as future trainers in companies."
+---
+
+## Initial situation
+
+This course consists of 6 half-days spread over one semester. The objective is to make students aware of the economic issues of continuing professional education. The teacher wants students to be able to transfer the skills developed in the course to their professional context, as most students are destined to be trainers in companies. To facilitate this transfer, students interact by confronting the theoretical concepts developed during the semester with real situations they have experienced as well as with information from current events.
+
+## Project implementation
+
+The activities proposed by the teacher during a session alternate between teaching theoretical concepts, sharing experiences and discussing current issues related to the course content. In concrete terms, the teacher offers the students press articles related to the theoretical concepts studied. On this basis, discussions are initiated with personal stories. The teacher then tries to encourage the students to make links with the concepts studied in the course.
+During the penultimate session of the course, the teacher set up a role-play of 1h30 consisting in defining and defending a project of investment in continuing education in a company by mobilizing the course content. During the preparation phase, which lasts about 30 minutes, the different groups of students freely choose a context and a training project, this choice is often influenced by their own professional experience. Each group takes on the role of a specific actor (employee, training manager, training provider) and develops an economic argument to defend its training project. All the elements necessary for the preparation of the intervention are recorded in a pre-formatted table, to be completed, which guides the reflection. The objective for each group is to develop an argument to convince the other actors to invest in training. The teacher moves between the groups and encourages discussion. Each group then defends its project for 5-10 minutes, which leads to a discussion with the whole class. The other groups play the role of contradictors by taking the point of view of the actors not chosen by the group that intervenes. During the preparation time, the group that presents its training investment project is encouraged to decentralize its thinking in order to anticipate the arguments that will be put forward by the opposing groups. The teacher makes sure that the interventions are balanced and that any aspects that may have been forgotten or overlooked are brought up.
+This role-playing game not only allows students to confront the theoretical developments developed in class with a case study inspired by real-life professional experience, but also to sharpen their listening and consensus-building skills within the group as well as to anticipate the arguments that could be opposed by the other actors involved in the decision to invest or not in training in a company. The final goal is to present a well-constructed and robust project.
+The evaluation of the course consists of the writing of a personal file of about ten pages on a theoretical deepening of a theme approached in the course or on a case study on the training policy of a company.
+Thoughts and advice on implementing a similar project
+It is important that people feel comfortable doing an activity such as role-playing, hence the idea of doing it towards the end of the course when the students know each other well. This approach allows for real interactivity with the students and is a great experience for the teacher.
+Over the years, the teacher has gradually lightened her PowerPoint, leaving less room for theoretical concepts, but more time dedicated to exchanges between students. In order for each student to develop professional self-confidence, it is important to maintain a high level of involvement during the sessions.
+Student feedback
+"A lot of discussion. We talk about current events and deal with a topic that can affect us."
+"A critical look at the reality of the field as it relates to continuing education. A course much closer to my personal interests and professional concerns. Practical cases and numerical examples."
+"Thank you for explaining the economic aspect in such a simple and affordable way. This is the first time I've attended a course on this topic and as a future adult educator, I find it very important to understand how education and economics are linked. Thank you also for linking context and concepts. It helped me to better grasp the lessons of the course. This is a course that I will recommend to future trainers."
+

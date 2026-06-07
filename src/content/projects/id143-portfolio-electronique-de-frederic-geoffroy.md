@@ -1,0 +1,40 @@
+---
+id: 143
+title: Portfolio électronique de Frédéric Geoffroy
+author: Frédéric Geoffroy
+contact: "Frederic.Geoffroy@unige.ch"
+faculty: Médecine
+course: Tous
+level: Tous
+students: ">1000"
+year: 2019
+category: Responsabiliser
+innovation_type: Développer des compétences
+observation_accepted: false
+description_short: Une application portfolio permet aux étudiant-es de documenter l’ensemble des activités effectuées lors de leur stage et autres activités d’apprentissage. Elle permet également aux responsables de stage d’évaluer et valider les degrés d’autonomie atteints par les étudiant-es dans les différentes activités.
+featured: false
+status: actif
+---
+
+## Situation de départ
+
+La Suisse a mis en place un nouveau référentiel de compétences pour les études prégraduées de médecine humaine, nommé «PROFILES» (ou “Principal Relevant Objectives and Framework for Integrated Learning and Education in Switzerland”). PROFILES décrit les compétences qu’un-e étudiant-e en fin d’études devrait maîtriser pour débuter sa première année d’internat en médecine.
+Depuis l’arrivée de ce nouveau référentiel, les facultés doivent s’assurer que les étudiant-es maîtrisent des compétences de manière beaucoup plus longitudinale. Ces compétences sont acquises de façon intégrative tout au long du cursus de médecine, et en particulier au travers des stages en milieu clinique. Tout au long de ses études, l’étudiant-e doit documenter son parcours et le degré d’autonomie qu’il/elle a acquis dans les différentes activités effectuées lors de ces stages. C’est pour faciliter ce suivi qu’a été créé le portfolio de suivi « GPS » pour Geneva Portfolio Support.
+
+## Mise en place
+
+Le référentiel de compétences répertorie 9 activités professionnelles principales : Anamnèse, examen clinique, diagnostic différentiel, examens complémentaires, gestes techniques, situations d’urgence, prescription, documentation et qualité, sécurité des soins. A travers différents stages cliniques, l’étudiant-e en médecine doit acquérir une autonomie dans chacune de ces activités.
+Le portfolio GPS permet aux étudiant-es de documenter les activités qu’ils/elles effectuent lors de leurs stages cliniques. Ils/elles effectuent ainsi un suivi de leurs expériences et peuvent créer un parallèle entre les compétences attendues et les compétences expérimentées et validées ou non en effectuant une auto-évaluation de ces compétences. GPS leur fournit un soutien au processus d’apprentissage en permettant de noter leurs progrès, leurs acquis et leurs faiblesses en fonction des compétences cliniques attendues à la fin des études de médecine.
+Le GPS est un espace personnel pour l’étudiant-e mais il est également un outil d’évaluation pour les enseignant-es. En effet, certaines des activités documentées donnent lieu à des évaluations de la part des cliniciens responsables des stages notamment. Lorsqu’ils/elles arrivent en stage dans un service, les étudiant-es peuvent consulter sur leur GPS la liste des activités à effectuer. Parmi celles-ci, un bon nombre sont à documenter et certaines sont indiquées comme étant « à évaluer ». Lorsque l’étudiant-e est prêt-e, il ou elle donne accès à l’activité documentée et la soumet à la validation du clinicien qui l’a supervisé. Ce dernier effectue une évaluation de l’autonomie de l’étudiant pour les activités d’une situation clinique donnée. Il a aussi la possibilité de spécifier les points forts et points à améliorer afin de solliciter la réflexivité chez l’étudiant-e et lui fournir un feedback formatif.
+Le GPS demeure toutefois un outil garantissant la confidentialité des données qui y figurent. Les étudiant-es donnent eux-mêmes l’accès à certaines parties aux personnes responsables de leur formation, pour valider des activités, recevoir un feedback, ou certifier la présence à un enseignement. Les accès étant donnés de manière restreinte, un-e maitre de stage n’aura pas accès aux données concernant les autres stages effectués par l’étudiant-e, par exemple. Il existe par ailleurs une zone qui appartient à l’étudiant-e seul-e, pour ses notes personnelles ou y consulter ses résultats d’examens, et qui n’est accessible par aucun tiers.
+Par ailleurs, le portfolio électronique joue un rôle essentiel dans la validation des stages en quatrième et cinquième année de médecine. Une série d’activités à documenter lors des stages en master est définie dans le portfolio. Ces activités doivent être documentées un certain nombre de fois et/ou évaluées par les superviseurs de stage. Le responsable du stage voit un résumé de tout ce qui a été documenté et évalué et définit la validation ou non du stage sur la base d’un tableau de synthèse de l’autonomie de l’étudiant-e.
+La validation du stage permet à l’étudiant-e de se présenter à l’examen de chaque discipline. A la fin de leurs études, les étudiant-es conservent un accès au GPS mais ne peuvent pas y ajouter de nouvelles données. Lors de postulations aux HUG, par exemple, la présentation de l’évaluation de leurs stages est souvent demandée.
+
+## Retour et conseils
+
+L’usage de GPS permet de renforcer l’aspect intégratif du curriculum et de rendre les étudiant-es davantage acteurs et actrices de leur formation. Les statistiques d’utilisation couvrant l’année académique 2020-2021 montrent que les étudiant-es ont documenté plus de 39 000 activités sur GPS. Parmi celles-ci 11 800 ont fait l’objet d’une validation par un-e enseignant-e.
+L’introduction de GPS n’a pas demandé de formation particulière des enseignant-es car il se veut suffisamment intuitif pour être utilisé seul ou avec une documentation succincte. Il est par contre nécessaire d’inciter les enseignant-es à son usage et leur faire prendre l’habitude de l’utiliser. C’est un outil un peu chronophage pour eux surtout pour les clinicien-es qui peinent trouver du temps pour remplir les évaluations. Parfois les étudiant-es sont bloqué-es et doivent insister afin d’obtenir leurs évaluations. Une relance automatique par la plateforme est prévue au bout de quelques jours. Afin de motiver les enseignant-es à utiliser GPS, deux fois par an, une extraction de toutes les évaluations est effectuée. Lorsque 5 évaluations ont été validée par l’enseignant-e, cela lui permet d’obtenir un crédit d’enseignement pour justifier de son activité d’enseignement.
+Avant de se lancer dans la création d’une telle application, il est important d’avoir une idée très claire de ce qu’on veut retrouver dans celle-ci. Il est recommandé de travailler en collaboration avec un pédagogue sur les compétences et les activités que l’on veut suivre afin de définir ses besoins et élaborer une maquette. Il faut faire attention au fait que l’ensemble du référentiel d’étude soit couvert par l’application cependant elle doit indéniablement être accompagnée d’un document référentiel à part entière ; GPS ne représentant que la façon dont l’étudiant vit sa progression à travers ce référentiel.
+Il est nécessaire d’identifier une personne dédiée à la gestion de la plateforme en terme technique et pédagogique afin de gérer la création des comptes, leur suppression, les problèmes de connexion, la gestion des droits (accès aux bons formulaires) etc. Il faut également gérer tout le paramétrage pour créer les formulaires, aider les enseignants à les concevoir car ils/elles n’ont pas forcément consciences de ce que peut faire l’outil. Une mise à jour régulière (tous les étés) est fortement recommandée. Cela requiert de recontacter les enseignant-es pour les questionner sur l’évolution de leur cours afin que l’application soit à jour.
+Une autre facette du Portfolio est celle qui permet d’extraire des données afin d’effectuer un suivi des étudiant-es. Un groupe de suivi des étudiant-es et de l’apprentissage a d’ailleurs été constitué. Il est composé de responsables d'enseignements et de conseillers et conseillères aux études. Il a pour mission d’identifier et suivre les étudiant-es qui rencontrent des difficultés dans leur parcours. Une fois la difficulté identifiée, le groupe propose aux étudiants-es concerné-es des outils de remédiation adaptés à chaque situation.
+

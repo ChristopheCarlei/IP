@@ -1,32 +1,38 @@
 import { defineCollection, z } from 'astro:content';
 
+// French projects — primary content, all metadata
 const projects = defineCollection({
   type: 'content',
   schema: z.object({
+    id: z.number(),
     title: z.string(),
-    title_en: z.string().optional(),
     author: z.string().optional(),
-    members: z.array(z.string()).optional(),
+    contact: z.string().optional(),
     faculty: z.string().optional(),
     course: z.string().optional(),
-    course_code: z.string().optional(),
+    course_code: z.union([z.string(), z.number()]).transform(v => String(v)).optional(),
     level: z.string().optional(),
-    students: z.string().optional(),
+    students: z.union([z.string(), z.number()]).transform(v => String(v)).optional(),
     year: z.union([z.string(), z.number()]).optional(),
     category: z.string().optional(),
     innovation_type: z.string().optional(),
-    status: z.enum(['actif', 'archivé', 'supprimé']).default('actif'),
+    observation_accepted: z.boolean().default(false),
     description_short: z.string().optional(),
-    description_short_en: z.string().optional(),
     youtube: z.string().optional(),
     images: z.array(z.string()).optional(),
-    observation_accepted: z.boolean().default(false),
-    award: z.string().optional(),
-    award_year: z.string().optional(),
     featured: z.boolean().default(false),
-    url: z.string().optional(),
-    published: z.coerce.date().optional(),
-    updated: z.coerce.date().optional(),
+    status: z.enum(['actif', 'archivé', 'supprimé']).default('actif'),
+    award: z.string().optional(),
+  }),
+});
+
+// English translations — matched by same slug as FR
+const projects_en = defineCollection({
+  type: 'content',
+  schema: z.object({
+    id: z.number(),
+    title: z.string().optional(),
+    description_short: z.string().optional(),
   }),
 });
 
@@ -52,4 +58,4 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { projects, team, pages };
+export const collections = { projects, projects_en, team, pages };
