@@ -111,7 +111,7 @@ function isLightFac(fac?: string | null): boolean {
     {allProjects.map(p => {
       const facVar   = getFacVar(p.data.faculty);
       const hasPhoto = !!p.data.photo;
-      const light    = !hasPhoto && isLightFac(p.data.faculty);
+      const light    = isLightFac(p.data.faculty);
       const searchStr = [
         p.data.title,
         p.data.author,
@@ -131,27 +131,25 @@ function isLightFac(fac?: string | null): boolean {
           data-search={searchStr}
           style={`--fac:${facVar}`}
         >
-          <!-- Photo ou fond couleur faculté -->
+          <!-- Photo plein-cadre (aucun overlay) -->
           <div
-            class={`cover${!hasPhoto ? ' no-photo' + (light ? ' light' : '') : ''}`}
+            class={`cover${!hasPhoto ? ' no-photo' : ''}`}
             style={hasPhoto ? `background-image:url(${p.data.photo})` : ''}
           >
             {!hasPhoto && <span class="cover-initials">{initials}</span>}
             {p.data.award && (
-              <span class="award">
-                <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor">
-                  <path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/>
-                </svg>
-                {p.data.award}
+              <span class="award">★ {p.data.award}
               </span>
             )}
-            {p.data.faculty && <span class="fac">{p.data.faculty}</span>}
           </div>
-          <!-- Titre + auteur -->
+          <!-- Titre -->
           <div class="card-body">
             <h3><a href={`/projets/${p.slug}`}>{p.data.title}</a></h3>
-            {p.data.author && <p style="color:var(--muted);font-size:13px;margin:0">{p.data.author}</p>}
           </div>
+          <!-- Barre faculté pleine largeur -->
+          {p.data.faculty && (
+            <div class={`card-fac${light ? ' light' : ''}`}>{p.data.faculty}</div>
+          )}
         </article>
       );
     })}
