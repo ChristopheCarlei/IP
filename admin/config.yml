@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: OWNER/IP
+  repo: ChristopheCarlei/IP
   branch: main
 
 media_folder: public/images
