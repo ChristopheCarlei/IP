@@ -25,258 +25,293 @@ function getFacVar(fac?: string | null): string {
   if (f.includes('THEO') || f.includes('THÉO'))                        return 'var(--fac-theologie)';
   return 'var(--rose)';
 }
+function isLightFac(fac?: string | null): boolean {
+  const f = fac?.toUpperCase() ?? '';
+  return f.includes('SOC') || f.includes('SDS');
+}
 
 const facVar = getFacVar(d.faculty);
+const light  = isLightFac(d.faculty);
 ---
 <Base title={d.title} description={d.description_short}>
 <style>
 /* ---- Fiche projet ---------------------------------------- */
-.fac-band{height:6px;width:100%}
-.proj-head{background:#fff;border-bottom:1px solid var(--line)}
-.proj-head-inner{width:var(--content);margin:auto;padding:24px 0 30px}
-.crumb{font-size:13px;color:var(--faint);display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+
+/* Fil d'Ariane */
+.crumb-bar{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.crumb{width:var(--content);margin:auto;padding:14px 0;font-size:13px;color:var(--faint);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .crumb a{text-decoration:none;color:inherit}
 .crumb a:hover{color:var(--rose)}
-.crumb .sep{opacity:.6}
+.crumb .sep{opacity:.5}
 .crumb .cur{color:var(--muted);font-weight:600}
-.tagrow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:16px}
-.tag{font-size:12.5px;font-weight:800;padding:5px 13px;border-radius:999px;white-space:nowrap}
-.tag.fac{color:#fff}
+
+/* ---- Bloc résumé (style fiche UNIGE) ---- */
+.proj-card{width:var(--content);margin:clamp(24px,3vw,40px) auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+
+/* En-tête : badge faculté + titre */
+.proj-card-head{padding:18px 24px 14px;border-bottom:1px solid var(--line)}
+.fac-badge{display:inline-block;background:var(--fac,var(--rose));color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:6px;margin-bottom:12px}
+.fac-badge.light{color:var(--ink)}
+.proj-card-head h1{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:0}
+
+/* Tags (axe, prix, archivé) */
+.tagrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tag{font-size:12px;font-weight:800;padding:4px 12px;border-radius:999px;white-space:nowrap}
 .tag.axe{color:var(--rose-ink);background:var(--bg-rose)}
-.tag.prix{color:#fff;display:inline-flex;align-items:center;gap:6px;background:var(--ink)}
+.tag.prix{color:#fff;display:inline-flex;align-items:center;gap:5px;background:var(--ink)}
 .tag.archive{color:var(--ink);background:#FEF3C7;border:1px solid #FDE68A}
-.proj-head h1{font-size:clamp(30px,4.2vw,50px);line-height:1.04;letter-spacing:-.025em;font-weight:800;max-width:20ch;margin:0}
-.proj-head .author{color:var(--muted);font-size:18px;margin-top:12px;font-weight:600}
 
-.body-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,56px) 0;display:grid;grid-template-columns:1fr 340px;gap:clamp(32px,4vw,56px);align-items:start}
-.lead-text{font-size:21px;line-height:1.5;color:var(--ink);font-weight:400;margin:0 0 32px;padding-bottom:32px;border-bottom:1px solid var(--line)}
-.media{aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:var(--bg-soft);border:1px solid var(--line);margin-bottom:36px;position:relative}
-.media iframe{width:100%;height:100%;border:0;display:block}
-.media-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
-.media-placeholder .play{width:64px;height:64px;border-radius:50%;background:var(--fac,var(--rose));display:grid;place-items:center;color:#fff}
-.media-placeholder .play svg{width:26px;height:26px;margin-left:3px}
+/* Corps : galerie gauche + description droite */
+.proj-card-body{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:220px}
+.proj-gallery{padding:20px 20px 16px;display:flex;flex-direction:column;gap:10px;border-right:1px solid var(--line)}
+.gallery-imgs{display:grid;gap:8px}
+.gallery-imgs.n1{grid-template-columns:1fr}
+.gallery-imgs.n2{grid-template-columns:1fr 1fr}
+.gallery-imgs.n3{grid-template-columns:1fr 1fr 1fr}
+.gallery-imgs figure{margin:0}
+.gallery-imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-sm);border:1px solid var(--line);display:block}
+.gallery-imgs figcaption{font-size:11px;color:var(--faint);margin-top:4px;text-align:center;line-height:1.3}
 
-/* Prose (contenu markdown) */
-.prose h2{font-size:24px;font-weight:800;letter-spacing:-.01em;margin:36px 0 12px;line-height:1.2}
+/* Photo enseignant (si pas d'images de projet) */
+.teacher-photo{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;border-radius:0}
+
+/* Côté description */
+.proj-desc{padding:24px 28px;display:flex;flex-direction:column;gap:12px}
+.proj-desc .desc-label{font-size:clamp(20px,2.2vw,26px);font-weight:800;color:var(--fac,var(--rose));line-height:1}
+.proj-desc .desc-text{font-size:16px;line-height:1.65;color:var(--ink);font-style:italic;margin:0}
+.proj-desc .desc-meta{margin-top:8px;display:flex;flex-direction:column;gap:8px;font-size:14.5px}
+.proj-desc .desc-meta .row{display:flex;gap:6px;align-items:baseline}
+.proj-desc .desc-meta strong{color:var(--ink);font-weight:700;white-space:nowrap}
+.proj-desc .desc-meta a{color:var(--fac,var(--rose));font-weight:600;text-decoration:none}
+.proj-desc .desc-meta a:hover{text-decoration:underline}
+.proj-desc .desc-meta span{color:var(--muted)}
+
+/* Barre infos en bas (couleur faculté) */
+.proj-card-foot{background:var(--fac,var(--rose));display:flex;align-items:stretch}
+.proj-card-foot.light .foot-item{color:var(--ink)}
+.foot-item{flex:1;display:flex;align-items:center;gap:10px;padding:14px 20px;color:#fff;font-size:14px;font-weight:700}
+.foot-item:not(:last-child){border-right:1px solid rgba(255,255,255,.2)}
+.foot-item.light-sep:not(:last-child){border-right-color:rgba(0,0,0,.12)}
+.foot-item svg{width:20px;height:20px;flex-shrink:0;opacity:.85}
+.foot-item .fi-label{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;opacity:.75;margin-bottom:2px}
+.foot-item .fi-val{font-size:14px;font-weight:700;line-height:1.2}
+
+/* ---- Corps principal (prose) ---- */
+.body-wrap{width:var(--content);margin:0 auto clamp(48px,6vw,72px)}
+
+/* Prose */
+.prose{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,3vw,40px);box-shadow:var(--shadow)}
+.prose h2{font-size:22px;font-weight:800;letter-spacing:-.01em;margin:32px 0 10px;line-height:1.2;color:var(--ink)}
 .prose h2:first-child{margin-top:0}
-.prose h3{font-size:18px;font-weight:700;margin:24px 0 8px}
-.prose p{color:var(--muted);font-size:16.5px;line-height:1.7;margin:0 0 16px}
-.prose ul{margin:0 0 16px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px}
-.prose ul li{position:relative;padding-left:26px;color:var(--muted);font-size:16.5px;line-height:1.6}
-.prose ul li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:2px;background:var(--fac,var(--rose))}
-.prose blockquote{margin:24px 0;padding:4px 0 4px 22px;border-left:3px solid var(--fac,var(--rose));font-size:18px;line-height:1.55;color:var(--ink);font-style:italic}
-.prose blockquote p{color:var(--ink);font-size:18px;font-style:italic}
+.prose h3{font-size:17px;font-weight:700;margin:22px 0 7px;color:var(--ink)}
+.prose p{color:var(--muted);font-size:16px;line-height:1.7;margin:0 0 14px}
+.prose ul{margin:0 0 14px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.prose ul li{position:relative;padding-left:24px;color:var(--muted);font-size:16px;line-height:1.6}
+.prose ul li::before{content:"";position:absolute;left:4px;top:10px;width:7px;height:7px;border-radius:2px;background:var(--fac,var(--rose))}
+.prose blockquote{margin:22px 0;padding:4px 0 4px 20px;border-left:3px solid var(--fac,var(--rose));font-size:17px;line-height:1.55;color:var(--ink);font-style:italic}
+.prose blockquote p{color:var(--ink);font-size:17px;font-style:italic;margin:0}
 
-/* Sidebar */
-.sidebar{position:sticky;top:96px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.sidebar .sb-head{padding:14px 20px;font-size:14px;font-weight:800;letter-spacing:.02em;color:#fff}
-.sidebar dl{margin:0;padding:8px 20px 4px}
-.sidebar dt{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:16px 0 3px}
-.sidebar dd{margin:0;font-size:15px;color:var(--ink);font-weight:600}
-.sidebar dd.sub{font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
-.sidebar dd a{color:var(--rose);font-weight:700;font-size:14px;text-decoration:none}
-.sidebar dd a:hover{text-decoration:underline}
-.sidebar .sb-foot{border-top:1px solid var(--line);padding:16px 20px;margin-top:14px}
-.sidebar .sb-foot a{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none}
-.sidebar .sb-foot a:hover{color:var(--rose)}
+/* Vidéo embed */
+.video-wrap{margin-bottom:24px}
+.media{aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:var(--bg-soft);border:1px solid var(--line)}
+.media iframe{width:100%;height:100%;border:0;display:block}
 
-/* Encart observation */
-.obs{margin-top:12px;border-radius:var(--radius);padding:20px 22px;background:color-mix(in srgb,var(--fac-sciences) 7%,#fff);border:1px solid color-mix(in srgb,var(--fac-sciences) 28%,#fff)}
-.obs strong{display:flex;align-items:center;gap:9px;color:var(--fac-sciences);font-size:15px;font-weight:800;margin-bottom:6px}
+/* Observation encart */
+.obs{margin-top:24px;border-radius:var(--radius);padding:18px 22px;background:color-mix(in srgb,var(--fac-sciences) 7%,#fff);border:1px solid color-mix(in srgb,var(--fac-sciences) 28%,#fff)}
+.obs strong{display:flex;align-items:center;gap:9px;color:var(--fac-sciences);font-size:15px;font-weight:800;margin-bottom:5px}
 .obs strong svg{width:18px;height:18px;flex-shrink:0}
-.obs p{color:var(--muted);font-size:14.5px;margin:0}
+.obs p{color:var(--muted);font-size:14px;margin:0}
 .obs p a{color:var(--fac-sciences);font-weight:700}
 
-/* Images */
-.images-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:36px}
-.images-grid.single{grid-template-columns:1fr}
-.images-grid img{border-radius:var(--radius-sm);width:100%;object-fit:cover;border:1px solid var(--line)}
+/* Retour */
+.back-link{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none;margin-bottom:20px}
+.back-link:hover{color:var(--rose)}
 
-@media(max-width:880px){
-  .body-wrap{grid-template-columns:1fr}
-  .sidebar{position:static;order:-1}
+@media(max-width:860px){
+  .proj-card-body{grid-template-columns:1fr}
+  .proj-gallery{border-right:0;border-bottom:1px solid var(--line)}
+  .proj-card-foot{flex-wrap:wrap}
+  .foot-item{flex:1 1 45%}
+}
+@media(max-width:560px){
+  .gallery-imgs.n3{grid-template-columns:1fr 1fr}
+  .foot-item{flex:1 1 100%}
 }
 </style>
 
-<!-- Bande couleur faculté -->
-<div class="fac-band" style={`background:${facVar}`}></div>
+<!-- Fil d'Ariane -->
+<div class="crumb-bar">
+  <nav class="crumb" aria-label="Fil d'Ariane">
+    <a href="/">Accueil</a>
+    <span class="sep">/</span>
+    <a href="/catalogue">Catalogue</a>
+    <span class="sep">/</span>
+    <span class="cur">{d.title}</span>
+  </nav>
+</div>
 
-<!-- En-tête projet -->
-<div class="proj-head">
-  <div class="proj-head-inner">
-    <nav class="crumb" aria-label="Fil d'Ariane">
-      <a href="/">Accueil</a>
-      <span class="sep">/</span>
-      <a href="/catalogue">Catalogue</a>
-      <span class="sep">/</span>
-      <span class="cur">{d.title}</span>
-    </nav>
+<!-- Fiche résumé style UNIGE -->
+<div style={`--fac:${facVar}`}>
+<div class="proj-card">
 
+  <!-- En-tête -->
+  <div class="proj-card-head">
+    {d.faculty && (
+      <div class={`fac-badge${light ? ' light' : ''}`}>{d.faculty}</div>
+    )}
+    <h1>{d.title}</h1>
     <div class="tagrow">
-      {d.faculty && (
-        <span class="tag fac" style={`background:${facVar}`}>{d.faculty}</span>
-      )}
-      {d.category && (
-        <span class="tag axe">{d.category}</span>
-      )}
+      {d.category && <span class="tag axe">{d.category}</span>}
       {d.award && (
         <span class="tag prix">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
             <path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/>
           </svg>
           {d.award}
         </span>
       )}
-      {d.status === 'archivé' && (
-        <span class="tag archive">Archivé</span>
+      {d.status === 'archivé' && <span class="tag archive">Archivé</span>}
+    </div>
+  </div>
+
+  <!-- Corps : galerie + description -->
+  <div class="proj-card-body">
+
+    <!-- Galerie images ou photo enseignant -->
+    <div class="proj-gallery">
+      {(d.images && d.images.length > 0) ? (
+        <div class={`gallery-imgs n${Math.min(d.images.length, 3)}`}>
+          {d.images.slice(0, 3).map((img: string) => (
+            <figure>
+              <img src={img} alt={d.title} loading="lazy" />
+            </figure>
+          ))}
+        </div>
+      ) : d.photo ? (
+        <img src={d.photo} alt={d.author ?? d.title} class="teacher-photo" style="border-radius:var(--radius-sm);max-height:280px;object-fit:cover" />
+      ) : (
+        <div style={`background:var(--fac,var(--rose));border-radius:var(--radius-sm);flex:1;min-height:180px;display:flex;align-items:center;justify-content:center`}>
+          <span style="font-size:56px;font-weight:800;color:rgba(255,255,255,.25)">
+            {(d.author ?? d.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase()}
+          </span>
+        </div>
       )}
     </div>
 
-    <h1>{d.title}</h1>
-    {d.author && (
-      <div style="display:flex;align-items:center;gap:14px;margin-top:14px">
-        {d.photo && (
-          <img src={d.photo} alt={d.author} class="avatar-lg" />
+    <!-- Description -->
+    <div class="proj-desc">
+      <div class="desc-label">Projet</div>
+      {d.description_short && (
+        <p class="desc-text">{d.description_short}</p>
+      )}
+      <div class="desc-meta">
+        {d.course && (
+          <div class="row">
+            <strong>Cours :</strong>
+            <span>
+              <a href="#">{d.course}</a>
+              {d.level ? ` / ${d.level}` : ''}
+            </span>
+          </div>
         )}
-        <p class="author" style="margin:0">
-          {d.author}{d.faculty ? ` · ${d.faculty}` : ''}
-        </p>
+        {d.contact && (
+          <div class="row">
+            <strong>Contact :</strong>
+            <a href={`mailto:${d.contact}`}>{d.contact}</a>
+          </div>
+        )}
+        {d.author && !d.course && !d.contact && (
+          <div class="row">
+            <strong>Responsable :</strong>
+            <span>{d.author}</span>
+          </div>
+        )}
+        {d.year && (
+          <div class="row">
+            <strong>Depuis :</strong>
+            <span>{d.year}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- Barre infos colorée -->
+  <div class={`proj-card-foot${light ? ' light' : ''}`}>
+    {d.category && (
+      <div class="foot-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+        </svg>
+        <div>
+          <div class="fi-label">Axe</div>
+          <div class="fi-val">{d.category}</div>
+        </div>
+      </div>
+    )}
+    {d.innovation_type && (
+      <div class="foot-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/>
+        </svg>
+        <div>
+          <div class="fi-label">Type d'innovation</div>
+          <div class="fi-val">{d.innovation_type}</div>
+        </div>
+      </div>
+    )}
+    {d.students && (
+      <div class="foot-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <div>
+          <div class="fi-label">Étudiant·es</div>
+          <div class="fi-val">{d.students}</div>
+        </div>
       </div>
     )}
   </div>
+
+</div>
 </div>
 
-<!-- Corps : grille main + sidebar -->
+<!-- Corps étendu (contenu Markdown) -->
 <div class="body-wrap" style={`--fac:${facVar}`}>
+  <a class="back-link" href="/catalogue">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 19l-7-7 7-7"/>
+    </svg>
+    Retour au catalogue
+  </a>
 
-  <!-- Colonne principale -->
-  <div>
-    {d.description_short && (
-      <p class="lead-text">{d.description_short}</p>
-    )}
-
-    {d.youtube && (
+  {d.youtube && (
+    <div class="video-wrap">
       <div class="media">
-        <iframe
-          src={d.youtube}
-          allowfullscreen
-          loading="lazy"
-          title={`Vidéo — ${d.title}`}
-        />
+        <iframe src={d.youtube} allowfullscreen loading="lazy" title={`Vidéo — ${d.title}`} />
       </div>
-    )}
-
-    {d.images && d.images.length > 0 && (
-      <div class={`images-grid${d.images.length === 1 ? ' single' : ''}`}>
-        {d.images.map((img: string) => (
-          <img src={img} alt={d.title} loading="lazy" />
-        ))}
-      </div>
-    )}
-
-    <div class="prose">
-      <Content />
     </div>
+  )}
+
+  <div class="prose">
+    <Content />
   </div>
 
-  <!-- Sidebar -->
-  <aside>
-    <div class="sidebar">
-      <div class="sb-head" style={`background:${facVar}`}>Fiche du projet</div>
-      <dl>
-        {d.author && (
-          <>
-            <dt>Responsable</dt>
-            <dd style="display:flex;align-items:center;gap:10px">
-              {d.photo && (
-                <img src={d.photo} alt={d.author} class="avatar" />
-              )}
-              <span>{d.author}</span>
-            </dd>
-            {d.contact && (
-              <dd class="sub"><a href={`mailto:${d.contact}`}>{d.contact}</a></dd>
-            )}
-          </>
-        )}
-
-        {d.faculty && (
-          <>
-            <dt>Faculté</dt>
-            <dd>{d.faculty}</dd>
-          </>
-        )}
-
-        {d.course && (
-          <>
-            <dt>Cours</dt>
-            <dd>{d.course}</dd>
-            {d.course_code && <dd class="sub">Code : {d.course_code}</dd>}
-          </>
-        )}
-
-        {d.level && (
-          <>
-            <dt>Niveau</dt>
-            <dd>{d.level}</dd>
-          </>
-        )}
-
-        {d.students && (
-          <>
-            <dt>Étudiant·es</dt>
-            <dd>{d.students}</dd>
-          </>
-        )}
-
-        {d.year && (
-          <>
-            <dt>Mise en place</dt>
-            <dd>Depuis {d.year}</dd>
-          </>
-        )}
-
-        {d.category && (
-          <>
-            <dt>Axe pédagogique</dt>
-            <dd>{d.category}</dd>
-          </>
-        )}
-
-        {d.innovation_type && (
-          <>
-            <dt>Type d'innovation</dt>
-            <dd class="sub">{d.innovation_type}</dd>
-          </>
-        )}
-      </dl>
-      <div class="sb-foot">
-        <a href="/catalogue">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-               stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 19l-7-7 7-7"/>
-          </svg>
-          Retour au catalogue
-        </a>
-      </div>
+  {d.observation_accepted && (
+    <div class="obs">
+      <strong>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2.5 12C4 7.9 7.7 5 12 5s8 2.9 9.5 7c-1.5 4.1-5.2 7-9.5 7s-8-2.9-9.5-7z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        Observation entre pairs
+      </strong>
+      <p>
+        Cet·te enseignant·e accepte que des collègues observent son cours.
+        <a href="/observation">En savoir plus →</a>
+      </p>
     </div>
-
-    {d.observation_accepted && (
-      <div class="obs">
-        <strong>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-               stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2.5 12C4 7.9 7.7 5 12 5s8 2.9 9.5 7c-1.5 4.1-5.2 7-9.5 7s-8-2.9-9.5-7z"/>
-            <circle cx="12" cy="12" r="3"/>
-          </svg>
-          Observation entre pairs
-        </strong>
-        <p>
-          Cet·te enseignant·e accepte que des collègues observent son cours.
-          <a href="/observation">En savoir plus →</a>
-        </p>
-      </div>
-    )}
-  </aside>
-
+  )}
 </div>
 </Base>
