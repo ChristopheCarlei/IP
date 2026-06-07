@@ -99,7 +99,30 @@ const light  = isLightFac(d.faculty);
 /* ---- Corps principal (prose) ---- */
 .body-wrap{width:var(--content);margin:0 auto clamp(48px,6vw,72px)}
 
-/* Prose */
+/* ---- Accordéon ---- */
+.accordion{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+details.acc-item{border-radius:var(--radius-sm);overflow:hidden}
+details.acc-item summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:#F2F2F2;cursor:pointer;font-size:18px;font-weight:400;color:var(--ink);letter-spacing:-.01em;user-select:none}
+details.acc-item summary::-webkit-details-marker{display:none}
+details.acc-item summary .acc-chevron{flex-shrink:0;transition:transform .22s ease;width:20px;height:20px;color:#555}
+details.acc-item[open] summary .acc-chevron{transform:rotate(180deg)}
+details.acc-item summary:hover{background:#EAEAEA}
+.acc-body{padding:22px 28px 26px;border:1px solid var(--line);border-top:0;border-radius:0 0 var(--radius-sm) var(--radius-sm)}
+
+/* Prose à l'intérieur de l'accordéon */
+.acc-body h3{font-size:17px;font-weight:700;margin:20px 0 7px;color:var(--ink)}
+.acc-body h3:first-child{margin-top:0}
+.acc-body p{color:var(--muted);font-size:16px;line-height:1.7;margin:0 0 14px}
+.acc-body p:last-child{margin-bottom:0}
+.acc-body ul{margin:0 0 14px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.acc-body ul li{position:relative;padding-left:24px;color:var(--muted);font-size:16px;line-height:1.6}
+.acc-body ul li::before{content:"";position:absolute;left:4px;top:10px;width:7px;height:7px;border-radius:2px;background:var(--fac,var(--rose))}
+.acc-body blockquote{margin:18px 0;padding:4px 0 4px 18px;border-left:3px solid var(--fac,var(--rose));font-size:16px;line-height:1.6;color:var(--ink);font-style:italic}
+.acc-body blockquote p{color:var(--ink);font-size:16px;font-style:italic;margin:0}
+.acc-body a{color:var(--fac,var(--rose));font-weight:600;text-decoration:none}
+.acc-body a:hover{text-decoration:underline}
+
+/* Prose sans h2 (pas d'accordéon) */
 .prose{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,3vw,40px);box-shadow:var(--shadow)}
 .prose h2{font-size:22px;font-weight:800;letter-spacing:-.01em;margin:32px 0 10px;line-height:1.2;color:var(--ink)}
 .prose h2:first-child{margin-top:0}
@@ -294,7 +317,8 @@ const light  = isLightFac(d.faculty);
     </div>
   )}
 
-  <div class="prose">
+  <!-- Le contenu markdown est rendu ici ; le script ci-dessous le transforme en accordéon -->
+  <div class="prose" id="proj-prose">
     <Content />
   </div>
 
@@ -314,4 +338,86 @@ const light  = isLightFac(d.faculty);
     </div>
   )}
 </div>
+<script>
+/* Transforme les h2 du bloc #proj-prose en accordéon <details> */
+(function () {
+  const prose = document.getElementById('proj-prose');
+  if (!prose) return;
+
+  const children = Array.from(prose.childNodes);
+  const h2s = prose.querySelectorAll('h2');
+  if (!h2s.length) return; // pas de sections → prose normale
+
+  /* Chevron SVG réutilisable */
+  function chevron() {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '1.8');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    svg.classList.add('acc-chevron');
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', 'M6 9l6 6 6-6');
+    svg.appendChild(path);
+    return svg;
+  }
+
+  /* Construire les sections */
+  const sections: { heading: Element; nodes: Node[] }[] = [];
+  let before: Node[] = [];   // nœuds avant le 1er h2 (intro, etc.)
+  let currentH2: Element | null = null;
+  let currentNodes: Node[] = [];
+
+  children.forEach(node => {
+    if (node.nodeType === Node.ELEMENT_NODE && (node as Element).tagName === 'H2') {
+      if (currentH2) sections.push({ heading: currentH2, nodes: currentNodes });
+      else before = [...currentNodes];
+      currentH2 = node as Element;
+      currentNodes = [];
+    } else {
+      currentNodes.push(node);
+    }
+  });
+  if (currentH2) sections.push({ heading: currentH2, nodes: currentNodes });
+
+  /* Vider le prose */
+  prose.innerHTML = '';
+  prose.classList.remove('prose');
+
+  /* Réinsérer le contenu avant le 1er h2 */
+  if (before.length) {
+    const intro = document.createElement('div');
+    intro.className = 'prose';
+    intro.style.marginBottom = '16px';
+    before.forEach(n => intro.appendChild(n.cloneNode(true)));
+    prose.appendChild(intro);
+  }
+
+  /* Créer l'accordéon */
+  const acc = document.createElement('div');
+  acc.className = 'accordion';
+
+  sections.forEach((sec, i) => {
+    const details = document.createElement('details');
+    details.className = 'acc-item';
+    if (i === 0) details.open = true; // première section ouverte
+
+    const summary = document.createElement('summary');
+    summary.textContent = sec.heading.textContent ?? '';
+    summary.appendChild(chevron());
+    details.appendChild(summary);
+
+    const body = document.createElement('div');
+    body.className = 'acc-body';
+    sec.nodes.forEach(n => body.appendChild(n.cloneNode(true)));
+    details.appendChild(body);
+
+    acc.appendChild(details);
+  });
+
+  prose.appendChild(acc);
+})();
+</script>
 </Base>
