@@ -122,30 +122,10 @@ const hasCarousel = carouselImages.length > 0;
 .carousel-dots button.on{background:var(--fac,var(--rose));transform:scale(1.2)}
 .carousel-caption{text-align:center;font-size:13px;color:var(--faint);padding:0 20px 14px;min-height:20px}
 
-/* ---- Corps (accordéon + annexes) ---- */
+/* ---- Corps ---- */
 .body-wrap{width:var(--content);margin:24px auto clamp(48px,6vw,72px)}
 
-.accordion{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
-details.acc-item{border-radius:var(--radius-sm);overflow:hidden}
-details.acc-item summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 28px;background:#F2F2F2;cursor:pointer;font-size:18px;font-weight:400;color:var(--ink);letter-spacing:-.01em;user-select:none}
-details.acc-item summary::-webkit-details-marker{display:none}
-details.acc-item summary .acc-chevron{flex-shrink:0;transition:transform .22s ease;width:20px;height:20px;color:#555}
-details.acc-item[open] summary .acc-chevron{transform:rotate(180deg)}
-details.acc-item summary:hover{background:#EAEAEA}
-.acc-body{padding:22px 28px 26px;border:1px solid var(--line);border-top:0;border-radius:0 0 var(--radius-sm) var(--radius-sm)}
-.acc-body h3{font-size:16px;font-weight:700;margin:18px 0 6px;color:var(--ink)}
-.acc-body h3:first-child{margin-top:0}
-.acc-body p{color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 0 13px}
-.acc-body p:last-child{margin-bottom:0}
-.acc-body ul{margin:0 0 13px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}
-.acc-body ul li{position:relative;padding-left:22px;color:var(--muted);font-size:15.5px;line-height:1.6}
-.acc-body ul li::before{content:"";position:absolute;left:4px;top:9px;width:7px;height:7px;border-radius:2px;background:var(--fac,var(--rose))}
-.acc-body blockquote{margin:16px 0;padding:4px 0 4px 18px;border-left:3px solid var(--fac,var(--rose));font-size:15.5px;line-height:1.6;color:var(--ink);font-style:italic}
-.acc-body blockquote p{color:var(--ink);font-style:italic;margin:0}
-.acc-body a{color:var(--fac,var(--rose));font-weight:600;text-decoration:none}
-.acc-body a:hover{text-decoration:underline}
-
-/* Prose sans h2 */
+/* Prose sans h2 (fallback) */
 .prose{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,3vw,36px);box-shadow:var(--shadow)}
 .prose h3{font-size:17px;font-weight:700;margin:20px 0 7px;color:var(--ink)}
 .prose p{color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 0 13px}
@@ -154,14 +134,6 @@ details.acc-item summary:hover{background:#EAEAEA}
 .prose ul li::before{content:"";position:absolute;left:4px;top:9px;width:7px;height:7px;border-radius:2px;background:var(--fac,var(--rose))}
 .prose blockquote{margin:20px 0;padding:4px 0 4px 18px;border-left:3px solid var(--fac,var(--rose));font-size:16px;line-height:1.6;color:var(--ink);font-style:italic}
 .prose blockquote p{color:var(--ink);font-style:italic;margin:0}
-
-/* Section Annexes (rendue hors accordéon) */
-.annexes{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 32px;box-shadow:var(--shadow);margin-top:24px}
-.annexes-title{font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin:0 0 6px}
-.annexes-rule{border:0;border-top:1px solid var(--line);margin:0 0 20px}
-.annexes-links{display:flex;flex-direction:column;gap:10px}
-.annexes-links a{display:inline-flex;align-items:center;gap:10px;color:var(--rose);font-weight:600;font-size:15.5px;text-decoration:none}
-.annexes-links a:hover{text-decoration:underline}
 .annexes-links a svg{width:20px;height:20px;flex-shrink:0;color:var(--ink);opacity:.6}
 
 /* Observation */
@@ -187,6 +159,124 @@ details.acc-item summary:hover{background:#EAEAEA}
   .foot-item{flex:1 1 100%}
   .proj-header-photo,.proj-header-photo-placeholder{width:120px;height:120px}
 }
+</style>
+
+<style is:global>
+/* =====================================================
+   Accordéon (éléments créés dynamiquement en JS)
+   is:global car Astro ne scope pas les éléments JS
+   ===================================================== */
+.accordion{display:flex;flex-direction:column;gap:8px;margin-bottom:28px}
+
+/* Carte accordéon */
+details.acc-item{
+  border-radius:10px;
+  border:1px solid #E4E7EC;
+  background:#fff;
+  box-shadow:0 1px 3px rgba(16,24,40,.06);
+  overflow:hidden;
+  transition:box-shadow .18s;
+}
+details.acc-item[open]{
+  box-shadow:0 4px 16px -4px rgba(16,24,40,.12);
+  border-color:#D0D5DD;
+}
+
+/* En-tête de section */
+details.acc-item > summary{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 24px;
+  cursor:pointer;
+  user-select:none;
+  font-size:17px;
+  font-weight:600;
+  color:#172033;
+  letter-spacing:-.01em;
+  background:#fff;
+  transition:background .15s;
+}
+details.acc-item > summary::-webkit-details-marker{display:none}
+details.acc-item > summary::marker{display:none}
+details.acc-item > summary:hover{background:#F9FAFB}
+details.acc-item[open] > summary{
+  background:#F9FAFB;
+  border-bottom:1px solid #E4E7EC;
+  color:#CF0063; /* rose UNIGE */
+  font-weight:700;
+}
+
+/* Numéro de section */
+.acc-num{
+  width:28px;height:28px;border-radius:50%;
+  background:#F2F4F7;
+  color:#667085;
+  font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  transition:background .15s,color .15s;
+}
+details.acc-item[open] .acc-num{
+  background:#CF0063;
+  color:#fff;
+}
+.acc-title-wrap{flex:1;display:flex;align-items:center;gap:12px;min-width:0}
+
+/* Chevron */
+.acc-chevron{
+  flex-shrink:0;
+  transition:transform .25s cubic-bezier(.4,0,.2,1);
+  color:#98A2B3;
+}
+details.acc-item[open] .acc-chevron{
+  transform:rotate(180deg);
+  color:#CF0063;
+}
+
+/* Corps du panneau */
+.acc-body{
+  padding:24px 28px 28px;
+  border-top:0;
+}
+.acc-body > *:first-child{margin-top:0}
+.acc-body > *:last-child{margin-bottom:0}
+.acc-body h3{font-size:15.5px;font-weight:700;margin:18px 0 6px;color:#172033;font-family:inherit}
+.acc-body p{color:#5A6477;font-size:15px;line-height:1.72;margin:0 0 12px;font-family:inherit}
+.acc-body ul{margin:0 0 12px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.acc-body ul li{position:relative;padding-left:22px;color:#5A6477;font-size:15px;line-height:1.65;font-family:inherit}
+.acc-body ul li::before{content:"";position:absolute;left:5px;top:8px;width:7px;height:7px;border-radius:2px;background:var(--fac,#CF0063)}
+.acc-body blockquote{margin:16px 0;padding:12px 16px 12px 20px;border-left:3px solid var(--fac,#CF0063);background:rgba(207,0,99,.04);border-radius:0 6px 6px 0;font-size:15px;line-height:1.65;color:#172033;font-style:italic}
+.acc-body blockquote p{color:#172033;font-style:italic;margin:0;font-size:15px}
+.acc-body a{color:var(--fac,#CF0063);font-weight:600;text-decoration:none}
+.acc-body a:hover{text-decoration:underline}
+
+/* =====================================================
+   Section Annexes
+   ===================================================== */
+.annexes{
+  background:#fff;
+  border:1px solid #E4E7EC;
+  border-radius:10px;
+  padding:28px 32px;
+  box-shadow:0 1px 3px rgba(16,24,40,.06);
+  margin-top:8px;
+}
+.annexes-title{font-size:20px;font-weight:800;letter-spacing:-.01em;color:#172033;margin:0 0 6px;font-family:inherit}
+.annexes-rule{border:0;border-top:1px solid #E4E7EC;margin:0 0 20px}
+.annexes-links{display:flex;flex-direction:column;gap:12px}
+.annexes-links a{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--fac,#CF0063);font-weight:600;font-size:15px;
+  text-decoration:none;padding:10px 14px;
+  background:#F9FAFB;border-radius:8px;
+  border:1px solid #E4E7EC;
+  transition:background .15s,border-color .15s;
+}
+.annexes-links a:hover{background:#F2F4F7;border-color:#D0D5DD;text-decoration:none}
+.annexes-links a svg{width:18px;height:18px;flex-shrink:0;color:#667085}
 </style>
 
 <!-- Fil d'Ariane -->
@@ -487,12 +577,21 @@ details.acc-item summary:hover{background:#EAEAEA}
       if (i === 0) details.open = true;
 
       const summary = document.createElement('summary');
-      summary.textContent = sec.title;
-      // Rotation du chevron via JS (le CSS scopé Astro ne s'applique pas aux éléments créés dynamiquement)
-      details.addEventListener('toggle', () => {
-        const ch = summary.querySelector('svg') as SVGElement | null;
-        if (ch) ch.style.transform = details.open ? 'rotate(180deg)' : '';
-      });
+
+      // Numéro
+      const num = document.createElement('span');
+      num.className = 'acc-num';
+      num.textContent = String(i + 1);
+
+      // Titre + numéro groupés
+      const titleWrap = document.createElement('span');
+      titleWrap.className = 'acc-title-wrap';
+      titleWrap.appendChild(num);
+      const titleText = document.createElement('span');
+      titleText.textContent = sec.title;
+      titleWrap.appendChild(titleText);
+
+      summary.appendChild(titleWrap);
       summary.appendChild(chevron());
       details.appendChild(summary);
 
