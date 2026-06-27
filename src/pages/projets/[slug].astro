@@ -40,6 +40,17 @@ const carouselImages: string[] = d.images
   ? (hasVideo ? d.images : d.images.slice(1))
   : [];
 
+// Image de secours selon l'axe pédagogique (catégorie) si aucune illustration
+function categoryImage(cat?: string | null): string | null {
+  const c = (cat ?? '').toLowerCase();
+  if (c.includes('prépar') || c.includes('prepar'))   return '/images/sections/Preparer.svg';
+  if (c.includes('rendre'))                            return '/images/sections/RendreActif.svg';
+  if (c.includes('responsabilis'))                     return '/images/sections/Responsabiliser.svg';
+  if (c.includes('cré') || c.includes('cre'))          return '/images/sections/FaireCreer.svg';
+  return null;
+}
+const catImg = categoryImage(d.category);
+
 const hasCarousel = carouselImages.length > 0;
 ---
 <Base title={d.title} description={d.description_short}>
@@ -83,6 +94,7 @@ const hasCarousel = carouselImages.length > 0;
 .proj-media .media-embed{width:100%;height:100%;position:relative}
 .proj-media .media-embed iframe{width:100%;height:100%;border:0;display:block;min-height:260px}
 .proj-media img.main-img{width:100%;height:100%;object-fit:cover;display:block}
+.proj-media img.cat-img{object-fit:contain;background:#fff;padding:8px}
 .proj-media .media-placeholder{width:100%;height:100%;min-height:260px;background:var(--fac,var(--rose));display:flex;align-items:center;justify-content:center}
 .proj-media .media-placeholder span{font-size:72px;font-weight:800;color:rgba(255,255,255,.2);letter-spacing:-.02em}
 
@@ -350,6 +362,8 @@ details.acc-item[open] .acc-chevron{
         </div>
       ) : (d.images && d.images.length > 0) ? (
         <img src={d.images[0]} alt={d.title} class="main-img" loading="lazy" />
+      ) : catImg ? (
+        <img src={catImg} alt={d.category} class="main-img cat-img" loading="lazy" />
       ) : (
         <div class="media-placeholder">
           <span>{(d.author ?? d.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase()}</span>
