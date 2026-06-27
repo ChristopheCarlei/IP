@@ -338,7 +338,7 @@ details.acc-item[open] .acc-chevron{
   <!-- Corps : média principal gauche + description droite -->
   <div class="proj-card-body">
 
-    <!-- Média principal : vidéo > première image > photo > placeholder -->
+    <!-- Média principal : vidéo > première image > placeholder -->
     <div class="proj-media">
       {d.videos && d.videos.length > 0 ? (
         <div class="media-embed">
@@ -350,8 +350,6 @@ details.acc-item[open] .acc-chevron{
         </div>
       ) : (d.images && d.images.length > 0) ? (
         <img src={d.images[0]} alt={d.title} class="main-img" loading="lazy" />
-      ) : d.photo ? (
-        <img src={d.photo} alt={d.title} class="main-img" loading="lazy" />
       ) : (
         <div class="media-placeholder">
           <span>{(d.author ?? d.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase()}</span>
