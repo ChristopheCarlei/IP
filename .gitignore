@@ -4,3 +4,9 @@ dist/
 .env
 .env.*
 *.log
+
+# Dossiers sensibles - ne pas pusher
+Prix Pédagogie/
+Prix-Pedagogie-2027/
+Projets/
+apercu-site-offline/
