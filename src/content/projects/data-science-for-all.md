@@ -24,6 +24,10 @@ observation_accepted: true
 description_short: "Ce projet offre une approche nouvelle de l'apprentissage de la science des données en proposant une plateforme abritant une collection de capsules vidéo, chacune se concentrant sur des compétences essentielles du domaine de la science des données, mises à disposition pour se former de façon autonome et réutilisables par les enseignant-es dans leurs cours."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/199027
+  - https://mediaserver.unige.ch/embed/199025
+  - https://mediaserver.unige.ch/embed/199026
 ---
 
 ## Situation de départ

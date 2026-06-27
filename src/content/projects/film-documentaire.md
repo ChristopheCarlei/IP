@@ -1,6 +1,5 @@
 ﻿---
 id: 40
-youtube: https://www.youtube.com/embed/Qe2R0FYcaYk
 team: Annie Goudeaux, Germain Poizat
 title: Film documentaire
 author: Nicolas Senn
@@ -16,6 +15,9 @@ observation_accepted: false
 description_short: Ce cours permet aux étudiant-es de développer des projets de films documentaires en binôme ou individuellement, de la prise de vue au montage, en utilisant du matériel professionnel.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/Qe2R0FYcaYk
+  - https://mediaserver.unige.ch/embed/193163
 ---
 
 ## Situation de départ

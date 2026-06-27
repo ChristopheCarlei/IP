@@ -25,6 +25,9 @@ observation_accepted: true
 description_short: "L'École Préparatoire de Mathématiques propose aux nouvelles volées estudiantines de mettre à niveau leurs connaissances en mathématiques. Principalement en ligne, elle permet aux étudiant-es de progresser à leur propre rythme, avec des tests de positionnement, des modules personnalisés, une boîte de dialogue pour les questions et des sessions en personne."
 featured: false
 status: actif
+videos:
+  - https://gsem-epm-be.innprogress.ch/uploads/video/intro__VF-1661955700116.mp4
+  - https://gsem-epm-be.innprogress.ch/uploads/video/Georgia_VF-1662115677386.mp4
 ---
 
 ## Situation de départ

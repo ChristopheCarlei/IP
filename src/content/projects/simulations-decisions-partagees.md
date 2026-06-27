@@ -15,6 +15,9 @@ observation_accepted: true
 description_short: "Des scénarios de simulation sont utilisés pour les exercices, permettant aux étudiants de s'entraîner avec des mannequins pilotés par ordinateurs ou avec des Patients Simulés, et comprennent également des scénarios co-créés avec des patients partenaires pour offrir une perspective patient-centrée et des retours d'expérience."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/188416
+  - https://mediaserver.unige.ch/embed/188417
 ---
 
 ## Situation de départ

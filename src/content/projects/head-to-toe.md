@@ -16,6 +16,8 @@ observation_accepted: false
 description_short: HeadToToe est une application développée par deux étudiants en médecine à l’Université de Genève, destinée à promouvoir un accès en tout temps à du matériel médical de qualité, avec un outil intuitif, logique et facile d’accès.
 featured: false
 status: actif
+videos:
+  - https://www.unige.ch/innovations-pedagogiques/application/files/4116/0586/2909/HeadtoToe_final.mp4
 ---
 
 ## Situation de départ

@@ -14,6 +14,8 @@ observation_accepted: false
 description_short: "Pour optimiser le temps en classe et ne pas revenir de façon automatique sur des notions précédemment abordées, l'enseignant utilise des sondages anonymes réguliers avec l’outil en ligne Votamatic. Il permet aux étudiant-es de répondre à des questions et ainsi identifier les erreurs communes, favorisant les discussions en groupe afin de clarifier les concepts."
 featured: false
 status: archivé
+videos:
+  - https://www.youtube.com/embed/YnUjZ9T1t8M
 ---
 
 ## Situation de départ

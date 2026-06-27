@@ -2,7 +2,6 @@
 id: 128
 images:
   - /images/gallery/proj-128-1.jpg
-youtube: https://www.youtube.com/embed/ZECUQojxp_8
 award: Prix innovation pédagogique
 title: Fiches médicales
 author: "Priscilla Soulie & Monica Didier"
@@ -19,6 +18,8 @@ observation_accepted: false
 description_short: "Dans ce projet mené en autonomie, les étudiant-es rédigent des fiches de maladies rares pour une base de données, en assumant des rôles spécifiques, s'auto-évaluant et s'évaluant mutuellement."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/ZECUQojxp_8
 ---
 
 ## Situation de départ

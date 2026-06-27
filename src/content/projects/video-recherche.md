@@ -14,6 +14,9 @@ observation_accepted: false
 description_short: "Dans ce cours, les étudiant-es ont la possibilité de créer des vidéos pour présenter leur travail de recherche. Cette option facultative leur permet de présenter leur cas d'étude en 5 minutes maximum, en abordant la problématique, la méthode, la motivation et les problèmes rencontrés."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/215790
+  - https://mediaserver.unige.ch/embed/215791
 ---
 
 ## Situation de départ

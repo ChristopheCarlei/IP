@@ -1,7 +1,11 @@
----
+﻿---
 id: 106
 title: "Cornelia Hummel's Short film"
 description_short: This course offers students the opportunity to create video clips on social science concepts. They choose, write and direct their film, then present it and link it to the theoretical content of the course for evaluation.
+videos:
+  - https://www.youtube.com/embed/f5nXN8e7vYk
+  - https://www.youtube.com/embed/vTAAPsnsz8E
+  - https://www.youtube.com/embed/ZzxIJstIwSI
 ---
 
 ## Initial situation

@@ -1,4 +1,4 @@
----
+﻿---
 id: 101
 team: Laurent Moccozet
 title: Fabrication au Faclab
@@ -16,6 +16,9 @@ observation_accepted: false
 description_short: "Ce projet pédagogique vise à moderniser les méthodes d'enseignement en intégrant des approches basées sur la fabrication (tangible et intangible) et le Design Thinking, afin de favoriser l'apprentissage actif et interdisciplinaire, répondant ainsi aux évolutions de la société numérique."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/S2kjCUVBQMc
+  - https://www.youtube.com/embed/3ctzArLngkQ
 ---
 
 ## Situation de départ

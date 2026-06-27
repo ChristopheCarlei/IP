@@ -1,7 +1,9 @@
----
+﻿---
 id: 12
 title: Catchbox by Judith Schrempf-Stirling
 description_short: The Catchbox is a portable cube-shaped microphone that allows students to share their ideas by launching the microphone through the room. It gives the opportunity for easy and fun speaking, promoting interaction and active engagement of students in the course.
+videos:
+  - https://www.youtube.com/embed/VWzk2KIcklI
 ---
 
 ## Initial situation

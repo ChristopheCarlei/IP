@@ -1,7 +1,10 @@
----
+﻿---
 id: 4
 title: "Michelle Bergadaa's Responsible Project"
 description_short: This course teaches students the fundamental principles necessary to carry out any entrepreneurial project. To apply the methods learned, students are invited to carry out a group project in partnership with an NGO working in education in disadvantaged countries.
+videos:
+  - https://www.youtube.com/embed/523U2N1wEQE
+  - https://www.youtube.com/embed/MFyfQ9zosn8
 ---
 
 ## Initial situation

@@ -1,7 +1,9 @@
----
+﻿---
 id: 130
 title: Soft skills and digital projects by Yaniv Benhamou and Seth Mediateur Tuyisabe
 description_short: Using project-based learning methods, students work together to solve real-world digital problems, developing cross-disciplinary skills while producing a variety of solutions that are published in an open-access format.
+videos:
+  - https://mediaserver.unige.ch/embed/223040
 ---
 
 ## Initial situation

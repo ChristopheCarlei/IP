@@ -1,7 +1,9 @@
----
+﻿---
 id: 64
 title: "Voting & Groups by Jörg Balsiger"
 description_short: "The teacher used Pingo's Text-tag cloud feature to allow students to propose news topics and geographical locations. This led to the selection of the most frequently mentioned topics on which the students based their policy memos."
+videos:
+  - https://www.youtube.com/embed/EhPyLmrruXw
 ---
 
 ## Initial situation

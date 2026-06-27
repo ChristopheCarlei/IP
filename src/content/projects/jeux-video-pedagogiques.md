@@ -1,6 +1,5 @@
 ﻿---
 id: 103
-youtube: https://www.youtube.com/embed/bDv0r2u8k0I
 title: Jeux vidéo pédagogiques
 author: Nicolas Szilas
 photo: /images/projet/Kim__Le_Nicolas_Szilas_2023.jpg
@@ -16,6 +15,8 @@ observation_accepted: false
 description_short: "Ce cours a évolué d'une approche théorique sur la création multimédia vers la conception pratique d'un jeu vidéo, plaçant la création des étudiant-es au centre de l'apprentissage. Les étudiant-es travaillent en groupes pour concevoir, développer et évaluer un jeu vidéo."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/bDv0r2u8k0I
 ---
 
 ## Situation de départ

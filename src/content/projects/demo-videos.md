@@ -14,6 +14,9 @@ observation_accepted: false
 description_short: "L'enseignante utilise des démonstrations en direct et des vidéos pour rendre le cours plus interactif. Les sessions d'exercices ont été réorganisées avec des étudiant-es présentant leurs solutions devant la classe, ce qui a amélioré les résultats aux examens."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/VRAXK4QKJ1Q
+  - https://www.youtube.com/embed/EkDhlzA-lwI
 ---
 
 ## Situation de départ

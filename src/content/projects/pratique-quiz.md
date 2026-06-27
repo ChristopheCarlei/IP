@@ -14,6 +14,9 @@ observation_accepted: false
 description_short: "Le cours propose des vidéos formatives pour familiariser les étudiant-es avec l'outil Sketch Engine, notamment le concordancier et l'outil de création de corpus. Les étudiant-es regardent ces vidéos, suivies de quiz, afin d'acquérir une compréhension et une maîtrise de l'outil."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/f4eszLB47Qk
+  - https://www.youtube.com/embed/VjHC4lMop-s
 ---
 
 ## Situation de départ

@@ -13,6 +13,10 @@ observation_accepted: false
 description_short: InfoTrack est la plateforme de la Bibliothèque de l’Université de Genève destinée à la formation en ligne aux compétences informationnelles (recherche documentaire, sélection, communication et utilisation éthique de l’information) principalement pour les étudiant-e-s en Bachelor, toutes les disciplines confondues.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/YM8g7DqHEug
+  - https://www.youtube.com/embed/dXlZ06XElMo
+  - https://www.youtube.com/embed/hUpvl6XnBRQ
 ---
 
 ## Situation de départ

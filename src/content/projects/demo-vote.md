@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "En amphithéâtre, le cours manquait de rythme. L'enseignant a mis en place un logiciel permettant d'annoter en direct son support de présentation ainsi qu'une plateforme de vote."
 featured: false
 status: supprimé
+videos:
+  - https://www.youtube.com/embed/A0nGgelhT2k
 ---
 
 ## Situation de départ

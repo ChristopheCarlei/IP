@@ -14,6 +14,8 @@ observation_accepted: false
 description_short: "Ce cours propose une approche pédagogique basée sur l'analyse de films mettant en scène des troubles psychiatriques. Chaque séance comprend la présentation du film, la projection d'extraits, un questionnaire diagnostique, un débat sur la représentation des troubles et un questionnaire d'évaluation."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/129538
 ---
 
 ## Situation de départ

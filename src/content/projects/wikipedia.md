@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Les étudiant-es de Master sont encouragé-es à publier des contributions sur Wikipédia liées aux sujets du séminaire, en équipes ou individuellement, après des étapes de familiarisation, de soumission de projet, et d'encadrement par des formatrices expertes en publication sur Wikipédia."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/8A0JJiGQeTo
 ---
 
 ## Situation de départ

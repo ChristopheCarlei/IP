@@ -13,6 +13,8 @@ observation_accepted: false
 description_short: "Dans ce cours, les étudiant-es présentent leur travail sous forme de vidéos. Afin de dynamiser les présentations, l'enseignante leur propose de le faire sous forme de battle : deux groupes présentent chacun leur vidéo traitant du même thème et la classe les analysent en les comparant."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/123219
 ---
 
 ## Situation de départ

@@ -1,7 +1,10 @@
----
+﻿---
 id: 40
 title: Documentary film by Nicolas Senn
 description_short: This course allows students to develop documentary film projects in pairs or individually, from shooting to editing, using professional equipment.
+videos:
+  - https://www.youtube.com/embed/Qe2R0FYcaYk
+  - https://mediaserver.unige.ch/embed/193163
 ---
 
 ## Initial situation

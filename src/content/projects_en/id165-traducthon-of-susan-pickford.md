@@ -1,7 +1,9 @@
----
+﻿---
 id: 165
 title: Traducthon of Susan Pickford
 description_short: "This project offers an intensive program, a collaborative translation marathon, allowing students to put into practice the technical and cross-disciplinary skills acquired in the Master's program, through a real translation assignment. This activity promotes collaboration between units and offers practical immersion in the professional realities of the profession."
+videos:
+  - https://mediaserver.unige.ch/embed/299485
 ---
 
 ## Initial situation

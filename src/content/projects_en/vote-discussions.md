@@ -1,7 +1,9 @@
----
+﻿---
 id: 65
 title: "Gérard Hopfgartner's vote & discussions"
 description_short: To optimize class time and not automatically return to previously discussed concepts, the teacher uses regular anonymous surveys with the Votamatic online tool. It allows students to answer questions and thus identify common mistakes, promoting group discussions to clarify concepts.
+videos:
+  - https://www.youtube.com/embed/YnUjZ9T1t8M
 ---
 
 ## Initial situation

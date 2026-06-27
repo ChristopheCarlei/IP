@@ -15,6 +15,9 @@ observation_accepted: false
 description_short: "Cet atelier en Études Visuelles propose aux étudiant-es d'apprendre et de mettre en pratique la production d'un film documentaire, avec des séances théoriques et pratiques, ainsi qu'une évaluation basée sur la réalisation d'un film projeté publiquement."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/163399
+  - https://mediaserver.unige.ch/embed/163390
 ---
 
 ## Situation de départ

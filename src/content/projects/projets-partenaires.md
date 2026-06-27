@@ -15,6 +15,9 @@ observation_accepted: true
 description_short: Le Programme de Projets Partenaires mis en place par le rectorat de l’UNIGE propose aux étudiant-es de participer conjointement avec des collaborateurs/trices de l’université dans des projets concrets menés dans l’institution.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/Kf2AXsVXkPM
+  - https://www.youtube.com/embed/b4easr-SJd4
 ---
 
 ## Situation de départ

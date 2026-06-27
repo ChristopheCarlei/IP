@@ -1,6 +1,5 @@
 ﻿---
 id: 115
-youtube: https://www.youtube.com/embed/wqddan7BFHs
 title: SketchNote 3D
 author: "Christophe Lamy & Julien DaCosta"
 photo: /images/projet/Lamy-DaCosta.jpg
@@ -16,6 +15,8 @@ observation_accepted: false
 description_short: "Les travaux pratiques d'anatomie en médecine ont adopté la classe inversée avec des modules e-learning préalables. Pour enrichir cette méthode, l'outil web \"SketchNote 3D\" a été développé pour annoter et visualiser des modèles anatomiques 3D interactifs dans l'enseignement."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/wqddan7BFHs
 ---
 
 ## Situation de départ

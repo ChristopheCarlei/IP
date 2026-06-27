@@ -3,7 +3,6 @@ id: 145
 images:
   - /images/gallery/proj-145-1.jpg
   - /images/gallery/proj-145-2.jpg
-youtube: https://www.youtube.com/embed/GCYtPRAOQpE
 title: Reportage en direct
 author: "Nicolas Szilas & Kim Le"
 photo: /images/projet/Kim__Le_Nicolas_Szilas_2023.jpg
@@ -19,6 +18,8 @@ observation_accepted: false
 description_short: Afin de diffuser des connaissances liées à des lieux difficilement accessibles en grands groupes, l’équipe de ce projet propose des cours sous forme de reportages diffusés en temps réel sur Zoom.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/GCYtPRAOQpE
 ---
 
 ## Situation de départ

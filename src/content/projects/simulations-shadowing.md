@@ -15,6 +15,8 @@ observation_accepted: true
 description_short: "Ce module se concentre sur l'analyse des collaborations interprofessionnelles en soins de santé. Les étudiant-es participent à des simulations en groupe encadrées par des tuteurs et tutrices et peuvent également prendre part à une simulation à grande échelle appelée \"ValTra\"."
 featured: false
 status: actif
+videos:
+  - https://www.rts.ch/play/embed?urn=urn:rts:video:9011359&subdivisions=false
 ---
 
 ## Situation de départ

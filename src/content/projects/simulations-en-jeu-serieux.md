@@ -1,6 +1,5 @@
 ﻿---
 id: 90
-youtube: https://www.youtube.com/embed/xjChZFRmjwQ
 title: Simulations en jeu sérieux
 author: Dominique Jaccard
 contact: "Dominique.Jaccard@heig-vd.ch"
@@ -15,6 +14,8 @@ observation_accepted: false
 description_short: "L'enseignant a développé un jeu sérieux en management de projet pour permettre aux étudiant-es d'appliquer concrètement les concepts théoriques, favorisant ainsi une meilleure compréhension et intégration des sujets enseignés."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/xjChZFRmjwQ
 ---
 
 ## Situation de départ

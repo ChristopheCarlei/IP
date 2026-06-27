@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Ce cours est structuré autour d'un ebook interactif proposant un contenu détaillé et organisé, adapté à une participation en ligne. Lors des sessions en personne, l'enseignant utilise un site web proposant, pour chaque chapitre, du contenu théorique articulé avec des exercices pratiques."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/0zlWcHDKCFw
 ---
 
 ## Situation de départ

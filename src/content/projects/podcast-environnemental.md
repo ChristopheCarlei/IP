@@ -1,6 +1,5 @@
 ﻿---
 id: 62
-youtube: https://www.youtube.com/embed/FahjppRC2X8
 award: Prix innovation pédagogique
 team: Karine Duplan
 title: Podcast environnemental
@@ -17,6 +16,9 @@ observation_accepted: false
 description_short: "Cet enseignement permet aux étudiant-es de se former à l'analyse de podcasts sur des questions environnementales. Ils/elles écoutent et critiquent des podcasts existants, puis produisent leur propre podcast en groupe, mettant en pratique leurs compétences de travail d'équipe."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/FahjppRC2X8
+  - https://www.youtube.com/embed/LVaWD1K9rmY
 ---
 
 ## Situation de départ

@@ -1,7 +1,10 @@
----
+﻿---
 id: 112
 title: International contest by Armelle Choplin
 description_short: "Students participate in the \"Students Reinventing Cities\" competition by forming multidisciplinary teams. They collaborate with cities around the world to design urban regeneration projects that respect sustainable principles and are adapted to the specific strategies of each city."
+videos:
+  - https://www.youtube.com/embed/NFzSSuxIrak
+  - https://www.youtube.com/embed/WrtK96ZW_hg
 ---
 
 ## Initial situation

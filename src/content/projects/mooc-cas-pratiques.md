@@ -14,6 +14,10 @@ observation_accepted: false
 description_short: Plusieurs cours ex-cathedra de cet enseignement ont été filmés et montés à la manière d’un MOOC. En visionnant ces vidéos à distance, les étudiant-es préparent les séances de travail en présentiel qui leur permettent d’approfondir leurs connaissances et poser des questions. Cela leur permet également de revisionner les cours quand ils/elles le souhaitent.
 featured: false
 status: archivé
+videos:
+  - https://www.youtube.com/embed/Mq6aa971ke4
+  - https://www.youtube.com/embed/Wc21EOV0OmE
+  - https://www.youtube.com/embed/WbH6QzyAu2o
 ---
 
 ## Situation de départ

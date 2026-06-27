@@ -1,7 +1,9 @@
----
+﻿---
 id: 134
 title: Interprofessionality de Thomas Fassier
 description_short: The teaching team has set up a one-week congress aimed at developing transversal skills in interprofessional collaboration. Activities include interactive workshops, role plays, lectures and an e-learning path.
+videos:
+  - https://www.youtube.com/embed/4tLR7MBefOg
 ---
 
 ## Initial situation

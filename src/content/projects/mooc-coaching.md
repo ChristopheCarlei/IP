@@ -13,6 +13,8 @@ observation_accepted: false
 description_short: Les étudiant-es sont exposés à un MOOC avant les cours, puis interagissent avec des réfugié-es pour appliquer les concepts enseignés, et enfin évaluent leur contribution via un questionnaire en ligne.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/b0lj9jftDy4
 ---
 
 ## Situation de départ

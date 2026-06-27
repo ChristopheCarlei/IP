@@ -1,7 +1,9 @@
----
+﻿---
 id: 103
 title: Video games by Nicolas Szilas
 description_short: This course has evolved from a theoretical approach to multimedia creation to the practical design of a video game, placing the creation of students at the center of learning. Students work in groups to design, develop and evaluate a video game.
+videos:
+  - https://www.youtube.com/embed/bDv0r2u8k0I
 ---
 
 ## Initial situation

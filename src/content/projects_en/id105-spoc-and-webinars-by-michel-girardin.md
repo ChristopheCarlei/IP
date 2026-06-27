@@ -1,7 +1,10 @@
----
+﻿---
 id: 105
 title: "SPOC & webinars by Michel Girardin"
 description_short: This course offers 150 video capsules, each lasting an average of 8 minutes, with the involvement of practitioners from the financial sector, complemented by PDF documents summarizing the lessons, moments of reflection integrated into the videos, an interactive forum and regular webinars to update the content and promote exchanges with students.
+videos:
+  - https://www.youtube.com/embed/HSv1NuZCnNk
+  - https://player.vimeo.com/video/524809968
 ---
 
 ## Initial situation

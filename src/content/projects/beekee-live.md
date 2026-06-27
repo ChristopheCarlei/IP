@@ -12,9 +12,10 @@ category: Rendre actifs
 innovation_type: Faire collaborer
 observation_accepted: false
 description_short: "Les enseignant-es utilisent Beekee Live, un outil en ligne qui permet aux étudiant-es de partager et discuter de leurs productions sans avoir à créer de compte ou à installer une application. Cela facilite la collaboration et l'évaluation des étudiant-es."
-youtube: https://www.youtube.com/embed/jS6GCEjdnik
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/jS6GCEjdnik
 ---
 
 ## Situation de départ

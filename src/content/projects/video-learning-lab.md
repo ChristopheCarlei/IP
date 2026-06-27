@@ -15,9 +15,10 @@ category: Faire créer
 innovation_type: Faire réaliser une production originale
 observation_accepted: true
 description_short: Le Video Learning Lab engage les étudiant-es dans l’analyse de situations authentiques d’enseignement filmées et la conception de scénarios de formation. Il favorise une articulation théorie-pratique, un apprentissage actif et le développement d’une posture réflexive.
-youtube: "https://www.youtube.com/embed/1dAgT87F-0E"
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/1dAgT87F-0E
 ---
 
 ## Situation de départ

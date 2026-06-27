@@ -22,6 +22,9 @@ observation_accepted: true
 description_short: L’enseignant utilise un lightboard, un tableau en verre transparent rétroéclairé avec des marqueurs fluorescents, pour corriger les exercices en se filmant face à la caméra, ce qui lui permet d’écrire tout en restant visible pour les étudiant-es.
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/243758
+  - https://mediaserver.unige.ch/embed/243757
 ---
 
 ## Situation de départ

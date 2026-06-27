@@ -16,6 +16,10 @@ observation_accepted: false
 description_short: "Ce cours propose aux étudiant-es de créer des capsules vidéos sur des concepts des sciences sociales. Ils/elles choisissent, écrivent et réalisent leur film, puis le présentent et le relient au contenu théorique du cours pour l'évaluation."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/f5nXN8e7vYk
+  - https://www.youtube.com/embed/vTAAPsnsz8E
+  - https://www.youtube.com/embed/ZzxIJstIwSI
 ---
 
 ## Situation de départ

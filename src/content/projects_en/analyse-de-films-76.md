@@ -1,7 +1,9 @@
----
+﻿---
 id: 76
 title: Film analysis by Jean-François Staszak
 description_short: This course focuses on the use of iconography and visual aids in the social sciences. Students are encouraged to develop visual analysis skills and create a PowerPoint presentation on a film sequence, highlighting the visual aspects.
+videos:
+  - https://mediaserver.unige.ch/embed/129538
 ---
 
 ## Initial situation

@@ -1,7 +1,11 @@
----
+﻿---
 id: 89
 title: "MOOC & case study by Michel Hottelier"
 description_short: Several ex-cathedra courses of this teaching were filmed and edited in the manner of a MOOC. By watching these videos remotely, students prepare face-to-face work sessions that allow them to deepen their knowledge and ask questions. It also allows them to rewatch classes whenever they want.
+videos:
+  - https://www.youtube.com/embed/Mq6aa971ke4
+  - https://www.youtube.com/embed/Wc21EOV0OmE
+  - https://www.youtube.com/embed/WbH6QzyAu2o
 ---
 
 ## Initial situation

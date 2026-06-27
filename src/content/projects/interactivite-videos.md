@@ -17,7 +17,7 @@ description_short: "Pour favoriser l'interaction et l'implication des étudiant-
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/120277
+  - https://mediaserver.unige.ch/embed/120287
 ---
 
 ## Situation de départ

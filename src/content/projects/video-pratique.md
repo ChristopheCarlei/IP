@@ -1,6 +1,5 @@
 ﻿---
 id: 8
-youtube: https://www.youtube.com/embed/6QlAQePPAGI
 title: "Vidéo & pratique"
 author: Valérie Lussi Borer
 photo: /images/projet/Valerie_Lussi_Borer.jpg
@@ -15,6 +14,8 @@ observation_accepted: false
 description_short: "Ce cours vise à améliorer l'expertise professionnelle des étudiant-es en promouvant un échange bienveillant et formatif entre pairs. Les étudiant-es se filment durant leur pratique professionnelle et les séquences vidéo sont analysées objectivement et évaluées à chaque étape."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/6QlAQePPAGI
 ---
 
 ## Situation de départ

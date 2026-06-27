@@ -1,7 +1,11 @@
----
+﻿---
 id: 27
 title: "Videos & role playing by Jérôme Berger"
 description_short: The teacher uses an academic coaching approach, encouraging students to take charge of their learning, promoting critical thinking and reflection in small groups. The evaluation is done on computer with access to research tools, simulating real working conditions.
+videos:
+  - https://mediaserver.unige.ch/embed/208147
+  - https://mediaserver.unige.ch/embed/208145
+  - https://mediaserver.unige.ch/embed/192922
 ---
 
 ## Initial situation

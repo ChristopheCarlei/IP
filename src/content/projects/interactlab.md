@@ -18,6 +18,9 @@ observation_accepted: true
 description_short: "En alliant classe inversée et apprentissage par projet, ces travaux pratiques initient les apprenant-es à la démarche de recherche et de publication en psychologie dès le bachelor. La méthode proposée facilite les communications et la rédaction collaborative grâce à l'utilisation d’outils numériques."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/299479
+  - https://mediaserver.unige.ch/embed/299480
 ---
 
 ## Situation de départ

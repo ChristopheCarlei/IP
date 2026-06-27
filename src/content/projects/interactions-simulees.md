@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Des acteurs et actrices jouent le rôle de patient-es tandis que les étudiant-es agissent en psychologues, créant des interactions simulées pour l'apprentissage. Le format Stop&Go favorise des débriefings réguliers, permettant aux étudiant-es d'incarner acteurs et spectateurs actifs successivement"
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/170122
 ---
 
 ## Situation de départ

@@ -16,6 +16,8 @@ observation_accepted: false
 description_short: "Inspiré par le dynamisme des vidéos YouTube qui simplifient les concepts mathématiques, l'enseignant a adopté un format similaire pour son cours en ligne pendant l'année académique 2020-21. Les étudiant-es ont eu accès à des vidéos préenregistrées, divisées en chapitres courts et dynamiques, agrémentées d'animations interactives, afin de rendre la matière plus digeste, plaisante et accessible."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/cw3cKoQDyAA
 ---
 
 ## Situation de départ

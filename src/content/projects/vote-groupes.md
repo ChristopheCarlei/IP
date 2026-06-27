@@ -1,4 +1,4 @@
----
+﻿---
 id: 64
 team: Rebecca Duroulet, Sandro Loi, Hervé Roquet
 title: "Vote & groupes"
@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "L'enseignant a utilisé la fonction Text-tag cloud de Pingo pour permettre aux étudiant-es de proposer des sujets d'actualité et des lieux géographiques. Cela a conduit à la sélection des thèmes les plus fréquemment mentionnés sur lesquels les étudiant-es se sont basé-es pour rédiger des policy memo."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/EhPyLmrruXw
 ---
 
 ## Situation de départ

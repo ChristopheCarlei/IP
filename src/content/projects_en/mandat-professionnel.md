@@ -1,4 +1,4 @@
----
+﻿---
 id: 116
 title: Professional mandate by Aurélie Picton
 description_short: In this course, students are given a fictitious (but realistic) mandate, where the mandator expects a recommendation of one or more terms for French in response to an English neologism. These mandates are developed by the teacher, in close collaboration with professionals familiar with such mandates.

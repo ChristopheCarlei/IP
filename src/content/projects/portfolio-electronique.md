@@ -22,6 +22,8 @@ observation_accepted: false
 description_short: Une application portfolio permet aux étudiant-es de documenter l’ensemble des activités effectuées lors de leur stage et autres activités d’apprentissage. Elle permet également aux responsables de stage d’évaluer et valider les degrés d’autonomie atteints par les étudiant-es dans les différentes activités.
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/147544
 ---
 
 ## Situation de départ

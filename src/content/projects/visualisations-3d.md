@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Un scanner haute résolution a été utilisé pour numériser des dents, permettant ainsi la création de reconstructions en 3D. Ces modèles 3D sont ensuite diffusés lors des cours offrant aux étudiants la possibilité d'examiner les dents sous tous les angles, de zoomer sur les détails importants, et même de reconstruire virtuellement des dents endommagées."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/215784
 ---
 
 ## Situation de départ

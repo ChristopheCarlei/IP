@@ -1,4 +1,4 @@
----
+﻿---
 id: 107
 title: Amphi inversé
 author: "Eduardo Solana & Alexandre-Quentin Berger"

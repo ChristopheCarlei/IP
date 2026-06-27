@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "En utilisant des méthodes d'apprentissage par projet, les étudiant-es collaborent pour résoudre des problématiques concrètes du numérique, développant ainsi des compétences transversales tout en aboutissant à des solutions variées publiées en libre accès."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/223040
 ---
 
 ## Situation de départ

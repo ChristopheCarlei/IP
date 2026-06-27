@@ -1,4 +1,4 @@
----
+﻿---
 id: 125
 title: Vidéos interdiscplinaires
 author: Valérie Wyssbrod
@@ -15,6 +15,15 @@ observation_accepted: false
 description_short: Dans ce cours, les étudiant-es sont divisé-es en groupes et créent des capsules vidéo sur la conservation de la biodiversité, en se concentrant sur le cadre juridique. Ils/elles sont accompagné-es par des séances de coaching et des rendus intermédiaires.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/kigst0kkj9o
+  - https://www.youtube.com/embed/uZDjAZMaFSI
+  - https://www.youtube.com/embed/w56R6ziRYhI
+  - https://www.youtube.com/embed/Nr_bNkV0nYc
+  - https://www.youtube.com/embed/R1x0uELBjIA
+  - https://www.youtube.com/embed/Nla97DAhKVw
+  - https://www.youtube.com/embed/UGZNFj7BCs4
+  - https://www.youtube.com/embed/KbqyD7dHDeE
 ---
 
 ## Situation de départ

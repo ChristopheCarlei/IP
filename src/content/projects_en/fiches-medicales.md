@@ -1,7 +1,9 @@
----
+﻿---
 id: 128
 title: Medical sheets by Priscilla Soulié and Monica Didier
 description_short: In this independent project, students write rare disease fact sheets for a database, taking on specific roles, self-assessing and evaluating each other.
+videos:
+  - https://www.youtube.com/embed/ZECUQojxp_8
 ---
 
 ## Initial situation

@@ -17,6 +17,8 @@ observation_accepted: false
 description_short: "Ce projet comprend des activités pédagogiques telles qu'un jeu interactif sur la phylogénie des végétaux, un quiz basé sur l'observation d'une exposition de plantes et la participation à la mise en place d'un mur végétal."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/241821
 ---
 
 ## Situation de départ

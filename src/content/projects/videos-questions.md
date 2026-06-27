@@ -1,6 +1,5 @@
 ﻿---
 id: 15
-youtube: https://www.youtube.com/embed/m-7NmevfX8E
 title: "Vidéos & questions"
 author: Jérôme Kasparian
 photo: /images/projet/Jerome_Kasparian.jpg
@@ -15,6 +14,9 @@ observation_accepted: false
 description_short: "Ce projet vise à fournir des bases en mathématiques via des capsules vidéo et à favoriser l'interactivité en posant des questions pendant le cours, utilisant une plateforme de questions/réponses en direct."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/m-7NmevfX8E
+  - https://www.unige.ch/fapse/vll/application/files/6815/7839/0295/Kasparian.mp4
 ---
 
 ## Situation de départ

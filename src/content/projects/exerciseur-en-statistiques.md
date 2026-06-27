@@ -13,9 +13,10 @@ category: Préparer
 innovation_type: Questionner
 observation_accepted: false
 description_short: "L’enseignant a ajouté à son cours des exercices pratiques générés aléatoirement sur Moodle avec correction automatique, ainsi que la réalisation d'exercices d'interprétation en petits groupes lors des séminaires."
-youtube: https://www.youtube.com/embed/m52TceyEOAY
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/m52TceyEOAY
 ---
 
 ## Situation de départ

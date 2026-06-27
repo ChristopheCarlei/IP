@@ -1,7 +1,10 @@
----
+﻿---
 id: 158
 title: InteractLab of Nicolas Burra
 description_short: By combining the flipped classroom approach with project-based learning, these practical exercises introduce students to the research and publication process in psychology as early as the bachelor’s level. The proposed method facilitates communication and collaborative writing using digital tools.
+videos:
+  - https://mediaserver.unige.ch/embed/299479
+  - https://mediaserver.unige.ch/embed/299480
 ---
 
 ## Initial situation

@@ -1,7 +1,10 @@
----
+﻿---
 id: 135
 title: Simulations and shared decisions de Patricia Picchiottino
 description_short: This module proposes simulation scenarios used for the exercises, allowing students to train with computer-controlled mannequins or with Simulated Patients. It also includes scenarios co-created with patient partners to offer a patient-centered perspective and feedback.
+videos:
+  - https://mediaserver.unige.ch/embed/188416
+  - https://mediaserver.unige.ch/embed/188417
 ---
 
 ## Initial situation

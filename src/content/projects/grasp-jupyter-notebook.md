@@ -1,4 +1,4 @@
----
+﻿---
 id: 124
 images:
   - /images/gallery/proj-124-1.png
@@ -18,6 +18,9 @@ observation_accepted: false
 description_short: Ce projet permet aux étudiant-es d’effectuer en autonomie l’apprentissage et la révision de concepts de programmation à travers de courtes capsules vidéo sur les concepts, des ressources interactives additionnelles pour approfondir ces concepts (selon leur niveau et leurs besoins) ainsi que des exercices auto-évalués.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/qvYvqb5tB8M
+  - https://www.youtube.com/embed/videoseries
 ---
 
 ## Situation de départ

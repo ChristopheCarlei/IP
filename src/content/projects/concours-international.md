@@ -1,4 +1,4 @@
----
+﻿---
 id: 112
 team: Eloise Pelaud, Matteo Tarantino et Raphael Languillon
 title: Concours international
@@ -16,6 +16,9 @@ observation_accepted: false
 description_short: "Les étudiant-es participent au concours \"Students Reinventing Cities\" en formant des équipes multidisciplinaires. Ils/elles collaborent avec des villes du monde entier pour concevoir des projets de régénération urbaine respectueux de principes durables et adaptés aux stratégies spécifiques de chaque ville."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/NFzSSuxIrak
+  - https://www.youtube.com/embed/WrtK96ZW_hg
 ---
 
 ## Situation de départ

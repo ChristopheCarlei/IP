@@ -1,7 +1,10 @@
----
+﻿---
 id: 79
 title: "Juliet Fall's video workshop"
 description_short: This workshop in Visual Studies offers students to learn and put into practice the production of a documentary film, with theoretical and practical sessions, as well as an evaluation based on the making of a publicly projected film.
+videos:
+  - https://mediaserver.unige.ch/embed/163399
+  - https://mediaserver.unige.ch/embed/163390
 ---
 
 ## Initial situation

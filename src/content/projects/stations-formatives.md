@@ -16,6 +16,8 @@ observation_accepted: false
 description_short: "Ce cours propose des consultations simulées sous trois formats : observation directe, observation vidéo et observation en cabinet. Les étudiant-es peuvent ainsi s'entraîner aux compétences cliniques et relationnelles lors de consultations avec des patient-es standardisé-es."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/i3qyhjipoCw
 ---
 
 ## Situation de départ

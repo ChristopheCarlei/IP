@@ -1,7 +1,13 @@
----
+﻿---
 id: 144
 title: Training speakers of Simon Flandin
 description_short: In this course, speakers involved in the subject matter co-teach the course while becoming more professional.
+videos:
+  - https://www.youtube.com/embed/JSE-Lx1rQZQ
+  - https://mediaserver.unige.ch/embed/211202
+  - https://mediaserver.unige.ch/embed/198550
+  - https://mediaserver.unige.ch/embed/198552
+  - https://mediaserver.unige.ch/embed/198553
 ---
 
 ## Initial situation

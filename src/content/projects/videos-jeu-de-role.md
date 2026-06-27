@@ -15,6 +15,10 @@ observation_accepted: true
 description_short: "L’enseignant a inversé certaines séances de cours en créant des vidéos théoriques en ligne que les étudiant-es regardent avant le cours. Des travaux pratiques sont également organisés en présence d'experts, où les étudiant-es jouent différents rôles et reçoivent des retours précis sur leurs performances."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/208147
+  - https://mediaserver.unige.ch/embed/208145
+  - https://mediaserver.unige.ch/embed/192922
 ---
 
 ## Situation de départ

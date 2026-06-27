@@ -1,6 +1,5 @@
 ﻿---
 id: 127
-youtube: https://www.youtube.com/embed/tid5PLrfH-U
 award: Prix innovation pédagogique
 team: Jennifer Socquet, Aurélia Platon, Nadia Bajwa, Lygia Pavitt
 title: Improvisation théâtrale
@@ -18,6 +17,8 @@ observation_accepted: false
 description_short: "Le cours consiste en une présentation théorique suivie d’une représentation théâtrale de scènes réelles mettant en évidence le sexisme et l'agression dans le milieu médical. Les étudiant-es participent ensuite à des discussions en groupe pour proposer des stratégies de réaction qui sont ensuite mises en pratique lors de nouvelles représentations théâtrales."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/tid5PLrfH-U
 ---
 
 ## Situation de départ

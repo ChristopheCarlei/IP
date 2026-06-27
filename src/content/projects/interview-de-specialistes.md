@@ -14,6 +14,8 @@ observation_accepted: false
 description_short: Ce MOOC propose 60 séquences vidéo de 10 minutes chacune, présentées par 25 spécialistes internationaux. Les vidéos abordent chaque sujet de manière accessible, offrent une perspective historique et encouragent les étudiants à échanger sur un forum pour explorer différentes idées et points de vue.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/FIeXZ_Cl6QM
 ---
 
 ## Situation de départ

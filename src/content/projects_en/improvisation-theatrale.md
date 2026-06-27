@@ -1,7 +1,9 @@
----
+﻿---
 id: 127
 title: Theatrical improvisation by Pauline Haemmerli and colleagues
 description_short: The course consists of a theoretical presentation followed by a theatrical representation of real scenes highlighting sexism and aggression in the medical environment. Students then participate in group discussions to propose reaction strategies that are then put into practice in new theatrical performances.
+videos:
+  - https://www.youtube.com/embed/tid5PLrfH-U
 ---
 
 ## Initial situation

@@ -1,6 +1,5 @@
 ﻿---
 id: 4
-youtube: https://www.youtube.com/embed/523U2N1wEQE
 photo: /images/projet/Michelle_Bergadaa.jpg
 title: Projet responsable
 author: Michelle Bergadaà
@@ -15,6 +14,9 @@ observation_accepted: false
 description_short: "Ce cours apprend aux étudiant-es les principes fondamentaux nécessaires à la réalisation de tout projet. Afin d’appliquer les méthodes apprises, les étudiant-es sont invité-es à mener un projet de groupe en partenariat avec une ONG œuvrant dans l'éducation dans les pays défavorisés."
 featured: false
 status: archivé
+videos:
+  - https://www.youtube.com/embed/523U2N1wEQE
+  - https://www.youtube.com/embed/MFyfQ9zosn8
 ---
 
 ## Situation de départ

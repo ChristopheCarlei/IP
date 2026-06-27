@@ -7,7 +7,6 @@ images:
   - /images/gallery/proj-152-4.png
   - /images/gallery/proj-152-5.png
   - /images/gallery/proj-152-6.png
-youtube: https://www.youtube.com/embed/wNdYR-M16ls
 title: Escape game virtuel
 author: Rita Trigo Trindade
 photo: /images/projet/Rita_Trigo_Trindade.jpg
@@ -24,6 +23,8 @@ observation_accepted: false
 description_short: "Le projet prend la forme d’un escape game : les étudiant-es sont placé-es dans la situation d’une héritière d’un associé « parachutée » dans une société dont elle veut s’échapper sans pour autant perdre son héritage."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/wNdYR-M16ls
 ---
 
 ## Situation de départ

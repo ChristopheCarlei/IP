@@ -1,7 +1,9 @@
----
+﻿---
 id: 81
 title: Green wall by Emilie Demarsy
 description_short: This project includes educational activities such as an interactive game on plant phylogeny, a quiz based on the observation of a plant exhibition and participation in the establishment of a green wall.
+videos:
+  - https://mediaserver.unige.ch/embed/241821
 ---
 
 ## Initial situation

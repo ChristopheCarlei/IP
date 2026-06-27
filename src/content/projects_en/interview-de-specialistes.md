@@ -1,7 +1,9 @@
----
+﻿---
 id: 67
 title: Specialist interview with Michel Grandjean
 description_short: This MOOC offers 60 video sequences of 10 minutes each, presented by 25 international specialists. The videos address each topic in an accessible way, offer historical perspective, and encourage students to fellowship in a forum to explore different ideas and perspectives.
+videos:
+  - https://www.youtube.com/embed/FIeXZ_Cl6QM
 ---
 
 ## Initial situation

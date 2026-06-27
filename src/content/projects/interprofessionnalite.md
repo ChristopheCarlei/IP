@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "L'équipe enseignante a mis en place un congrès d’une semaine visant à développer les compétences transversales en collaboration interprofessionnelle. Les activités proposées comprennent des ateliers interactifs, des jeux de rôle, des conférences et un parcours e-learning."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/4tLR7MBefOg
 ---
 
 ## Situation de départ

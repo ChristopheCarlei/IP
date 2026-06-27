@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: Les participant-es, des médecins, magistrats et policiers africains, suivent quatre modules thématiques couvrant des domaines tels que la médecine légale, la science forensique, le droit et le montage de projets médico-légaux.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/H7rtd-jHNNc
 ---
 
 ## Situation de départ

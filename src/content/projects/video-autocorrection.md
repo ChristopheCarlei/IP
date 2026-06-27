@@ -15,7 +15,7 @@ description_short: "Le cours se compose d'un cours ex cathedra suivi de vidéos 
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/VN3-1466-2017-2018-A
+  - https://www.unige.ch/innovations-pedagogiques/application/files/7215/8048/7160/Trindade_Droit_Ens.mp4
 ---
 
 ## Situation de départ

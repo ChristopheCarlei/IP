@@ -1,7 +1,9 @@
----
+﻿---
 id: 143
 title: Electronic portfolio of Frédéric Geoffroy
 description_short: A portfolio application enables students to document all the activities carried out during their internship and other learning activities. It also enables placement supervisors to assess and validate the degrees of autonomy achieved by students in the various activities.
+videos:
+  - https://mediaserver.unige.ch/embed/147544
 ---
 
 ## Initial situation

@@ -1,9 +1,9 @@
----
+﻿---
 id: 19
 title: "Video & autocorrection of Rita Trigo Trindade"
 description_short: This course offers students the opportunity to work in cooperation with faculty members on projects related to the organization of events, faculty or university development, as well as research or tutoring projects.
 videos:
-  - https://mediaserver.unige.ch/embed/VN3-1466-2017-2018-A
+  - https://www.unige.ch/innovations-pedagogiques/application/files/7215/8048/7160/Trindade_Droit_Ens.mp4
 ---
 
 ## Initial situation

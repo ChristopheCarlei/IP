@@ -1,7 +1,9 @@
----
+﻿---
 id: 86
 title: Alumni coaching by Jean-Yves Mercier
 description_short: This course combines an online learning platform for individual work with group coaching sessions led by former students trained in coaching.
+videos:
+  - https://mediaserver.unige.ch/embed/223418
 ---
 
 ## Initial situation

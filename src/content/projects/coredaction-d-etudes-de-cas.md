@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: Afin d’avoir à disposition des études de cas plus proches de la réalité du terrain local, de renforcer les liens avec les acteurs locaux et d’impliquer les étudiant-es dans l’étude et la gestion des cas pratiques, l’enseignante et son équipe ont décidé de créer des études de cas avec les acteurs locaux.
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/e32ZsDxjQsw
 ---
 
 ## Situation de départ

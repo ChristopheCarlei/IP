@@ -14,6 +14,10 @@ observation_accepted: false
 description_short: "Plusieur-es assistant-es étaient en charge de dispenser les explications et les démonstrations de début de travaux pratiques. Afin de les uniformiser, elles sont désormais proposées aux étudiant-es sous forme de vidéos créées par l'équipe enseignante. La compréhension de leur contenu est vérifiée à travers des quiz."
 featured: false
 status: actif
+videos:
+  - https://www.youtube.com/embed/L3qF7yUgs3c
+  - https://www.youtube.com/embed/Y-fvos-XXZI
+  - https://www.youtube.com/embed/quX65vcQbvs
 ---
 
 ## Situation de départ

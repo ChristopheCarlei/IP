@@ -1,4 +1,4 @@
----
+﻿---
 id: 107
 title: Inverted amphitheatre by Eduardo Solana students
 description_short: In this course, students select a topic related to computer security and present it in an informative way, lasting 20 to 30 minutes, thus offering enriching knowledge sharing for the whole class.
