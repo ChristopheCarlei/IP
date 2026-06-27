@@ -16,6 +16,8 @@ observation_accepted: false
 description_short: Dans ce cours, les étudiant-es reçoivent un mandat fictif (mais réaliste), où le/la mandataire attend une recommandation d’un ou plusieurs termes pour le français en réponse à un néologisme issu de l’anglais. Ces mandats sont développés par l’enseignante, en collaboration étroite avec des professionnel-les habitué-es de ces mandats.
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/139302
 ---
 
 ## Situation de départ

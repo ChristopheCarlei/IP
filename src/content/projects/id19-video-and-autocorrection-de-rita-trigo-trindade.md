@@ -14,6 +14,8 @@ observation_accepted: false
 description_short: "Le cours se compose d'un cours ex cathedra suivi de vidéos en ligne et d'exercices autocorrectifs pour acquérir les connaissances théoriques. Des séances en présentiel permettent de réaliser des exercices complexes en groupe."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/VN3-1466-2017-2018-A
 ---
 
 ## Situation de départ

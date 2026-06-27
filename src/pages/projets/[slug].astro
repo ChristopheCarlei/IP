@@ -35,8 +35,9 @@ const light  = isLightFac(d.faculty);
 
 // Images secondaires pour le carousel
 // Si vidéo présente : toutes les images sont secondaires ; sinon : images[1+]
+const hasVideo = d.videos && d.videos.length > 0;
 const carouselImages: string[] = d.images
-  ? (d.youtube ? d.images : d.images.slice(1))
+  ? (hasVideo ? d.images : d.images.slice(1))
   : [];
 
 const hasCarousel = carouselImages.length > 0;
@@ -339,7 +340,11 @@ details.acc-item[open] .acc-chevron{
 
     <!-- Média principal : vidéo > première image > photo > placeholder -->
     <div class="proj-media">
-      {d.youtube ? (
+      {d.videos && d.videos.length > 0 ? (
+        <div class="media-embed">
+          <iframe src={d.videos[0]} allowfullscreen loading="lazy" title={`Vidéo — ${d.title}`} />
+        </div>
+      ) : d.youtube ? (
         <div class="media-embed">
           <iframe src={d.youtube} allowfullscreen loading="lazy" title={`Vidéo — ${d.title}`} />
         </div>
@@ -458,6 +463,27 @@ details.acc-item[open] .acc-chevron{
   <div class="prose" id="proj-prose">
     <Content />
   </div>
+
+  <!-- Vidéos supplémentaires (si plusieurs vidéos) -->
+  {d.videos && d.videos.length > 1 && (
+    <div class="annexes">
+      <h2 class="annexes-title">En savoir plus</h2>
+      <hr class="annexes-rule" />
+      <div style="display:flex;flex-direction:column;gap:20px">
+        {d.videos.slice(1).map((video, i) => (
+          <div style="width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid #E4E7EC">
+            <iframe
+              src={video}
+              style="width:100%;height:100%;border:none"
+              allowfullscreen
+              loading="lazy"
+              title={`Vidéo supplémentaire ${i + 2}`}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
 
   {d.observation_accepted && (
     <div class="obs">

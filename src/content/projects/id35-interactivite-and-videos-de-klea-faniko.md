@@ -16,6 +16,8 @@ observation_accepted: false
 description_short: "Pour favoriser l'interaction et l'implication des étudiant-es, l'enseignante a utilisé des plateformes numériques interactives telles que Kahoot et Padlet. De plus, des modalités de participation facultatives, telles que la création de capsules vidéo et la participation à des tables rondes, ont été proposées à des groupes plus restreints d'étudiant-es."
 featured: false
 status: actif
+videos:
+  - https://mediaserver.unige.ch/embed/120277
 ---
 
 ## Situation de départ
