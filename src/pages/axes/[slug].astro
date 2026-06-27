@@ -1,0 +1,368 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'preparer' } },
+    { params: { slug: 'rendre-actif' } },
+    { params: { slug: 'responsabiliser' } },
+    { params: { slug: 'faire-creer' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+type Innovation = { name: string; img: string; href: string };
+type AxeData = {
+  title: string;
+  color: string;
+  colorDark: string;
+  img: string;
+  description: string;
+  savoir: string;
+  innovations: Innovation[];
+};
+
+const axes: Record<string, AxeData> = {
+  'preparer': {
+    title: "Préparer",
+    color: "#9966ff",
+    colorDark: "#613fa4",
+    img: "/images/sections/Preparer.svg",
+    description: "Préparer les étudiant·es consiste à leur demander d'effectuer une tâche avant de se présenter à une séance de cours. Cela va notamment vous permettre de dégager du temps lors de la séance pour pratiquer, appliquer des concepts et vérifier la compréhension de vos étudiant·es.",
+    savoir: "Nous entendons souvent parler de la classe inversée dans l'enseignement supérieur. Si le terme est à la mode, le principe lui est employé depuis longtemps. Il consiste à renverser la manière traditionnelle de faire son cours. Les étudiant·es sont exposé·es à un contenu pédagogique (p.ex., lectures, vidéos, podcasts…) en amont d'une session de cours. Pendant le cours, les étudiant·es sont alors en situation de s'approprier les concepts par la mise en pratique de ceux-ci leur permettant ainsi un meilleur apprentissage.\n\nLa classe inversée relève de la pédagogie dite active, elle est centrée sur l'apprenant·e et a comme objectif de stimuler l'apprentissage et l'engagement des étudiant·es pendant le cours. Une des plus-values de cette innovation pédagogique tient dans le gain de temps qu'elle vous permet en présentiel, ce dans l'optique, par exemple, de créer des situations d'interactions entre vos étudiant·es et vous ou entre pairs.\n\nLa classe inversée n'est pas une méthode, mais un concept qui se décline de plusieurs façons et peut facilement se conjuguer avec d'autres types de pédagogie.\n\nComment allez-vous vérifier que les étudiant·es ont correctement pris connaissance des ressources mises à disposition ? Allez-vous les questionner ou les faire réagir ? Ce travail à la maison peut donner lieu par exemple à une activité à distance sous forme de quiz, d'auto-évaluation, d'évaluation par les pairs ou de participation sur un forum.",
+    innovations: [
+      { name: "Faire réagir", img: "/images/innovations/1.FaireReagir.svg", href: "#" },
+      { name: "Questionner",  img: "/images/innovations/1.Questionner.svg",  href: "#" },
+    ],
+  },
+  'rendre-actif': {
+    title: "Rendre actif",
+    color: "#33cc99",
+    colorDark: "#269973",
+    img: "/images/sections/RendreActif.svg",
+    description: "Engager vos étudiant·es à participer au cours… un vrai défi dans l'enseignement supérieur ! L'enjeu est de passer d'un cours « magistral traditionnel » dans lequel les étudiant·es sont des récepteurs passifs du savoir à un cours « interactif » dans lequel vos étudiant·es deviennent des participant·es actif·ves.",
+    savoir: "Rendre actifs vos étudiant·es va notamment vous permettre de susciter de l'intérêt pour votre discipline, de maintenir l'attention de vos étudiant·es et de les motiver à apprendre régulièrement (par rapport à un simple bachotage intensif pré-examen).\n\nComment mettre en place ces exposés interactifs ? En parallèle de vos présentations de contenus théoriques « classiques », vous allez pouvoir intégrer des activités pédagogiques pour mobiliser ponctuellement vos étudiant·es sur une thématique particulière. Ces activités plus ou moins complexes et chronophages sont à adapter à vos objectifs pédagogiques.",
+    innovations: [
+      { name: "Démontrer",              img: "/images/innovations/2.Demontrer.svg",       href: "#" },
+      { name: "Donner la parole",       img: "/images/innovations/2.DonnerParole.svg",    href: "#" },
+      { name: "Simuler une situation",  img: "/images/innovations/2.Simuler.svg",         href: "#" },
+      { name: "Faire collaborer",       img: "/images/innovations/2.FaireCollaborer.svg", href: "#" },
+      { name: "Faire voter",            img: "/images/innovations/2.FaireVoter.svg",      href: "#" },
+    ],
+  },
+  'responsabiliser': {
+    title: "Responsabiliser",
+    color: "#0099ff",
+    colorDark: "#297eb6",
+    img: "/images/sections/Responsabiliser.svg",
+    description: "Si vous souhaitez que vos étudiant·es se souviennent à long terme des contenus enseignés, il faut viser un apprentissage étalé dans le temps et en profondeur. Pour y parvenir, nous vous conseillons de responsabiliser vos étudiant·es dans leurs apprentissages.",
+    savoir: "La mise en pratique plus ou moins concrète de connaissances théoriques est un excellent moyen pour responsabiliser les étudiant·es dans leurs apprentissages.\n\nL'implication des étudiant·es dans des activités de mise en pratique nécessite souvent de dégager un temps spécifique pour le développement de compétences transversales et/ou disciplinaires. Vos étudiant·es seront davantage motivé·es si leur travail est valorisé au-delà du simple objectif de recevoir une évaluation.",
+    innovations: [
+      { name: "Impliquer dans l’enseignement", img: "/images/innovations/3.ImpliquerEnseignement.svg", href: "#" },
+      { name: "Exposer des cas pratiques",          img: "/images/innovations/3.ExposerCasPratiques.svg",  href: "#" },
+      { name: "Impliquer dans la recherche",        img: "/images/innovations/3.ImpliquerRecherche.svg",   href: "#" },
+      { name: "Développer des compétences", img: "/images/innovations/3.DevelopperCompetences.svg", href: "#" },
+    ],
+  },
+  'faire-creer': {
+    title: "Faire créer",
+    color: "#ffa248",
+    colorDark: "#bc7c3c",
+    img: "/images/sections/FaireCreer.svg",
+    description: "Cette forme d’enseignement actif est centrée sur l’étudiant·e, stimulant son engagement et sa motivation. Vous n’êtes plus dans la transmission frontale de contenus, mais prenez le rôle de tuteur·trice, accompagnant et donnant du feedback à vos étudiant·es au fil de l’avancement de leurs projets.",
+    savoir: "L’enseignement par projet est un excellent moyen de développer les compétences de vos étudiant·es.\n\nEn plus d’éventuelles compétences propres à votre discipline, des compétences génériques liées au travail de groupe et à la gestion de projet vont être mobilisées.\n\nEn fonction de vos objectifs pédagogiques, de l’encadrement / des outils proposés et de vos critères d’évaluation, vous allez pouvoir mettre une emphase plus particulière sur les compétences qui sont à vos yeux les plus importantes à développer.\n\nLe choix du/des supports qui vont être créés peut être opéré par vous ou vos étudiant·es : site internet, vidéo, podcast, blog, rapport, poster, article, etc.\n\nPour obtenir des productions de qualité, il est important d’être clair dès le début sur le travail final attendu en leur fournissant les critères d’évaluation et/ou des exemples de bonnes et mauvaises productions.",
+    innovations: [
+      { name: "Faire conceptualiser un projet",          img: "/images/innovations/4.FaireConceptualiserProjet.svg", href: "#" },
+      { name: "Faire gérer un projet",              img: "/images/innovations/4.FaireGererProjet.svg",          href: "#" },
+      { name: "Faire réaliser une production originale", img: "/images/innovations/4.FaireRealiser.svg",        href: "#" },
+    ],
+  },
+};
+
+const axe = axes[slug ?? ''];
+
+const otherAxes = [
+  { slug: "preparer",        title: "Préparer",       img: "/images/sections/Preparer.svg",        color: "#9966ff" },
+  { slug: "rendre-actif",    title: "Rendre actif",        img: "/images/sections/RendreActif.svg",      color: "#33cc99" },
+  { slug: "responsabiliser", title: "Responsabiliser",     img: "/images/sections/Responsabiliser.svg",  color: "#0099ff" },
+  { slug: "faire-creer",     title: "Faire créer",    img: "/images/sections/FaireCreer.svg",       color: "#ffa248" },
+].filter(a => a.slug !== slug);
+
+const allProjects = await getCollection('projects');
+const axeProjects = allProjects.filter(p => {
+  const cat = (p.data.category ?? '').toLowerCase();
+  const slugMap: Record<string, string[]> = {
+    'preparer':        ['préparer', 'preparer'],
+    'rendre-actif':    ['rendre actif', 'rendre-actif'],
+    'responsabiliser': ['responsabiliser'],
+    'faire-creer':     ['faire créer', 'faire creer', 'faire-creer'],
+  };
+  return (slugMap[slug ?? ''] ?? []).some(k => cat.includes(k));
+}).slice(0, 6);
+
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE')) return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                       return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD')) return 'var(--fac-fti)';
+  if (f.includes('SCIEN')&& !f.includes('SOC')) return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))  return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))  return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                       return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))  return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO')) return 'var(--fac-theologie)';
+  return 'var(--rose)';
+}
+---
+<Base title={axe?.title ?? ''}>
+<style define:vars={{ ax: axe?.color ?? '#000', axDark: axe?.colorDark ?? '#000' }}>
+
+/* ---- Hero -------------------------------------------------- */
+.axe-hero{border-bottom:1px solid var(--line);overflow:hidden;background:#fff}
+.axe-hero-inner{
+  width:var(--content);margin:auto;
+  display:grid;grid-template-columns:1fr 320px;gap:48px;
+  align-items:center;padding:clamp(40px,5vw,64px) 0;
+}
+.axe-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ax);margin-bottom:20px
+}
+.axe-hero-eyebrow span{
+  display:inline-block;width:32px;height:3px;background:var(--ax);border-radius:2px
+}
+.axe-hero h1{
+  font-size:clamp(40px,5.5vw,72px);line-height:.95;font-weight:800;
+  letter-spacing:-.03em;color:var(--ax);margin:0 0 20px
+}
+.axe-hero-desc{
+  font-size:18px;line-height:1.65;color:var(--muted);max-width:52ch;margin:0
+}
+.axe-hero-img{
+  width:100%;height:auto;display:block;
+  aspect-ratio:300/190;object-fit:contain;padding:20px;
+  background:color-mix(in srgb,var(--ax) 8%,#fff);
+  border-radius:var(--radius);
+  border:1px solid color-mix(in srgb,var(--ax) 20%,#fff)
+}
+
+/* ---- Barre inter-axes (sticky) ----------------------------- */
+.axe-subnav{
+  background:#fff;border-bottom:1px solid var(--line);
+  position:sticky;top:100px;z-index:20
+}
+.axe-subnav-inner{
+  width:var(--content);margin:auto;
+  display:flex;align-items:stretch;gap:0;
+  overflow-x:auto;scrollbar-width:none
+}
+.axe-subnav-inner::-webkit-scrollbar{display:none}
+.axe-subnav-link{
+  display:flex;align-items:center;gap:8px;
+  padding:14px 22px;font-size:13.5px;font-weight:700;
+  color:var(--muted);text-decoration:none;white-space:nowrap;
+  border-bottom:3px solid transparent;transition:color .15s,border-color .15s
+}
+.axe-subnav-link:hover{color:var(--ink)}
+.axe-subnav-link.active{border-bottom-color:var(--subnav-ax)}
+.axe-subnav-link.active{color:var(--subnav-ax)}
+.axe-subnav-link img{width:28px;height:28px;object-fit:contain}
+
+/* ---- Corps ------------------------------------------------- */
+.axe-body{width:var(--content);margin:auto;padding:clamp(48px,6vw,80px) 0}
+
+.section-title{
+  font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ax);margin:0 0 28px
+}
+
+/* Innovations — pastilles colorées (fidèle au site IP) */
+.innov-section{
+  border-top:1px solid var(--axDark);
+  border-bottom:1px solid var(--axDark);
+  padding:36px 0;margin-bottom:56px
+}
+.innov-section .section-title{text-align:center;margin:0 0 28px}
+.innov-pills{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px
+}
+.innov-pill{
+  display:inline-block;padding:12px 28px;
+  background:var(--ax);color:#fff;
+  border-radius:6px;font-size:17px;font-weight:700;
+  text-decoration:none;text-align:center;
+  box-shadow:1px 1px 3px rgba(0,0,0,.2);
+  transition:filter .2s,box-shadow .2s,transform .2s
+}
+.innov-pill:hover{
+  filter:brightness(1.1);transform:translateY(-2px);
+  box-shadow:1px 3px 8px rgba(0,0,0,.25)
+}
+
+/* En savoir plus */
+.savoir-box{
+  background:var(--bg-soft);border-radius:var(--radius);
+  border-left:4px solid var(--ax);
+  padding:clamp(28px,4vw,44px);margin-bottom:56px
+}
+.savoir-box h2{
+  font-size:22px;font-weight:800;letter-spacing:-.01em;
+  color:var(--ax);margin:0 0 20px
+}
+.savoir-box p{
+  color:var(--muted);font-size:16px;line-height:1.75;margin:0 0 16px
+}
+.savoir-box p:last-child{margin:0}
+
+/* Projets */
+.projets-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:24px
+}
+.projets-head a{font-size:14px;font-weight:700;color:var(--ax);text-decoration:none}
+.projets-head a:hover{text-decoration:underline}
+
+/* Autres axes */
+.autres-axes{border-top:1px solid var(--line);padding-top:48px;margin-top:56px}
+.autres-axes-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px
+}
+.autre-axe{
+  display:flex;flex-direction:column;background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s
+}
+.autre-axe:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.autre-axe-visual{
+  aspect-ratio:300/190;display:flex;align-items:center;justify-content:center;
+  padding:16px
+}
+.autre-axe-visual img{width:100%;height:100%;object-fit:contain}
+.autre-axe-body{padding:16px 18px;border-top:3px solid var(--ac)}
+.autre-axe-body h3{font-size:16px;font-weight:800;margin:0 0 8px}
+.autre-axe-go{font-size:13px;font-weight:700;display:inline-block}
+
+/* Responsive */
+@media(max-width:900px){
+  .axe-hero-inner{grid-template-columns:1fr}
+  .axe-hero-img{max-width:260px}
+  .axe-subnav{top:58px}
+  .autres-axes-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .innov-grid{grid-template-columns:repeat(2,1fr)}
+  .autres-axes-grid{grid-template-columns:1fr}
+}
+</style>
+
+<!-- Hero -->
+<div class="axe-hero">
+  <div class="axe-hero-inner">
+    <div>
+      <div class="axe-hero-eyebrow">
+        <span></span>
+        Cadre pédagogique
+      </div>
+      <h1>{axe?.title}</h1>
+      <p class="axe-hero-desc">{axe?.description}</p>
+    </div>
+    <img class="axe-hero-img" src={axe?.img} alt={axe?.title} />
+  </div>
+</div>
+
+<!-- Navigation inter-axes -->
+<nav class="axe-subnav" aria-label="Axes pédagogiques">
+  <div class="axe-subnav-inner">
+    {[
+      { slug: "preparer",        title: "Préparer",        img: "/images/sections/Preparer.svg",        color: "#9966ff" },
+      { slug: "rendre-actif",    title: "Rendre actif",    img: "/images/sections/RendreActif.svg",      color: "#33cc99" },
+      { slug: "responsabiliser", title: "Responsabiliser", img: "/images/sections/Responsabiliser.svg",  color: "#0099ff" },
+      { slug: "faire-creer",     title: "Faire créer",     img: "/images/sections/FaireCreer.svg",       color: "#ffa248" },
+    ].map(a => (
+      <a
+        href={`/axes/${a.slug}`}
+        class={`axe-subnav-link${a.slug === slug ? ' active' : ''}`}
+        style={`--subnav-ax:${a.color}`}
+      >
+        <img src={a.img} alt="" aria-hidden="true" />
+        {a.title}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<!-- Corps -->
+<div class="axe-body">
+
+  <!-- Innovations -->
+  <div class="innov-section">
+    <p class="section-title">Innovations ayant permis de résoudre cette situation</p>
+    <div class="innov-pills">
+      {(axe?.innovations ?? []).map(inn => (
+        <a class="innov-pill" href={inn.href}>{inn.name}</a>
+      ))}
+    </div>
+  </div>
+
+  <!-- En savoir plus -->
+  <div class="savoir-box">
+    <h2>En savoir plus</h2>
+    {(axe?.savoir ?? '').split('\n\n').map(para => (
+      <p>{para}</p>
+    ))}
+  </div>
+
+  <!-- Projets liés -->
+  {axeProjects.length > 0 && (
+    <div style="margin-bottom:56px">
+      <div class="projets-head">
+        <p class="section-title" style="margin:0">Projets associés</p>
+        <a href="/catalogue">Voir tous les projets →</a>
+      </div>
+      <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+        {axeProjects.map(p => {
+          const facVar = getFacVar(p.data.faculty);
+          const hasPhoto = !!p.data.photo;
+          const initials = (p.data.author ?? p.data.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase();
+          return (
+            <article class="card" style={`--fac:${facVar}`}>
+              <div class={`cover${!hasPhoto ? ' no-photo' : ''}`}
+                   style={hasPhoto ? `background-image:url(${p.data.photo})` : ''}>
+                {!hasPhoto && <span class="cover-initials">{initials}</span>}
+              </div>
+              <div class="card-body">
+                <h3><a href={`/projets/${p.slug}`}>{p.data.title}</a></h3>
+              </div>
+              {p.data.faculty && <div class="card-fac">{p.data.faculty}</div>}
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  )}
+
+  <!-- Autres axes -->
+  <div class="autres-axes">
+    <p class="section-title">Autres situations problématiques</p>
+    <div class="autres-axes-grid">
+      {otherAxes.map(a => (
+        <a class="autre-axe" href={`/axes/${a.slug}`} style={`--ac:${a.color}`}>
+          <div class="autre-axe-visual"
+               style={`background:color-mix(in srgb,${a.color} 8%,#fff)`}>
+            <img src={a.img} alt={a.title} />
+          </div>
+          <div class="autre-axe-body">
+            <h3 style={`color:${a.color}`}>{a.title}</h3>
+            <span class="autre-axe-go" style={`color:${a.color}`}>Explorer →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</div>
+</Base>

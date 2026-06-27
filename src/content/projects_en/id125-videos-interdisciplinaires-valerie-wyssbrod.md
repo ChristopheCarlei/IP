@@ -11,24 +11,39 @@ The aim of the interfaculty course "Introduction to the law of biodiversity cons
 ## Project implementation
 
 The initial session is divided into two parts. The first part allows students to familiarize themselves with the concept of the course and the second part is an introduction to law (for biology students) or biology (for law students). The second part is a course on environmental law and the conservation of biological diversity.
+
 At the beginning of the module, groups of 2-3 students are formed (ideally mixing orientations). Each group is asked to produce a video capsule related to the issue of biodiversity conservation from a legal perspective. The video productions must be between 6 and 8 minutes long and use exclusively free of rights or self-created material.
+
 To help students with their project, a session led by external experts is devoted to the popularization of science and the basics of video production (presentation of a simple editing software).
+
 Students are coached individually by group 3 times. Twice before the submission of the 1er draft and once before the submission of the 2nd draft. The sessions last 15 minutes per group.
+
 During the semester, as the project progresses, students are required to provide various deliverables. First, they produce a bibliography of the video capsule, a draft scenario and a first version of the video capsule. These intermediate deliverables allow the teacher to ensure that the groups are following a good direction and making steady progress. After the first draft is handed in, a viewing and feedback are organized over two sessions. Each group must give constructive feedback orally on the film of another group that has been previously assigned to them. In turn, the teacher provides detailed written feedback for each film. Students then produce and turn in the final version of their video capsule along with a written reflection and self-evaluation.
+
 Students are evaluated on the following criteria (out of 100 points, then converted to a 6-point grade):
+
 Capsule bibliography (10 points) - Group grade;
+
 Script project (10 points) - group grade;
+
 Feedback between groups on the first capsule (10 points) - individual grade;
+
 Final version of the video capsule (60 points) - group grade;
+
 Written reflection and self-evaluation (10 points) - individual grade.
+
 During the semester, 2 conferences with external speakers are organized. These conferences allow students to discover the work of practitioners from the Federal Office for the Environment (FOEN) and the Cantonal Service for Wildlife, Forests and Nature (SFFN) and to complete their knowledge acquired through the video clip exercise.
+
 The last class is devoted to a general discussion on the films. The students meet to exchange and reflect on the different legal instruments, their articulation and their usefulness for the management and conservation of biodiversity. They are invited to represent this graphically on an A0 sheet and then present their thoughts to the rest of the class. Each group then takes the most important references used for their capsule and a common bibliography is made on Framapad. The various reports are then shared on Moodle.
 
 ## Thoughts and advice
 
 Such an interdisciplinary module requires a certain amount of flexibility on the part of the teacher in order to adapt the content and the feedback to students with different backgrounds. This introduction to a very different discipline is not always easy; it is essential to give a very clear framework at the beginning of the course and then to accompany the groups throughout the semester. The follow-up and correction of intermediate deliverables are important investments for the teacher.
+
 Ideally, there should be the same number of students in biology and law so that only mixed groups can be created.
+
 Despite the very basic training and the basic materials, the productions are of good quality. Even if the teacher only requires a minimal format for the vignettes (video of the students + visual outline, for example, PowerPoint), most of the groups are very invested and go beyond the workload required by the course.
+
 To further motivate the students, the video vignettes have been promoted through various collaborations. Some of the films were screened at events after being selected by a jury (e.g., in 2021 - Museum Night - Museum of Natural History; in 2022 - Festival Vivant). The film screenings were followed by a student-audience discussion.
 
 ## Student feedback

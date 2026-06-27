@@ -1,5 +1,8 @@
 ﻿---
 id: 127
+youtube: https://www.youtube.com/embed/tid5PLrfH-U
+award: Prix innovation pédagogique
+team: Jennifer Socquet, Aurélia Platon, Nadia Bajwa, Lygia Pavitt
 title: Improvisation théâtrale
 author: Pauline Hämmerli
 photo: /images/projet/Haemmerli_et_collegues.jpg
@@ -7,10 +10,10 @@ contact: "pauline.haemmerli@etu.unige.ch"
 faculty: Médecine
 course: "Sexisme et harcèlement sexuel en milieu clinique : formation par improvisation théâtrale"
 level: Master
-students: 100-300
+students: 100 - 300
 year: 2021
-category: Rendre actif
-innovation_type: Simuler une sitation
+category: Rendre actifs
+innovation_type: Simuler une situation
 observation_accepted: false
 description_short: "Le cours consiste en une présentation théorique suivie d’une représentation théâtrale de scènes réelles mettant en évidence le sexisme et l'agression dans le milieu médical. Les étudiant-es participent ensuite à des discussions en groupe pour proposer des stratégies de réaction qui sont ensuite mises en pratique lors de nouvelles représentations théâtrales."
 featured: false
@@ -22,25 +25,24 @@ status: actif
 La campagne de CLASH (Collectif de Lutte contre les Attitudes Sexistes en milieu Hospitalier) Genève, menée en mars 2021 et soutenue par l’UNIGE et les HUG, a montré que les étudiant-es en médecine sont confronté-es, en tant que victime ou témoin, à des situations de sexisme et harcèlement sexuel au cours de leur formation. Les témoignages ont révélé une culture d’apprentissage qui ne protégeait pas les étudiant-es contre les remarques, attitudes et actes sexistes ainsi qu’une nécessité de leur donner des outils concrets pour prévenir et réagir face à ces comportements.
 
 Dans ce contexte, l’idée de mettre sur pied un cours de sensibilisation à ces thématiques a été formulée par CLASH Genève et la faculté de médecine car rien de tel n’était proposé jusqu’alors. L’intégration de ce cours a été soutenue par le bureau de la commission de l’enseignement et le comité Master de la faculté de médecine. Suite à ces événements, plusieurs déclarations de tolérance zéro face aux sexisme et harcèlement sexuel par la faculté de médecine et les HUG ont été annoncées. Ce cours s’inscrit donc dans cette prise de position politique par les deux institutions.
+
 Les objectifs du cours sont de définir le sexisme, le harcèlement sexuel et faire prendre conscience de leur ampleur ; de permettre l’identification et l’analyse de situations problématiques (décoder/déconstruire) ; de rappeler le cadre légal et moral (tolérance zéro) ; de donner des pistes pour se protéger (savoir où s’adresser et attitudes à adopter) et faire réaliser l’importance d’agir (aussi bien en tant que victime que témoin).
+
 Au vu du sujet sensible à aborder, il semblait important d’ancrer cet enseignement en reprenant les témoignages de la campagne de communication et sensibilisation. Il y avait un souhait de stimuler les étudiant-es à réfléchir en profondeur sur les stratégies de prévention pour les rendre acteurs et actrices et les sortir du rôle de victime. C’est avec ces buts en tête que l’idée de travailler avec un groupe d’improvisation théâtrale est venue.
 
-## Mise en place
+## Mise en place et déroulement
 
 Le cours débute avec une présentation théorique par l’enseignante puis une intervenante du groupe d’improvisation introduit le format du cours. Elle précise que les scènes à venir peuvent être choquantes et que des psychologues sont présents dans la salle si un soutien psychologique se révèle nécessaire pour certain-es.
+
 L’équipe du projet a rédigé un script avec cinq scènes différentes basées sur des faits réels relevant des témoignages recueillis. Les scènes présentent une étudiante en médecine vivant sa première journée de stage dans un service. Elles se déroulent dans divers lieux (bloc opératoire, cafétéria de l’hôpital, parc, etc.) et abordent plusieurs formes de sexisme et degrés d’agression. La troupe d’Impro Impact répète plusieurs fois pour rendre les scènes les plus réelles possibles, en respectant les codes du milieu médical et un timing adéquat. Le jeu est travaillé avec le retour des ancien-nes étudiant-es de médecine.
+
 Après chaque représentation, des groupes d’étudiant-es sont constitués et orientés avec des questions qui sont affichées sur l’écran de la salle. Leurs réactions vis-à-vis des scènes sont confrontées et récoltées. Les étudiant-es doivent se mettre à la place de la victime ou du témoin et proposer des stratégies de réaction. Les comédien-nes ainsi que les organisatrices du cours se déplacent dans les groupes pour animer la discussion et la cadrer.
+
 Après une phase de mise en commun des solutions, les comédien-nes rejouent les scènes en mettant en place les stratégies suggérées par les étudiant-es et en improvisant les réactions des protagonistes qui pouvaient varier d’une scène à l’autre.
+
 Une présentation théorique clôture le cours en insistant sur l’ampleur du problème, les stratégies de réaction face à ces situations ainsi que les ressources de l’UNIGE et des HUG à disposition des étudiant-es.
+
 Le cours s’inscrit dans une séance d’unité de formation qui est obligatoire. Le contenu est évalué lors l’examen final qui se présente sous forme de QCM. Deux des questions posées concernent les situations vues en cours lors des représentations théâtrales.
-
-## Retour et conseils
-
-De manière générale, le bilan de ce cours est très positif autant de la part des organisatrices, des comédien-nes d’Impro Impact que des étudiant-es. Le fait de voir des solutions jouées et d’y avoir réfléchi devrait faciliter la prise de position des étudiant-es par la suite et les rendre ainsi plus autonomes et réactifs face à des situations similaires.
-
-Le fait que le cours soit obligatoire permet de toucher d’autres publics que les campagnes de sensibilisation et potentiellement des futurs agresseurs qui se prendraient conscience de leur comportement. Ce cours devrait être pérennisé si les retours continuent d’être positifs.
-Il est envisagé de mettre en place un cours de sensibilisation similaire dans d’autres facultés mais aussi dans les niveaux hiérarchiques plus élevés des HUG. Les comédien-nes d’Impro Impact se sont déjà proposé-es pour interpréter le spectacle dans d’autres contextes, cependant, les scènes doivent être adaptées au milieu concerné. Adapter le script et le jeu théâtral au contexte spécifique dans lequel le cours est proposé est plus impactant qu’un cours généraliste sur le sexisme.
-L’équipe enseignante rappelle qu’il est important de bien penser la partie théorique en amont. Elle doit être consistante et travaillée afin de dégager au mieux des messages clés et clairs à l’issue du cours, ainsi que des techniques de communication. Mettre en place ce format, adapté à l’enseignement en grand groupe, permet d’aligner le but et la méthode pédagogique. L’équipe enseignante souligne que les ressources afin d’être soutenus sont nombreuses (telle que le pôle SEA par exemple) et qu’il ne faut pas hésiter à s’en servir.
 
 ## Avis des étudiant·es
 
@@ -53,3 +55,10 @@ L’équipe enseignante rappelle qu’il est important de bien penser la partie 
 > « Peut-être un peu plus de temps sur les stratégies concrètes aurait été top. »
 > « J'ai apprécié le fait qu'on mette au grand jour ces scénarios qui arrivent tous les jours. Cela est très important pour sensibiliser tout le monde afin que dans le futur cela ne se reproduise plus. De plus, un autre élément important c'est que ces scénarios ont été dérangeants pour tout le monde donc je pense que personne ne voudrait reproduire ça ou aimerait être harcelé-e »
 
+## Annexes
+
+- [Le support d’enseignement](http://www.unige.ch/innovations-pedagogiques/download_file/view/1043/535)
+- [Le script et questions pour animer les groupes de discussion](http://www.unige.ch/innovations-pedagogiques/download_file/view/1041/535)
+- [La présentation théorique](http://www.unige.ch/innovations-pedagogiques/download_file/view/1042/535)
+- [Campagne de communication et sensibilisation](https://www.unige.ch/medecine/egalite/fr/clash/campagne-clash/)
+- [Impro Impact](https://www.impro-impact.ch/)

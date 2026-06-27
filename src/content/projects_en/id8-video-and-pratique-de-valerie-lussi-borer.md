@@ -11,7 +11,9 @@ The approach developed in this course aims to support the professional experimen
 ## Project implementation
 
 This course format enhances students' professional expertise by stimulating and bringing creativity to their personal professional practice through the non-judgmental external input of peers. The course consists of 6 sessions of 4 hours each spread over the year.
+
 During the plenary sessions (first 3 sessions), the problematic: "what is watching a video and how to do it constructively" is addressed. More specifically, the students measure the need to deconstruct the natural tendency of everyone to judge. To do so, they are provided with a methodology and tools for describing and analyzing video content objectively. They also take part in role plays and simulations.
+
 In the following sessions, students are divided into small groups (3-4 people). The main purpose of these sessions is to promote a supportive and formative exchange between peers. Students define collaborative inquiry projects based on their personal professional needs (e.g., how to deal with incivilities? how to correct a math exercise with students?) They then establish the modalities of their investigations (what do they want to test, how, when to provide the image right consent forms, which session will be filmed, etc.). They then film themselves during their professional practice. The technical staff of each school in which they work in parallel will set up the equipment and collect the film, which will then be provided to the student. Each student then chooses a video clip (5-10 min.) that addresses the defined object of inquiry, which will be shared with his/her peers. These video sequences form the basis for the group sessions. They are viewed and the students proceed to the objective analysis of the activities and provide various interpretations, tools or solutions. Evaluation is done at each stage of the investigation.
 
 ## Thoughts and advice

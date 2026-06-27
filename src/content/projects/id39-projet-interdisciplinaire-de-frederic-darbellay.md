@@ -1,15 +1,15 @@
 ﻿---
 id: 39
 title: Projet interdisciplinaire
-author: ""
+author: Frédéric Darbellay
 photo: /images/projet/Frederic_Darbellay.jpg
-faculty: ""
+faculty: FPSE
 course: ""
 level: ""
-students: ""
-year: ""
-category: ""
-innovation_type: ""
+students: 50 - 100
+year: 2020
+category: Faire créer
+innovation_type: Faire conceptualiser un projet
 observation_accepted: false
 description_short: Les étudiant-es, issu-es de diverses disciplines, se regroupent pour développer un projet interdisciplinaire créatif et innovant. La constitution en groupes permet aux étudiant-es de définir et de valoriser leurs compétences propres.
 featured: false
@@ -20,17 +20,15 @@ status: actif
 
 L’enseignant souhaite transmettre aux étudiant-es la notion d’interdisciplinarité en leur faisant expérimenter directement. Pour ce faire, il donne la possibilité à ses étudiant-es (venant de disciplines très diverses) de créer par groupe un projet interdisciplinaire créatif et innovant sur le thème des droits de l’enfant.
 
-## Mise en place
+## Mise en place et déroulement
 
 Lors des premières séances, l’enseignant commence par fournir aux étudiant-es les bases théoriques de l’interdisciplinarité (méthode de recherche, approche systémique, résolution de problème) ainsi que les compétences transversales nécessaires dans un contexte interdisciplinaire.
-Les étudiant-es vont ensuite se répartir en groupes de 5 à 7. La constitution en groupes va permettre aux étudiant-es de définir et de valoriser leurs compétences propres. L’objectif est de favoriser la création de groupes aux compétences variées pour créer une bonne dynamique et former une « intelligence de groupe » (intelligence collective).
-Chaque groupe va choisir une thématique plus ou moins spécifique pour leur projet interdisciplinaire en lien avec les droits de l’enfant (l’intégration des enfants migrants ; les droits de l’enfant dans le cadre du changement climatique, etc.). Les étudiant-es ne vont pas réaliser de façon effective le projet choisi, l’objectif du cours n’est pas opérationnel, mais d’abord réflexif. La volonté est de les faire réfléchir sur toutes les manières possibles de développer, orienter et mener à bien un projet après en avoir posé les fondements théoriques et un cadre interdisciplinaire.
+
+Les étudiant-es vont ensuite se répartir en groupes de 5 à 7. La constitution en groupes va permettre aux étudiant-es de définir et de valoriser leurs compétences propres. L’objectif est de favoriser la création de groupes aux compétences variées pour créer une bonne dynamique et former une « intelligence de groupe » (intelligence collective).
+
+Chaque groupe va choisir une thématique plus ou moins spécifique pour leur projet interdisciplinaire en lien avec les droits de l’enfant (l’intégration des enfants migrants ; les droits de l’enfant dans le cadre du changement climatique, etc.). Les étudiant-es ne vont pas réaliser de façon effective le projet choisi, l’objectif du cours n’est pas opérationnel, mais d’abord réflexif. La volonté est de les faire réfléchir sur toutes les manières possibles de développer, orienter et mener à bien un projet après en avoir posé les fondements théoriques et un cadre interdisciplinaire.
+
 L’évaluation du cours est composée d’une 1ère note de groupe au travers d’une présentation orale du projet et de la production d’un support. On s’intéresse ici à la dynamique de groupe et son fonctionnement interdisciplinaire. Une 2e note individuelle porte sur l’élaboration de fiches de lecture sur des textes partagés traitant de la collaboration interdisciplinaire. De plus, une évaluation formative individuelle consiste à rédiger un rapport autoréflexif sur son vécu de l’interdisciplinarité. Les notes du travail de groupe et du travail individuel comptent chacune pour moitié de la note globale.
-
-## Retour et conseils
-
-L’enseignant conseille de bien se focaliser sur les étudiant-es et leurs compétences (Qui sont-ils/elles ? Pourquoi sont-ils/elles là ? D’où viennent-ils/elles ? Quelles sont leurs forces ?). Chaque année, le contenu du cours va être adapté en fonction des acquis disciplinaires des étudiant-es présent-es tout en s’appuyant sur l’état de la littérature concernant l’interdisciplinarité.
-Il est important que l’évaluation soit en phase avec ce qui est demandé aux étudiant-es lors du cours et soit bien explicitée dès la 1ère séance.
 
 ## Avis des étudiant·es
 
@@ -39,4 +37,3 @@ Il est important que l’évaluation soit en phase avec ce qui est demandé aux 
 > « Le cours est très intéressant et nous permet d’avoir une vision différente de l’enseignement habituel. Il permet une réflexion plus complexe et différente par rapport à l’enseignement que j’ai pu recevoir en amont. »
 > « Faire des travaux à plusieurs est très enrichissant, que ce soit au niveau de l’enseignement, mais aussi à un niveau personnel (apprendre à coopérer, collaborer, etc.). »
 > « Enfin un cours qui prend en compte plusieurs disciplines pour en faire quelque chose de constructif. »
-

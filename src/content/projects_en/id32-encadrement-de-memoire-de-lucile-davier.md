@@ -11,9 +11,13 @@ The students to be supervised in the realization of their thesis work being many
 ## Project implementation
 
 From the first meeting with the students she is supervising, the teacher proposes a learning contract to be co-signed. This contract expresses the expectations and commitments of each student as well as the teacher's suggestions for support associated with each of her expectations.
+
 She also provides the students with the evaluation grid that will be used to evaluate their thesis. This grid, along with the grading scale, allows them to know how the 78 points are attributed according to the different elements that make up the thesis and the level of quality expected.
+
 After each follow-up meeting, the teacher asks her students to fill out a report on the session. The report outlines the points discussed during the meeting, the advice given, the conclusions reached during the meeting and the objectives to be reached before the next meeting.
+
 These minutes are posted on a private forum on Moodle accessible to the student, the teacher and the judges. It includes a thread for the minutes, a thread for the bibliographic references and a thread for the documents they have finished working on. The use of these different threads by the student is optional except for the PV.
+
 The teacher also offers seminars to her students. The topics covered can be researching a topic, time management, finding information, diagonal reading or simply the progress of their thesis. Since most of the topics have been covered in a research methods course, these seminars are for the most part a refresher and a more focused application to their dissertation topic. The teacher uses multimedia resources in the flipped classroom, including InfoTrack video vignettes (see project).
 
 ## Thoughts and advice

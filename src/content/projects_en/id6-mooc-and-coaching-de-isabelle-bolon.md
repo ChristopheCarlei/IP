@@ -11,7 +11,9 @@ This project is part of the course "Global Health at the Human-Animal-Ecosystem 
 ## Project implementation
 
 First, following the principle of the flipped classroom, students are first exposed to the MOOC "Global Health at the Human-Animal-Ecosystem Interface" before the class in order to practice, apply the concepts and verify their good understanding of them. At the same time, the students took a course on specific teaching techniques adapted to refugees in fragile contexts.
+
 In a second phase, following the pedagogical concept of "learning by teaching", students were able to develop their applied skills, interacting directly with refugees through concrete public health issues. They were put in contact with a group of 15 refugee students from Kakuma camp (Kenya) who were following a simplified version of the MOOC. For this purpose, 2 exchange groups were created (via the WhatsApp application). One group was composed of the Master students, the teaching staff, the refugee students and 3 local tutors. Another group was composed of only the Master's students and the teaching staff. The Master's students were asked to coach the refugee students by initiating weekly debates. They had to provide answers and comments to specific questions asked by the refugee students (sometimes spontaneously). To do so, they had to conduct active research, debate with other students in the Master's program as well as with the teachers.
+
 Finally, they had to reflect on their work and their contribution by creating an online evaluation form for the refugee students.
 
 ## Thoughts and advice

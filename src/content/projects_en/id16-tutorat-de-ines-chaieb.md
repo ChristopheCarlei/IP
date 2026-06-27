@@ -11,11 +11,13 @@ The Bachelor's courses are overloaded. In order to improve the teaching of small
 ## Project implementation
 
 The teacher who coordinates this course inquires at the beginning of the semester with colleagues about their need for assistantships. These are presented in the form of projects to the Master's students who can apply to take part in them. According to their preference and their background, students are assigned to the teachers responsible for the courses. The students propose and lead exercise or question-and-answer sessions on various topics discussed in class. This is done in collaboration with the assistants and doctoral students of the course and the teacher who supervises the Master students.
+
 The student is evaluated at the end of the semester on the basis of the feedback and the teacher's overall assessment.
 
 ## Thoughts and advice
 
 This form of teaching allows students to complete and deepen certain aspects of their finance training and gives them the opportunity to teach students less advanced in their studies.
+
 This type of practice is very easy to replicate and does not require much time to set up. It is necessary to appoint a person in charge of listing the needs of the teachers and the applications of the students in order to put them in contact. The teaching team acts as an intermediary between the teacher responsible for the course and the student. It is therefore necessary to know how to step back.
 
 ## Student feedback

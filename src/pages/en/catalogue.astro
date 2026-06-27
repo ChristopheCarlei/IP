@@ -1,0 +1,323 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const all = (await getCollection('projects')).filter(p => p.data.status === 'actif');
+
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE'))   return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                          return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD'))    return 'var(--fac-fti)';
+  if (f.includes('SCIEN')&& !f.includes('SOC'))    return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))     return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))     return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                          return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))     return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO'))    return 'var(--fac-theologie)';
+  if (f.includes('TRANSV'))                         return 'var(--faint)';
+  return 'var(--rose)';
+}
+
+const FACULTIES = [
+  { code: 'FPSE',        cssVar: 'var(--fac-fapse)',     test: (f: string) => f.includes('FPSE') || f.includes('PSE') },
+  { code: 'Sciences',    cssVar: 'var(--fac-sciences)',  test: (f: string) => f.includes('SCIEN') && !f.includes('SOC') },
+  { code: 'Médecine',    cssVar: 'var(--fac-medecine)',  test: (f: string) => f.includes('MED') || f.includes('MÉD') },
+  { code: 'SDS',         cssVar: 'var(--fac-sds)',       test: (f: string) => f.includes('SDS') || f.includes('SOC') },
+  { code: 'GSEM',        cssVar: 'var(--fac-gsem)',      test: (f: string) => f.includes('GSEM') },
+  { code: 'FTI',         cssVar: 'var(--fac-fti)',       test: (f: string) => f.includes('FTI') || f.includes('TRAD') },
+  { code: 'Lettres',     cssVar: 'var(--fac-lettres)',   test: (f: string) => f.includes('LETTR') },
+  { code: 'Droit',       cssVar: 'var(--fac-droit)',     test: (f: string) => f.includes('DROIT') || f.includes('LAW') },
+  { code: 'Théologie',   cssVar: 'var(--fac-theologie)', test: (f: string) => f.includes('THEO') || f.includes('THÉO') },
+  { code: 'Transversal', cssVar: 'var(--faint)',         test: (f: string) => f.includes('TRANSV') },
+];
+
+function facCodes(fac?: string | null): string[] {
+  if (!fac) return [];
+  const f = fac.toUpperCase();
+  return FACULTIES.filter(x => x.test(f)).map(x => x.code);
+}
+
+const AXES = [
+  { slug: 'preparer',        label: 'Prepare',         color: '#9966ff' },
+  { slug: 'rendre-actif',    label: 'Engage',          color: '#33cc99' },
+  { slug: 'responsabiliser', label: 'Make responsible',color: '#0099ff' },
+  { slug: 'faire-creer',     label: 'Create',          color: '#ffa248' },
+];
+
+function axeSlug(cat?: string | null): string {
+  const c = (cat ?? '').toLowerCase();
+  if (c.includes('prépar') || c.includes('prepar'))   return 'preparer';
+  if (c.includes('rendre'))                            return 'rendre-actif';
+  if (c.includes('responsabilis'))                     return 'responsabiliser';
+  if (c.includes('créer') || c.includes('creer'))      return 'faire-creer';
+  return '';
+}
+
+const projects = all
+  .map(p => {
+    const d = p.data;
+    const initials = (d.author ?? d.title ?? '')
+      .split(' ').slice(0, 2).map((w: string) => w[0] ?? '').join('').toUpperCase();
+    return {
+      slug: p.slug,
+      title: d.title,
+      author: d.author ?? '',
+      faculty: d.faculty ?? '',
+      facCodes: facCodes(d.faculty),
+      facVar: getFacVar(d.faculty),
+      axe: axeSlug(d.category),
+      category: d.category ?? '',
+      course: d.course ?? '',
+      innovation: d.innovation_type ?? '',
+      year: d.year ? Number(d.year) || 0 : 0,
+      photo: d.photo ?? '',
+      award: d.award ?? '',
+      initials,
+      description: d.description_short ?? '',
+    };
+  })
+  .sort((a, b) => a.title.localeCompare(b.title, 'en'));
+
+const searchData = projects.map(p => ({
+  slug: p.slug,
+  title: p.title,
+  author: p.author,
+  faculty: p.faculty,
+  course: p.course,
+  innovation: p.innovation,
+  category: p.category,
+  description: p.description,
+}));
+---
+<Base title="Catalogue" lang="en">
+<style>
+  .cat-hero{border-bottom:1px solid var(--line);background:var(--bg-soft)}
+  .cat-hero-inner{width:var(--content);margin:auto;padding:clamp(36px,5vw,56px) 0 clamp(28px,4vw,40px)}
+  .cat-eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin:0 0 14px}
+  .cat-hero h1{font-size:clamp(34px,5vw,56px);line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0 0 14px}
+  .cat-hero p{font-size:18px;line-height:1.6;color:var(--muted);max-width:60ch;margin:0}
+  .cat-toolbar{width:var(--content);margin:auto;padding:28px 0 8px;position:sticky;top:100px;z-index:20;background:var(--bg)}
+  .cat-search{position:relative;max-width:520px;margin-bottom:20px}
+  .cat-search input{width:100%;height:48px;border:1px solid var(--line-strong);border-radius:var(--radius);padding:0 46px 0 18px;font-size:16px;font-family:var(--font);color:var(--ink);background:#fff;transition:border-color .15s,box-shadow .15s}
+  .cat-search input:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px var(--bg-rose)}
+  .cat-search svg{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--faint);pointer-events:none}
+  .cat-filters{display:flex;flex-direction:column;gap:14px}
+  .cat-filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+  .cat-filter-label{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);min-width:72px}
+  .pill{display:inline-flex;align-items:center;gap:7px;padding:7px 16px;border-radius:999px;border:1.5px solid var(--line-strong);background:#fff;color:var(--muted);font-size:13.5px;font-weight:700;font-family:var(--font);cursor:pointer;transition:all .15s;white-space:nowrap}
+  .pill:hover{border-color:var(--p,var(--rose));color:var(--ink)}
+  .pill .dot{width:10px;height:10px;border-radius:50%;background:var(--p,var(--rose));flex-shrink:0}
+  .pill[aria-pressed="true"]{background:var(--p,var(--rose));border-color:var(--p,var(--rose));color:#fff}
+  .pill[aria-pressed="true"] .dot{background:#fff}
+  .cat-meta{width:var(--content);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 0 16px;border-bottom:1px solid var(--line)}
+  .cat-count{font-size:14.5px;color:var(--muted);font-weight:600}
+  .cat-count strong{color:var(--ink);font-weight:800}
+  .cat-sort{display:flex;align-items:center;gap:8px}
+  .cat-sort label{font-size:13px;color:var(--faint);font-weight:700}
+  .cat-sort select{height:38px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:0 12px;font-size:14px;font-family:var(--font);color:var(--ink);background:#fff;cursor:pointer}
+  .cat-reset{background:none;border:none;color:var(--rose);font-size:13.5px;font-weight:700;font-family:var(--font);cursor:pointer;padding:0}
+  .cat-reset:hover{text-decoration:underline}
+  .cat-reset[hidden]{display:none}
+  .cat-grid-wrap{width:var(--content);margin:auto;padding:28px 0 80px}
+  .cat-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+  .card[hidden]{display:none}
+  .cover .award{position:absolute;top:10px;right:10px;background:#fff;color:var(--ink);border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;display:inline-flex;align-items:center;gap:4px;box-shadow:0 1px 4px rgba(0,0,0,.18);z-index:6}
+  .cat-empty{text-align:center;padding:64px 0;color:var(--muted)}
+  .cat-empty[hidden]{display:none}
+  .cat-empty strong{display:block;font-size:20px;color:var(--ink);margin-bottom:8px}
+  @media(max-width:900px){.cat-toolbar{top:58px}}
+</style>
+
+<div class="cat-hero">
+  <div class="cat-hero-inner">
+    <p class="cat-eyebrow">Index</p>
+    <h1>Project catalogue</h1>
+    <p>Browse the pedagogical innovation projects of UNIGE teachers.
+       Filter by action category or by faculty, or run a search.</p>
+  </div>
+</div>
+
+<div class="cat-toolbar">
+  <div class="cat-search">
+    <input type="search" id="cat-q" placeholder="Search a project, a name, a faculty…"
+           aria-label="Search a project" autocomplete="off" />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </div>
+
+  <div class="cat-filters">
+    <div class="cat-filter-row" id="axe-row">
+      <span class="cat-filter-label">Category</span>
+      {AXES.map(a => (
+        <button class="pill" type="button" data-axe={a.slug} aria-pressed="false" style={`--p:${a.color}`}>
+          <span class="dot"></span>{a.label}
+        </button>
+      ))}
+    </div>
+    <div class="cat-filter-row" id="fac-row">
+      <span class="cat-filter-label">Faculty</span>
+      {FACULTIES.map(f => (
+        <button class="pill" type="button" data-fac={f.code} aria-pressed="false" style={`--p:${f.cssVar}`}>
+          <span class="dot"></span>{f.code}
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
+<div class="cat-meta">
+  <span class="cat-count" id="cat-count"><strong>{projects.length}</strong> projects</span>
+  <div class="cat-sort">
+    <button class="cat-reset" id="cat-reset" hidden>Reset filters</button>
+    <label for="cat-sortby">Sort:</label>
+    <select id="cat-sortby">
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+      <option value="year">Year (recent)</option>
+      <option value="fac">Faculty</option>
+    </select>
+  </div>
+</div>
+
+<div class="cat-grid-wrap">
+  <div class="cards cat-grid" id="cat-grid">
+    {projects.map(p => (
+      <article class="card" data-slug={p.slug} data-axe={p.axe} data-fac={p.facCodes.join('|')}
+               data-title={p.title} data-year={p.year} data-faculty={p.faculty} style={`--fac:${p.facVar}`}>
+        <div class={`cover${!p.photo ? ' no-photo' : ''}`}
+             style={p.photo ? `background-image:url(${p.photo})` : ''}>
+          {p.award && <span class="award">★ Award</span>}
+          {!p.photo && <span class="cover-initials">{p.initials}</span>}
+        </div>
+        <div class="card-body">
+          <h3><a href={`/projets/${p.slug}`}>{p.title}</a></h3>
+        </div>
+        {p.faculty && <div class="card-fac">{p.faculty}</div>}
+      </article>
+    ))}
+  </div>
+
+  <div class="cat-empty" id="cat-empty" hidden>
+    <strong>No project matches</strong>
+    Try broadening your search or removing a filter.
+  </div>
+</div>
+
+<script type="application/json" id="cat-data" set:html={JSON.stringify(searchData)}></script>
+
+<script>
+  import Fuse from 'fuse.js';
+
+  const grid    = document.getElementById('cat-grid');
+  const cards   = Array.from(grid.querySelectorAll('.card'));
+  const input   = document.getElementById('cat-q');
+  const countEl = document.getElementById('cat-count');
+  const emptyEl = document.getElementById('cat-empty');
+  const resetEl = document.getElementById('cat-reset');
+  const sortEl  = document.getElementById('cat-sortby');
+  const axeBtns = Array.from(document.querySelectorAll('#axe-row .pill'));
+  const facBtns = Array.from(document.querySelectorAll('#fac-row .pill'));
+
+  const data = JSON.parse(document.getElementById('cat-data').textContent || '[]');
+  const fuse = new Fuse(data, {
+    includeScore: false,
+    threshold: 0.2,
+    ignoreLocation: false,
+    minMatchCharLength: 2,
+    keys: [
+      { name: 'title', weight: 0.4 },
+      { name: 'author', weight: 0.25 },
+      { name: 'faculty', weight: 0.12 },
+      { name: 'innovation', weight: 0.1 },
+      { name: 'course', weight: 0.07 },
+      { name: 'description', weight: 0.06 },
+    ],
+  });
+
+  const state = { q: '', axe: '', fac: '' };
+
+  function syncUrl() {
+    const u = new URL(location.href);
+    state.q   ? u.searchParams.set('q', state.q)     : u.searchParams.delete('q');
+    state.axe ? u.searchParams.set('axe', state.axe) : u.searchParams.delete('axe');
+    state.fac ? u.searchParams.set('fac', state.fac) : u.searchParams.delete('fac');
+    history.replaceState(null, '', u);
+  }
+
+  function apply() {
+    let matched = null;
+    const q = state.q.trim();
+    if (q.length >= 2) matched = new Set(fuse.search(q).map(r => r.item.slug));
+
+    let visible = 0;
+    for (const c of cards) {
+      const okQ   = !matched || matched.has(c.dataset.slug);
+      const okAxe = !state.axe || c.dataset.axe === state.axe;
+      const okFac = !state.fac || (c.dataset.fac || '').split('|').indexOf(state.fac) !== -1;
+      const show  = okQ && okAxe && okFac;
+      c.hidden = !show;
+      if (show) visible++;
+    }
+
+    countEl.innerHTML = '<strong>' + visible + '</strong> project' + (visible > 1 ? 's' : '');
+    emptyEl.hidden = visible !== 0;
+    resetEl.hidden = !(state.q || state.axe || state.fac);
+    syncUrl();
+  }
+
+  function sortCards(mode) {
+    const sorted = cards.slice().sort((a, b) => {
+      if (mode === 'az')   return a.dataset.title.localeCompare(b.dataset.title, 'en');
+      if (mode === 'za')   return b.dataset.title.localeCompare(a.dataset.title, 'en');
+      if (mode === 'year') return Number(b.dataset.year) - Number(a.dataset.year);
+      if (mode === 'fac')  return (a.dataset.faculty || '').localeCompare(b.dataset.faculty || '', 'en')
+                                  || a.dataset.title.localeCompare(b.dataset.title, 'en');
+      return 0;
+    });
+    sorted.forEach(c => grid.appendChild(c));
+  }
+
+  input.addEventListener('input', () => { state.q = input.value; apply(); });
+  sortEl.addEventListener('change', () => sortCards(sortEl.value));
+
+  axeBtns.forEach(btn => btn.addEventListener('click', () => {
+    const v = btn.dataset.axe;
+    state.axe = state.axe === v ? '' : v;
+    axeBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.axe === state.axe)));
+    apply();
+  }));
+  facBtns.forEach(btn => btn.addEventListener('click', () => {
+    const v = btn.dataset.fac;
+    state.fac = state.fac === v ? '' : v;
+    facBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.fac === state.fac)));
+    apply();
+  }));
+  resetEl.addEventListener('click', () => {
+    state.q = ''; state.axe = ''; state.fac = '';
+    input.value = '';
+    axeBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+    facBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+    apply();
+  });
+
+  (function initFromUrl() {
+    const p = new URLSearchParams(location.search);
+    const q = p.get('q');
+    const axe = p.get('axe');
+    const fac = p.get('fac');
+    if (q) { state.q = q; input.value = q; }
+    if (axe && axeBtns.some(b => b.dataset.axe === axe)) {
+      state.axe = axe;
+      axeBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.axe === axe)));
+    }
+    if (fac && facBtns.some(b => b.dataset.fac === fac)) {
+      state.fac = fac;
+      facBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.fac === fac)));
+    }
+    apply();
+  })();
+</script>
+</Base>

@@ -11,7 +11,9 @@ This is a new type of MOOC (Massive Open Online Courses) accessible to a wide au
 ## Project implementation
 
 This MOOC consists of 60 video sequences of about 10 min each, all subtitled in French and Arabic. They are spread over 6 weeks of teaching.
+
 In order to allow students to decentralize and approach different perspectives, multiple sources and expert points of view are offered. In concrete terms, these videos feature 25 international specialists who explain the subject in simple terms and then offer a personal analysis while taking a broad historical perspective (2000 years).  These videos also provide tools for reflection and discussion among the students. The forum on which students are strongly encouraged to exchange allows them to present their possible questions, but also to create debates and thus to feed their reflection. As the students come from different backgrounds (60% are non-academics), this heterogeneity enriches the comparison of their sometimes divergent points of view.
+
 Evaluation is done through verification quizzes at the end of each video sequence as well as validation quizzes at the end of a week of teaching.
 
 ## Thoughts and advice

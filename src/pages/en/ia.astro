@@ -1,0 +1,81 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const GENIALLY = 'https://view.genially.com/642e8b666cba7a0011ef4154';
+---
+<Base title="AI & teaching" lang="en">
+<style>
+.ia-hero{background:#fff;border-bottom:1px solid var(--line)}
+.ia-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.ia-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.ia-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.ia-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
+.ia-hero p{color:var(--muted);font-size:17px;line-height:1.65;max-width:64ch;margin:20px 0 0}
+.ia-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0}
+.ia-section-label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin:0 0 20px}
+.ia-guide{position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#000}
+.ia-guide iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.ia-guide-note{font-size:13.5px;color:var(--faint);margin:12px 2px 0;display:flex;align-items:center;gap:8px}
+.ia-guide-note a{color:var(--rose);font-weight:700;text-decoration:none}
+.ia-guide-note a:hover{color:var(--rose-deep)}
+.ia-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px}
+.ia-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.ia-card h3{font-size:17px;font-weight:800;color:var(--ink);margin:0 0 8px;letter-spacing:-.01em}
+.ia-card p{font-size:14.5px;line-height:1.6;color:var(--muted);margin:0 0 14px}
+.ia-card a{font-size:13.5px;font-weight:700;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.ia-card a:hover{color:var(--rose-deep)}
+.ia-card .ia-ico{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--bg-rose);color:var(--rose-deep);margin-bottom:14px}
+.ia-card .ia-ico svg{width:22px;height:22px}
+</style>
+
+<div class="ia-hero">
+  <div class="ia-hero-inner">
+    <span class="ia-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
+    <h1>AI<span class="sub">& teaching</span></h1>
+    <p>
+      Generative artificial intelligence is transforming teaching and learning.
+      The SEA Pole provides an interactive guide to help teachers understand the
+      challenges of AI in their courses and integrate it thoughtfully.
+    </p>
+  </div>
+</div>
+
+<div class="ia-wrap">
+  <p class="ia-section-label">AI guide for teaching</p>
+
+  <div class="ia-guide">
+    <iframe
+      src={GENIALLY}
+      title="UNIGE AI teaching guide"
+      allowfullscreen
+      allow="fullscreen"
+      loading="lazy"
+    ></iframe>
+  </div>
+  <p class="ia-guide-note">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+    Interactive guide produced by the SEA Pole — <a href={GENIALLY} target="_blank" rel="noopener">open in full screen</a>
+  </p>
+
+  <div class="ia-cards">
+    <div class="ia-card">
+      <div class="ia-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/></svg></div>
+      <h3>Integrating AI into your course</h3>
+      <p>Guidance for defining a stance and adapting your instructions and assessments to generative AI.</p>
+      <a href={GENIALLY} target="_blank" rel="noopener">Read the guide →</a>
+    </div>
+    <div class="ia-card">
+      <div class="ia-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <h3>Projects using AI</h3>
+      <p>Discover UNIGE pedagogical projects that make use of artificial intelligence.</p>
+      <a href="/en/catalogue">View projects →</a>
+    </div>
+    <div class="ia-card">
+      <div class="ia-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <h3>Talk with the SEA Pole</h3>
+      <p>Need support on using AI in your teaching? Get in touch with the team.</p>
+      <a href="mailto:sea@unige.ch">Write to us →</a>
+    </div>
+  </div>
+</div>
+</Base>

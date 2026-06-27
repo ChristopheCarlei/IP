@@ -11,13 +11,17 @@ This course is aimed exclusively at non-French-speaking students and offers them
 ## Project implementation
 
 During the first two sessions of the "classic" seminars, students are introduced the Francophonie in terms of history, politics and culture. Afterwards, they go in search of their "object" of study. Some may choose songs, other tales, comics, novels, documentaries, etc.
+
 The next 4 sessions consist of a presentation by each student to the whole group of their progress with a projection of the pedagogical sheets under construction. This essential step allows the students to develop their oral communication skills, but also allows the teaching team to reframe the pedagogical sheets in the desired perspective (i.e. to make this material accessible to the target audience, i.e. A2-B1 level students). Students review and correct their worksheets before presenting them in their final form during an oral exam.
+
 At the end of the course, each student can share his/her pedagogical project on the French Language Week (SLFF) website. The various pedagogical activities they propose in their sheets can thus be effectively taken up and used by teachers.
 
 ## Thoughts and advice
 
 The elaboration by students of pedagogical sheets for a young audience obliges them not only to appropriate an object of study, but also to popularize it and make it didactic.
+
 The teaching staff is responsible for providing a supportive learning environment. They act as guides, offering advice, criticism and suggestions for remediation, but let the students manage their projects as they wish.
+
 The final formatting of the projects to be put online is done in collaboration with the graphic designer of the French Language Week website.
 
 ## Student feedback

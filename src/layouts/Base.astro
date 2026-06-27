@@ -1,28 +1,33 @@
 ---
 import '../styles/global.css';
+import { navItems, instItems, ui, localizePath, altLangPath, type Lang } from '../i18n';
 
 interface Props {
   title: string;
   description?: string;
-  lang?: 'fr' | 'en';
+  lang?: Lang;
 }
 const {
   title,
-  description = "Plateforme de recensement et de valorisation des projets d'innovation pédagogique de l'Université de Genève.",
+  description,
   lang = 'fr',
 } = Astro.props;
 
-const navItems = [
-  { href: '/catalogue',   fr: 'Catalogue',    en: 'Catalogue' },
-  { href: '/ia',          fr: 'IA',            en: 'AI' },
-  { href: '/videos',      fr: 'Vidéos',        en: 'Videos' },
-  { href: '/soutien',     fr: 'Soutien',       en: 'Support' },
-  { href: '/observation', fr: 'Observation',   en: 'Observation' },
-  { href: '/prix',        fr: 'Prix',          en: 'Awards' },
-  { href: '/commission',  fr: 'Commission',    en: 'Committee' },
-];
+const t = ui[lang];
+const defaultDesc = lang === 'en'
+  ? 'A platform for recording and showcasing the pedagogical innovation projects of the University of Geneva.'
+  : "Plateforme de recensement et de valorisation des projets d'innovation pédagogique de l'Université de Genève.";
+const desc = description ?? defaultDesc;
 
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+function isActive(path: string): boolean {
+  const lp = localizePath(path, lang);
+  return currentPath === lp || currentPath.startsWith(lp + '/');
+}
+
+const frHref = altLangPath(currentPath, 'fr');
+const enHref = altLangPath(currentPath, 'en');
 ---
 <!doctype html>
 <html lang={lang}>
@@ -30,7 +35,7 @@ const currentPath = Astro.url.pathname;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{title} — Innovations Pédagogiques · Université de Genève</title>
-  <meta name="description" content={description} />
+  <meta name="description" content={desc} />
   <meta name="theme-color" content="#CF0063" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>
@@ -39,41 +44,53 @@ const currentPath = Astro.url.pathname;
   <!-- Filet rose institutionnel 5 px -->
   <div class="topstrip"></div>
 
-  <!-- En-tête sticky -->
+  <!-- Barre institutionnelle UNIGE -->
+  <div class="instbar">
+    <div class="instbar-inner">
+      <nav class="instbar-nav" aria-label={t.instAria}>
+        <a class="instbar-logo" href="https://www.unige.ch" target="_blank" rel="noopener" aria-label="Université de Genève">
+          <span class="instbar-u">UNIGE</span>
+          <span class="instbar-g">Université de Genève</span>
+        </a>
+        <span class="instbar-sep" aria-hidden="true"></span>
+        <div class="instbar-links">
+          {instItems.map(item => (
+            <a href={lang === 'en' ? item.href_en : item.href_fr} target="_blank" rel="noopener">
+              {lang === 'en' ? item.en : item.fr}
+            </a>
+          ))}
+        </div>
+      </nav>
+      <span class="instbar-langpick">
+        <a href={frHref} class={lang === 'fr' ? 'on' : ''}>FR</a>
+        <a href={enHref} class={lang === 'en' ? 'on' : ''}>EN</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- En-tête section Innovations Pédagogiques -->
   <header class="topbar">
-    <nav class="nav" aria-label="Navigation principale">
-      <a class="brand" href="/" aria-label="Accueil — Innovations Pédagogiques UNIGE">
-        <span class="wordmark">
-          <span class="u">UNIGE</span>
-          <span class="g">Université de Genève</span>
-        </span>
-        <span class="divider" aria-hidden="true"></span>
+    <nav class="nav" aria-label={t.navAria}>
+      <a class="brand" href={localizePath('/', lang)} aria-label="Innovations Pédagogiques UNIGE">
         <span class="titles">
-          <strong>Innovations</strong>
-          <span>Pédagogiques</span>
+          <strong>Innovations Pédagogiques</strong>
+          <span>{t.brandTagline}</span>
         </span>
       </a>
 
       <button class="burger" id="burger" type="button"
-              aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navlinks">
+              aria-label={t.openMenu} aria-expanded="false" aria-controls="navlinks">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <path d="M4 7h16M4 12h16M4 17h16"/>
         </svg>
       </button>
 
       <div class="navlinks" id="navlinks">
-        {navItems.map(item => {
-          const isActive = currentPath === item.href || (currentPath.startsWith(item.href + '/'));
-          return (
-            <a href={item.href} class={isActive ? 'active' : ''}>
-              {lang === 'en' ? item.en : item.fr}
-            </a>
-          );
-        })}
-        <span class="langpick">
-          <a href="/" class={lang === 'fr' ? 'on' : ''}>FR</a>
-          <a href="/en" class={lang === 'en' ? 'on' : ''}>EN</a>
-        </span>
+        {navItems.map(item => (
+          <a href={localizePath(item.path, lang)} class={isActive(item.path) ? 'active' : ''}>
+            {lang === 'en' ? item.en : item.fr}
+          </a>
+        ))}
       </div>
     </nav>
   </header>
@@ -83,47 +100,89 @@ const currentPath = Astro.url.pathname;
     <slot />
   </main>
 
-  <!-- Pied de page -->
-  <footer class="footer">
+  <!-- Pied de page institutionnel -->
+  <footer class="footer" role="contentinfo">
     <div class="footer-inner">
+
+      <!-- Grille principale -->
       <div class="footer-grid">
-        <div>
-          <span class="wordmark">
-            <span class="u">UNIGE</span>
-            <span class="g">Université de Genève</span>
-          </span>
-          <p class="about">
-            Plateforme de recensement et de valorisation des projets d'innovation
-            pédagogique de l'Université de Genève. Une initiative du Pôle SEA
-            et de la Commission d'Innovation Pédagogique.
-          </p>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <address>
-            Pôle SEA<br />
+
+        <!-- Col 1 : UNIGE + IP -->
+        <div class="footer-col footer-col--brand">
+          <div class="footer-brand">
+            <span class="footer-u">UNIGE</span>
+            <span class="footer-g">{t.footerColUnige}</span>
+          </div>
+          <p class="footer-about">{t.footerAbout}</p>
+          <address class="footer-address">
             24 rue du Général-Dufour<br />
             1211 Genève 4<br />
-            <a class="mail" href="mailto:sea@unige.ch">sea@unige.ch</a>
+            T. +41 (0)22 379 71 11
           </address>
         </div>
-        <div>
-          <h4>Liens</h4>
-          <ul>
-            <li><a href="https://www.unige.ch" target="_blank" rel="noopener">unige.ch</a></li>
-            <li><a href="/catalogue">Catalogue des projets</a></li>
-            <li><a href="/observation">Observation entre pairs</a></li>
-            <li><a href="/prix">Prix de la pédagogie</a></li>
-            <li><a href="/admin/">Administration CMS</a></li>
+
+        <!-- Col 2 : Innovations Pédagogiques -->
+        <div class="footer-col">
+          <h4 class="footer-title">{t.footerColIP}</h4>
+          <ul class="footer-links">
+            <li><a href={localizePath('/catalogue', lang)}>{t.footerCatalogue}</a></li>
+            <li><a href={localizePath('/ia', lang)}>{t.footerIA}</a></li>
+            <li><a href={localizePath('/videos', lang)}>{t.footerVideos}</a></li>
+            <li><a href={localizePath('/soutien', lang)}>{t.footerSoutien}</a></li>
+            <li><a href={localizePath('/observation', lang)}>{t.footerObservation}</a></li>
+            <li><a href={localizePath('/prix', lang)}>{t.footerPrix}</a></li>
+            <li><a href={localizePath('/commission', lang)}>{t.footerCommission}</a></li>
+            <li><a href={localizePath('/contact', lang)}>{t.footerContact}</a></li>
           </ul>
         </div>
+
+        <!-- Col 3 : UNIGE -->
+        <div class="footer-col">
+          <h4 class="footer-title">{t.footerColUnige}</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.unige.ch" target="_blank" rel="noopener">unige.ch</a></li>
+            <li><a href="https://www.unige.ch/sea/" target="_blank" rel="noopener">Pôle SEA</a></li>
+            <li><a href="https://www.unige.ch/medias/" target="_blank" rel="noopener">Médias</a></li>
+            <li><a href="https://unige.ch/-/emplois" target="_blank" rel="noopener">Offres d'emploi</a></li>
+            <li><a href="https://www.unige.ch/biblio/" target="_blank" rel="noopener">Bibliothèque</a></li>
+            <li><a href="/admin/">{t.footerAdmin}</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 : Réseaux sociaux + accréditation -->
+        <div class="footer-col">
+          <h4 class="footer-title">{t.footerColSocial}</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/unigeneve" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/university-of-geneva" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UCLVD78-qZV06ULrJ6eKJIiQ" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff"/></svg>
+            </a>
+            <a href="https://instagram.com/unigeneve/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+          <div class="footer-accred">
+            <img src="https://www.unige.ch/files/4416/5210/1573/SAR-Label_Institutionen_22-29_EN.png"
+                 alt="Accréditation SAR" width="120" loading="lazy" />
+          </div>
+        </div>
       </div>
+
+      <!-- Bas de page -->
       <div class="footer-base">
         <span>© {new Date().getFullYear()} Université de Genève</span>
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-           target="_blank" rel="noopener"
-           style="color:var(--faint);font-weight:600">CC BY-NC-SA 4.0</a>
+        <div class="footer-base-links">
+          <a href="https://www.unige.ch/contact/" target="_blank" rel="noopener">{t.footerContactLink}</a>
+          <a href="https://www.unige.ch/cookies/" target="_blank" rel="noopener">{t.footerCookies}</a>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+        </div>
       </div>
+
     </div>
   </footer>
 
@@ -135,7 +194,6 @@ const currentPath = Astro.url.pathname;
       b.addEventListener('click', function () {
         const open = n.classList.toggle('open');
         b.setAttribute('aria-expanded', open ? 'true' : 'false');
-        b.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
       });
       n.addEventListener('click', function (e) {
         if ((e.target as Element).closest('a')) n.classList.remove('open');

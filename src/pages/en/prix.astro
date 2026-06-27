@@ -1,0 +1,219 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const norm = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/&/g, ' et ').replace(/[^a-z0-9]+/g, ' ').trim();
+const bySlug = new Map(allProjects.map(p => [norm(p.data.title ?? ''), p]));
+
+const REG  = 'https://www.unige.ch/innovations-pedagogiques/download_file/1944/0';
+const DOSSIER = 'https://www.unige.ch/innovations-pedagogiques/application/files/2117/7606/5298/Nom_Candidature_2026.docx';
+const LETTRE  = 'https://www.unige.ch/innovations-pedagogiques/application/files/3417/7606/5298/Nom_Lettre_2026.docx';
+
+const lauréats = [
+  { name: 'Fiches médicales',                  author: 'Priscilla Soulié & Monica Didier', faculty: 'Médecine', annee: '2024' },
+  { name: 'Interventions formatives',          author: 'Simon Flandin',                    faculty: 'FPSE',     annee: '2023' },
+  { name: 'Improvisation théâtrale',           author: 'Pauline Hämmerli',                 faculty: 'Médecine', annee: '2022' },
+  { name: 'Professionnalisation & jeu sérieux',author: 'Rita Trigo Trindade',              faculty: 'Droit',    annee: '2021' },
+  { name: 'Head to Toe',                       author: 'Ido Zamberg & Olivier Windisch',   faculty: 'Médecine', annee: '2020' },
+  { name: 'Projet institutionnel',             author: 'Marcel Paulssen',                  faculty: 'GSEM',     annee: '2019' },
+  { name: 'Exerciseur en statistiques',        author: 'Matthias Studer',                  faculty: 'SDS',      annee: '2018' },
+  { name: 'Podcast environnemental',           author: 'Juliet Fall',                      faculty: 'SDS',      annee: '2017' },
+].map(w => {
+  const p = bySlug.get(norm(w.name));
+  return { ...w, slug: p?.slug ?? null, photo: p?.data.photo ?? null };
+});
+
+const criteria = [
+  'Impact on learning',
+  'Pedagogical clarity and alignment',
+  'Student engagement',
+  'Originality and creativity',
+  'Sustainability',
+  'Transferability',
+  'Dissemination and sharing',
+];
+
+function facVar(f: string): string {
+  const x = f.toUpperCase();
+  if (x.includes('FPSE')) return 'var(--fac-fapse)';
+  if (x.includes('GSEM')) return 'var(--fac-gsem)';
+  if (x.includes('FTI'))  return 'var(--fac-fti)';
+  if (x.includes('MÉD') || x.includes('MED')) return 'var(--fac-medecine)';
+  if (x.includes('SDS'))  return 'var(--fac-sds)';
+  if (x.includes('LETTR')) return 'var(--fac-lettres)';
+  if (x.includes('DROIT')) return 'var(--fac-droit)';
+  if (x.includes('SCIEN')) return 'var(--fac-sciences)';
+  return 'var(--rose)';
+}
+---
+<Base title="University Pedagogy Award" lang="en">
+<style>
+.px-hero{background:#fff;border-bottom:1px solid var(--line)}
+.px-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.px-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.px-hero h1{font-size:clamp(36px,4.6vw,60px);line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.px-hero h1 .sub{display:block;font-weight:300;color:var(--muted);font-size:.62em}
+.px-hero p{color:var(--muted);font-size:16.5px;line-height:1.7;max-width:70ch;margin:18px 0 0}
+.px-deadline{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--bg-rose);color:var(--rose-deep);font-weight:800;font-size:14px;padding:10px 18px;border-radius:999px}
+.px-deadline svg{width:16px;height:16px}
+.px-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0;display:grid;grid-template-columns:1fr;gap:clamp(40px,5vw,64px)}
+.px-block h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:0 0 18px}
+.px-block p{color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 0 14px;max-width:74ch}
+.px-block a.inline{color:var(--rose);font-weight:700;text-decoration:none}
+.px-block a.inline:hover{text-decoration:underline}
+.px-dotation{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.px-prize{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.px-prize::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--rose)}
+.px-prize .rank{font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.px-prize .amount{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--rose);letter-spacing:-.02em;margin-top:6px}
+.px-prize.gold::before{background:linear-gradient(90deg,#ffcb00,#ca8404)}
+.px-prize.gold .amount{color:#ca8404}
+.px-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.px-step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.px-step .num{width:34px;height:34px;border-radius:50%;background:var(--rose);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:12px}
+.px-step h3{font-size:16px;font-weight:800;color:var(--ink);margin:0 0 8px}
+.px-step ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.6}
+.px-criteres{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.px-crit{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;box-shadow:var(--shadow)}
+.px-crit .c-num{width:28px;height:28px;border-radius:8px;background:var(--bg-rose);color:var(--rose-deep);font-weight:800;font-size:13px;display:grid;place-items:center;flex-shrink:0}
+.px-crit span:last-child{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.3}
+.px-docs{display:flex;gap:14px;flex-wrap:wrap}
+.px-doc{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 18px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14.5px;box-shadow:var(--shadow);transition:border-color .15s,transform .15s}
+.px-doc:hover{border-color:var(--rose);transform:translateY(-2px)}
+.px-doc svg{width:20px;height:20px;color:var(--rose);flex-shrink:0}
+.px-win-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.px-win{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s;position:relative}
+.px-win:hover{transform:translateY(-3px);box-shadow:0 8px 22px -8px rgba(16,24,40,.28)}
+.px-win-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center top;background:var(--fac,#ccc);display:block}
+.px-win-year{position:absolute;top:10px;right:10px;background:linear-gradient(45deg,#ffcb00,#ca8404);color:#fff;font-size:12px;font-weight:800;padding:4px 11px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.px-win-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.px-win-body h3{font-size:15.5px;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin:0 0 4px;line-height:1.25}
+.px-win-author{font-size:13px;color:var(--muted);margin:0 0 10px}
+.px-win-fac{margin-top:auto;align-self:flex-start;font-size:11px;font-weight:800;color:#fff;background:var(--fac,var(--rose));padding:3px 10px;border-radius:999px}
+@media(max-width:760px){.px-dotation,.px-steps{grid-template-columns:1fr}}
+</style>
+
+<div class="px-hero">
+  <div class="px-hero-inner">
+    <span class="px-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
+    <h1>Award<span class="sub">University Pedagogy Award</span></h1>
+    <p>
+      Until 2024, the Pedagogical Innovation Award supported and promoted innovations
+      implemented by members of the University of Geneva. After a brief hiatus, the award is
+      returning in 2026 under a new name — the <strong>University Pedagogy Award</strong> —
+      reaffirming a commitment to valuing teaching practices that transform the student experience.
+    </p>
+    <span class="px-deadline">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Submission deadline: 15.04.2026
+    </span>
+  </div>
+</div>
+
+<div class="px-wrap">
+
+  <section class="px-block">
+    <h2>Description and nature of the award</h2>
+    <p>
+      Each year, the University Pedagogy Award recognizes up to <strong>three projects</strong>,
+      subject to the renewal of financial support by the funder. The total annual grant amounts to
+      <strong>10,000 CHF</strong>. If one of the three prizes is not awarded in a given year, it is
+      carried over to the following year, with no possibility of accumulation.
+    </p>
+    <div class="px-dotation">
+      <div class="px-prize gold"><div class="rank">1st prize</div><div class="amount">5,000 CHF</div></div>
+      <div class="px-prize"><div class="rank">2nd prize</div><div class="amount">3,000 CHF</div></div>
+      <div class="px-prize"><div class="rank">3rd prize</div><div class="amount">2,000 CHF</div></div>
+    </div>
+  </section>
+
+  <section class="px-block">
+    <h2>How to apply</h2>
+    <p>
+      First make sure that your application is eligible by referring to the regulations. In
+      particular, it is essential that your project is internal to the University of Geneva and
+      benefits its community. To apply, complete the application form and the accompanying letter,
+      then send them to us by <a class="inline" href="mailto:sea@unige.ch">email</a>.
+    </p>
+    <div class="px-docs">
+      <a class="px-doc" href={REG} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Award regulations
+      </a>
+      <a class="px-doc" href={DOSSIER} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Application form
+      </a>
+      <a class="px-doc" href={LETTRE} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Accompanying letter
+      </a>
+    </div>
+  </section>
+
+  <section class="px-block">
+    <h2>Jury and award decision</h2>
+    <div class="px-steps">
+      <div class="px-step">
+        <div class="num">1</div>
+        <h3>Preselection</h3>
+        <ul><li>The SEA Pole selects a maximum of 10 applications.</li></ul>
+      </div>
+      <div class="px-step">
+        <div class="num">2</div>
+        <h3>Jury evaluation</h3>
+        <ul>
+          <li>8 members (min.) of the CIP, representing the diversity of UNIGE disciplines</li>
+          <li>An expert external to the institution</li>
+          <li>A UNIGE student aware of pedagogical issues</li>
+        </ul>
+      </div>
+      <div class="px-step">
+        <div class="num">3</div>
+        <h3>Oral presentation & winners</h3>
+        <ul>
+          <li>The leaders of the selected projects present their work</li>
+          <li>The jury designates the 3 winners and their ranking</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-block">
+    <h2>Evaluation criteria</h2>
+    <p>Submitted projects are assessed by the jury on the basis of the following seven criteria, which are objective and non-discriminatory:</p>
+    <div class="px-criteres">
+      {criteria.map((c, i) => (
+        <div class="px-crit"><span class="c-num">{i + 1}</span><span>{c}</span></div>
+      ))}
+    </div>
+  </section>
+
+  <section class="px-block">
+    <h2>Winners of previous editions</h2>
+    <div class="px-win-grid">
+      {lauréats.map(w => {
+        const initials = w.author.split(' ').slice(0, 2).map(s => s[0] ?? '').join('').toUpperCase();
+        const inner = (
+          <>
+            <span class="px-win-year">★ {w.annee}</span>
+            {w.photo
+              ? <img class="px-win-img" src={w.photo} alt={w.name} loading="lazy" />
+              : <div class="px-win-img" style="display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:rgba(255,255,255,.35)">{initials}</div>}
+            <div class="px-win-body">
+              <h3>{w.name}</h3>
+              <p class="px-win-author">{w.author}</p>
+              <span class="px-win-fac">{w.faculty}</span>
+            </div>
+          </>
+        );
+        return w.slug
+          ? <a class="px-win" href={`/projets/${w.slug}`} style={`--fac:${facVar(w.faculty)}`}>{inner}</a>
+          : <div class="px-win" style={`--fac:${facVar(w.faculty)}`}>{inner}</div>;
+      })}
+    </div>
+  </section>
+
+</div>
+</Base>

@@ -11,13 +11,21 @@ Previously, explanations and demonstrations were given at the beginning of the p
 ## Project implementation
 
 This course alternates lectures and practical work. To prepare the students for the practical work, 3 types of videos are proposed to them beforehand:
+
 Theoretical basis of the course;
+
 Explanations of the link between the course and the work required in the laboratory;
+
 Concrete demonstrations of the use of the instruments for practical work.
+
 To verify that the students have watched the videos and understood the content, quizzes are given before the lab. They must obtain a minimum of 70% of correct answers to enter the laboratory.
+
 Thus, students come to the lab knowing what is expected and are ready to do the manipulations after watching the videos. They are thus much more autonomous and make fewer mistakes. From the experimentation to the writing of the report, the students are more confident and take more initiative.
+
 Thanks to the video, each student can choose the time that suits him/her best to learn. The alternation between classes, homework and practical work allows students to learn at their own pace and to come to the teacher and assistants with specific questions.
+
 Thoughts and advice on implementing a similar project
+
 Be careful not to give too much information per video, no more than 5-6 minutes. A student will prefer to see 3 videos of 6 minutes rather than one video of 20 minutes. Don't over-script, don't be afraid of making a few mistakes. The key is to make the video as lively as possible. If you make videos that are too professional and take a lot of time to make, you will be less motivated in the future to modify them and change the content to make the course evolve.
 
 ## Student feedback

@@ -1,91 +1,238 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
 
-const laureats = [
-  { projet: 'Fiches médicales', responsables: 'Priscilla Soulie, Monica Didier', annee: '2024', faculte: 'Médecine' },
-  { projet: 'Interventions formatives', responsables: 'Simon Flandin (et équipe)', annee: '2023', faculte: 'FPSE' },
-  { projet: 'Improvisation théâtrale', responsables: 'Pauline Hämmerli (et équipe)', annee: '2022', faculte: 'Médecine' },
-  { projet: 'Professionnalisation & jeu sérieux', responsables: 'Rita Trigo Trindade', annee: '2021', faculte: 'Droit' },
-  { projet: 'Head to Toe', responsables: 'Ido Zamberg, Olivier Windisch', annee: '2020', faculte: 'Médecine' },
-  { projet: 'Projet institutionnel', responsables: 'Marcel Paulssen', annee: '2019', faculte: 'GSEM' },
-  { projet: 'Exerciseur en statistiques', responsables: 'Matthias Studer', annee: '2018', faculte: 'SDS' },
-  { projet: 'Podcast environnemental', responsables: 'Juliet Fall', annee: '2017', faculte: 'SDS' },
-];
+const allProjects = await getCollection('projects');
+const norm = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/&/g, ' et ').replace(/[^a-z0-9]+/g, ' ').trim();
+const bySlug = new Map(allProjects.map(p => [norm(p.data.title ?? ''), p]));
+
+const REG  = 'https://www.unige.ch/innovations-pedagogiques/download_file/1944/0';
+const DOSSIER = 'https://www.unige.ch/innovations-pedagogiques/application/files/2117/7606/5298/Nom_Candidature_2026.docx';
+const LETTRE  = 'https://www.unige.ch/innovations-pedagogiques/application/files/3417/7606/5298/Nom_Lettre_2026.docx';
+
+const lauréats = [
+  { name: 'Fiches médicales',                  author: 'Priscilla Soulié & Monica Didier', faculty: 'Médecine', annee: '2024' },
+  { name: 'Interventions formatives',          author: 'Simon Flandin',                    faculty: 'FPSE',     annee: '2023' },
+  { name: 'Improvisation théâtrale',           author: 'Pauline Hämmerli',                 faculty: 'Médecine', annee: '2022' },
+  { name: 'Professionnalisation & jeu sérieux',author: 'Rita Trigo Trindade',              faculty: 'Droit',    annee: '2021' },
+  { name: 'Head to Toe',                       author: 'Ido Zamberg & Olivier Windisch',   faculty: 'Médecine', annee: '2020' },
+  { name: 'Projet institutionnel',             author: 'Marcel Paulssen',                  faculty: 'GSEM',     annee: '2019' },
+  { name: 'Exerciseur en statistiques',        author: 'Matthias Studer',                  faculty: 'SDS',      annee: '2018' },
+  { name: 'Podcast environnemental',           author: 'Juliet Fall',                      faculty: 'SDS',      annee: '2017' },
+].map(w => {
+  const p = bySlug.get(norm(w.name));
+  return { ...w, slug: p?.slug ?? null, photo: p?.data.photo ?? null };
+});
 
 const criteres = [
-  'Impact pédagogique', 'Clarté pédagogique', 'Engagement étudiant',
-  'Originalité', 'Durabilité', 'Transférabilité', 'Diffusion',
+  "Impact sur l'apprentissage",
+  'Clarté et alignement pédagogique',
+  'Engagement étudiant·e',
+  'Originalité et créativité',
+  'Durabilité',
+  'Transférabilité',
+  'Diffusion et partage',
 ];
+
+function facVar(f: string): string {
+  const x = f.toUpperCase();
+  if (x.includes('FPSE')) return 'var(--fac-fapse)';
+  if (x.includes('GSEM')) return 'var(--fac-gsem)';
+  if (x.includes('FTI'))  return 'var(--fac-fti)';
+  if (x.includes('MÉD') || x.includes('MED')) return 'var(--fac-medecine)';
+  if (x.includes('SDS'))  return 'var(--fac-sds)';
+  if (x.includes('LETTR')) return 'var(--fac-lettres)';
+  if (x.includes('DROIT')) return 'var(--fac-droit)';
+  if (x.includes('SCIEN')) return 'var(--fac-sciences)';
+  return 'var(--rose)';
+}
 ---
-<Base title="Prix de la Pédagogie Universitaire">
-  <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-4">Prix de la Pédagogie Universitaire</h1>
+<Base title="Prix de la pédagogie universitaire">
+<style>
+.px-hero{background:#fff;border-bottom:1px solid var(--line)}
+.px-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.px-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.px-hero h1{font-size:clamp(36px,4.6vw,60px);line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.px-hero h1 .sub{display:block;font-weight:300;color:var(--muted);font-size:.62em}
+.px-hero p{color:var(--muted);font-size:16.5px;line-height:1.7;max-width:70ch;margin:18px 0 0}
+.px-deadline{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--bg-rose);color:var(--rose-deep);font-weight:800;font-size:14px;padding:10px 18px;border-radius:999px}
+.px-deadline svg{width:16px;height:16px}
 
-    <!-- Édition 2026 -->
-    <div class="bg-unige-red text-white rounded-xl p-8 mb-10">
-      <h2 class="text-xl font-bold mb-3">Édition 2026 — 10 000 CHF à remporter</h2>
-      <div class="grid md:grid-cols-3 gap-4 mb-6">
-        {[['1er prix', '5 000 CHF'], ['2e prix', '3 000 CHF'], ['3e prix', '2 000 CHF']].map(([rang, montant]) => (
-          <div class="bg-white/10 rounded-lg p-4 text-center">
-            <p class="font-semibold">{rang}</p>
-            <p class="text-2xl font-bold">{montant}</p>
-          </div>
-        ))}
-      </div>
-      <p class="text-sm opacity-90 mb-4">
-        Date limite de candidature : <strong>15 avril 2026</strong>.
-        Envoyez votre dossier de candidature et lettre d'accompagnement à{' '}
-        <a href="mailto:sea@unige.ch" class="underline">sea@unige.ch</a>
-      </p>
-    </div>
+.px-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0;display:grid;grid-template-columns:1fr;gap:clamp(40px,5vw,64px)}
 
-    <!-- Critères -->
-    <div class="mb-10">
-      <h2 class="text-xl font-bold mb-4">Critères d'évaluation</h2>
-      <div class="grid md:grid-cols-2 gap-3">
-        {criteres.map((c, i) => (
-          <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-            <span class="w-7 h-7 rounded-full bg-unige-red text-white text-sm flex items-center justify-center font-bold shrink-0">{i+1}</span>
-            <span class="text-sm font-medium">{c}</span>
-          </div>
-        ))}
-      </div>
-    </div>
+.px-block h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:0 0 18px}
+.px-block p{color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 0 14px;max-width:74ch}
+.px-block a.inline{color:var(--rose);font-weight:700;text-decoration:none}
+.px-block a.inline:hover{text-decoration:underline}
 
-    <!-- Jury -->
-    <div class="mb-10">
-      <h2 class="text-xl font-bold mb-3">Jury</h2>
-      <p class="text-gray-600">
-        Le jury comprend au minimum 8 membres de la Commission d'Innovation Pédagogique (CIP),
-        un expert externe et un étudiant·e UNIGE sensibilisé·e aux enjeux pédagogiques.
-      </p>
-    </div>
+/* Dotation */
+.px-dotation{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.px-prize{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.px-prize::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--rose)}
+.px-prize .rank{font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.px-prize .amount{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--rose);letter-spacing:-.02em;margin-top:6px}
+.px-prize.gold::before{background:linear-gradient(90deg,#ffcb00,#ca8404)}
+.px-prize.gold .amount{color:#ca8404}
 
-    <!-- Lauréats -->
-    <div>
-      <h2 class="text-xl font-bold mb-4">Lauréat·es précédent·es</h2>
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm border-collapse">
-          <thead>
-            <tr class="bg-gray-100 text-left">
-              <th class="px-4 py-3 font-semibold text-gray-600">Projet</th>
-              <th class="px-4 py-3 font-semibold text-gray-600">Responsable(s)</th>
-              <th class="px-4 py-3 font-semibold text-gray-600">Faculté</th>
-              <th class="px-4 py-3 font-semibold text-gray-600">Année</th>
-            </tr>
-          </thead>
-          <tbody>
-            {laureats.map((l, i) => (
-              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                <td class="px-4 py-3 font-medium">{l.projet}</td>
-                <td class="px-4 py-3 text-gray-600">{l.responsables}</td>
-                <td class="px-4 py-3 text-gray-600">{l.faculte}</td>
-                <td class="px-4 py-3 text-gray-600">{l.annee}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+/* Étapes jury */
+.px-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.px-step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.px-step .num{width:34px;height:34px;border-radius:50%;background:var(--rose);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:12px}
+.px-step h3{font-size:16px;font-weight:800;color:var(--ink);margin:0 0 8px}
+.px-step ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.6}
+
+/* Critères */
+.px-criteres{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.px-crit{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;box-shadow:var(--shadow)}
+.px-crit .c-num{width:28px;height:28px;border-radius:8px;background:var(--bg-rose);color:var(--rose-deep);font-weight:800;font-size:13px;display:grid;place-items:center;flex-shrink:0}
+.px-crit span:last-child{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.3}
+
+/* Documents */
+.px-docs{display:flex;gap:14px;flex-wrap:wrap}
+.px-doc{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 18px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14.5px;box-shadow:var(--shadow);transition:border-color .15s,transform .15s}
+.px-doc:hover{border-color:var(--rose);transform:translateY(-2px)}
+.px-doc svg{width:20px;height:20px;color:var(--rose);flex-shrink:0}
+
+/* Lauréats */
+.px-win-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.px-win{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s;position:relative}
+.px-win:hover{transform:translateY(-3px);box-shadow:0 8px 22px -8px rgba(16,24,40,.28)}
+.px-win-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center top;background:var(--fac,#ccc);display:block}
+.px-win-year{position:absolute;top:10px;right:10px;background:linear-gradient(45deg,#ffcb00,#ca8404);color:#fff;font-size:12px;font-weight:800;padding:4px 11px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.px-win-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.px-win-body h3{font-size:15.5px;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin:0 0 4px;line-height:1.25}
+.px-win-author{font-size:13px;color:var(--muted);margin:0 0 10px}
+.px-win-fac{margin-top:auto;align-self:flex-start;font-size:11px;font-weight:800;color:#fff;background:var(--fac,var(--rose));padding:3px 10px;border-radius:999px}
+
+@media(max-width:760px){.px-dotation,.px-steps{grid-template-columns:1fr}}
+</style>
+
+<!-- Hero -->
+<div class="px-hero">
+  <div class="px-hero-inner">
+    <span class="px-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
+    <h1>Prix<span class="sub">de la Pédagogie universitaire</span></h1>
+    <p>
+      Jusqu'en 2024, le Prix de l'innovation pédagogique a soutenu et valorisé les innovations
+      mises en œuvre par les membres de l'Université de Genève. Après une pause, le prix fait son
+      retour en 2026 sous une nouvelle appellation — le <strong>Prix de la Pédagogie universitaire</strong> —
+      affirmant la volonté de valoriser les enseignements qui transforment l'expérience étudiante.
+    </p>
+    <span class="px-deadline">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Délai de candidature : 15.04.2026
+    </span>
   </div>
+</div>
+
+<div class="px-wrap">
+
+  <!-- Description & dotation -->
+  <section class="px-block">
+    <h2>Description et nature du prix</h2>
+    <p>
+      Chaque année, le Prix de la pédagogie universitaire récompense jusqu'à <strong>trois projets</strong>,
+      sous réserve du renouvellement du soutien financier par le bailleur de fonds. La dotation annuelle
+      globale s'élève à <strong>10 000 CHF</strong>. Si l'un des trois prix n'est pas attribué au cours d'une
+      année, il est reporté à l'année suivante, sans possibilité de cumul.
+    </p>
+    <div class="px-dotation">
+      <div class="px-prize gold"><div class="rank">1er prix</div><div class="amount">5 000 CHF</div></div>
+      <div class="px-prize"><div class="rank">2e prix</div><div class="amount">3 000 CHF</div></div>
+      <div class="px-prize"><div class="rank">3e prix</div><div class="amount">2 000 CHF</div></div>
+    </div>
+  </section>
+
+  <!-- Comment candidater -->
+  <section class="px-block">
+    <h2>Comment candidater ?</h2>
+    <p>
+      Assurez-vous au préalable que votre dossier est éligible en vous référant au règlement. Il est
+      notamment essentiel que votre projet soit interne à l'Université de Genève et au bénéfice de sa
+      communauté. Pour candidater, remplissez le dossier de candidature et la lettre d'accompagnement,
+      puis envoyez-les-nous par <a class="inline" href="mailto:sea@unige.ch">email</a>.
+    </p>
+    <div class="px-docs">
+      <a class="px-doc" href={REG} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Règlement du Prix
+      </a>
+      <a class="px-doc" href={DOSSIER} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Dossier de candidature
+      </a>
+      <a class="px-doc" href={LETTRE} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Lettre d'accompagnement
+      </a>
+    </div>
+  </section>
+
+  <!-- Jury -->
+  <section class="px-block">
+    <h2>Jury et décision d'attribution</h2>
+    <div class="px-steps">
+      <div class="px-step">
+        <div class="num">1</div>
+        <h3>Présélection</h3>
+        <ul><li>Le Pôle SEA sélectionne un maximum de 10 dossiers.</li></ul>
+      </div>
+      <div class="px-step">
+        <div class="num">2</div>
+        <h3>Évaluation par le jury</h3>
+        <ul>
+          <li>8 membres (min.) de la CIP, représentant la diversité des disciplines de l'UNIGE</li>
+          <li>Un·e expert·e externe à l'institution</li>
+          <li>Un·e étudiant·e UNIGE sensibilisé·e aux enjeux pédagogiques</li>
+        </ul>
+      </div>
+      <div class="px-step">
+        <div class="num">3</div>
+        <h3>Présentation orale & lauréat·es</h3>
+        <ul>
+          <li>Les responsables des projets retenus présentent leur travail</li>
+          <li>Le jury désigne les 3 lauréat·es et leur classement</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Critères -->
+  <section class="px-block">
+    <h2>Critères d'évaluation</h2>
+    <p>Les projets soumis sont évalués par le jury sur la base des sept critères suivants, objectifs et non-discriminants :</p>
+    <div class="px-criteres">
+      {criteres.map((c, i) => (
+        <div class="px-crit"><span class="c-num">{i + 1}</span><span>{c}</span></div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Lauréats -->
+  <section class="px-block">
+    <h2>Lauréat·es des éditions précédentes</h2>
+    <div class="px-win-grid">
+      {lauréats.map(w => {
+        const initials = w.author.split(' ').slice(0, 2).map(s => s[0] ?? '').join('').toUpperCase();
+        const inner = (
+          <>
+            <span class="px-win-year">★ {w.annee}</span>
+            {w.photo
+              ? <img class="px-win-img" src={w.photo} alt={w.name} loading="lazy" />
+              : <div class="px-win-img" style="display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:rgba(255,255,255,.35)">{initials}</div>}
+            <div class="px-win-body">
+              <h3>{w.name}</h3>
+              <p class="px-win-author">{w.author}</p>
+              <span class="px-win-fac">{w.faculty}</span>
+            </div>
+          </>
+        );
+        return w.slug
+          ? <a class="px-win" href={`/projets/${w.slug}`} style={`--fac:${facVar(w.faculty)}`}>{inner}</a>
+          : <div class="px-win" style={`--fac:${facVar(w.faculty)}`}>{inner}</div>;
+      })}
+    </div>
+  </section>
+
+</div>
 </Base>

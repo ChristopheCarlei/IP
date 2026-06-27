@@ -11,15 +11,21 @@ The Health Psychology course is part of the Bachelor's degree in Psychology. In 
 ## Project implementation
 
 In concrete terms, the students who choose the video theater workshop are grouped randomly into groups of 4 or 5. Shortly after the first class, all the participants are brought together and the teacher presents them with a complex notion seen in class. Each group is then asked to write a 3-4 page theatrical script about the concept they have learned and to send in a first version of their script after one week. The teacher then gives an initial feedback on the content, the density and the staging. A discussion takes place between the groups and the teacher. Several iterations are necessary until the script is adequate. The script should reflect a real-life situation that reflects the concept that has been seen and studied. The final script must reflect the students' creativity, which is also evaluated.
+
 When the script is validated by the teacher and the students, an appointment is made to stage and film the script that will be performed by the students of the group. The staging and filming are done in the lab (indoor) if possible, but in 2020-21, some filming was done on zoom. The students assign roles to each other and the teacher helps with the staging. In concrete terms, she prepares the material necessary for the shooting and suggests warm-up exercises for the voice, emotions and body. The script is reread several times and the group practices for the staging. After several rehearsals, when the group is sufficiently ready, the scene is performed and filmed.
+
 The video is edited and cut to make it presentable. The final cut is discussed with the whole group (final look, appearance of names, choice of colors and backgrounds, etc.). Once the video has been made, each group draws a diagram that best explains the complex concept discussed in the video. The drawings are made available on the course's Moodle space.
+
 The video is then shown to all the students in the course, who are asked to take notes. A global discussion takes place in order to identify the psychological concept addressed in the video. Finally, the group that made the video presents the complex concept studied thanks to the diagram they made. The videos produced then become course material and the complex concepts are taken up again and deepened thanks to the debriefing that takes place in class. The projects also benefit students who have not participated in the workshop, as the need to react to the presentation of the videos and to comment on them engages reflexivity and the spirit of analysis.
+
 The evaluation of the course is done through a quantitative questionnaire for all the students of the course on the notions and concepts covered during the year. Students who participated in the video theater workshop also receive a qualitative evaluation.
 
 ## Thoughts and advice
 
 This possibility of activity offered to the students within the framework of the course allows for a playful learning of the subject and favors the acquisition of new transversal skills such as autonomy, reflexivity, the spirit of analysis and the critical spirit. This type of project forces both students and teachers to leave their comfort zone and allows for the development of common creations among the learners.
+
 The qualitative evaluations show that the project has a positive effect on the students' learning, that it allows the acquisition of new skills and that there is also learning through the teacher's feedback. The quantitative evaluation showed a significant increase in knowledge acquisition following the implementation of the system.
+
 This type of device has a strong transferability potential. It could easily be used in other courses, as the investment cost for both the teaching staff and the students is reasonable. The project also has a strong added value thanks to the possible reuse of the productions as course material.
 
 ## Student feedback

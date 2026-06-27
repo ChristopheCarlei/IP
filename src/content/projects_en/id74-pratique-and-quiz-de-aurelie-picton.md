@@ -11,14 +11,19 @@ The teacher wanted to change the dynamics of the course because she had observed
 ## Project implementation
 
 The course alternates theoretical elements and practical applications in order to allow students to master the notions on the one hand and to be able to apply them concretely on the other hand. The first two sessions are dedicated to the presentation of the theoretical object of the course, namely corpora, their use and their creation. To accompany these lectures, students must complete readings that are the subject of evaluation quizzes.
+
 The 3e session is prepared in a flipped classroom. In order to get acquainted with the software that will allow them to carry out their end-of-semester work, the students watch several short training videos on the Sketch engine (concordancer and corpus creation tool). These videos are followed by quizzes allowing students to evaluate their understanding and acquisition of the content, but also their ability to apply it on the software. They also have to create their own data with this tool, following a tutorial, and explore it independently. The videos remain available for students to watch as many times as they wish.
+
 The following week, the teacher goes over the concordancer with the students to check their understanding of the tool, their integration of the concepts or if certain points need to be clarified.
+
 At the same time, students must complete a final written assignment for which the instructions and evaluation grid are available on Moodle. This is done in groups of 3 or alone if the chosen problematic concerns the student's thesis. In order to help them choose their theme, the teacher provides them with a document presenting several examples of themes and subjects that can be dealt with (see annexes). This work can also be based on their personal interests, cases seen in class, imagined or encountered during their professional practice. Following the submission of their theme proposal, the teacher will give feedback in terms of the relevance of the subject of study and the feasibility during the semester. The rest of the work is to be submitted in stages (described in the attached document).
+
 The evaluation is done through continuous assessment, in the form of quizzes and exercises (40%), and on the final group work and its oral presentation (60%). The oral presentation is a general presentation of the work during the exam session, it lasts 10 min and all members of the group must participate.
 
 ## Thoughts and advice
 
 The flipped classroom format allows students to learn the tools at their own pace with the help of the elements provided and the teacher's explanations afterwards. This approach favors learning because it allows students to learn by doing.
+
 For this to work, students must be motivated and organized to perform the tasks required in the flipped classroom so that they do not "drop out" of the course. To do this, it is not enough to give the students the documents, they must be accompanied. This implies a lot of preparatory work to establish a framework. In addition to the instructions that guide the students, the teacher proposes different activities on Moodle to support learning. In addition to quizzes that allow students to test their knowledge, the teacher has also set up a forum to answer questions and an FAQ.
 
 ## Student feedback

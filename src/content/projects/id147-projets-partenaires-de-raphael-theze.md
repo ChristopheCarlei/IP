@@ -4,10 +4,10 @@ title: Projets partenaires
 author: Raphaël Thézé
 photo: /images/projet/Raphael_Theze.jpg
 contact: "Raphael.theze@unige.ch"
-faculty: Toutes
+faculty: Transversal
 course: Aucun
 level: Tous Cursus
-students: 25-50
+students: 25 - 50
 year: 2022
 category: Faire créer
 innovation_type: Faire gérer un projet
@@ -20,26 +20,28 @@ status: actif
 ## Situation de départ
 
 Afin de soutenir la transformation de l’Université, le rectorat souhaitait renforcer la contribution de la communauté et l’adhésion de ses membres à l’institution en leur permettant de proposer des projets auxquels les étudiant-es, les enseignant-es et les collaborateurs/trices pouvaient participer et s’impliquer activement.
+
 Se basant sur des formes de projets partenariaux déjà existants dans d’autres structures (Students as Partners dans les universités anglo-saxonnes, Patients Partenaires aux HUG, etc.), le responsable a mis en place le Programme de Projets Partenaires (P3). L’objectif visé, en particulier avec les étudiant-es, est d’encourager leur potentiel de créativité, d’apprentissage et d’innovation dans des projets menés par l’institution.
 
-## Mise en place
+## Mise en place et déroulement
 
 Deux fois par an, un appel à projet est adressé aux étudiant-es et aux collaborateurs/trices de l’Université de Genève. Tout membre de la communauté peut ainsi soumettre une idée de projet via un formulaire en ligne sur le site web dédié. Les étudiant-es, toutefois, doivent déjà avoir trouvé un partenaire (collaborateur/trice) pour soumettre un projet.
-Environ une dizaine de projets sont soumis à chaque appel, ils sont alors évalués par un comité de sélection. Pour être éligible, le projet doit concerner une transformation (ex. une amélioration d’un service ou d’un outil) à l’Université et doit bénéficier à la communauté (ne peut pas bénéficier à un laboratoire de recherche exclusivement). Il y a un ensemble de sept critères  permettant d’évaluer les projets. Ils sont pensés pour permettre que des problématiques très concrètes de la communauté soient remontées tout en assurant la compatibilité du projet avec l’institution et le cahier des charges du P3.
+
+Environ une dizaine de projets sont soumis à chaque appel, ils sont alors évalués par un comité de sélection. Pour être éligible, le projet doit concerner une transformation (ex. une amélioration d’un service ou d’un outil) à l’Université et doit bénéficier à la communauté (ne peut pas bénéficier à un laboratoire de recherche exclusivement). Il y a un ensemble de sept critères permettant d’évaluer les projets. Ils sont pensés pour permettre que des problématiques très concrètes de la communauté soient remontées tout en assurant la compatibilité du projet avec l’institution et le cahier des charges du P3.
+
 Les projets retenus sont publiés sur un site web et les étudiant-es peuvent les consulter puis soumettre, via un formulaire, leur candidature à trois projets avec un ordre de préférence. Une fois les candidatures closes, un appariement est effectué en essayant d’offrir le maximum de satisfaction. Le but du P3 étant de permettre un apprentissage, et souhaitant favoriser une mixité interdisciplinaire, la formation ou les compétences préalables ne sont pas prise en compte prioritairement, sauf cas particulier d’un projet nécessitant une compétence préalable qu’il n’est pas possible d’acquérir dans le délai imparti au projet.
+
 Il faut au moins un-e collaborateur/trice et un-e étudiant-e partenaire dont l’un-e des deux porte un projet pour que celui-ci soit lancé. Les groupes font connaissance au début du semestre lors d’une séance d’accueil. Chaque projet a par ailleurs une personne référente qui est extérieure aux projets. Cette personne assure le suivi du projet au cours du semestre sans intervenir dans la direction du celui-ci. Elle peut être contactée en tout temps pour un soutien.
+
 Le projet est réalisé en autonomie par les membres. Le programme fournit un cadre éthique, des ressources (p.ex., documents, coaching, ateliers de formation ou finances) et des occasions de rencontre. L’investissement de chacun est libre pour favoriser l’autonomie, toutefois, un nombre indicatif d’heures minimum et maximum à fournir est transmis. Le soutien aux projets est donc avant tout structurel.
+
 A mi-semestre (ou fin de semestre pour les projets plus longs), tous les projets sont évalués qualitativement à travers une rencontre informelle d’environ 1h. L’entretien se termine par questionnaire standardisé qui permet de faire un résumé de l’entretien, d’évaluer la progression du projet et d’identifier d’éventuels problèmes. L’entretien permet d’offrir une modération ou une expertise. De plus, les participant-es donnent un feedback conjoint et individuel concernant leur expérience personnelle via un formulaire.
+
 A la fin du semestre, à l’aide d’un template fourni, les partenaires complètent un rapport d’activité rendant compte des différentes étapes de construction du projet, des défis rencontrés et des apprentissages réalisés. De plus, chaque participant-e reçoit un certificat officiel pouvant être utilisé dans un CV ou, pour les étudiant-es, auprès de leur faculté pour l’obtention de crédits ECTS. Le certificat atteste des compétences et connaissances acquises.
-L’expérience se clôture par l’obligation de présenter publiquement leur projet lors de l’événement « Demain, l’UNIGE » qui valorise l’engagement collaboratif de la communauté et durant lequel, d’autres projets d’intelligence collective sont invités à participer.
+
+L’expérience se clôture par l’obligation de présenter publiquement leur projet lors de l’événement « Demain, l’UNIGE » qui valorise l’engagement collaboratif de la communauté et durant lequel, d’autres projets d’intelligence collective sont invités à participer.
+
 Les projets achevés sont accompagnés pour assurer leur déploiement, dans la mesure du possible. Un suivi est également réalisé à six mois et un an pour évaluer le parcours des partenaires au-delà du programme. Enfin, pour renforcer l’apprentissage mutuel et maintenir l’engagement actif, les partenaires ayant compéter un projet avec succès sont invités à rejoindre la communauté P3 sur le long terme, notamment en participant aux comités de sélection des projets des nouvelles éditions.
-
-## Retour et conseils
-
-Dans la réalisation de ce projet, le point de vigilance principal est la charge de travail pour les partenaires. Le travail se faisant hors du cadre d’un cours avec des horaires précis, les partenaires se laissent souvent surcharger, ou surestiment leur capacité à réaliser certaines tâches dans certains délais. C’est pour cela que l’accompagnement est crucial afin de ne pas livrer les partenaires à eux/elles-mêmes, au risque que le projet stagne ou se disperse.
-Toujours au niveau de réalisation, il est important d’assurer à chacun une certaine liberté intellectuelle et de créer un lien de confiance avec les partenaires pour qu’ils et elles puissent s’exprimer à travers leur projet. En réalisant quelque chose de concret et d’utile, souvent par la résolution d’un problème, les étudiant-es gagnent en confiance. Le partenaire institutionnel découvre et apprend en même temps dans une démarche de co-construction qui enforce la légitimité de ce que l’étudiant·e peut apporter.
-Les projets, une fois développés, peuvent prendre différentes orientations. Des projets connexes peuvent se soutenir et fusionner pour trouver des solutions mutuelles. Des services compétents peuvent être sollicités pour reprendre une partie du travail réalisé, si un dossier a été rédigé il est diffusé, et parfois l’étudiant-e partenaire est engagé-e comme stagiaire.
-Le P3 a une grande transférabilité. Par exemple, pour les cours inscrits dans un cursus qui se basent sur de l’enseignement par projet, les étudiant-es peuvent soumettre un projet pour pouvoir le poursuivre à travers le P3. A l’inverse, un projet développé via le P3 peut être repris dans ce type de cours et faire l’objet de validation de crédits. Dans une perspective de développement, P3 souhaite collaborer activement avec les facultés de sorte que le programme soit intégré aux cursus. Dans l’idéal, il s’agit d’inscrire dans le règlement d’études la possibilité d’obtenir des crédits libres via la participation à ce type de projet.
 
 ## Avis des étudiant·es
 
@@ -51,3 +53,13 @@ Le P3 a une grande transférabilité. Par exemple, pour les cours inscrits dans 
 > « Outre l’aspect financier, le P3 nous a permis de donner de la crédibilité à notre projet ce qui a grandement contribué à sa réussite et la relation que nous avons eu avec les utilisateurs. De plus, la disponibilité et les conseils de Raphaël et de notre référente Lamia ont été d’une aide précieuse. Enfin, la possibilité de bénéficier du réseau et de la mise en contact direct avec les différentes structures de l’UNIGE a facilité les échanges et notre insertion au sein de l’UNIGE. [Le P3 a apporté] La possibilité de changer les choses sur notre campus ! A travers le P3, nous avons pu contribuer à l’amélioration de la vie de la communauté selon notre propre vision. Nous avons également pu développer des connaissances dans la gestion de projet et certains aspects technique de manière agréable au sein d’une équipe. Point positif, l’autonomie dans la réalisation du projet tout en restant disponible et à notre écoute selon notre besoin. Les personnes du P3 ont toujours été là lorsqu’on avait une question ou un souci, je trouve ça très positif. Il serait intéressant de faire un concours avec les différents projets du P3, il pourrait y avoir une motivation supplémentaire pour les différents groupes. » [Etudiant-e et Collaborateur/trice]
 > « Le Programme P3 a apporté une contribution à notre projet à plusieurs niveaux. Tout d'abord, grâce à leur aide financière, nous avons pu démarrer le projet de manière solide. Le P3 nous a soutenus en finançant des événements clés tels que l'apéro de départ, qui a permis de rassembler tous les membres des groupes et de créer une atmosphère conviviale dès le début. L’impression d’autocollants a permis une meilleure visibilité et diffusion du projet. En plus de l'aide financière, le P3 nous a offert une visibilité au sein de l'Université de Genève. Grâce à cela, nous avons pu promouvoir notre projet de manière plus efficace, en suscitant l'intérêt des étudiant.e.s et des enseignant.e.s en médecine. Le suivi régulier du P3 a également été un élément précieux tout au long du projet. Nous avons eu des réunions Zoom avec l'équipe du P3 pour discuter de nos progrès, partager nos idées et résoudre les éventuels problèmes rencontrés. » [Etudiant-e et Collaborateur/trice]
 
+## Annexes
+
+- [Dossier présentation P3](https://www.unige.ch/innovations-pedagogiques/application/files/1016/8743/7515/THEZE_Dosseir_presentation_P3.pdf)
+- [Site web du P3](https://www.unige.ch/p3/)
+- [Règlement du P3](https://www.unige.ch/innovations-pedagogiques/application/files/9116/8743/7515/THEZE_Reglement_P3.pdf)
+- [Guideline pour l’évaluation des projets](https://www.unige.ch/innovations-pedagogiques/application/files/8416/8743/7515/THEZE_Guideline_evaluation_projets.pdf)
+- [Template de première réunion](https://www.unige.ch/innovations-pedagogiques/application/files/1316/8743/7516/THEZE_template_premiere_reunion.pdf)
+- [Template de rapport d’activité](https://www.unige.ch/innovations-pedagogiques/application/files/1016/8743/7516/THEZE_template_rapport_activite.pdf)
+- [Questionnaires d’évaluation mi-session](https://www.unige.ch/innovations-pedagogiques/application/files/6516/8743/7515/THEZE_questionnaire_evaluation_midterme.pdf)
+- [Synthèse des évaluation mi-session 2022](https://www.unige.ch/innovations-pedagogiques/application/files/7416/8743/7516/THEZE_synthese_evaluation_misession_2022.pdf)

@@ -1,15 +1,15 @@
 ﻿---
 id: 50
 title: Dossiers pédagogiques
-author: ""
+author: Nadine Bordessoule Gilliéron
 photo: /images/projet/Nadine_Bordessoule.jpg
-faculty: ""
+faculty: Lettres
 course: ""
 level: ""
-students: ""
-year: ""
-category: ""
-innovation_type: ""
+students: Moins de 25
+year: 2018
+category: Faire créer
+innovation_type: Faire gérer un projet
 observation_accepted: false
 description_short: "Les étudiant-es, non francophones, sélectionnent un élément culturel qui les intéresse (une chanson, une bande dessinée ou un conte) et créent des fiches pédagogiques adaptées à un public d'élèves non francophones de niveau inférieur."
 featured: false
@@ -18,19 +18,15 @@ status: actif
 
 ## Situation de départ
 
-Ce cours vise exclusivement des étudiant-es non francophones et leur propose un apprentissage linguistique actif par approfondissement culturel sur des thématiques variées. Au lieu d’enseigner de manière traditionnelle, il s’agit de proposer aux étudiant-es de choisir un élément culturel de leur choix (chanson, BD, roman, conte, dessin animé) et de le travailler pour élaborer une fiche pédagogique à destination de jeunes élèves non francophones. Le pari est donc de transformer des apprenant-es non francophones de niveau B2 en « expert-es » sur des microprojets destinés à des élèves de niveau inférieur (A2-B1).
+Ce cours vise exclusivement des étudiant-es non francophones et leur propose un apprentissage linguistique actif par approfondissement culturel sur des thématiques variées. Au lieu d’enseigner de manière traditionnelle, il s’agit de proposer aux étudiant-es de choisir un élément culturel de leur choix (chanson, BD, roman, conte, dessin animé) et de le travailler pour élaborer une fiche pédagogique à destination de jeunes élèves non francophones. Le pari est donc de transformer des apprenant-es non francophones de niveau B2 en « expert-es » sur des microprojets destinés à des élèves de niveau inférieur (A2-B1).
 
-## Mise en place
+## Mise en place et déroulement
 
-Lors des deux premières séances de séminaires de type « classique », les étudiant-es reçoivent une introduction à la francophonie sur les plans : historique, politique et culturel. À la suite de quoi, ils/elles partent en quête de leur « objet » d’étude. Certain-es peuvent ainsi choisir des chansons, d’autres des contes, des BD, des romans, des documentaires, etc.
-Les 4 séances suivantes consistent en une présentation par chacun-e des étudiant-es à l’ensemble du groupe de leur état d’avancement avec projection des fiches pédagogiques en construction. Cette étape essentielle permet aux étudiant-es de développer leur compétence en communication orale, mais également à l’équipe enseignante de recadrer les fiches pédagogiques dans l’optique souhaitée (à savoir rendre ce matériel accessible au public visé soit des élèves de niveau A2-B1). Les étudiant-es reprennent et corrigent leurs fiches avant de les présenter sous leur forme finale lors d’un examen oral.
+Lors des deux premières séances de séminaires de type « classique », les étudiant-es reçoivent une introduction à la francophonie sur les plans : historique, politique et culturel. À la suite de quoi, ils/elles partent en quête de leur « objet » d’étude. Certain-es peuvent ainsi choisir des chansons, d’autres des contes, des BD, des romans, des documentaires, etc.
+
+Les 4 séances suivantes consistent en une présentation par chacun-e des étudiant-es à l’ensemble du groupe de leur état d’avancement avec projection des fiches pédagogiques en construction. Cette étape essentielle permet aux étudiant-es de développer leur compétence en communication orale, mais également à l’équipe enseignante de recadrer les fiches pédagogiques dans l’optique souhaitée (à savoir rendre ce matériel accessible au public visé soit des élèves de niveau A2-B1). Les étudiant-es reprennent et corrigent leurs fiches avant de les présenter sous leur forme finale lors d’un examen oral.
+
 À la fin du cours, chaque étudiant-e a la possibilité de partager son projet pédagogique sur le site de la semaine de la langue française (SLFF). Les différentes activités pédagogiques qu’ils/elles proposent dans leurs fiches pourront ainsi être effectivement reprises et utilisées par des enseignant-es.
-
-## Retour et conseils
-
-L’élaboration par les étudiant-es de fiches pédagogiques à destination d’un jeune public les oblige non seulement à s’approprier un objet d’étude, mais également à le vulgariser et le rendre didactique.
-L’équipe enseignante a pour mission de mettre en place un cadre d’apprentissage favorable. Elle joue le rôle de guide, fait part de ses conseils, de ses critiques et de ses suggestions de remédiation, mais laisse les étudiant-es gérer leurs projets comme ils/elles le souhaitent.
-La mise en forme finale des projets en vue de la mise en ligne est faite en collaboration avec le graphiste du site de la semaine de la langue française.
 
 ## Avis des étudiant·es
 
@@ -41,3 +37,11 @@ La mise en forme finale des projets en vue de la mise en ligne est faite en coll
 > « C’était une expérience hors du commun très intéressante d’enseignement. En effet, je n’ai jamais participé à ce genre de cours. Ensuite, cette innovation pédagogique m’a donné la possibilité de découvrir la culture polynésienne que je ne connaissais pas bien. J’ai pu exprimer ma créativité pendant la préparation des exercices pour les jeunes élèves à partir d’une idée qui s’est développée au fur et à mesure des semaines. En outre, j’ai eu le plaisir de travailler en binôme qui m’a permis de développer différentes façons d’aborder le sujet. La présentation devant un auditoire a été également très riche en échange de points de vue. »
 > « Dès le début, j’ai compris que ce cours était construit de façon particulière. À la place d’apprendre la matière traditionnellement, avec beaucoup de dates et événements historiques difficiles à retenir, le cours était mis en place à la manière interactive. Pour le travail d’attestation, nous avons eu le droit de choisir un sujet intéressant et se basant dessus, il fallait fournir un travail didactique qui était susceptible de participer au concours cantonal à Bern. Cela nous a donné non seulement une motivation extraordinaire, mais nous a obligés aussi à bien maîtriser le sujet afin de pouvoir transmettre notre savoir aux destinataires du dossier pédagogique. Je reconnais que le volume du travail était considérable, cependant je suis très contente de ma participation et que mon dossier pédagogique « Couleurs de la francophonie dans la peinture d’Haïti » ait été sélectionné pour le concours à Bern. »
 
+## Annexes
+
+- [Dossiers pédagogiques 2018 "Les francophonies d'Amérique du nord"](https://www.slff.ch/ecoles/dossiers-pedagogiques-2018/)
+- [Dossiers pédagogiques 2019 "L'Afrique francophone"](https://www.slff.ch/ecoles/dossiers-pedagogiques-2019/)
+- [Dossiers pédagogiques 2020 "Les îles francophones"](https://www.slff.ch/ecoles/dossiers-pedagogiques-2020/)
+- [Dossiers pédagogiques 2022 "L'Europe francophone"](https://www.slff.ch/ecoles/dossiers-pedagogiques-2022/)
+- [Dossiers pédagogiques 2023 "Musiques et chansons dans les francophonies"](https://www.slff.ch/dossiers-pedagogiques-2023/)
+- [Dossiers pédagogiques 2024 "La diversité dans les francophonies"](https://www.slff.ch/dossiers-pedagogiques/)

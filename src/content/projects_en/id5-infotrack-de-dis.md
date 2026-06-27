@@ -11,14 +11,20 @@ InfoTrack is an online platform dedicated to the training of Bachelor's students
 ## Project implementation
 
 The InfoTrack platform is made up of 26 independent course modules divided into 5 themes: how to find, document research plan, sorting, plagiarism and writing & communication. All modules are structured on the same model: each unit includes a lecture in the form of a short video (3 to 5 min), a self-assessment quiz of 2 to 4 questions, a summary with the key elements of the lecture and sometimes additional resources. Each module can be followed independently of the others. No order of progression is imposed.
+
 In a self-training perspective, the learner can manage his or her progress thanks to a personal dashboard, which records his or her quiz results. If the system is used to complete a classroom training (before, during or after class), the modular structure allows trainers to select only the modules that correspond to the pedagogical objectives identified for a session or a group of learners.
 
 ## Thoughts and advice
 
 Feedback was solicited from librarians who have used InfoTrack in their instructional sequences. It was found that InfoTrack helps to:
+
 give a dynamic rhythm to the course by eliciting positive reactions
+
 makes the subject more attractive, which helps to hold students' attention;
+
 free up time for practical exercises adapted to the discipline;
+
 Facilitate the introduction of more discipline-specific topics or topics related to an assignment;
+
 introduce or summarize a lecture.
 

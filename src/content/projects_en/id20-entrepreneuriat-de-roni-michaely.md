@@ -11,17 +11,25 @@ The teacher wanted to offer a course that would combine new technologies and the
 ## Project implementation
 
 The teacher contacted many Israeli startups. He then selected a limited number of them and asked about their major difficulties (e.g., how to present their product to sell it). These challenges were submitted to the students who were divided into groups of 3 or 4 according to their interests and skills. The students are thus completely immersed in entrepreneurship, confronted with real business problems.
+
 After 3 preliminary theoretical courses, students communicate with the startup at a distance once or twice a week (via Skype). This will allow them to exchange regularly with the companies to gather information and present the progress of their project. During the whole process, they are supervised by the teacher and a mentor (representative of the professional world present in Geneva).
+
 The students are asked to present the progress of their project and their reflections on it three times during three seminars. This presentation allows them to obtain feedback from the teacher and professionals. The teacher encourages them to be proactive and to take responsibility.
+
 In parallel to the group work with the companies, 3 thematic seminars are also organized. Students will develop their skills in oral presentation (e.g., being able to present their idea in 120 seconds), teamwork (e.g., setting up a good collaboration with their colleagues).
+
 The evaluation consists of a final 20-minute oral presentation and a written report on their project. Finally, a trip is organized during which the students go to Tel Aviv and present their project to the startup, which counts for a major part of their evaluation.
 
 ## Thoughts and advice
 
 The teacher takes care to choose startups with good listening and communication skills that consider the students trustworthy and with whom they can have a professional relationship. This selection process each year is very time consuming.
+
 Students are generally very motivated by this approach and invest a lot of time and energy in these projects. The theoretical background provided up front is very important before launching the students into group work.
+
 The teacher reports that, first, the students were very surprised by the format of the course, which is unusual in its content, but also in its demand. Traditionally, students know what is expected of them, what the purpose of the course is. In this case the work is never finished, there is no right or wrong answer. This can be worrying for students, but it corresponds to the reality of the professional world.
+
 Significant funding is needed to make such a course possible.
+
 The course could be even more complete if the students came from more diverse backgrounds (e.g., biotechnology, data science).
 
 ## Student feedback

@@ -11,11 +11,13 @@ This course is divided into two parts, a presentation by the teacher and practic
 ## Project implementation
 
 Before each class, the teacher will ask the students questions on Moodle based on concrete cases that a lawyer might face. The teacher will come back to each of these questions during the theory session. The students' answers to these questions will allow the teacher to adapt the time spent on each topic.
+
 For the e2nd part of the course, the teacher presents problems to the students (2 to 5). Once the practical case is announced, two lawyers present in the course will confront each other. They each have 1 min 30 to present their arguments. The students will be able to vote for one of the two arguments via the interactive platform SpeakUp. The students will be able to participate in the online exchanges in an anonymous way. Then, the teacher will be able to use these comments to fuel a real debate with the students on the practical case.
 
 ## Thoughts and advice
 
 Tools such as Votamatic or SpeakUp are a good way to start a discussion with many students to make the course more interactive. Depending on the class, it is sometimes difficult to get students to be active.
+
 Introducing a practical part to one's course, focusing on student participation, introduces uncertainty and needs to be well prepared. It is easier to get started when your course is well-practiced, you can better distinguish the most important parts and those where students may have difficulties and adapt accordingly.
 
 ## Student feedback

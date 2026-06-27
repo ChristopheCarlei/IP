@@ -1,64 +1,151 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const accompagnements_enseignants = [
-  { titre: 'Policy brief', auteur: 'Jorg Balsiger', faculte: 'SDS', type: 'Interview vidéo' },
-  { titre: 'Pratique de la traduction', auteur: 'Gabrielle Rivier', faculte: 'FTI', type: 'Interview vidéo' },
-  { titre: 'Psychothérapie', auteur: 'Gabriel Thorens', faculte: 'Médecine', type: 'Entretien thérapeutique' },
-  { titre: 'Anamnèse clinique', auteur: 'Heidi Cleverley', faculte: 'Médecine', type: 'Entretien médical' },
-  { titre: 'Émotions dans l\'apprentissage', auteur: 'David Sander', faculte: 'FPSE', type: 'Conférences sur fond vert' },
-  { titre: 'Biographie d\'un moulage en cire', auteur: 'Alexandre Wenger', faculte: 'Médecine', type: 'Documentaire' },
-  { titre: 'Biologie & Sexualité', auteur: 'Céline Brockmann', faculte: 'Médecine', type: 'Présentation e-learning' },
-  { titre: 'Soutien doctoral', auteur: 'Christophe Carlei', faculte: 'SEA', type: 'Présentation et animations' },
+const EMBED = 'https://player.vod2.infomaniak.com/embed/';
+
+const enseignants = [
+  { id: '1jijk03u4049g', titre: 'Policy brief', auteur: 'Jorg Balsiger', faculte: 'SDS', type: 'Interview face caméra', desc: "Cette capsule s'inscrit dans une série de 4 vidéos expliquant comment réaliser un policy brief à des étudiant·es de Master en Sciences de la Société (SDS)." },
+  { id: '1jijk03u403km', titre: 'Pratique de la traduction', auteur: 'Gabrielle Rivier', faculte: 'FTI', type: 'Interview face caméra', desc: "Cette capsule s'inscrit dans une série de 2 vidéos illustrant la pratique de la traduction à des étudiant·es de la Faculté de Traduction et d'Interprétation (FTI)." },
+  { id: '1jijk03u404u6', titre: 'Psychothérapie', auteur: 'Gabriel Thorens', faculte: 'Médecine', type: 'Entretien de thérapie', desc: "Cette capsule s'inscrit dans une série de 3 vidéos écologiques illustrant trois formes d'entretiens cliniques à destination d'étudiant·es en Master de médecine." },
+  { id: '1jijk03u40517', titre: 'Anamnèse clinique', auteur: 'Heidi Cleverley', faculte: 'Médecine', type: 'Entretien médical', desc: "Cette capsule s'inscrit dans une série de 5 vidéos écologiques illustrant cinq formes de plaintes à destination d'étudiant·es en médecine." },
+  { id: '1jijk03u406rl', titre: "Émotions dans l'apprentissage scolaire", auteur: 'David Sander', faculte: 'FPSE', type: 'Incrustation sur fond vert', desc: "Extrait d'une série de 5 conférences réalisées sur fond vert à destination des enseignant·es du Département de l'instruction publique (DIP)." },
+  { id: '1jijk03u3zewd', titre: "Biographie d'un moulage en cire", auteur: 'Alexandre Wenger', faculte: 'Médecine', type: 'Tournage documentaire', desc: "Ce documentaire a été réalisé pour la Faculté de Médecine, tourné au Centre médical universitaire, au Musée d'histoire des sciences de Genève et au Musée des moulages de Zurich." },
+  { id: '1jijk03u4058f', titre: 'Biologie & Sexualité', auteur: 'Céline Brockmann', faculte: 'Médecine', type: 'Présentation e-learning', desc: "Cette capsule introduit les contenus de la formation en ligne « Biologie & Sexualité » : plusieurs intervenantes présentent les sujets traités et la manière dont ils sont abordés." },
+  { id: '1jijk03u40789', titre: 'Soutien doctoral', auteur: 'Christophe Carlei', faculte: 'SEA', type: 'Présentation & animations', desc: "Vidéo qui s'inscrit dans le cadre d'une formation plus large à destination des doctorant·es de l'Université de Genève, alternant face caméra et animations visuelles." },
 ];
 
-const accompagnements_etudiants = [
-  { titre: 'Des ordures et des bouées', auteur: 'Mathilde Foehr et al.', faculte: 'SDS', type: 'Film documentaire' },
-  { titre: 'La couleur des murs', auteur: 'Jasmine Miles & Laetitia Keller', faculte: 'FPSE', type: 'Film documentaire' },
+const etudiants = [
+  { id: '1jijk03u408ru', titre: 'Des ordures et des bouées : au cœur de la vie du Rhône', auteur: 'Mathilde Foehr, Charlotte Langel et Lisa Mol', faculte: 'SDS', type: 'Film documentaire', desc: "Documentaire réalisé dans le cadre d'un enseignement à destination des étudiant·es en Master en Sciences de la Société." },
+  { id: '1jijk03u4094s', titre: 'La couleur des murs', auteur: 'Jasmine Miles & Laetitia Keller', faculte: 'FPSE', type: 'Film documentaire', desc: "Documentaire réalisé dans le cadre d'un enseignement à destination des étudiant·es en Master à la Faculté de Psychologie et des Sciences de l'éducation (FPSE)." },
 ];
+
+function facVar(f: string): string {
+  const x = f.toUpperCase();
+  if (x.includes('FPSE')) return 'var(--fac-fapse)';
+  if (x.includes('GSEM')) return 'var(--fac-gsem)';
+  if (x.includes('FTI'))  return 'var(--fac-fti)';
+  if (x.includes('MÉD') || x.includes('MED')) return 'var(--fac-medecine)';
+  if (x.includes('SDS'))  return 'var(--fac-sds)';
+  if (x.includes('LETTR')) return 'var(--fac-lettres)';
+  if (x.includes('DROIT')) return 'var(--fac-droit)';
+  if (x.includes('SCIEN')) return 'var(--fac-sciences)';
+  return 'var(--rose)';
+}
 ---
 <Base title="Soutien pédagogique">
-  <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-4">Soutien pédagogique</h1>
-    <p class="text-lg text-gray-600 mb-10">
-      Notre équipe accompagne les enseignant·es et étudiant·es dans la création de vidéos pédagogiques
-      et d'espaces de formation. Nous pouvons être sollicité·es pour des projets internes sur mandat.
+<style>
+.so-hero{background:#fff;border-bottom:1px solid var(--line)}
+.so-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.so-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.so-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.so-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
+.so-hero p{color:var(--muted);font-size:17px;line-height:1.65;max-width:66ch;margin:20px 0 0}
+.so-hero .cta{margin-top:24px}
+
+.so-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0}
+.so-sec + .so-sec{margin-top:56px}
+.so-sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 24px;flex-wrap:wrap}
+.so-sec-head h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:0}
+.so-sec-head .n{font-size:13px;font-weight:800;color:var(--rose);background:var(--bg-rose);padding:3px 10px;border-radius:999px}
+
+.so-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px}
+.so-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.so-frame{position:relative;aspect-ratio:16/9;background:#000}
+.so-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.so-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.so-body h3{font-size:16.5px;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin:0 0 6px;line-height:1.25}
+.so-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 10px}
+.so-author{font-size:13px;font-weight:700;color:var(--muted)}
+.so-fac{font-size:11px;font-weight:800;color:#fff;background:var(--fac,var(--rose));padding:2px 9px;border-radius:999px}
+.so-type{font-size:11px;font-weight:700;color:var(--rose-deep);background:var(--bg-rose);padding:2px 9px;border-radius:999px}
+.so-desc{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+
+.so-contact{margin-top:56px;background:var(--ink);border-radius:var(--radius);padding:clamp(28px,4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.so-contact h3{font-size:clamp(20px,2.4vw,26px);font-weight:800;color:#fff;margin:0 0 6px;letter-spacing:-.01em}
+.so-contact p{color:rgba(255,255,255,.7);font-size:15px;margin:0;max-width:52ch}
+.so-contact .btn{flex-shrink:0}
+
+@media(max-width:640px){.so-grid{grid-template-columns:1fr}}
+</style>
+
+<!-- Hero -->
+<div class="so-hero">
+  <div class="so-hero-inner">
+    <span class="so-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
+    <h1>Soutien<span class="sub">pédagogique</span></h1>
+    <p>
+      Nous accompagnons les équipes enseignantes et leurs étudiant·es dans la création de
+      vidéos pédagogiques et d'espaces de formation. Notre équipe peut être sollicitée en
+      interne sur mandat. Vous trouverez ci-dessous des exemples concrets de productions réalisées.
     </p>
-
-    <section class="mb-10">
-      <h2 class="text-xl font-bold mb-5">Accompagnement des enseignant·es</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        {accompagnements_enseignants.map(a => (
-          <div class="bg-gray-50 rounded-xl p-5">
-            <p class="font-semibold text-gray-900">{a.titre}</p>
-            <p class="text-sm text-gray-500">{a.auteur} — {a.faculte}</p>
-            <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{a.type}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <section>
-      <h2 class="text-xl font-bold mb-5">Accompagnement des étudiant·es</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        {accompagnements_etudiants.map(a => (
-          <div class="bg-gray-50 rounded-xl p-5">
-            <p class="font-semibold text-gray-900">{a.titre}</p>
-            <p class="text-sm text-gray-500">{a.auteur} — {a.faculte}</p>
-            <span class="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{a.type}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <div class="mt-10 p-6 bg-unige-red/5 border border-unige-red/20 rounded-xl">
-      <h3 class="font-semibold mb-2">Faire appel à notre équipe</h3>
-      <p class="text-sm text-gray-600 mb-3">
-        Vous souhaitez bénéficier d'un accompagnement pour votre projet pédagogique ?
-      </p>
-      <a href="mailto:sea@unige.ch" class="inline-block bg-unige-red text-white text-sm px-4 py-2 rounded-lg hover:bg-red-800 transition">
-        Contacter le SEA
-      </a>
+    <div class="cta">
+      <a class="btn primary" href="mailto:sea@unige.ch">Parler de votre projet</a>
     </div>
   </div>
+</div>
+
+<div class="so-wrap">
+
+  <!-- Enseignant·es -->
+  <section class="so-sec">
+    <div class="so-sec-head">
+      <h2>Accompagnement des enseignant·es</h2>
+      <span class="n">{enseignants.length} réalisations</span>
+    </div>
+    <div class="so-grid">
+      {enseignants.map(v => (
+        <article class="so-card">
+          <div class="so-frame">
+            <iframe src={`${EMBED}${v.id}`} title={v.titre} allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="so-body">
+            <h3>{v.titre}</h3>
+            <div class="so-meta">
+              <span class="so-author">{v.auteur}</span>
+              <span class="so-fac" style={`--fac:${facVar(v.faculte)}`}>{v.faculte}</span>
+              <span class="so-type">{v.type}</span>
+            </div>
+            <p class="so-desc">{v.desc}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Étudiant·es -->
+  <section class="so-sec">
+    <div class="so-sec-head">
+      <h2>Accompagnement des étudiant·es</h2>
+      <span class="n">{etudiants.length} réalisations</span>
+    </div>
+    <div class="so-grid">
+      {etudiants.map(v => (
+        <article class="so-card">
+          <div class="so-frame">
+            <iframe src={`${EMBED}${v.id}`} title={v.titre} allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="so-body">
+            <h3>{v.titre}</h3>
+            <div class="so-meta">
+              <span class="so-author">{v.auteur}</span>
+              <span class="so-fac" style={`--fac:${facVar(v.faculte)}`}>{v.faculte}</span>
+              <span class="so-type">{v.type}</span>
+            </div>
+            <p class="so-desc">{v.desc}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <div class="so-contact">
+    <div>
+      <h3>Un projet pédagogique en tête ?</h3>
+      <p>Notre équipe vous accompagne dans la conception et la réalisation de vos vidéos et espaces de formation.</p>
+    </div>
+    <a class="btn primary" href="mailto:sea@unige.ch">Contacter le Pôle SEA</a>
+  </div>
+
+</div>
 </Base>

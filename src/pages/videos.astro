@@ -2,43 +2,128 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const projects = await getCollection('projects', p => !!p.data.youtube);
+const allProjects = await getCollection('projects');
+
+// Galerie vidéo curée — reprise de unige.ch/innovations-pedagogiques/video-promotion
+const videos = [
+  { yt: "m-7NmevfX8E", author: "Jérôme Kasparian", name: "Vidéos & questions", desc: "Ce projet vise à fournir des bases en mathématiques via des capsules vidéo et à favoriser l'interactivité en posant des questions pendant le cours, utilisant une plateforme de questions/réponses en direct.", award: false },
+  { yt: "ZECUQojxp_8", author: "Priscilla Soulié & Monica Didier", name: "Fiches médicales", desc: "Dans ce projet mené en autonomie, les étudiant-es rédigent des fiches de maladies rares pour une base de données, en assumant des rôles spécifiques, s'auto-évaluant et s'évaluant mutuellement.", award: true },
+  { yt: "xjChZFRmjwQ", author: "Dominique Jaccard", name: "Simulations en jeu sérieux", desc: "L'enseignant a développé un jeu sérieux en management de projet pour permettre aux étudiant-es d'appliquer concrètement les concepts théoriques, favorisant ainsi une meilleure compréhension et intégration des sujets enseignés.", award: false },
+  { yt: "wqddan7BFHs", author: "Christophe Lamy & Julien DaCosta", name: "SketchNote 3D", desc: "Les travaux pratiques d'anatomie en médecine ont adopté la classe inversée avec des modules e-learning préalables. L'outil web « SketchNote 3D » a été développé pour annoter et visualiser des modèles anatomiques 3D interactifs.", award: false },
+  { yt: "wNdYR-M16ls", author: "Rita Trigo Trindade", name: "Escape game virtuel", desc: "Le projet prend la forme d'un escape game : les étudiant-es sont placé-es dans la situation d'une héritière « parachutée » dans une société dont elle veut s'échapper sans perdre son héritage.", award: false },
+  { yt: "GCYtPRAOQpE", author: "Nicolas Szilas & Kim Le", name: "Reportage en direct", desc: "Afin de diffuser des connaissances liées à des lieux difficilement accessibles en grands groupes, les cours prennent la forme de reportages diffusés en temps réel sur Zoom aux étudiant-es de la FPSE.", award: false },
+  { yt: "JSE-Lx1rQZQ", author: "Simon Flandin, Léa Beaud & Rui Costa Machado", name: "Interventions formatives", desc: "Des intervenant-es sont invité-es à partager leur expérience en tant que personnes concernées par une situation de vulnérabilité. Ils/elles participent activement à l'enseignement à travers un stage professionnalisant.", award: true },
+  { yt: "Vnm9oGKI5Pk", author: "Barbara Fouquet-Chauprade & Kristine Balslev", name: "Posters & podcasts", desc: "Les étudiant-es interagissent avec des intervenant-es extérieur-es, conçoivent des projets d'intervention en réponse à des mandats fictifs, et présentent leurs propositions à travers des posters et des podcasts.", award: false },
+  { yt: "tid5PLrfH-U", author: "Pauline Hämmerli & collègues", name: "Improvisation théâtrale", desc: "Une présentation théorique suivie d'une représentation théâtrale de scènes mettant en évidence le sexisme et l'agression dans le milieu médical, puis des discussions de groupe pour proposer des stratégies de réaction.", award: true },
+  { yt: "bDv0r2u8k0I", author: "Nicolas Szilas", name: "Jeux vidéo pédagogiques", desc: "Ce cours a évolué vers la conception pratique d'un jeu vidéo, plaçant la création des étudiant-es au centre de l'apprentissage. Les étudiant-es travaillent en groupes pour concevoir, développer et évaluer un jeu vidéo.", award: false },
+  { yt: "FahjppRC2X8", author: "Juliet Fall & Karine Duplan", name: "Podcast environnemental", desc: "Les étudiant-es se forment à l'analyse de podcasts sur des questions environnementales, puis produisent leur propre podcast en groupe, mettant en pratique leurs compétences de travail d'équipe.", award: true },
+  { yt: "VWzk2KIcklI", author: "Judith Schrempf-Stirling", name: "Catchbox", desc: "La Catchbox est un microphone portable en forme de cube que les étudiant-es se lancent à travers la salle. Elle favorise une prise de parole facile et ludique et l'engagement actif des étudiant-es.", award: false },
+  { yt: "Qe2R0FYcaYk", author: "Nicolas Senn, Annie Goudeaux & Germain Poizat", name: "Film documentaire", desc: "Ce cours permet aux étudiant-es de développer des projets de films documentaires en binôme ou individuellement, de la prise de vue au montage, en utilisant du matériel professionnel.", award: false },
+  { yt: "m52TceyEOAY", author: "Matthias Studer", name: "Exerciseur en statistiques", desc: "L'enseignant a ajouté à son cours des exercices pratiques générés aléatoirement sur Moodle avec correction automatique, ainsi que des exercices d'interprétation en petits groupes lors des séminaires.", award: true },
+  { yt: "jS6GCEjdnik", author: "Mireille Bétrancourt & Vincent Widmer", name: "Beekee Live", desc: "Beekee Live est un outil en ligne qui permet aux étudiant-es de partager et discuter de leurs productions sans créer de compte ni installer d'application, facilitant la collaboration et l'évaluation.", award: false },
+  { yt: "V1gSANVW4yc", author: "Marcel Paulssen", name: "Projet institutionnel", desc: "Ce cours offre aux étudiant-es la possibilité de travailler en coopération avec les membres de la faculté sur des projets liés à l'organisation d'événements, au développement de l'université, ou à la recherche.", award: true },
+  { yt: "6QlAQePPAGI", author: "Valérie Lussi Borer", name: "Vidéo & pratique", desc: "Ce cours promeut un échange bienveillant et formatif entre pairs. Les étudiant-es se filment durant leur pratique professionnelle et les séquences vidéo sont analysées objectivement et évaluées à chaque étape.", award: false },
+  { yt: "523U2N1wEQE", author: "Michelle Bergadaà", name: "Projet responsable", desc: "Ce cours apprend les principes fondamentaux de la gestion de projet. Les étudiant-es mènent un projet de groupe en partenariat avec une ONG œuvrant dans l'éducation dans les pays défavorisés.", award: false },
+];
+
+// associer chaque vidéo au slug de son projet (lien « Voir le projet »)
+const norm = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/&/g, ' et ').replace(/[^a-z0-9]+/g, ' ').trim();
+const bySlug = new Map(allProjects.map(p => [norm(p.data.title ?? ''), p.slug]));
+const videosWithSlug = videos.map(v => ({ ...v, slug: bySlug.get(norm(v.name)) ?? null }));
 ---
-<Base title="Vidéos de promotion">
-  <div class="max-w-7xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-2">Vidéos de promotion</h1>
-    <p class="text-gray-500 mb-8">
-      Nous réalisons régulièrement des vidéos afin de mettre davantage en lumière les projets innovants.
+<Base title="Promotion vidéo">
+<style>
+.vid-hero{background:#fff;border-bottom:1px solid var(--line)}
+.vid-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.vid-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.vid-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.vid-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
+.vid-hero p{color:var(--muted);font-size:17px;line-height:1.65;max-width:64ch;margin:20px 0 0}
+
+.vid-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0}
+.vid-count{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin:0 0 24px}
+
+.vid-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.vid-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+.vid-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px -8px rgba(16,24,40,.28)}
+
+.vid-frame{position:relative;aspect-ratio:16/9;background:#000;cursor:pointer;overflow:hidden}
+.vid-frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s,opacity .2s}
+.vid-frame:hover img{transform:scale(1.04);opacity:.85}
+.vid-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.vid-play svg{width:62px;height:62px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));transition:transform .2s}
+.vid-frame:hover .vid-play svg{transform:scale(1.1)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-award{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(45deg,#ffcb00,#ca8404);color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.35);display:inline-flex;align-items:center;gap:4px}
+
+.vid-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.vid-body h2{font-size:17px;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin:0 0 4px;line-height:1.25}
+.vid-author{font-size:13px;font-weight:700;color:var(--rose);margin:0 0 10px}
+.vid-desc{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.vid-link{margin-top:auto;font-size:13.5px;font-weight:700;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.vid-link:hover{color:var(--rose-deep)}
+
+@media(max-width:640px){.vid-grid{grid-template-columns:1fr}}
+</style>
+
+<!-- Hero -->
+<div class="vid-hero">
+  <div class="vid-hero-inner">
+    <span class="vid-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
+    <h1>Vidéos<span class="sub">de promotion</span></h1>
+    <p>
+      Nous réalisons régulièrement des vidéos afin de mettre davantage en lumière les
+      projets innovants. Parcourez ces vidéos pour découvrir des projets en image,
+      commentés par les enseignant·es, les étudiant·es et les assistant·es des cours.
     </p>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects.map(p => (
-        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-          <div class="aspect-video bg-black">
-            <iframe
-              src={p.data.youtube}
-              class="w-full h-full"
-              allowfullscreen
-              loading="lazy"
-              title={p.data.title}
-            />
-          </div>
-          <div class="p-4">
-            <h2 class="font-semibold text-gray-900">{p.data.title}</h2>
-            {p.data.author && <p class="text-sm text-gray-500 mt-1">{p.data.author}</p>}
-            {p.data.description_short && (
-              <p class="text-sm text-gray-600 mt-2 line-clamp-2">{p.data.description_short}</p>
-            )}
-            <a href={`/projets/${p.slug}`} class="inline-block mt-3 text-sm text-unige-red hover:underline">
-              Voir le projet →
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    {projects.length === 0 && (
-      <p class="text-gray-500 italic">Les vidéos seront disponibles après migration des données des projets.</p>
-    )}
   </div>
+</div>
+
+<div class="vid-wrap">
+  <p class="vid-count">Vidéos réalisées par l'équipe — {videosWithSlug.length} projets</p>
+
+  <div class="vid-grid">
+    {videosWithSlug.map(v => (
+      <div class="vid-card">
+        <div class="vid-frame" data-yt={v.yt} role="button" tabindex="0" aria-label={`Lire la vidéo : ${v.name}`}>
+          {v.award && (
+            <span class="vid-award">
+              <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/></svg>
+              Primé
+            </span>
+          )}
+          <img src={`https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg`} alt={v.name} loading="lazy" />
+          <span class="vid-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48"><path d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.2 0 34 0 34 0S12.8 0 7.5 1.6a8.6 8.6 0 0 0-6 6A90 90 0 0 0 0 24a90 90 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.8 48 34 48 34 48s21.2 0 26.5-1.6a8.6 8.6 0 0 0 6-6A90 90 0 0 0 68 24a90 90 0 0 0-1.5-16.3z" fill="#f00"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+          </span>
+        </div>
+        <div class="vid-body">
+          <h2>{v.name}</h2>
+          <p class="vid-author">{v.author}</p>
+          <p class="vid-desc">{v.desc}</p>
+          {v.slug && <a class="vid-link" href={`/projets/${v.slug}`}>Voir le projet →</a>}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.vid-frame').forEach(frame => {
+    const load = () => {
+      const id = frame.dataset.yt;
+      if (!id || frame.querySelector('iframe')) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.title = 'Vidéo';
+      frame.appendChild(iframe);
+    };
+    frame.addEventListener('click', load);
+    frame.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); }
+    });
+  });
+</script>
 </Base>

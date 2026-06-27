@@ -1,0 +1,305 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const featured = allProjects.filter(p => p.data.featured).slice(0, 6);
+const activeCount = allProjects.filter(p => p.data.status === 'actif').length;
+const awardCount  = allProjects.filter(p => p.data.award).length;
+
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE') || f.includes('PSYCH')) return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                                               return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD'))                        return 'var(--fac-fti)';
+  if (f.includes('SCIEN') && !f.includes('SOC'))                       return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))                         return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))                         return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                                              return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))                         return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO'))                        return 'var(--fac-theologie)';
+  return 'var(--rose)';
+}
+function isLightFac(fac?: string | null): boolean {
+  const f = fac?.toUpperCase() ?? '';
+  return f.includes('SOC') || f.includes('SDS');
+}
+---
+<Base title="Home" lang="en">
+<style>
+.banner{width:100%;max-height:340px;object-fit:cover;object-position:center;display:block}
+.anchor-nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:100px;z-index:20}
+.anchor-nav-inner{width:var(--content);margin:auto;display:flex;align-items:center;justify-content:center;gap:0;min-height:46px}
+.anchor-nav-inner a{font-size:14px;font-weight:700;color:var(--ink);padding:12px 24px;border-bottom:3px solid transparent;text-decoration:none;transition:color .15s,border-color .15s}
+.anchor-nav-inner a:hover{color:var(--rose);border-bottom-color:var(--rose)}
+.anchor-nav-sep{color:var(--line-strong);font-size:18px;padding:0 2px}
+.intro-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,56px) 0 clamp(24px,3vw,36px)}
+.intro-highlight{font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:80ch;line-height:1.65;margin:0 auto 32px;text-align:center}
+.searchbar-wrap{width:var(--content);margin:0 auto 40px;display:flex;justify-content:center}
+.searchbar-form{display:flex;align-items:center;gap:0;background:#fff;border:1.5px solid var(--line-strong);border-radius:999px;overflow:hidden;max-width:560px;width:100%;transition:border-color .15s}
+.searchbar-form:focus-within{border-color:var(--rose)}
+.searchbar-form input{border:none;outline:none;flex:1;padding:12px 20px;font-size:15px;font-family:var(--font);color:var(--ink);background:transparent}
+.searchbar-form button{background:var(--rose);border:none;padding:0 18px;height:46px;cursor:pointer;color:#fff;display:grid;place-items:center;transition:background .15s;flex-shrink:0}
+.searchbar-form button:hover{background:var(--rose-deep)}
+.searchbar-form button svg{width:20px;height:20px}
+.featured-label{width:var(--content);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:baseline}
+.featured-label strong{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.ip-section{padding:clamp(40px,6vw,72px) 0;position:relative}
+.ip-section + .ip-section{border-top:1px solid var(--line)}
+.ip-section-grey{background:var(--bg-soft)}
+.ip-section-inner{width:var(--content);margin:auto}
+.ip-section h2{font-size:clamp(28px,3.8vw,46px);font-weight:800;text-align:center;letter-spacing:-.02em;margin-bottom:8px}
+.ip-section .sub{text-align:center;color:var(--muted);font-size:clamp(15px,1.5vw,18px);max-width:72ch;margin:0 auto 36px;line-height:1.6}
+.video-container{position:relative;padding-bottom:56.25%;height:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);max-width:860px;margin:0 auto 28px}
+.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.video-link{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 22px;max-width:400px;margin:0 auto;text-decoration:none;color:var(--ink);transition:box-shadow .18s,transform .18s}
+.video-link:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.video-link img{width:36px;height:36px;object-fit:contain;flex-shrink:0}
+.video-link span{font-size:14.5px;font-weight:700;color:var(--rose)}
+.explorer-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}
+.explorer-block{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+.explorer-block h3{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+.axes-pills{display:flex;flex-wrap:wrap;gap:8px}
+.axe-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;color:#fff;text-decoration:none;transition:opacity .15s}
+.axe-pill:hover{opacity:.85}
+.fac-pills{display:flex;flex-wrap:wrap;gap:6px}
+.fac-pill{padding:5px 12px;border-radius:999px;font-size:12px;font-weight:700;color:#fff;text-decoration:none;transition:opacity .15s}
+.fac-pill:hover{opacity:.85}
+.explorer-cta{display:flex;align-items:center;gap:16px;background:#eee;border-radius:var(--radius);padding:16px 22px;text-decoration:none;color:var(--ink);transition:background .15s;max-width:480px;margin:0 auto}
+.explorer-cta:hover{background:var(--line)}
+.explorer-cta img{width:40px;height:40px;object-fit:contain}
+.explorer-cta span{font-size:15px;font-weight:700}
+.realiser-card{display:flex;align-items:center;gap:0;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);max-width:640px;margin:0 auto;text-decoration:none;color:var(--ink);overflow:hidden;transition:box-shadow .18s,transform .18s}
+.realiser-card:hover{box-shadow:0 4px 24px rgba(0,0,0,.18);transform:translateY(-2px)}
+.realiser-card img{width:44%;padding:2em;object-fit:contain;flex-shrink:0}
+.realiser-card b{padding:1.2em 1.5em 1.2em 0;font-size:clamp(14px,1.4vw,17px);font-weight:700;line-height:1.4}
+.axes-section{padding:clamp(40px,6vw,72px) 0;border-top:1px solid var(--line)}
+.axes-section-inner{width:var(--content);margin:auto}
+.axes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.axe{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .18s,transform .18s;text-decoration:none;color:inherit}
+.axe:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+.axe-visual{background:color-mix(in srgb,var(--ax) 10%,#fff);border-bottom:3px solid var(--ax);padding:0}
+.axe-visual img{width:100%;height:auto;display:block;aspect-ratio:300/190;object-fit:contain;padding:20px}
+.axe-body{padding:20px 22px 20px;flex:1;display:flex;flex-direction:column}
+.axe h3{font-size:18px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;color:var(--ax)}
+.axe p{color:var(--muted);font-size:14px;margin:0 0 16px;line-height:1.55;flex:1}
+.axe .go{font-size:13px;font-weight:800;color:var(--ax);display:inline-flex;align-items:center;gap:5px;margin-top:auto}
+.figures{background:var(--rose-deep);color:#fff}
+.figures-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.fig strong{display:block;font-size:clamp(38px,4.5vw,54px);font-weight:800;letter-spacing:-.02em;line-height:1}
+.fig span{display:block;font-size:14.5px;color:rgba(255,255,255,.82);margin-top:8px}
+.fig:not(:last-child){border-right:1px solid rgba(255,255,255,.18)}
+@media(max-width:1080px){.axes{grid-template-columns:repeat(2,1fr)}.explorer-grid{grid-template-columns:1fr}}
+@media(max-width:760px){
+  .anchor-nav-inner a{padding:10px 14px;font-size:13px}
+  .anchor-nav-sep{display:none}
+  .axes,.figures-inner{grid-template-columns:1fr}
+  .fig:not(:last-child){border-right:0;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:24px}
+  .realiser-card{flex-direction:column}
+  .realiser-card img{width:60%;padding:2em 2em 1em}
+  .realiser-card b{padding:0 1.5em 1.5em}
+}
+@media(prefers-reduced-motion:reduce){.axe,.video-link,.realiser-card{transition:none}}
+</style>
+
+<img class="banner" src="/images/sections/header.jpg" alt="Pedagogical Innovations — University of Geneva" />
+
+<nav class="anchor-nav" aria-label="Page sections">
+  <div class="anchor-nav-inner">
+    <a href="#discover">Discover</a>
+    <span class="anchor-nav-sep" aria-hidden="true">|</span>
+    <a href="#explore">Explore</a>
+    <span class="anchor-nav-sep" aria-hidden="true">|</span>
+    <a href="#produce">Produce</a>
+  </div>
+</nav>
+
+<div class="intro-wrap">
+  <p class="intro-highlight">
+    Welcome to the space where you can find out about innovative teaching projects
+    implemented by teachers at the University of Geneva.
+  </p>
+
+  <div class="searchbar-wrap">
+    <form class="searchbar-form" action="/en/catalogue" method="get" role="search">
+      <input type="search" name="q" placeholder="Search for a project…" aria-label="Search for a project" />
+      <button type="submit" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+{featured.length > 0 && (
+  <section style="width:var(--content);margin:0 auto;padding-bottom:clamp(48px,6vw,72px)">
+    <div class="featured-label">
+      <strong>Featured projects</strong>
+      <a class="sec-link" href="/en/catalogue">More projects →</a>
+    </div>
+    <div class="cards">
+      {featured.map(p => {
+        const facVar   = getFacVar(p.data.faculty);
+        const hasPhoto = !!p.data.photo;
+        const initials = (p.data.author ?? p.data.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase();
+        return (
+          <article class="card" style={`--fac:${facVar}`}>
+            <div class={`cover${!hasPhoto ? ' no-photo' : ''}`}
+                 style={hasPhoto ? `background-image:url(${p.data.photo})` : ''}>
+              {!hasPhoto && <span class="cover-initials">{initials}</span>}
+              {p.data.award && <span class="award">★ {p.data.award}</span>}
+            </div>
+            <div class="card-body">
+              <h3><a href={`/projets/${p.slug}`}>{p.data.title}</a></h3>
+            </div>
+            {p.data.faculty && (
+              <div class={`card-fac${isLightFac(p.data.faculty) ? ' light' : ''}`}>{p.data.faculty}</div>
+            )}
+          </article>
+        );
+      })}
+    </div>
+  </section>
+)}
+
+<div id="discover" style="position:relative;top:-100px;pointer-events:none"></div>
+<section class="ip-section ip-section-grey">
+  <div class="ip-section-inner">
+    <h2>Discover</h2>
+    <p class="sub">
+      Browse more than <strong>{activeCount} projects</strong> by teachers reinventing
+      their courses at the University of Geneva.
+    </p>
+
+    <div class="video-container">
+      <iframe
+        src="https://view.genial.ly/62388f9e05b3ae0011fa72c8"
+        allowfullscreen
+        frameborder="0"
+        title="Pedagogical innovations at UNIGE"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <a class="video-link" href="/en/videos">
+      <img src="/images/sections/videoIcone.svg" alt="" aria-hidden="true" />
+      <span>Discover our promotional videos →</span>
+    </a>
+  </div>
+</section>
+
+<div id="explore" style="position:relative;top:-100px;pointer-events:none"></div>
+<section class="ip-section">
+  <div class="ip-section-inner">
+    <h2>Explore</h2>
+    <p class="sub">
+      Search for projects according to 4 action categories for your students,
+      by faculty, or browse the complete list.
+    </p>
+
+    <div class="explorer-grid">
+      <div class="explorer-block">
+        <h3>Action categories</h3>
+        <div class="axes-pills">
+          <a class="axe-pill" href="/en/catalogue?axe=preparer" style="background:var(--fac-lettres)">Prepare</a>
+          <a class="axe-pill" href="/en/catalogue?axe=rendre-actif" style="background:var(--fac-sciences)">Engage</a>
+          <a class="axe-pill" href="/en/catalogue?axe=responsabiliser" style="background:#C28A00">Make responsible</a>
+          <a class="axe-pill" href="/en/catalogue?axe=faire-creer" style="background:var(--rose)">Create</a>
+        </div>
+      </div>
+      <div class="explorer-block">
+        <h3>Faculties</h3>
+        <div class="fac-pills">
+          <a class="fac-pill" href="/en/catalogue?fac=FPSE" style="background:var(--fac-fapse)">FPSE</a>
+          <a class="fac-pill" href="/en/catalogue?fac=Sciences" style="background:var(--fac-sciences)">Sciences</a>
+          <a class="fac-pill" href="/en/catalogue?fac=Médecine" style="background:var(--fac-medecine)">Medicine</a>
+          <a class="fac-pill" href="/en/catalogue?fac=Lettres" style="background:var(--fac-lettres)">Humanities</a>
+          <a class="fac-pill" href="/en/catalogue?fac=Droit" style="background:var(--fac-droit)">Law</a>
+          <a class="fac-pill" href="/en/catalogue?fac=SDS" style="background:var(--fac-sds);color:var(--ink)">SDS</a>
+          <a class="fac-pill" href="/en/catalogue?fac=GSEM" style="background:var(--fac-gsem)">GSEM</a>
+          <a class="fac-pill" href="/en/catalogue?fac=FTI" style="background:var(--fac-fti)">FTI</a>
+          <a class="fac-pill" href="/en/catalogue?fac=Théologie" style="background:var(--fac-theologie)">Theology</a>
+        </div>
+      </div>
+    </div>
+
+    <a class="explorer-cta" href="/en/catalogue">
+      <img src="/images/sections/research.svg" alt="" aria-hidden="true" />
+      <span>View all projects</span>
+    </a>
+  </div>
+</section>
+
+<div id="produce" style="position:relative;top:-100px;pointer-events:none"></div>
+<section class="ip-section ip-section-grey">
+  <div class="ip-section-inner">
+    <h2>Produce</h2>
+    <p class="sub">
+      We support teaching teams and their students in the creation of educational
+      videos and learning spaces. Our team can also be called upon for in-house projects.
+    </p>
+
+    <a class="realiser-card" href="/en/soutien">
+      <img src="/images/sections/ProjetPeda.svg" alt="Pedagogical productions" />
+      <b>Discover our pedagogical productions →</b>
+    </a>
+  </div>
+</section>
+
+<div class="axes-section" id="axes">
+  <div class="axes-section-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:12px">
+      <div>
+        <span class="eyebrow">Pedagogical framework</span>
+        <h2 style="font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-.02em;margin:8px 0 0">Four innovation categories</h2>
+      </div>
+      <a class="sec-link" href="/en/catalogue" style="white-space:nowrap">View all projects →</a>
+    </div>
+    <div class="axes">
+      <a class="axe" href="/en/catalogue?axe=preparer" style="--ax:var(--fac-lettres)">
+        <div class="axe-visual"><img src="/images/sections/Preparer.svg" alt="Prepare" /></div>
+        <div class="axe-body">
+          <h3>Prepare</h3>
+          <p>Ask students to complete a task before class.</p>
+          <span class="go">Explore →</span>
+        </div>
+      </a>
+      <a class="axe" href="/en/catalogue?axe=rendre-actif" style="--ax:var(--fac-sciences)">
+        <div class="axe-visual"><img src="/images/sections/RendreActif.svg" alt="Engage" /></div>
+        <div class="axe-body">
+          <h3>Engage</h3>
+          <p>Engage students during the session, both in person and remotely.</p>
+          <span class="go">Explore →</span>
+        </div>
+      </a>
+      <a class="axe" href="/en/catalogue?axe=responsabiliser" style="--ax:#C28A00">
+        <div class="axe-visual"><img src="/images/sections/Responsabiliser.svg" alt="Make responsible" /></div>
+        <div class="axe-body">
+          <h3>Make responsible</h3>
+          <p>Develop autonomy and responsibility in learning.</p>
+          <span class="go">Explore →</span>
+        </div>
+      </a>
+      <a class="axe" href="/en/catalogue?axe=faire-creer" style="--ax:var(--rose)">
+        <div class="axe-visual"><img src="/images/sections/FaireCreer.svg" alt="Create" /></div>
+        <div class="axe-body">
+          <h3>Create</h3>
+          <p>Invite students to produce something original and useful.</p>
+          <span class="go">Explore →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="figures">
+  <div class="figures-inner">
+    <div class="fig"><strong>{activeCount}+</strong><span>projects recorded</span></div>
+    <div class="fig"><strong>9</strong><span>faculties represented</span></div>
+    <div class="fig"><strong>4</strong><span>pedagogical categories</span></div>
+    <div class="fig"><strong>{awardCount || 8}</strong><span>Award winners</span></div>
+  </div>
+</div>
+</Base>

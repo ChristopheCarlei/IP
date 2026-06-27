@@ -11,7 +11,9 @@ This course is intended for PhD students of the Faculty of Physics. Previously d
 ## Project implementation
 
 The objective of this course, presented in a form approaching a research colloquium, is to provide an overview of the teacher's research topics. It addresses the subject of particle detectors, in particular semiconductor detectors, with particular attention to recent developments in detector technology with applications to high energy and medical physics. For doctoral students, this topic is not always related to the theme of their thesis. The goal is not to offer a course that is too specialized, but to complete the training of doctoral students from an experimental point of view.
+
 Because of the heterogeneity of the audience, the teacher's concern is to interest all the participants, regardless of the theme of their thesis. In order to ensure the relevance of the content he proposes and the dynamics of his course, he invites, without obligation, the students to answer a short questionnaire after each session.
+
 The questions focus on what they were interested in, what they were less interested in, what they missed, what they would like to learn more about or not. The answers and comments obtained allow the teacher to question the proposed content and to adapt the next course according to the requests made. If all the comments cannot always be taken into account within the time frame of the next course, they serve to improve and shape the proposed course in subsequent years.
 
 ## Thoughts and advice

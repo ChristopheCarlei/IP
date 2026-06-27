@@ -11,13 +11,17 @@ This course is interdisciplinary and therefore welcomes students from different 
 ## Project implementation
 
 The course format allows students to choose what they want to learn, to create the material from which they will learn, and to present a production that reflects what they have learned. The students (their interests and prior knowledge) are thus the starting point of the course; they create a learning medium not only for themselves but also for other students. They are fully active and involved in their training. They will, in fact, set their own objectives for the course by determining the grade and the number of credits they would like to obtain. They are thus led to reflect on their presence in the course and what they expect from it.
+
 During the 1st course, the teacher asks the students to write on a post-it the subject on which they would like to work. In the following classes, theoretical elements and research avenues in the mentioned fields are provided to them in class or through articles to be read. They then choose the research topic they would like to develop and must build the problematic around it. After numerous group discussions, in class or with the teacher, they must narrow down their interests to a specific research question, define how to answer it and how to implement it concretely. They must also write a paragraph each week to track their progress.
+
 The evaluation of the course is based on their final presentation, the format of which they choose (article, poster, podcast, video). More than the subject they have worked on, they must present what they have learned and how they have learned it.
+
 This course format allows students to be extremely free in the choice and realization of their project. They have a great deal of autonomy while benefiting from group reflection time, which allows them to exchange and benefit from the skills and points of view of each other.
 
 ## Thoughts and advice
 
 The key to such a course format is to get students to articulate what they want to do and learn and to articulate it regularly as they progress. It is important that they learn to communicate. Communication between a teacher and a student is an important aspect of this course format. Giving clear, structured, and encouraging feedback is necessary to ensure that the student does not stray from the chosen topic and that he/she has grasped the key concepts. The exchanges between students are very constructive and often formulated in a benevolent way.
+
 It is also worthwhile not to be afraid to encourage students to invest themselves fully in their project and to let their creativity run free. It might even be possible to forbid them to write a report to push them to do a project that takes a more innovative form. Similarly, it is sometimes necessary to be careful that very enthusiastic students do not commit themselves to projects that are too large.
 
 ## Student feedback

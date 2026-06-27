@@ -1,15 +1,16 @@
 ﻿---
 id: 15
+youtube: https://www.youtube.com/embed/m-7NmevfX8E
 title: "Vidéos & questions"
-author: ""
+author: Jérôme Kasparian
 photo: /images/projet/Jerome_Kasparian.jpg
-faculty: ""
+faculty: Médecine
 course: ""
 level: ""
-students: ""
-year: ""
-category: ""
-innovation_type: ""
+students: 500 - 1000
+year: 2016
+category: Rendre actifs
+innovation_type: Donner la parole
 observation_accepted: false
 description_short: "Ce projet vise à fournir des bases en mathématiques via des capsules vidéo et à favoriser l'interactivité en posant des questions pendant le cours, utilisant une plateforme de questions/réponses en direct."
 featured: false
@@ -18,15 +19,15 @@ status: actif
 
 ## Situation de départ
 
-Le cours de physique pour les étudiant-es en 1ère année de médecine possède 2 contraintes majeures : d’une part, l’effectif est grand avec plus de 600 étudiant-es, et d’autre part, il y a beaucoup de matière à enseigner. Dans ces conditions, il est difficile de savoir durant le cours ce que les étudiant-es comprennent réellement et ainsi de pouvoir adapter son rythme. Il est également difficile de sortir les étudiant-es de leur posture passive en auditoire.
-Mise en place et déroulement du projet
-Ce projet s’articule autour de deux objectifs. Le premier est de s’assurer que tous les étudiant-es aient les bases minimums en mathématique avant de suivre le cours. Pour ce faire, l’enseignant a développé lui-même de petites capsules vidéo à l’aide d’une caméra document sur des outils mathématiques de base indispensable en physique, que les étudiant-es sont censé-es connaître au début de leur première année de Bachelor en médecine. Les étudiant-es peuvent visionner ces vidéos à leur rythme et s’assurer qu’ils/elles seront en mesure de suivre le cours.
-Le second est de rendre les étudiant-es dynamiques pendant le cours magistral. À plusieurs moments durant le cours, l’enseignant arrête le cours et pose une question (à choix multiple) aux étudiant-es. La réponse à la question se donne à l’aide de leur smartphone (SpeakUp). L’enseignant voit les résultats en direct et peut alors décider s’il est nécessaire de passer plus de temps sur la notion en question ou alors au contraire s’il peut passer à la suite. En plus de poser des questions aux étudiant-es, l’enseignant utilise également la plateforme web SpeakUp développé par l’UNIL qui permet aux étudiant-es de poser des questions en direct et de voter pour les questions jugées les plus pertinentes. L’enseignant peut ainsi adapter son cours en fonction des questions qui lui sont posées via cette plateforme. Pour casser le rythme du cours et obtenir un regain d’attention, l’enseignant fait également visionner pendant le cours des capsules vidéo d’expériences menées en physique.
+Le cours de physique pour les étudiant-es en 1ère année de médecine possède 2 contraintes majeures : d’une part, l’effectif est grand avec plus de 600 étudiant-es, et d’autre part, il y a beaucoup de matière à enseigner. Dans ces conditions, il est difficile de savoir durant le cours ce que les étudiant-es comprennent réellement et ainsi de pouvoir adapter son rythme. Il est également difficile de sortir les étudiant-es de leur posture passive en auditoire.
 
-## Retour et conseils
+## Mise en place et déroulement
 
-Les capsules vidéo proposées en classe inversée permettent à l’enseignant d’aborder directement la matière du cours sans perdre du temps à faire des rappels sur des notions de base supposées avoir été vues à l’école secondaire.
-En plus de permettre à l’enseignant d’évaluer le niveau de compréhension de l’ensemble de la classe, le vote en classe encourage les étudiant-es à prendre un rôle plus actif durant le cours. En effet, les étudiant-es échangent de manière informelle entre eux/elles sur les questions durant le temps de réflexion. Les réponses données sont donc souvent celles de petits groupes (bien que cela ne soit pas une consigne explicite). Le vote en ligne permet aussi aux étudiant-es de mieux évaluer ce qu’ils/elles ont compris de ce qui reste à étudier.
+Ce projet s’articule autour de deux objectifs.
+
+Le premier est de s’assurer que tous les étudiant-es aient les bases minimums en mathématique avant de suivre le cours. Pour ce faire, l’enseignant a développé lui-même de petites capsules vidéo à l’aide d’une caméra document sur des outils mathématiques de base indispensable en physique, que les étudiant-es sont censé-es connaître au début de leur première année de Bachelor en médecine. Les étudiant-es peuvent visionner ces vidéos à leur rythme et s’assurer qu’ils/elles seront en mesure de suivre le cours.
+
+Le second est de rendre les étudiant-es dynamiques pendant le cours magistral. À plusieurs moments durant le cours, l’enseignant arrête le cours et pose une question (à choix multiple) aux étudiant-es. La réponse à la question se donne à l’aide de leur smartphone. L’enseignant voit les résultats en direct et peut alors décider s’il est nécessaire de passer plus de temps sur la notion en question ou alors au contraire s’il peut passer à la suite. En plus de poser des questions aux étudiant-es, l’enseignant utilise également la plateforme Web SpeakUp développé par l’UNIL qui permet aux étudiant-es de poser des questions en direct et de voter pour les questions jugées les plus pertinentes. L’enseignant peut ainsi adapter son cours en fonction des questions qui lui sont posées via cette plateforme. Pour casser le rythme du cours et obtenir un regain d’attention, l’enseignant fait également visionner pendant le cours des capsules vidéo d’expériences menées en physique.
 
 ## Avis des étudiant·es
 
@@ -34,3 +35,6 @@ En plus de permettre à l’enseignant d’évaluer le niveau de compréhension 
 > « Les questions fréquemment posées durant le cours par le prof, auxquelles nous pouvons répondre de manière interactive sont un point fort. De plus, la possibilité de poser nos propres questions via SpeakUp est vraiment une chance : nous pouvons poser les questions directement, et tout l’auditoire peut profiter des explications. »
 > « Les exemples en vidéo concernant le chapitre de physique, c’est une bonne idée, ils nous aident à mieux comprendre certains chapitres. »
 
+## Annexes
+
+- [Espace Moodle du cours](https://moodle.unige.ch/course/view.php?id=1413)

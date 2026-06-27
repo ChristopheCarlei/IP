@@ -64,22 +64,35 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{
 
 /* ---- En-tête institutionnel ------------------------------ */
 .topstrip{background:var(--rose);height:5px;flex-shrink:0}
-.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);flex-shrink:0}
-.nav{width:var(--content);margin:auto;min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+
+/* Barre institutionnelle UNIGE (niveau 1) — fond rose, charte UNIGE */
+.instbar{background:var(--rose);flex-shrink:0}
+.instbar-inner{width:var(--content);margin:auto;height:46px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.instbar-nav{display:flex;align-items:center;gap:0;min-width:0}
+.instbar-logo{display:flex;flex-direction:column;line-height:1;text-decoration:none;flex-shrink:0}
+.instbar-u{font-size:16px;font-weight:800;letter-spacing:-.01em;color:#fff}
+.instbar-g{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:3px}
+.instbar-sep{width:1px;height:24px;background:rgba(255,255,255,.35);flex:none;margin:0 16px}
+.instbar-links{display:flex;align-items:center;gap:2px}
+.instbar-links a{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.9);padding:5px 10px;border-radius:5px;text-decoration:none;transition:color .15s,background .15s}
+.instbar-links a:hover{color:#fff;background:rgba(255,255,255,.18)}
+.instbar-langpick{display:flex;border:1px solid rgba(255,255,255,.5);border-radius:999px;overflow:hidden;font-size:11.5px;font-weight:700;flex-shrink:0}
+.instbar-langpick a{padding:5px 10px;color:rgba(255,255,255,.85);text-decoration:none}
+.instbar-langpick a.on{background:#fff;color:var(--rose-deep)}
+
+/* Barre section IP (niveau 2) */
+.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);flex-shrink:0}
+.nav{width:var(--content);margin:auto;min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:15px;min-width:0;text-decoration:none}
 .wordmark{display:flex;flex-direction:column;line-height:1;flex:none}
 .wordmark .u{font-size:23px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
 .wordmark .g{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.brand .divider{width:1px;height:36px;background:var(--line-strong);flex:none}
-.brand .titles strong{display:block;font-size:15.5px;font-weight:800;line-height:1.15;color:var(--ink);letter-spacing:-.01em}
-.brand .titles span{display:block;font-size:12.5px;color:var(--rose);font-weight:600}
-.navlinks{display:flex;gap:4px;align-items:center}
-.navlinks a:not(.btn){padding:9px 12px;border-radius:8px;font-size:14.5px;font-weight:600;color:var(--ink);text-decoration:none}
+.brand .titles strong{display:block;font-size:15px;font-weight:800;line-height:1.15;color:var(--ink);letter-spacing:-.01em}
+.brand .titles span{display:block;font-size:11.5px;color:var(--rose);font-weight:600;margin-top:2px}
+.navlinks{display:flex;gap:2px;align-items:center}
+.navlinks a:not(.btn){padding:7px 11px;border-radius:7px;font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:none}
 .navlinks a:not(.btn):hover{background:var(--bg-soft);color:var(--rose-deep)}
-.navlinks a.active{color:var(--rose)}
-.langpick{display:flex;border:1.5px solid var(--line-strong);border-radius:999px;overflow:hidden;font-size:12.5px;font-weight:700;margin-left:6px}
-.langpick a{padding:7px 12px;color:var(--muted);text-decoration:none}
-.langpick a.on{background:var(--rose);color:#fff}
+.navlinks a.active{color:var(--rose);background:var(--bg-rose)}
 .burger{display:none;background:none;border:1.5px solid var(--line-strong);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--ink);align-items:center;justify-content:center;flex-shrink:0}
 .burger svg{width:22px;height:22px}
 
@@ -99,7 +112,7 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,84px) 0}
 .card:focus-within{box-shadow:var(--shadow);outline:2px solid var(--rose);outline-offset:2px}
 
 /* Photo plein-cadre — portrait visible, aucun overlay */
-.cover{height:290px;background:var(--fac,#ccc);background-size:cover;background-position:center top;flex-shrink:0;position:relative}
+.cover{height:200px;background:var(--fac,#ccc);background-size:cover;background-position:center top;flex-shrink:0;position:relative}
 /* Sans photo : fond couleur + initiales */
 .cover.no-photo{display:flex;align-items:center;justify-content:center}
 .cover-initials{font-size:64px;font-weight:800;color:rgba(255,255,255,.3);letter-spacing:-.02em;line-height:1}
@@ -118,19 +131,29 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,84px) 0}
 .card-body>p{color:var(--muted);font-size:14.5px;margin:0}
 .card .meta{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:14px;margin-top:16px;color:#475467;font-size:13px;font-weight:600}
 
-/* ---- Pied de page ---------------------------------------- */
-.footer{border-top:1px solid var(--line);background:var(--bg-soft);flex-shrink:0}
-.footer-inner{width:var(--content);margin:auto;padding:48px 0 28px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:32px}
-.footer .wordmark .u{font-size:20px}
-.footer-grid p.about{color:var(--muted);font-size:14.5px;max-width:42ch;margin:16px 0 0}
-.footer h4{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
-.footer address{font-style:normal;color:var(--muted);font-size:14px;line-height:1.7}
-.footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
-.footer ul a{color:var(--muted);font-size:14px;font-weight:600;text-decoration:none}
-.footer ul a:hover{color:var(--rose)}
-.footer a.mail{color:var(--rose);font-weight:700}
-.footer-base{border-top:1px solid var(--line-strong);padding-top:20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13px}
+/* ---- Pied de page institutionnel ------------------------- */
+.footer{border-top:3px solid var(--rose);background:var(--ink);color:rgba(255,255,255,.75);flex-shrink:0}
+.footer-inner{width:var(--content);margin:auto;padding:52px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-col{}
+.footer-col--brand{}
+.footer-brand{display:flex;flex-direction:column;line-height:1;margin-bottom:16px}
+.footer-u{font-size:22px;font-weight:800;letter-spacing:-.01em;color:#fff}
+.footer-g{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px}
+.footer-about{font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.6);margin:0 0 16px;max-width:38ch}
+.footer-address{font-style:normal;font-size:13px;line-height:1.7;color:rgba(255,255,255,.5)}
+.footer-title{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.footer-links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-size:13.5px;font-weight:500;color:rgba(255,255,255,.65);text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:#fff}
+.footer-social{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.footer-social-link{width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;color:rgba(255,255,255,.65);transition:background .15s,color .15s;text-decoration:none}
+.footer-social-link:hover{background:var(--rose);border-color:var(--rose);color:#fff}
+.footer-accred img{opacity:.55;width:100px;margin-top:4px}
+.footer-base{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.4);font-size:12.5px}
+.footer-base-links{display:flex;gap:20px}
+.footer-base-links a{color:rgba(255,255,255,.4);text-decoration:none;font-size:12.5px}
+.footer-base-links a:hover{color:rgba(255,255,255,.8)}
 
 /* ---- Avatar enseignant ----------------------------------- */
 .avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center 15%;border:2px solid var(--line);flex-shrink:0}
@@ -140,13 +163,19 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,84px) 0}
 @media(max-width:1080px){.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){
   :root{--content:min(100vw - 32px,1280px)}
+  .instbar{display:none}
   .burger{display:inline-flex}
   .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:#fff;border-bottom:1px solid var(--line);padding:14px max(16px,calc((100vw - var(--content))/2));box-shadow:var(--shadow)}
   .navlinks.open{display:flex}
   .navlinks a:not(.btn){padding:13px 12px;font-size:16px}
-  .langpick{margin:8px 0 0;align-self:flex-start}
-  .cards,.footer-grid{grid-template-columns:1fr}
-  .brand .titles span{display:none}
+  .cards{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-col--brand{grid-column:1/-1}
   .head-row{flex-direction:column;align-items:flex-start;gap:14px}
+}
+@media(max-width:1080px){
+  .instbar-links a{font-size:11.5px;padding:5px 7px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .footer-col--brand{grid-column:1/-1}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.card,.axe{transition:none}}

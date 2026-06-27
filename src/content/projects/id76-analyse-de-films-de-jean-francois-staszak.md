@@ -1,35 +1,42 @@
 ﻿---
 id: 76
-title: Analyse
-author: ""
-photo: /images/projet/Jean-Francois_Stassen.jpg
-faculty: ""
+title: Analyse de films
+author: Gérard Calzada
+photo: /images/projet/Gerard_Calzada.jpg
+faculty: Médecine
 course: ""
 level: ""
-students: ""
-year: ""
-category: ""
-innovation_type: ""
+students: Moins de 25
+year: 2014
+category: Responsabiliser
+innovation_type: Impliquer dans la Recherche
 observation_accepted: false
-description_short: "Ce cours met l'accent sur l'utilisation de l'iconographie et des supports visuels dans les sciences sociales. Les étudiant-es sont encouragé-es à développer des compétences en analyse visuelle et à créer une présentation PowerPoint portant sur une séquence de film, mettant en valeur les aspects visuels."
+description_short: "Ce cours propose une approche pédagogique basée sur l'analyse de films mettant en scène des troubles psychiatriques. Chaque séance comprend la présentation du film, la projection d'extraits, un questionnaire diagnostique, un débat sur la représentation des troubles et un questionnaire d'évaluation."
 featured: false
 status: actif
 ---
 
 ## Situation de départ
 
-L’enseignant a constaté que les sciences sociales ont connu un tournant dans l’utilisation de plus en plus répandue du visuel, mais que pour autant celui-ci n’était que peu intégré dans la formation. De ce fait, les étudiant-es sont formé-es et à l’aise avec l’analyse et la production de textes, mais ne savent pas comment réagir et s’exprimer sous format visuel (photo, cartographie, image). La volonté de l’enseignant est donc de donner une place prépondérante à l’apport de l’iconographie dans son cours et d’aider au changement de mentalité en passant du texte, largement plébiscité, à l’image qui a mauvaise réputation.
+En utilisant le cinéma comme support d’enseignement, ce projet vise à sensibiliser les étudiant-es à la psychiatrie, à la psychopathologie et au discours social de la psychiatrie, d’une manière interactive et participative. Il s’agit d’une formation qui aborde à travers des extraits de films différents aspects de la représentation de la psychiatrie dans le cinéma. Ces projections de films sont toujours suivies d’un questionnaire de diagnostic de façon à initier un débat.
 
-## Mise en place
+## Mise en place et déroulement
 
-Ce cours de 3h sur 9 semaines est partagé entre 2 enseignant-es. Il vise à montrer aux étudiant-es comment la géographie politique du monde, à différentes échelles, est mise en scène et en images dans la culture populaire. La première enseignante propose aux étudiant-es l’analyse et la réalisation de bandes dessinées afin d’apprendre à combiner texte et image pour mettre en scène leur expérience du monde (voir projet correspondant). Le second enseignant propose d’aborder le sujet sous l’angle du cinéma en pratiquant des analyses de films.
-La présentation théorique du cours suit un format assez classique de présentation PowerPoint. Cependant, suite au constat que les textes écrits ont de plus en plus laissé la place à des contenus audiovisuels dans la vie courante, l’enseignant a souhaité s’adapter au monde des étudiant-es en leur proposant des présentations les plus visuelles possible. Il enrichit la plupart de ses diapositives d’images ou d’extraits de films. L’enseignant aborde les contenus visuels comme sources et moyens d’expression. Ceux-ci peuvent, par exemple, constituer des données ou des résultats d’entretien qui nous informent sur la société.
-En lien avec cette conception, l’enseignant ne demande pas de travail écrit à ses étudiant-es, mais l’élaboration d’une présentation PowerPoint de l’analyse d’une séquence de film (Pourquoi le cinéma est-il intéressant au regard des sciences sociales ?). En groupe de 3, les étudiant-es doivent choisir un extrait de film (de fiction pour l’essentiel) en lien avec la thématique de l’année (ex., les enjeux en termes de popular geopolitics). Après sa validation de la part de l’enseignant, ils/elles isolent des séquences très courtes à analyser. L’enseignant les assiste en leur fournissant des ressources (grilles de lecture, bibliographies, exemples pendant le cours). L’important étant de ne pas se laisser absorber par l’histoire, mais de bien se concentrer sur l’image. La présentation orale de 30 min doit contenir une rapide présentation du film et de son contexte, la projection de la séquence en entier (3 à 5 min maximum), la description synthétique de la séquence, la problématique choisie et l’analyse de quelques plans. L’ensemble des étudiant-es assistent aux projections suivies de débats. L’évaluation porte sur différents critères fournis aux étudiant-es sur les éléments suivants : le document, la présentation, la problématique, l’analyse et les connaissances.
+Pour chaque séance, un film est choisi en fonction de critères préalablement établis par l’enseignant (ex., au moins un personnage doit présenter un trouble psychiatrique qui est illustré dans le film et un autre doit jouer le rôle d’un-e soignant-e).
 
-## Retour et conseils
+Les séances sont divisées en 5 étapes :
 
-L’enseignant souligne l’importance de l’iconographie. Pour lui, il est beaucoup plus plaisant de faire cours lorsque l’on montre des images qui retiennent l’attention des étudiant-es. Montrer de courtes séquences vidéo et les analyser correspond à leur mode de rapport au monde. L’image est partout, alors qu’elle est souvent ignorée, il s’agit pourtant d’une réalité sociale qu’il faut étudier. Il est ainsi très important de former les étudiant-es à savoir analyser les images et leur apporter du sens. Ils/elles seront de plus en plus amené-es à présenter leur travail avec des images dans leur vie professionnelle. Elles permettent d’exprimer des idées avec un autre support que seulement du discours, format un peu dépassé.
-Les étudiant-es aiment beaucoup que le cours s’appuie sur des images. L’iconographie constitue un savoir-faire à valoriser : parfois les étudiant-es n’ont pas une culture cinématographique très développée, mais ils/elles possèdent en revanche un savoir-faire d’édition et de montage. L’enseignant note d’ailleurs avec surprise qu’ils/elles ne sollicitent pas de soutien technique particulier, dans l’ensemble ils/elles possèdent les compétences nécessaires au travail demandé. L’enseignant ne leur fournit que le nom de quelques logiciels les plus faciles d’utilisation (ex., Mactheripper pour l’extraction/le rippage et Handbrake pour le montage).
+la présentation théorique du film et de la psychopathologie choisie pour la séance ; 
+ la projection d’extraits du film ; 
+ le questionnaire « diagnostic » : Les étudiant-es et l’enseignant répondent au questionnaire avec les critères diagnostiques du trouble et concluent si le/la protagoniste présente ou non les critères nécessaires pour confirmer le diagnostic ; 
+ un débat dans lequel le groupe analyse les réponses apportées au questionnaire. Il se questionne également sur la représentation des troubles psychiatriques, l’image de la maladie, des malades et des soignant-es dans ce film ; 
+ un questionnaire « évaluation » de leur capacité à reconnaître les symptômes typiques du trouble ainsi que de la pertinence du film pour observer les éléments clés qui caractérisent le trouble.
+
+Afin d’impliquer les étudiant-es dans le déroulement du cours et leur permettre d’acquérir des compétences transversales, ils/elles sont en charge d’organiser 4 séances en groupe de 5. Ils/elles s’organisent pour choisir un film, découper les scènes les plus significatives, préparer la présentation théorique du trouble et animer le débat.
+
+Le cours encourage également la participation à la recherche. Sur la durée du semestre, les étudiant-es préparent en groupes de 2 ou 3 une analyse approfondie d’un des films. Ce travail est corrigé par l’enseignant et retravaillé tant de fois que nécessaire afin de pouvoir être soumis à la revue « Swiss Archives of Neurology, Psychiatry and Psychotherapy » qui a une rubrique sur l’analyse de films en lien avec la psychiatrie.
+
+Les groupes d’étudiant-es et l’enseignant communiquent et s’organisent grâce à un outil de gestion de projets collaboratif appelé Basecamp. Cet outil permet de suivre facilement l’avancement des différentes tâches d’un projet, de communiquer avec les groupes de travail, de télécharger des documents (présentations de séances, articles à soumettre, informations diverses, etc.), de gérer le temps et surtout de centraliser l’information et la connaissance d’une année à l’autre.
 
 ## Avis des étudiant·es
 
@@ -37,3 +44,6 @@ Les étudiant-es aiment beaucoup que le cours s’appuie sur des images. L’ico
 > « Le nombre restreint d’étudiants permet une réelle interaction et des échanges de qualité directement avec l’enseignant. »
 > « Une nouvelle approche des sciences sociales qui est intéressante et nécessaire, avec des moments dédiés à la pratique (ce qui est rare et précieux). »
 
+## Annexes
+
+- [Articles publiés dans la Swiss Archives of Neurology, Psychiatry and Psychotherapy](https://sanp.ch/online-only-content/list/) *(lien externe indisponible)*

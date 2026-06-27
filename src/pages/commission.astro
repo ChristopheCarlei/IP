@@ -1,51 +1,185 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const equipe = [
-  { nom: 'Mallory Schaub', role: 'Chef de service', service: 'SEA', platformRole: 'Comité de pilotage' },
-  { nom: 'Patrick Roth', role: 'Informaticien de développement (E-Learning)', service: 'SEA', platformRole: 'Comité de pilotage' },
-  { nom: 'Christophe Carlei', role: 'Adjoint scientifique', service: 'SEA', platformRole: 'Chef de projet' },
-  { nom: 'Lucie Colpaert', role: 'Secrétaire', service: 'SEA', platformRole: 'Rédactrice projets' },
-  { nom: 'Julien Da Costa', role: 'Adjoint scientifique', service: 'Médecine', platformRole: 'Développeur et designer' },
-  { nom: 'Alexandre Bourquin', role: 'Technicien de production', service: 'FPSE', platformRole: 'Photographe' },
-  { nom: 'Vjollca Ahmeti', role: 'Organisatrice', service: 'SEA', platformRole: 'Coordinatrice prix enseignement' },
+type Member = { nom: string; faculte: string; fonction: string; fonctionIP: string; photo: string };
+
+const membres: Member[] = [
+  { nom: "Mallory Schaub", faculte: "", fonction: "Cheffe de service", fonctionIP: "Comité de pilotage Plateforme", photo: "/images/equipe/mallory-schaub.jpg" },
+  { nom: "Patrick Roth", faculte: "", fonction: "Informaticien de développement", fonctionIP: "Comité de pilotage Plateforme", photo: "/images/equipe/patrick-roth.jpg" },
+  { nom: "Christophe Carlei", faculte: "", fonction: "Adjoint scientifique", fonctionIP: "Chef de projet Plateforme", photo: "/images/equipe/christophe-carlei.jpg" },
+  { nom: "Lucie Colpaert", faculte: "", fonction: "Secrétaire", fonctionIP: "Rédactrice projets Plateforme", photo: "/images/equipe/lucie-colpaert.jpg" },
+  { nom: "Julien Da Costa", faculte: "Médecine", fonction: "Adjoint scientifique", fonctionIP: "Développeur et designer Plateforme", photo: "/images/equipe/julien-da-costa.jpg" },
+  { nom: "Alexandre Bourquin", faculte: "FPSE", fonction: "Technicien de production", fonctionIP: "Photographe Plateforme", photo: "/images/equipe/alexandre-bourquin.jpg" },
+  { nom: "Vjollca Ahmeti", faculte: "", fonction: "Organisatrice", fonctionIP: "Coordinatrice prix de l'enseignement", photo: "/images/equipe/vjollca-ahmeti.jpg" },
+  { nom: "Jérémy Lucchetti", faculte: "GSEM", fonction: "Professeur associé", fonctionIP: "", photo: "/images/equipe/jeremy-lucchetti.jpg" },
+  { nom: "Eric Sanchez", faculte: "FPSE", fonction: "Professeur associé", fonctionIP: "", photo: "/images/equipe/eric-sanchez.jpg" },
+  { nom: "Priscilla Soulié", faculte: "Médecine", fonction: "Collaboratrice scientifique", fonctionIP: "", photo: "/images/equipe/priscilla-soulie.jpg" },
+  { nom: "Jérôme Kasparian", faculte: "Sciences", fonction: "Professeur associé", fonctionIP: "", photo: "/images/equipe/jerome-kasparian.jpg" },
+  { nom: "Elisa Radosta", faculte: "", fonction: "Collaboratrice scientifique", fonctionIP: "", photo: "/images/equipe/elisa-radosta.jpg" },
+  { nom: "Christophe Montessuit", faculte: "Médecine", fonction: "Maître d'enseignement et de recherche", fonctionIP: "", photo: "/images/equipe/christophe-montessuit.jpg" },
+  { nom: "Jean-François Stassen", faculte: "", fonction: "Chef de projet", fonctionIP: "", photo: "/images/equipe/jean-francois-stassen.jpg" },
+  { nom: "Cecilia Mornata", faculte: "FPSE", fonction: "Chargée d'enseignement", fonctionIP: "", photo: "/images/equipe/cecilia-mornata.jpg" },
+  { nom: "Laure Mellifluo", faculte: "", fonction: "Coordinatrice en information documentaire", fonctionIP: "", photo: "/images/equipe/laure-mellifluo.jpg" },
+  { nom: "Bérénice Jaccaz", faculte: "Théologie", fonction: "Collaboratrice scientifique", fonctionIP: "", photo: "/images/equipe/berenice-jaccaz.jpg" },
+  { nom: "Gerd Rothenberg", faculte: "", fonction: "Adjoint au rectorat", fonctionIP: "", photo: "/images/equipe/gerd-rothenberg.jpg" },
+  { nom: "Oumaima Ajmi", faculte: "GSEM", fonction: "Collaboratrice scientifique", fonctionIP: "", photo: "/images/equipe/oumaima-ajmi.jpg" },
+  { nom: "Juliet Fall", faculte: "SDS", fonction: "Professeure ordinaire", fonctionIP: "", photo: "/images/equipe/juliet-fall.jpg" },
+  { nom: "Didier Wernli", faculte: "", fonction: "Professeur associé", fonctionIP: "", photo: "/images/equipe/didier-wernli.jpg" },
+  { nom: "Delphine Rinaldi", faculte: "", fonction: "Adjointe scientifique", fonctionIP: "", photo: "/images/equipe/delphine-rinaldi.jpg" },
+  { nom: "Christelle Bozelle", faculte: "", fonction: "Adjointe scientifique", fonctionIP: "", photo: "/images/equipe/christelle-bozelle.jpg" },
+  { nom: "Patrizia Birchler Emery", faculte: "", fonction: "Chargée de cours", fonctionIP: "", photo: "/images/equipe/patrizia-birchler-emery.jpg" },
+  { nom: "Aurélie Picton", faculte: "FTI", fonction: "Professeure associée", fonctionIP: "", photo: "/images/equipe/aurelie-picton.jpg" },
+  { nom: "Sophie Huber", faculte: "", fonction: "Directrice", fonctionIP: "", photo: "/images/equipe/sophie-huber.jpg" },
+  { nom: "Thierry Mengelle", faculte: "", fonction: "Chef de service", fonctionIP: "", photo: "/images/equipe/thierry-mengelle.png" },
+  { nom: "Frédéric Bernard", faculte: "Droit", fonction: "Professeur ordinaire", fonctionIP: "", photo: "/images/equipe/frederic-bernard.jpg" },
+  { nom: "Nicolas Carfora", faculte: "", fonction: "Collaborateur scientifique", fonctionIP: "", photo: "/images/equipe/nicolas-carfora.jpg" },
+  { nom: "Frédéric Esposito", faculte: "", fonction: "Chargé de cours", fonctionIP: "", photo: "/images/equipe/frederic-esposito.jpg" },
+  { nom: "Nadine Bordessoule Gilliéron", faculte: "Lettres", fonction: "Chargée d'enseignement", fonctionIP: "", photo: "/images/equipe/nadine-bordessoule-gillieron.jpg" },
+  { nom: "Chen Dandelot", faculte: "Théologie", fonction: "Chargée d'enseignement", fonctionIP: "", photo: "/images/equipe/chen-dandelot.jpg" },
+  { nom: "Alain Girardin", faculte: "FPSE", fonction: "Chargé d'enseignement et coordinateur pédagogique", fonctionIP: "", photo: "/images/equipe/alain-girardin.jpg" },
+  { nom: "Céline Girardet", faculte: "FPSE", fonction: "Maîtresse d'enseignement et de recherche", fonctionIP: "", photo: "/images/equipe/celine-girardet.jpg" },
+  { nom: "Giulia Ortoleva", faculte: "FPSE", fonction: "Collaboratrice scientifique", fonctionIP: "", photo: "/images/equipe/giulia-ortoleva.jpg" },
+  { nom: "Nathalie Borgognon", faculte: "GSEM", fonction: "Doctorante et chargée d'enseignement", fonctionIP: "", photo: "/images/equipe/nathalie-borgognon.jpg" },
 ];
+
+const equipe = membres.filter(m => m.fonctionIP);
+const cip    = membres.filter(m => !m.fonctionIP);
+
+function facVar(f: string): string {
+  const x = (f || '').toUpperCase();
+  if (x.includes('FPSE')) return 'var(--fac-fapse)';
+  if (x.includes('GSEM')) return 'var(--fac-gsem)';
+  if (x.includes('FTI'))  return 'var(--fac-fti)';
+  if (x.includes('MÉD') || x.includes('MED')) return 'var(--fac-medecine)';
+  if (x.includes('SDS'))  return 'var(--fac-sds)';
+  if (x.includes('LETTR')) return 'var(--fac-lettres)';
+  if (x.includes('DROIT')) return 'var(--fac-droit)';
+  if (x.includes('THÉO') || x.includes('THEO')) return 'var(--fac-theologie)';
+  if (x.includes('SCIEN')) return 'var(--fac-sciences)';
+  return 'var(--rose)';
+}
+const initials = (n: string) => n.split(' ').slice(0, 2).map(s => s[0] ?? '').join('').toUpperCase();
 ---
-<Base title="Commission d'Innovation Pédagogique">
-  <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-4">Commission d'Innovation Pédagogique (CIP)</h1>
+<Base title="Commission d'innovations pédagogiques">
+<style>
+.cm-hero{background:#fff;border-bottom:1px solid var(--line)}
+.cm-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.cm-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.cm-hero h1{font-size:clamp(34px,4.4vw,58px);line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.cm-hero h1 .sub{display:block;font-weight:300;color:var(--muted);font-size:.64em}
+.cm-hero p{color:var(--muted);font-size:16px;line-height:1.7;max-width:72ch;margin:18px 0 0}
 
-    <p class="text-lg text-gray-600 mb-8">
-      Commission interfacultaire dont la mission est de soutenir les innovations pédagogiques
-      selon trois axes : <strong>réflexion</strong>, <strong>communication</strong> et <strong>soutien</strong> aux projets innovants.
+.cm-axes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.cm-axe{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.cm-axe .ic{width:36px;height:36px;border-radius:9px;background:var(--bg-rose);color:var(--rose-deep);display:grid;place-items:center;margin-bottom:10px}
+.cm-axe .ic svg{width:20px;height:20px}
+.cm-axe h3{font-size:15px;font-weight:800;color:var(--ink);margin:0 0 4px}
+.cm-axe p{font-size:13.5px;line-height:1.55;color:var(--muted);margin:0}
+
+.cm-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0}
+.cm-sec + .cm-sec{margin-top:52px}
+.cm-sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 24px;flex-wrap:wrap}
+.cm-sec-head h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:0}
+.cm-sec-head .n{font-size:13px;font-weight:800;color:var(--rose);background:var(--bg-rose);padding:3px 10px;border-radius:999px}
+
+.cm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:20px}
+.cm-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);text-align:center}
+.cm-photo{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 20%;display:block;background:var(--fac,#ccc)}
+.cm-photo.ph{display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:800;color:rgba(255,255,255,.4)}
+.cm-body{padding:14px 14px 16px;display:flex;flex-direction:column;flex:1}
+.cm-body h3{font-size:15px;font-weight:800;color:var(--ink);margin:0 0 4px;letter-spacing:-.01em}
+.cm-fonction{font-size:12.5px;color:var(--muted);line-height:1.4;margin:0 0 8px}
+.cm-tags{margin-top:auto;display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.cm-fac{font-size:10.5px;font-weight:800;color:#fff;background:var(--fac,var(--rose));padding:2px 9px;border-radius:999px}
+.cm-role{font-size:10.5px;font-weight:700;color:var(--rose-deep);background:var(--bg-rose);padding:2px 9px;border-radius:999px}
+
+@media(max-width:760px){.cm-axes{grid-template-columns:1fr}}
+@media(max-width:520px){.cm-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+<!-- Hero -->
+<div class="cm-hero">
+  <div class="cm-hero-inner">
+    <span class="cm-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
+    <h1>Commission<span class="sub">d'innovations pédagogiques</span></h1>
+    <p>
+      La Commission innovations pédagogiques (CIP) est une commission interfacultaire de soutien
+      aux innovations pédagogiques. Nous sommes une équipe alliant diverses disciplines, cultures
+      et expertises, composée de collaborateurs·trices de différentes facultés et de services communs.
+      Ensemble, nous réfléchissons, débattons et critiquons dans un climat de respect, au service
+      d'un enseignement progressiste et d'un apprentissage stimulant.
     </p>
 
-    <h2 class="text-xl font-bold mb-6">Équipe de la plateforme</h2>
-    <div class="grid md:grid-cols-2 gap-4 mb-12">
-      {equipe.map(m => (
-        <div class="bg-gray-50 rounded-xl p-5">
-          <p class="font-semibold text-gray-900">{m.nom}</p>
-          <p class="text-sm text-gray-500">{m.role} — {m.service}</p>
-          <p class="text-sm text-unige-red mt-1 font-medium">{m.platformRole}</p>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-xl font-bold mb-4">Membres de la commission (26)</h2>
-    <p class="text-gray-600 mb-4">
-      La commission réunit des professeur·es, chargé·es d'enseignement et collaborateur·rices
-      scientifiques de toutes les facultés (GSEM, FPSE, Médecine, Sciences, FTI, Théologie, Droit, Lettres)
-      et services universitaires (Rectorat, DISTIC, CFCD).
-    </p>
-
-    <div class="bg-blue-50 rounded-xl p-6 mt-8">
-      <h3 class="font-semibold mb-2">Proposer un projet</h3>
-      <p class="text-sm text-gray-600 mb-3">
-        Les enseignant·es de l'UNIGE peuvent proposer leurs projets d'innovation pédagogique pour publication sur la plateforme.
-      </p>
-      <a href="mailto:sea@unige.ch" class="inline-block bg-unige-red text-white text-sm px-4 py-2 rounded-lg hover:bg-red-800 transition">
-        Contacter la commission
-      </a>
+    <div class="cm-axes">
+      <div class="cm-axe">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/></svg></div>
+        <h3>Réflexion</h3>
+        <p>Penser les innovations pédagogiques actuelles et à venir.</p>
+      </div>
+      <div class="cm-axe">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
+        <h3>Communication</h3>
+        <p>Faire connaître et valoriser ces innovations.</p>
+      </div>
+      <div class="cm-axe">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Soutien</h3>
+        <p>Accompagner les projets innovants des enseignant·es.</p>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="cm-wrap">
+
+  <!-- Équipe de la plateforme -->
+  <section class="cm-sec">
+    <div class="cm-sec-head">
+      <h2>L'équipe de la plateforme</h2>
+      <span class="n">{equipe.length} membres</span>
+    </div>
+    <div class="cm-grid">
+      {equipe.map(m => (
+        <article class="cm-card" style={`--fac:${facVar(m.faculte)}`}>
+          {m.photo
+            ? <img class="cm-photo" src={m.photo} alt={m.nom} loading="lazy" />
+            : <div class="cm-photo ph">{initials(m.nom)}</div>}
+          <div class="cm-body">
+            <h3>{m.nom}</h3>
+            <p class="cm-fonction">{m.fonction}</p>
+            <div class="cm-tags">
+              {m.faculte && <span class="cm-fac">{m.faculte}</span>}
+              {m.fonctionIP && <span class="cm-role">{m.fonctionIP}</span>}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Membres de la commission -->
+  <section class="cm-sec">
+    <div class="cm-sec-head">
+      <h2>Membres de la commission (CIP)</h2>
+      <span class="n">{cip.length} membres</span>
+    </div>
+    <div class="cm-grid">
+      {cip.map(m => (
+        <article class="cm-card" style={`--fac:${facVar(m.faculte)}`}>
+          {m.photo
+            ? <img class="cm-photo" src={m.photo} alt={m.nom} loading="lazy" />
+            : <div class="cm-photo ph">{initials(m.nom)}</div>}
+          <div class="cm-body">
+            <h3>{m.nom}</h3>
+            <p class="cm-fonction">{m.fonction}</p>
+            <div class="cm-tags">
+              {m.faculte && <span class="cm-fac">{m.faculte}</span>}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+</div>
 </Base>

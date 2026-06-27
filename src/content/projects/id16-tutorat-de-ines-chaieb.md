@@ -1,15 +1,15 @@
 ﻿---
 id: 16
 title: Tutorat
-author: ""
+author: Ines Chaieb
 photo: /images/projet/Ines_Chaieb.jpg
-faculty: ""
+faculty: GSEM
 course: ""
 level: ""
-students: ""
-year: ""
-category: ""
-innovation_type: ""
+students: 50 - 100
+year: 2015
+category: Responsabiliser
+innovation_type: "Impliquer dans l'enseignement"
 observation_accepted: false
 description_short: "Dans ce cours, les étudiant-es de Master ont l'opportunité de postuler pour des projets d'assistanat, où ils/elles animent des séances d'exercices ou de questions-réponses en collaboration avec les enseignant-es et les assistant-es du cours."
 featured: false
@@ -18,17 +18,13 @@ status: actif
 
 ## Situation de départ
 
-Les cours de Bachelor sont surchargés. Afin d’améliorer la prise en charge en petits groupes des étudiant-es de Bachelor, l’équipe enseignante a ressenti le besoin de faire appel à des assistant-es. Dans une dynamique de type « gagnant-gagnant », elle a donc proposé aux étudiant-es de Master de s’investir dans l’enseignement en participant en tant qu’assistant-es aux étudiant-es de Bachelor pendant un semestre. Ce cours donne aux étudiant-es de Master en « Gestion de patrimoine » (GEMWeM) l’occasion d’apprendre et de pratiquer des tâches d’enseignement et de recherche. Les étudiant-es assument un rôle d’assistant-es d’enseignement et aident les étudiant-es de Bachelor à atteindre les objectifs d’apprentissage d’un cours.
+Les cours de Bachelor sont surchargés. Afin d’améliorer la prise en charge en petits groupes des étudiant-es de Bachelor, l’équipe enseignante a ressenti le besoin de faire appel à des assistant-es. Dans une dynamique de type « gagnant-gagnant », elle a donc proposé aux étudiant-es de Master de s’investir dans l’enseignement en participant en tant qu’assistant-es aux étudiant-es de Bachelor pendant un semestre. Ce cours donne aux étudiant-es de Master en « Gestion de patrimoine » (GEMWeM) l’occasion d’apprendre et de pratiquer des tâches d’enseignement et de recherche. Les étudiant-es assument un rôle d’assistant-es d’enseignement et aident les étudiant-es de Bachelor à atteindre les objectifs d’apprentissage d’un cours.
 
-## Mise en place
+## Mise en place et déroulement
 
 L’enseignant-e qui coordonne ce cours s’informe en début de semestre auprès de ses collègues de leur besoin d’assistanat. Ceux-ci sont présentés sous forme de projets aux étudiant-es de Master qui peuvent postuler afin d’y prendre part. En fonction de leur préférence et de leur formation préalable, les étudiant-es sont assigné-es aux enseignant-es responsables des cours. Les étudiant-es proposent et animent des séances d’exercices ou de questions-réponses sur différentes thématiques abordées en cours. Ceci se met en place en collaboration avec les assistant-es et doctorant-es du cours et l’enseignant-e qui supervisent les étudiant-es de Master.
+
 L’étudiant-e est évalué-e en fin de semestre sur la base du retour d’activité et l’appréciation globale de l’enseignant-e.
-
-## Retour et conseils
-
-Cette forme d’enseignement permet aux étudiant-es de compléter et approfondir certains aspects de leur formation en finance et leur donne l’opportunité d’enseigner à des étudiant-es moins avancé-es dans leur cursus.
-Ce type de pratique est très facile à reproduire et ne demande pas beaucoup de temps à mettre en place. Il est nécessaire de nommer une personne en charge de répertorier les besoins des enseignant-es et les candidatures des étudiant-es afin de les mettre en relation. L’équipe enseignante a un rôle d’intermédiaire entre l’enseignant-e responsable du cours et l’étudiant-e. Il est donc nécessaire de savoir se mettre en retrait.
 
 ## Avis des étudiant·es
 
@@ -38,4 +34,3 @@ Ce type de pratique est très facile à reproduire et ne demande pas beaucoup de
 > « J’ai appris à communiquer des concepts complexes aux étudiant-es (de 5 à 15 par cours). La capacité de communication qu’on apprend dans ce cours est vraiment pratique et nécessaire dans le monde professionnel. Sans compter que l’enseignement est l’une des activités les plus enrichissantes que j’ai eu le plaisir de faire dans ma vie. C’était une expérience très intéressante et enrichissante d’être de l’autre côté de la classe. »
 
 > « En résumé, je pense que ce cours m’a permis de : Revoir et maîtriser les bases ; Organiser sa compréhension du sujet en fonction des autres et s’adapter ; Présenter de la manière simplifiée des notions parfois complexes ; Rassurer les étudiant-es. »
-

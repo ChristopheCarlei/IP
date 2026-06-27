@@ -11,14 +11,19 @@ Environmental sciences are a scientific field where a problem must be understood
 ## Project implementation
 
 The main purpose of the workshop is to carry out an interdisciplinary project through a field observation called "walk-transect". Each student will explore a place by taking on a defined role with a specific disciplinary vision. Then, the students work in groups to pool the different points of interest they have identified.
+
 During the first sessions, the teacher provides the theoretical tools concerning the epistemological and methodological aspects of interdisciplinarity. Students are also introduced to the principles and tools of teamwork, as well as the basics of oral communication and constructive feedback. Students have the opportunity to reflect on interdisciplinarity and their own contribution to it, if they wish.
+
 During the following sessions, a general theme is given (e.g., the tree in the city). During a brainstorming session, the students assess their academic skills on the theme. Because of the diversity of their background (biology, politics, geography, medicine, linguistics, etc.), the skills are very diverse. The students' personal generic skills are also taken into account (creativity, knowledge of the city, conducting interviews, etc.). The students are then grouped by skills and divided into working groups of 5 to 6 students. The objective is for the students to understand the interest of these different skills and how they can be articulated within a group.
+
 Each group is then assigned a section of the route predefined by the teacher. Each member of the group then practices the "walk-transect" alone, collecting data according to the role he or she has been assigned in relation to his or her own skills, before sharing his or her observations with his or her classmates. Following this walk, the group begins to pool the different disciplinary perspectives brought by each person. Then, each group determines the problem on which it will focus and the solutions to be brought. On the last day, the group presents their project orally to the other groups, who provide constructive feedback (peer feedback using an evaluation grid).
+
 The evaluation consists of an individual reflective work on the group project (a synthesis of 800 words), the constructive feedback given by the peers, a reflection on this feedback as well as an analytical reflection on the interdisciplinary work argued and including bibliographical references.
 
 ## Thoughts and advice
 
 The teacher emphasized the importance of framing discussions about skills and helping students define them. Students must be able to be very reflective about their own discipline and to differentiate between skills and tools.
+
 It is important to value peer feedback, as some students tend to discount it in favor of teacher feedback, which can be very time consuming.
 
 ## Student feedback

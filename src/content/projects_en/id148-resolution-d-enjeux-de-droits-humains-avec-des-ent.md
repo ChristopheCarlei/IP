@@ -7,28 +7,43 @@ description_short: This project gives students the opportunity to work on concre
 ## Initial situation
 
 When creating this new course, the teaching team wanted to get students involved in practical ways by getting them to apply their theoretical knowledge to the professional world. To achieve this, the teaching team collaborates with organizations that provide students with real-life human rights issues they are facing.
+
 These issues serve as case studies on which students will be working throughout the course to deliver an output that is readily applicable for the organization. This learning method is widely used in the US, especially in law schools (“clinical legal education”).
+
 The pedagogic objective of the BHR Clinic is to facilitate learning on a content and communication level. The students gain first-hand insights into the complexity of human rights challenges, advance their analytical and problem-solving capabilities, and develop experience in project management and team leadership.
 
 ## Project implementation
 
 The teaching team begins by circulating a call for applications to companies or non-governmental organizations, asking them to submit a draft challenge for the BHR Clinic. The proposed case study must be a real issue relating to human rights in the business world. Each application is assessed by the Advisory Board of the Geneva Center for Business and Human Rights (GCBHR). The selected organisation is invited to make a donation to the BHR Clinic. Previous partners include Microsoft, Holcim and the International Code of Conduct Association (ICoCa).
+
 Once a project has been selected, it is presented in the beginning of the academic year to the students, who can then apply to take part. These projects ('Clinics') are presented as part of the 'institutional project' course, which, as an optional course, contributes 6 ECTS to the Master's degree, taken into account for the specialization in 'Sustainable Business and Human Rights'. The teaching team selects seven to ten students, based on their letter of motivation and an interview, to form the project team working on the challenge proposed by the partner.
+
 Each week, the teachers organize a seminar to discuss the research methodology, project management methods and their practical progress with the group. Workshops are also organized with the partner at key moments in the development of the project. Apart from these 'formal' phases, students are free to choose their own tools for communicating and monitoring the project. Throughout the semester, they communicate with both supervisors and the organisation to conduct interviews, prepare their research and present their results.
+
 The project is broadly divided into two phases: a research phase and an application phase. With the students working on a real, current challenge, the "Clinic" is a co-creation process.
+
 The Clinic begins with a kick-off meeting at which the organisational partner explains its challenge and expectations.
+
 In the first phase, students conduct research and interviews to develop a framework for addressing the challenge. They discuss the mid-project interim results with the partner company and other experts.
+
 In the second phase, the students draw up the final document, which proposes a concrete solution tailored to the organisation. The Clinic ends with a final workshop to present the results to the partner.
+
 For some projects, students have had the opportunity to support the implementation of their work in practice (for example, by co-facilitating a training course for Holcim or by undertaking internships at ICoCA).
+
 The format of the project deliverables depends on the partner and the challenge to be addressed. Examples include interactive human rights training for Holcim employees, a rating methodology to assess companies' social sustainability performance for ICoCA, or a white paper with risk analysis and suggested product features to counter misinformation campaigns for Microsoft.
+
 Course evaluation is summative (pass/no pass). It is largely based on the mid-project framework developed by the students based on their research (first deliverable), and on the presentation of the proposed solution to the partner which closes the project (second deliverable). Moreover, the teaching team takes into account the students’ active participation in the project meetings and their reliability in contributing to the sub-tasks. The evaluation also includes general feedback from members of the company to the teaching team as well as the students’ participation in the end-of-semester teaching evaluation and reflective work on their progress and learning.
 
 ## Thoughts and advice
 
 Unlike other university courses, students must apply to take part in this project. Students are selected for this project on the basis of a portfolio. This method ensures that we have a small sample of highly competent and motivated participants. On the partner side, the process is also competitive, with only one project selected per semester.
+
 To ensure that motivation is sustained on both sides and that the work is of a high standard, it is important that the teaching team provides ongoing support through regular meetings and availability. The aim is for the students to develop a solution with the partner organisation with the help of the teachers.
+
 Having an original case study each semester requires a particularly time-consuming job of supporting the students.In this case, asking for a financial contribution from partner companies/organisations makes it possible to fund a resource person.In the long term, the teaching team plans to be able to carry out several case studies at the same time during the same academic year.
+
 To reinforce the professionalisation of students, they receive a letter of recommendation to attest to the skills developed at the end of the project. Opening up to the world of work is also encouraged, with partner companies able to offer work placements to students so that they can continue to develop the imagined project.
+
 Eventually, the teaching team plans to open up the BHR Clinic to students from different Masters programmes in order to facilitate interdisciplinary exchanges.
 
 ## Student feedback

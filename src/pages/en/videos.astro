@@ -1,0 +1,122 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+
+// "match" = titre FR (pour retrouver le slug du projet) ; "name"/"desc" = anglais
+const videos = [
+  { yt: "m-7NmevfX8E", match: "Vidéos & questions", author: "Jérôme Kasparian", name: "Videos & questions", desc: "This project aims to provide foundations in mathematics through video capsules and to foster interactivity by asking questions during class, using a live question-and-answer platform.", award: false },
+  { yt: "ZECUQojxp_8", match: "Fiches médicales", author: "Priscilla Soulié & Monica Didier", name: "Medical fact sheets", desc: "In this self-directed project, students write fact sheets on rare diseases for a database, taking on specific roles and assessing themselves and one another.", award: true },
+  { yt: "xjChZFRmjwQ", match: "Simulations en jeu sérieux", author: "Dominique Jaccard", name: "Serious-game simulations", desc: "The teacher developed a serious game in project management so that students can concretely apply theoretical concepts, fostering better understanding and integration of the topics taught.", award: false },
+  { yt: "wqddan7BFHs", match: "SketchNote 3D", author: "Christophe Lamy & Julien DaCosta", name: "SketchNote 3D", desc: "Anatomy practicals in medicine adopted the flipped classroom with prior e-learning modules. The web tool « SketchNote 3D » was developed to annotate and visualise interactive 3D anatomical models.", award: false },
+  { yt: "wNdYR-M16ls", match: "Escape game virtuel", author: "Rita Trigo Trindade", name: "Virtual escape game", desc: "The project takes the form of an escape game: students are placed in the situation of an heiress « parachuted » into a company she wants to escape from without losing her inheritance.", award: false },
+  { yt: "GCYtPRAOQpE", match: "Reportage en direct", author: "Nicolas Szilas & Kim Le", name: "Live reporting", desc: "To share knowledge about places that are hard to access with large groups, the courses take the form of reports broadcast in real time on Zoom to FPSE students.", award: false },
+  { yt: "JSE-Lx1rQZQ", match: "Interventions formatives", author: "Simon Flandin, Léa Beaud & Rui Costa Machado", name: "Formative interventions", desc: "Speakers are invited to share their experience as people affected by a situation of vulnerability. They take an active part in teaching through a professionalising placement.", award: true },
+  { yt: "Vnm9oGKI5Pk", match: "Posters & podcasts", author: "Barbara Fouquet-Chauprade & Kristine Balslev", name: "Posters & podcasts", desc: "Students interact with external speakers, design intervention projects in response to fictional briefs, and present their proposals through posters and podcasts.", award: false },
+  { yt: "tid5PLrfH-U", match: "Improvisation théâtrale", author: "Pauline Hämmerli & colleagues", name: "Theatrical improvisation", desc: "A theoretical presentation followed by a theatrical performance of scenes highlighting sexism and aggression in the medical field, then group discussions to suggest response strategies.", award: true },
+  { yt: "bDv0r2u8k0I", match: "Jeux vidéo pédagogiques", author: "Nicolas Szilas", name: "Educational video games", desc: "This course evolved towards the hands-on design of a video game, placing students' creation at the centre of learning. Students work in groups to design, develop and evaluate a video game.", award: false },
+  { yt: "FahjppRC2X8", match: "Podcast environnemental", author: "Juliet Fall & Karine Duplan", name: "Environmental podcast", desc: "Students learn to analyse podcasts on environmental issues, then produce their own podcast in groups, putting their teamwork skills into practice.", award: true },
+  { yt: "VWzk2KIcklI", match: "Catchbox", author: "Judith Schrempf-Stirling", name: "Catchbox", desc: "The Catchbox is a portable cube-shaped microphone that students throw across the room. It encourages easy, playful speaking and active student engagement.", award: false },
+  { yt: "Qe2R0FYcaYk", match: "Film documentaire", author: "Nicolas Senn, Annie Goudeaux & Germain Poizat", name: "Documentary film", desc: "This course lets students develop documentary film projects in pairs or individually, from shooting to editing, using professional equipment.", award: false },
+  { yt: "m52TceyEOAY", match: "Exerciseur en statistiques", author: "Matthias Studer", name: "Statistics exerciser", desc: "The teacher added randomly generated practical exercises on Moodle with automatic correction, along with interpretation exercises in small groups during seminars.", award: true },
+  { yt: "jS6GCEjdnik", match: "Beekee Live", author: "Mireille Bétrancourt & Vincent Widmer", name: "Beekee Live", desc: "Beekee Live is an online tool that lets students share and discuss their work without creating an account or installing an app, easing collaboration and assessment.", award: false },
+  { yt: "V1gSANVW4yc", match: "Projet institutionnel", author: "Marcel Paulssen", name: "Institutional project", desc: "This course gives students the opportunity to work cooperatively with faculty members on projects related to event organisation, university development or research.", award: true },
+  { yt: "6QlAQePPAGI", match: "Vidéo & pratique", author: "Valérie Lussi Borer", name: "Video & practice", desc: "This course promotes caring, formative peer exchange. Students film themselves during their professional practice and the video sequences are objectively analysed and assessed at each stage.", award: false },
+  { yt: "523U2N1wEQE", match: "Projet responsable", author: "Michelle Bergadaà", name: "Responsible project", desc: "This course teaches the fundamental principles of project management. Students run a group project in partnership with an NGO working in education in disadvantaged countries.", award: false },
+];
+
+const norm = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/&/g, ' et ').replace(/[^a-z0-9]+/g, ' ').trim();
+const bySlug = new Map(allProjects.map(p => [norm(p.data.title ?? ''), p.slug]));
+const videosWithSlug = videos.map(v => ({ ...v, slug: bySlug.get(norm(v.match)) ?? null }));
+---
+<Base title="Video promotion" lang="en">
+<style>
+.vid-hero{background:#fff;border-bottom:1px solid var(--line)}
+.vid-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.vid-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.vid-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.vid-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
+.vid-hero p{color:var(--muted);font-size:17px;line-height:1.65;max-width:64ch;margin:20px 0 0}
+.vid-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0}
+.vid-count{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin:0 0 24px}
+.vid-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.vid-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+.vid-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px -8px rgba(16,24,40,.28)}
+.vid-frame{position:relative;aspect-ratio:16/9;background:#000;cursor:pointer;overflow:hidden}
+.vid-frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s,opacity .2s}
+.vid-frame:hover img{transform:scale(1.04);opacity:.85}
+.vid-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.vid-play svg{width:62px;height:62px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));transition:transform .2s}
+.vid-frame:hover .vid-play svg{transform:scale(1.1)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-award{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(45deg,#ffcb00,#ca8404);color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.35);display:inline-flex;align-items:center;gap:4px}
+.vid-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.vid-body h2{font-size:17px;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin:0 0 4px;line-height:1.25}
+.vid-author{font-size:13px;font-weight:700;color:var(--rose);margin:0 0 10px}
+.vid-desc{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.vid-link{margin-top:auto;font-size:13.5px;font-weight:700;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.vid-link:hover{color:var(--rose-deep)}
+@media(max-width:640px){.vid-grid{grid-template-columns:1fr}}
+</style>
+
+<div class="vid-hero">
+  <div class="vid-hero-inner">
+    <span class="vid-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
+    <h1>Promotional<span class="sub">videos</span></h1>
+    <p>
+      We regularly produce videos to further highlight innovative projects. Browse them to
+      discover projects in pictures, commented by the teachers, students and teaching
+      assistants of the courses.
+    </p>
+  </div>
+</div>
+
+<div class="vid-wrap">
+  <p class="vid-count">Videos produced by the team — {videosWithSlug.length} projects</p>
+
+  <div class="vid-grid">
+    {videosWithSlug.map(v => (
+      <div class="vid-card">
+        <div class="vid-frame" data-yt={v.yt} role="button" tabindex="0" aria-label={`Play the video: ${v.name}`}>
+          {v.award && (
+            <span class="vid-award">
+              <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 19.8 6.9 17 8 11.4 3.8 7.6l5.6-.6z"/></svg>
+              Award
+            </span>
+          )}
+          <img src={`https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg`} alt={v.name} loading="lazy" />
+          <span class="vid-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48"><path d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.2 0 34 0 34 0S12.8 0 7.5 1.6a8.6 8.6 0 0 0-6 6A90 90 0 0 0 0 24a90 90 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.8 48 34 48 34 48s21.2 0 26.5-1.6a8.6 8.6 0 0 0 6-6A90 90 0 0 0 68 24a90 90 0 0 0-1.5-16.3z" fill="#f00"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+          </span>
+        </div>
+        <div class="vid-body">
+          <h2>{v.name}</h2>
+          <p class="vid-author">{v.author}</p>
+          <p class="vid-desc">{v.desc}</p>
+          {v.slug && <a class="vid-link" href={`/projets/${v.slug}`}>See the project →</a>}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.vid-frame').forEach(frame => {
+    const load = () => {
+      const id = frame.dataset.yt;
+      if (!id || frame.querySelector('iframe')) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.title = 'Video';
+      frame.appendChild(iframe);
+    };
+    frame.addEventListener('click', load);
+    frame.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); }
+    });
+  });
+</script>
+</Base>

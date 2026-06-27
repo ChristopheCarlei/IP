@@ -11,14 +11,19 @@ The overall goal of the project is to meet the specialized training needs of juv
 ## Project implementation
 
 This training combines scientific knowledge with intervention practices with children and adolescents in conflict or in contact with the law. It aims to improve the intervention strategies of professionals and to create an international network of expertise and experience shared between practitioners from different countries.
+
 It takes place over a period of 12 months and includes 4 thematic modules and 1 module dedicated to the final work. Each module lasts 7 weeks and the first module includes an additional week of introduction. It includes different forms of online teaching and learning: virtual teaching, online activities (discussion forums), personal reading, research and writing of the final paper.
+
 The filmed courses are designed and facilitated by internationally renowned university professors, experts and practitioners in the field of children's rights and juvenile justice. Learners therefore have access to expertise from around the world.
+
 Learners are organized into groups managed by tutors for the duration of the training. They accompany a group of learners by facilitating forums, assessing their participation in the modules and conducting the initial assessment of the end-of-module and final paper. Each tutor not only has experience in training at the university level but has also worked in the field of juvenile justice.
 
 ## Thoughts and advice
 
 The learners' evaluations were used to adapt the modules for the first edition and also to adapt the content of the training for the second edition. This allowed, among other things, to go more in depth on certain themes or to introduce new speakers or new articles according to the developments in the field.
+
 Despite the fact that some students, especially during the first edition, had more difficulties with this course format and felt isolated, the tutoring was reinforced as well as the follow-up from the coordination for an exchange of complementary information via email.
+
 Overall, learners found the group discussions so stimulating and enriching that they expressed a desire to stay in touch after the course. With this in mind, a network of alumni is being created, notably through the creation of a space for the exchange of good practices and development in the field of Restorative Juvenile Justice. It is planned to develop a tool to measure the political impact and set indicators of practices and jurisprudence in the short term and of changes in laws in the long term. In addition, the final papers have been published on the university's website to ensure dissemination and sharing of expertise in the field.
 
 ## Student feedback

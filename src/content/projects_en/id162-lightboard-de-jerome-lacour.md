@@ -11,16 +11,24 @@ The Organic Chemistry course is a compulsory basic course for students in their 
 ## Project implementation
 
 This course takes the form of lectures only, with no tutorials or practical work. To capture students' attention and encourage engagement, the teacher regularly uses Pingo software, which enables him to propose interactive MCQs at the end of each chapter. To encourage interaction, there is also a question period during the break and after each lesson; the most pertinent questions are taken up again at the start of the next lesson.
+
 The teacher has chosen a relatively old textbook, as new versions add too much non-essential content at the level expected of students. The manual has its limitations: it contains many exercises of varying levels, but very few answer. Although an answer book exists, the number of copies available is limited, and the book, in English only, is not available on lending, which limits its accessibility.
+
 The teacher has made up for this shortcoming by setting up a system that energizes these exercises too. Every Wednesday, after class, 10-12 optional exercises are published on Moodle. Students have until the following Monday to choose and vote for the exercises they would like to see corrected. This approach encourages students to explore the exercises by reading the statements and selecting those that seem most relevant or complex.
+
 Each week, the teacher corrects four to five selected exercises, in the form of short videos lasting around five minutes. These videos are produced using a lightboard, a backlit transparent glass board. Thanks to this device, the teacher can write on the board with fluorescent markers while still facing the camera, thus offering an oral and visual explanation. The image is then digitally inverted so that the text appears legible to the students. These short videos follow a structured, progressive method: identification of the problem, reminder of the associated theoretical concepts, presentation of the scientific problem and progressive resolution of the exercise.
+
 The course is assessed by a single final exam at the end of the year. Lasting three hours, this exam comprises 60 multiple-choice questions, including 14 Kprime-type questions and 46 standard questions. A practice test of 30 questions is scheduled at the end of the semester to prepare students. In addition, between three and four exercise sessions (approximately six hours) are offered during the semester to reinforce understanding and mastery of key concepts.
 
 ## Thoughts and advice
 
 The lightboard will be made available to the whole university once the test phase has been validated. To ensure optimum use of the lightboard, please contact the Science department's audiovisual services for technical advice and support. The teacher recommends taking the time to get to grips with the technique, by carrying out several trials.
+
 In terms of discourse, the teacher advises not to over-prepare your text, and to favor spontaneity in your explanations, to show real-time thinking, logical connections and reasoning. Accepting mistakes and correcting them live allows students to understand the difficulties encountered, identify potential pitfalls and see that the exercise is not always obvious. Too rigid a script would make the video less dynamic and less engaging. It's important to alternate writing phases with moments of oral explanation.
+
 From a technical point of view, there are several aspects to consider. Dark clothing is recommended to maximize contrast with the painting. Particular attention should be paid to the colors of the pens used: favor those that stand out best, such as green and orange. The teacher should write slightly offset from his or her body, so as not to obscure the content. For example, a right-handed teacher, if the video format allows it, should take care, even if it's counter-intuitive, to fill in the right-hand part of the board first. This makes it easy to see both the written content and the teacher not yet covered by the previous entries.
+
 In terms of format, videos should be kept short, ideally between 5 and 10 minutes, which corresponds to full use of the transparent board.
+
 The teacher draws attention to the fact that video preparation and recording take time: about two hours are needed for 4 to 5 exercises, but this effort represents a lasting investment for subsequent years. However, it is best to avoid long recording sessions (90 to 120 minutes maximum) to limit fatigue and maintain the quality of the work. It's also essential to anticipate the post-production phase, as editing and uploading videos to mediaserver can be time-consuming.
 

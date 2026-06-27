@@ -1,0 +1,143 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const EMBED = 'https://player.vod2.infomaniak.com/embed/';
+
+const enseignants = [
+  { id: '1jijk03u4049g', titre: 'Policy brief', auteur: 'Jorg Balsiger', faculte: 'SDS', type: 'On-camera interview', desc: "This capsule is part of a series of 4 videos explaining how to produce a policy brief for Master's students in Social Sciences (SDS)." },
+  { id: '1jijk03u403km', titre: 'Translation practice', auteur: 'Gabrielle Rivier', faculte: 'FTI', type: 'On-camera interview', desc: "This capsule is part of a series of 2 videos illustrating translation practice for students of the Faculty of Translation and Interpreting (FTI)." },
+  { id: '1jijk03u404u6', titre: 'Psychotherapy', auteur: 'Gabriel Thorens', faculte: 'Médecine', type: 'Therapy session', desc: "This capsule is part of a series of 3 ecological videos illustrating three forms of clinical interviews for Master's students in medicine." },
+  { id: '1jijk03u40517', titre: 'Clinical history-taking', auteur: 'Heidi Cleverley', faculte: 'Médecine', type: 'Medical interview', desc: "This capsule is part of a series of 5 ecological videos illustrating five types of complaints for medical students." },
+  { id: '1jijk03u406rl', titre: 'Emotions in school learning', auteur: 'David Sander', faculte: 'FPSE', type: 'Green-screen overlay', desc: "Extract from a series of 5 lectures filmed on a green screen for teachers of the Department of Public Education (DIP)." },
+  { id: '1jijk03u3zewd', titre: 'Biography of a wax cast', auteur: 'Alexandre Wenger', faculte: 'Médecine', type: 'Documentary filming', desc: "This documentary was produced for the Faculty of Medicine, filmed at the University Medical Centre, the Geneva Museum of the History of Science and the Cast Museum in Zurich." },
+  { id: '1jijk03u4058f', titre: 'Biology & Sexuality', auteur: 'Céline Brockmann', faculte: 'Médecine', type: 'E-learning presentation', desc: "This capsule introduces the contents of the online course « Biology & Sexuality »: several speakers present the topics covered and how they are approached." },
+  { id: '1jijk03u40789', titre: 'Doctoral support', auteur: 'Christophe Carlei', faculte: 'SEA', type: 'Presentation & animation', desc: "Video that is part of a broader training programme for PhD students at the University of Geneva, alternating on-camera segments and visual animations." },
+];
+
+const etudiants = [
+  { id: '1jijk03u408ru', titre: "Of waste and buoys: at the heart of the Rhône's life", auteur: 'Mathilde Foehr, Charlotte Langel and Lisa Mol', faculte: 'SDS', type: 'Documentary film', desc: "Documentary produced as part of a course for Master's students in Social Sciences." },
+  { id: '1jijk03u4094s', titre: 'The colour of the walls', auteur: 'Jasmine Miles & Laetitia Keller', faculte: 'FPSE', type: 'Documentary film', desc: "Documentary produced as part of a course for Master's students at the Faculty of Psychology and Educational Sciences (FPSE)." },
+];
+
+function facVar(f: string): string {
+  const x = f.toUpperCase();
+  if (x.includes('FPSE')) return 'var(--fac-fapse)';
+  if (x.includes('GSEM')) return 'var(--fac-gsem)';
+  if (x.includes('FTI'))  return 'var(--fac-fti)';
+  if (x.includes('MÉD') || x.includes('MED')) return 'var(--fac-medecine)';
+  if (x.includes('SDS'))  return 'var(--fac-sds)';
+  if (x.includes('LETTR')) return 'var(--fac-lettres)';
+  if (x.includes('DROIT')) return 'var(--fac-droit)';
+  if (x.includes('SCIEN')) return 'var(--fac-sciences)';
+  return 'var(--rose)';
+}
+---
+<Base title="Pedagogical support" lang="en">
+<style>
+.so-hero{background:#fff;border-bottom:1px solid var(--line)}
+.so-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.so-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.so-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.so-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
+.so-hero p{color:var(--muted);font-size:17px;line-height:1.65;max-width:66ch;margin:20px 0 0}
+.so-hero .cta{margin-top:24px}
+.so-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0}
+.so-sec + .so-sec{margin-top:56px}
+.so-sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 24px;flex-wrap:wrap}
+.so-sec-head h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:0}
+.so-sec-head .n{font-size:13px;font-weight:800;color:var(--rose);background:var(--bg-rose);padding:3px 10px;border-radius:999px}
+.so-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px}
+.so-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.so-frame{position:relative;aspect-ratio:16/9;background:#000}
+.so-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.so-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.so-body h3{font-size:16.5px;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin:0 0 6px;line-height:1.25}
+.so-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 10px}
+.so-author{font-size:13px;font-weight:700;color:var(--muted)}
+.so-fac{font-size:11px;font-weight:800;color:#fff;background:var(--fac,var(--rose));padding:2px 9px;border-radius:999px}
+.so-type{font-size:11px;font-weight:700;color:var(--rose-deep);background:var(--bg-rose);padding:2px 9px;border-radius:999px}
+.so-desc{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.so-contact{margin-top:56px;background:var(--ink);border-radius:var(--radius);padding:clamp(28px,4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.so-contact h3{font-size:clamp(20px,2.4vw,26px);font-weight:800;color:#fff;margin:0 0 6px;letter-spacing:-.01em}
+.so-contact p{color:rgba(255,255,255,.7);font-size:15px;margin:0;max-width:52ch}
+.so-contact .btn{flex-shrink:0}
+@media(max-width:640px){.so-grid{grid-template-columns:1fr}}
+</style>
+
+<div class="so-hero">
+  <div class="so-hero-inner">
+    <span class="so-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
+    <h1>Pedagogical<span class="sub">support</span></h1>
+    <p>
+      We support teaching teams and their students in the creation of educational videos and
+      learning spaces. Our team can be called upon internally on request. Below are concrete
+      examples of productions we have created.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:sea@unige.ch">Talk about your project</a>
+    </div>
+  </div>
+</div>
+
+<div class="so-wrap">
+
+  <section class="so-sec">
+    <div class="so-sec-head">
+      <h2>Support for teachers</h2>
+      <span class="n">{enseignants.length} productions</span>
+    </div>
+    <div class="so-grid">
+      {enseignants.map(v => (
+        <article class="so-card">
+          <div class="so-frame">
+            <iframe src={`${EMBED}${v.id}`} title={v.titre} allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="so-body">
+            <h3>{v.titre}</h3>
+            <div class="so-meta">
+              <span class="so-author">{v.auteur}</span>
+              <span class="so-fac" style={`--fac:${facVar(v.faculte)}`}>{v.faculte}</span>
+              <span class="so-type">{v.type}</span>
+            </div>
+            <p class="so-desc">{v.desc}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="so-sec">
+    <div class="so-sec-head">
+      <h2>Support for students</h2>
+      <span class="n">{etudiants.length} productions</span>
+    </div>
+    <div class="so-grid">
+      {etudiants.map(v => (
+        <article class="so-card">
+          <div class="so-frame">
+            <iframe src={`${EMBED}${v.id}`} title={v.titre} allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="so-body">
+            <h3>{v.titre}</h3>
+            <div class="so-meta">
+              <span class="so-author">{v.auteur}</span>
+              <span class="so-fac" style={`--fac:${facVar(v.faculte)}`}>{v.faculte}</span>
+              <span class="so-type">{v.type}</span>
+            </div>
+            <p class="so-desc">{v.desc}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <div class="so-contact">
+    <div>
+      <h3>Have a pedagogical project in mind?</h3>
+      <p>Our team supports you in designing and producing your videos and learning spaces.</p>
+    </div>
+    <a class="btn primary" href="mailto:sea@unige.ch">Contact the SEA Pole</a>
+  </div>
+
+</div>
+</Base>

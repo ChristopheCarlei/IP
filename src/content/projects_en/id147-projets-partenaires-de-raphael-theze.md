@@ -7,25 +7,37 @@ description_short: "The Partner Projects Program set up by the UNIGE Rector's Of
 ## Initial situation
 
 To support the transformation of the University, the Rector's Office wanted to strengthen the community's contribution and its members' commitment to the institution, by enabling them to propose projects in which students, teachers and staff could participate and become actively involved.
+
 Based on existing forms of partnership projects in other structures (Students as Pateners in Anglo-Saxon universities, “Patients Partenaires” at the HUG, etc.), the manager set up the Partner Projects Program (P3). The aim, particularly with students, is to encourage their potential for creativity, learning and innovation in projects run by the institution.
 
 ## Project implementation
 
 Twice a year, a call for projects is sent out to students and staff at the University of Geneva. Any member of the community can submit a project idea via an online form on the dedicated website. Students, however, must already have found a partner (collaborator) to submit a project.
+
 Around ten projects are submitted for each call and are then evaluated by a selection committee. To be eligible, the project must concern a transformation (e.g. an improvement in a service or tool) at the University and must benefit the community (cannot benefit a research laboratory exclusively). There is a set of seven criteria for evaluating projects. They are designed to ensure that very concrete community issues are brought to the fore, while at the same time ensuring that the project is compatible with the institution and the P3 specifications.
+
 The selected projects are published on a website, where students can consult them and then submit, via a form, their applications for three projects in order of preference. Once the applications are closed, a matching process is carried out to ensure maximum satisfaction. As the aim of P3 is to enable learning, and to encourage an interdisciplinary mix, prior training or skills are not taken into account as a priority, except in the particular case of a project requiring a prior skill that it is not possible to acquire within the timeframe allotted to the project.
+
 At least one collaborator and one student partner, one of whom is responsible for a project, are required for the project to be launched. The groups get to know each other at the beginning of the semester during a welcome session. Each project also has a contact person who is external to the project. This person is responsible for monitoring the project throughout the semester but is not involved in its management. They can be contacted at any time for support.
+
 The project is carried out independently by the members. The program provides an ethical framework, resources (e.g. documents, coaching, training workshops or finance) and opportunities to meet. The investment of each member is free to encourage autonomy, however, an indicative number of minimum and maximum hours to be provided is transmitted. Project support is therefore primarily structural.
+
 At mid-semester (or end of semester for longer projects), all projects are assessed qualitatively through an informal meeting lasting around 1 hour. The interview ends with a standardized questionnaire, which is used to summarize the interview, assess the project's progress and identify any problems. The interview provides an opportunity to offer moderation or expertise. In addition, participants provide joint and individual feedback on their personal experience via a form.
+
 At the end of the semester, using a template provided, the partners complete an activity report outlining the various stages of the project's construction, the challenges encountered, and the learning achieved. In addition, each participant receives an official certificate that can be used in a CV or, for students, with their faculty to obtain ECTS credits. The certificate attests to the skills and knowledge acquired.
+
 The experience concludes with the obligation to present their project publicly at the "Demain, l'UNIGE" event, which showcases the community's collaborative commitment and during which other collective intelligence projects are invited to participate.
+
 Completed projects are supported in their deployment, wherever possible. Follow-up is also carried out at six months and one year to assess partners' progress beyond the program. Finally, to reinforce mutual learning and maintain active commitment, partners who have successfully completed a project are invited to join the P3 community over the long term, notably by participating in project selection committees for new editions.
 
 ## Thoughts and advice
 
 The main point of concern in carrying out this project is the workload for the partners. As the work is carried out outside the framework of a course with precise timetables, the partners often allow themselves to be overloaded, or overestimate their ability to complete certain tasks within certain deadlines. That's why support is crucial, to ensure that the partners are not left to their own devices, at the risk of the project stagnating or becoming dispersed.
+
 Still at the level of implementation, it's important to ensure that everyone has a certain intellectual freedom, and to create a bond of trust with the partners, so that they can express themselves through their project. By doing something concrete and useful, often by solving a problem, students gain confidence. The institutional partner discovers and learns at the same time, in a process of co-construction that enforces the legitimacy of what the student can contribute.
+
 Once developed, projects can take different directions. Related projects can support each other and merge to find mutual solutions. Competent departments may be asked to take over part of the work carried out, if a dossier has been drawn up it is circulated, and sometimes the student partner is taken on as an intern.
+
 P3 is highly transferable. For example, for courses in a curriculum based on project-based teaching, students can submit a project for continuation through the P3. Conversely, a project developed via P3 can be taken up again in this type of course and be the subject of credit validation. From a development perspective, P3 is keen to work actively with faculties to integrate the program into their curricula. Ideally, the possibility of obtaining free credits through participation in this type of project should be included in the study regulations.
 
 ## Student feedback

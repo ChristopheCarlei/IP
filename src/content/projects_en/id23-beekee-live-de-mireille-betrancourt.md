@@ -11,9 +11,13 @@ In the user-centered design and usability course, the emphasis is on putting stu
 ## Project implementation
 
 The teachers' wish is to value the students' production by allowing them to share their work and to use it as a support for discussions. For this, a simple tool was needed that could be used by all students without wasting time. The teachers decided to use Beekee Live, a kind of mini social network controlled by the teacher, which allows to create an online collaborative space, to share photos, files or text with a smartphone or a computer. By transmitting the access code of the space, each student can connect to it without having to create an account or install an application.
+
 This tool is used at the end of each activity to share the students' productions throughout the year. Students are encouraged to share their productions and to consult those of their colleagues, adding comments if they wish. The teacher also goes through the productions to evaluate the students' understanding and to come back to the interesting or misunderstood elements.
+
 Thoughts and advice on implementing a similar project
+
 Making each student's work visible encourages their involvement and motivates them to participate. Students are willing and interested in the work of their colleagues. The ease of use of the platform for the teacher and students allows them to focus on the content rather than the technical aspect.
+
 It is necessary to plan to create categories in advance to classify students' publications (e.g., "Exercise 1"). Do not hesitate to ask students to use their smartphones to photograph and share paper-and-pencil exercises. When working on a computer, students can be asked to share a screenshot of their work.
 
 ## Student feedback

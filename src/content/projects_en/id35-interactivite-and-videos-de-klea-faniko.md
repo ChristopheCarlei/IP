@@ -11,10 +11,15 @@ This project was set up to promote interaction with and between students during 
 ## Project implementation
 
 The project is based on the use of several interactive digital platforms, encouraging each student to become involved in the course. Some of the participation modalities were used by all students during the course and others by smaller groups of students involved in optional projects.
+
 For all students.
+
 First of all, the Kahoot application is used multiple times during the lectures to provide quizzes and show examples of MCQs, allowing students to practice for the exam. These short exercises give students the opportunity to self-assess and be better prepared for the exam format. The Padlet application allows students to post their opinions or examples on a virtual wall, anonymously, allowing the teacher to have an overview of the students' proposals, and to give general feedback on what has been said.
+
 For smaller groups of students.
+
 Two ways of participation (optional) have been proposed. The first one consists in the realization of video clips of popularization and sensitization on one of the themes discussed in the course. The second offers students the opportunity to prepare and ask questions to guest speakers invited to participate in round table discussions during the course. These projects have encouraged students to get involved and to develop cross-curricular skills such as video editing and writing.
+
 The use of these digital tools not only allowed all the students to participate without having to speak in public, but also to bring a playful aspect to the course, which is essential to arouse the students' interest and reinforce their motivation.
 
 ## Thoughts and advice

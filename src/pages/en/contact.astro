@@ -1,0 +1,119 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const equipe = [
+  { nom: "Mallory Schaub", fonction: "Head of unit", role: "Steering committee", photo: "/images/equipe/mallory-schaub.jpg" },
+  { nom: "Patrick Roth", fonction: "Software developer", role: "Steering committee", photo: "/images/equipe/patrick-roth.jpg" },
+  { nom: "Christophe Carlei", fonction: "Scientific officer", role: "Project lead", photo: "/images/equipe/christophe-carlei.jpg" },
+  { nom: "Lucie Colpaert", fonction: "Secretary", role: "Project writer", photo: "/images/equipe/lucie-colpaert.jpg" },
+  { nom: "Julien Da Costa", fonction: "Scientific officer", role: "Developer & designer", photo: "/images/equipe/julien-da-costa.jpg" },
+  { nom: "Alexandre Bourquin", fonction: "Production technician", role: "Photographer", photo: "/images/equipe/alexandre-bourquin.jpg" },
+  { nom: "Vjollca Ahmeti", fonction: "Organizer", role: "Award coordinator", photo: "/images/equipe/vjollca-ahmeti.jpg" },
+];
+const initials = (n: string) => n.split(' ').slice(0, 2).map(s => s[0] ?? '').join('').toUpperCase();
+---
+<Base title="Contact" lang="en">
+<style>
+.ct-hero{background:#fff;border-bottom:1px solid var(--line)}
+.ct-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.ct-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.ct-hero h1{font-size:clamp(36px,4.6vw,60px);line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.ct-hero h1 .sub{display:block;font-weight:300;color:var(--muted);font-size:.64em}
+.ct-hero p{color:var(--muted);font-size:16.5px;line-height:1.7;max-width:72ch;margin:18px 0 0}
+.ct-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0}
+.ct-top{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-bottom:clamp(40px,5vw,60px)}
+.ct-cta{background:var(--ink);border-radius:var(--radius);padding:clamp(28px,4vw,40px);color:#fff}
+.ct-cta h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;margin:0 0 12px}
+.ct-cta p{color:rgba(255,255,255,.72);font-size:15px;line-height:1.7;margin:0 0 14px;max-width:52ch}
+.ct-cta .btn{margin-top:8px}
+.ct-info{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,3vw,32px);box-shadow:var(--shadow)}
+.ct-info h3{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin:0 0 18px}
+.ct-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px}
+.ct-row:last-child{margin-bottom:0}
+.ct-row .ic{width:38px;height:38px;border-radius:10px;background:var(--bg-rose);color:var(--rose-deep);display:grid;place-items:center;flex-shrink:0}
+.ct-row .ic svg{width:19px;height:19px}
+.ct-row .lbl{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);margin-bottom:2px}
+.ct-row .val{font-size:14.5px;color:var(--ink);font-weight:600;line-height:1.45}
+.ct-row a.val{color:var(--rose);text-decoration:none}
+.ct-row a.val:hover{text-decoration:underline}
+.ct-sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 24px;flex-wrap:wrap}
+.ct-sec-head h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:0}
+.ct-sec-head .n{font-size:13px;font-weight:800;color:var(--rose);background:var(--bg-rose);padding:3px 10px;border-radius:999px}
+.ct-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px}
+.ct-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);text-align:center}
+.ct-photo{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 20%;display:block;background:var(--rose)}
+.ct-photo.ph{display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:800;color:rgba(255,255,255,.4)}
+.ct-body{padding:14px}
+.ct-body h3{font-size:15px;font-weight:800;color:var(--ink);margin:0 0 3px}
+.ct-body .fn{font-size:12.5px;color:var(--muted);margin:0 0 8px;line-height:1.4}
+.ct-body .role{font-size:10.5px;font-weight:700;color:var(--rose-deep);background:var(--bg-rose);padding:2px 9px;border-radius:999px;display:inline-block}
+@media(max-width:760px){.ct-top{grid-template-columns:1fr}}
+@media(max-width:520px){.ct-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+<div class="ct-hero">
+  <div class="ct-hero-inner">
+    <span class="ct-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
+    <h1>Contact<span class="sub">Pedagogical innovations team</span></h1>
+    <p>
+      The implementation of this platform was made possible thanks to the alliance between
+      technical and pedagogical skills. Each project listed was the subject of an interview
+      (~1 hour) with the teachers in charge and can be updated at any time. Here are the people
+      who have contributed and who feed this platform.
+    </p>
+  </div>
+</div>
+
+<div class="ct-wrap">
+
+  <div class="ct-top">
+    <div class="ct-cta">
+      <h2>Add your project</h2>
+      <p>
+        Do you also innovate in your teaching? Contact us to submit your innovation project
+        for publication on the platform. If you are a member of the University of Geneva, we
+        will take care of the writing after a short interview with you!
+      </p>
+      <a class="btn primary" href="mailto:sea@unige.ch?subject=Pedagogical%20innovation%20project%20proposal">
+        Contact us
+      </a>
+    </div>
+
+    <div class="ct-info">
+      <h3>Contact details</h3>
+      <div class="ct-row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg></span>
+        <div><div class="lbl">E-mail</div><a class="val" href="mailto:sea@unige.ch">sea@unige.ch</a></div>
+      </div>
+      <div class="ct-row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div><div class="lbl">Address</div><div class="val">SEA Pole — University of Geneva<br/>24 rue du Général-Dufour<br/>1211 Geneva 4</div></div>
+      </div>
+      <div class="ct-row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <div><div class="lbl">Phone</div><a class="val" href="tel:+41223797111">+41 (0)22 379 71 11</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ct-sec-head">
+    <h2>The platform team</h2>
+    <span class="n">{equipe.length} members</span>
+  </div>
+  <div class="ct-grid">
+    {equipe.map(m => (
+      <article class="ct-card">
+        {m.photo
+          ? <img class="ct-photo" src={m.photo} alt={m.nom} loading="lazy" />
+          : <div class="ct-photo ph">{initials(m.nom)}</div>}
+        <div class="ct-body">
+          <h3>{m.nom}</h3>
+          <p class="fn">{m.fonction}</p>
+          <span class="role">{m.role}</span>
+        </div>
+      </article>
+    ))}
+  </div>
+
+</div>
+</Base>
