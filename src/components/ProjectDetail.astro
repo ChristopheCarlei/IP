@@ -57,6 +57,22 @@ const L = lang === 'en' ? {
   obsTitle:'Observation entre pairs', obsText:'Cet·te enseignant·e accepte que des collègues observent son cours.',
   obsLink:'En savoir plus →', obsHref:'/observation',
 };
+
+// Traduction des valeurs (affichage EN) — la valeur FR reste pour la logique couleur/image
+const CAT_EN: Record<string,string> = {
+  'Préparer':'Prepare', 'Rendre actifs':'Engage', 'Responsabiliser':'Make responsible', 'Faire créer':'Create',
+};
+const INNOV_EN: Record<string,string> = {
+  'Donner la parole':'Give a voice', 'Démontrer':'Demonstrate', 'Développer des compétences':'Develop skills',
+  'Exposer des cas pratiques':'Present case studies', 'Faire collaborer':'Foster collaboration',
+  'Faire conceptualiser un projet':'Have students conceptualise a project', 'Faire gérer un projet':'Have students manage a project',
+  'Faire réagir':'Prompt reactions', 'Faire réaliser une production originale':'Have students create an original production',
+  'Faire voter':'Run votes', "Impliquer dans l'enseignement":'Involve in teaching', 'Impliquer dans la Recherche':'Involve in research',
+  'Questionner':'Question', 'Simuler une situation':'Simulate a situation',
+};
+const trCat    = (v?: string | null) => !v ? v : (lang === 'en' ? (CAT_EN[v] ?? v) : v);
+const trInnov  = (v?: string | null) => !v ? v : (lang === 'en' ? (INNOV_EN[v] ?? v) : v);
+const trStud   = (v?: string | null) => !v ? v : (lang === 'en' ? v.replace('Moins de','Under').replace(/Sup[ée]rieur à/,'Over').replace('Plus de','Over') : v);
 ---
 <style>
 .crumb-bar{background:var(--bg-soft);border-bottom:1px solid var(--line)}
@@ -227,7 +243,7 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
       {d.author && <p class="author-main">{d.author}</p>}
       {d.team   && <p class="author-team">{d.team}</p>}
       <div class="tagrow">
-        {d.category && <span class="tag axe">{d.category}</span>}
+        {d.category && <span class="tag axe">{trCat(d.category)}</span>}
         {d.award && (
           <span class="tag prix">
             <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
@@ -300,7 +316,7 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
         </svg>
-        <div><div class="fi-label">{L.area}</div><div class="fi-val">{d.category}</div></div>
+        <div><div class="fi-label">{L.area}</div><div class="fi-val">{trCat(d.category)}</div></div>
       </div>
     )}
     {d.innovation_type && (
@@ -308,7 +324,7 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/>
         </svg>
-        <div><div class="fi-label">{L.innovationType}</div><div class="fi-val">{d.innovation_type}</div></div>
+        <div><div class="fi-label">{L.innovationType}</div><div class="fi-val">{trInnov(d.innovation_type)}</div></div>
       </div>
     )}
     {d.students && (
@@ -317,7 +333,7 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
           <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
-        <div><div class="fi-label">{L.students}</div><div class="fi-val">{d.students}</div></div>
+        <div><div class="fi-label">{L.students}</div><div class="fi-val">{trStud(d.students)}</div></div>
       </div>
     )}
   </div>
