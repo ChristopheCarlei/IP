@@ -16,7 +16,7 @@ description_short: "En utilisant des méthodes d'apprentissage par projet, les �
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/223040
+  - https://mediaserver.unige.ch/proxy/223040/VN5-24b3-05-23.mp4
 ---
 
 ## Situation de départ

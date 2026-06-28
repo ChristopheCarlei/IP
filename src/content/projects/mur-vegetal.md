@@ -15,7 +15,7 @@ description_short: "Ce projet comprend des activités pédagogiques telles qu'un
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/241821
+  - https://mediaserver.unige.ch/proxy/241821/Gr4LIjlt3wHQzdD5.mp4
 images:
   - /images/gallery/proj-81-1.png
   - /images/gallery/proj-81-2.png

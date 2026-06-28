@@ -3,8 +3,8 @@ id: 162
 title: Lightboard of Jérôme Lacour
 description_short: The teacher uses a lightboard, a transparent glass board backlit with fluorescent markers, to correct exercises while filming himself facing the camera, enabling him to write while remaining visible to the students.
 videos:
-  - https://mediaserver.unige.ch/embed/243758
-  - https://mediaserver.unige.ch/embed/243757
+  - https://mediaserver.unige.ch/proxy/243758/nhrsFHWBnmg0VsLl.mp4
+  - https://mediaserver.unige.ch/proxy/243757/o7YVnexRj4CIBP85.mp4
 images:
   - /images/gallery/proj-162-1.jpg
   - /images/gallery/proj-162-2.jpg

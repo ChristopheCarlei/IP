@@ -16,7 +16,7 @@ description_short: "Un scanner haute résolution a été utilisé pour numérise
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/215784
+  - https://mediaserver.unige.ch/proxy/215784/VN5-5255-03-14.mp4
 ---
 
 ## Situation de départ

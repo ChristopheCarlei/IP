@@ -17,8 +17,8 @@ description_short: L’enseignant utilise un lightboard, un tableau en verre tra
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/243758
-  - https://mediaserver.unige.ch/embed/243757
+  - https://mediaserver.unige.ch/proxy/243758/nhrsFHWBnmg0VsLl.mp4
+  - https://mediaserver.unige.ch/proxy/243757/o7YVnexRj4CIBP85.mp4
 images:
   - /images/gallery/proj-162-1.jpg
   - /images/gallery/proj-162-2.jpg

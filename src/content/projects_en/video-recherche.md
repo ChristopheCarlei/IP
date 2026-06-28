@@ -3,8 +3,8 @@ id: 59
 title: Research video of Rovena Troqe
 description_short: In this course, students have the opportunity to create videos to present their research work. This optional option allows them to present their case study in 5 minutes maximum, addressing the problem, the method, the motivation and the problems encountered.
 videos:
-  - https://mediaserver.unige.ch/embed/215790
-  - https://mediaserver.unige.ch/embed/215791
+  - https://mediaserver.unige.ch/proxy/215790/VN5-5255-03-14-A.mp4
+  - https://mediaserver.unige.ch/proxy/215791/VN5-5255-03-14-B.mp4
 ---
 
 ## Initial situation

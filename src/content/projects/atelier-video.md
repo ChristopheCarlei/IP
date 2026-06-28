@@ -16,8 +16,8 @@ description_short: "Cet atelier en Études Visuelles propose aux étudiant-es d'
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/163399
-  - https://mediaserver.unige.ch/embed/163390
+  - https://mediaserver.unige.ch/proxy/163399/VN3-18c4-2021-2022-11-25-D.mp4
+  - https://mediaserver.unige.ch/proxy/163390/VN3-18c4-2021-2022-11-25-B.mp4
 ---
 
 ## Situation de départ

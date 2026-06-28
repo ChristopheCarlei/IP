@@ -3,7 +3,7 @@ id: 154
 title: Present me a case of Clara Noble dans Sébastien De Kostine
 description_short: Two students have developed an online teaching tool to enable students to learn an essential skill that is scarcely covered in the official curriculum.
 videos:
-  - https://mediaserver.unige.ch/embed/223959
+  - https://mediaserver.unige.ch/proxy/223959/VN5-5255-07-04.mp4
 ---
 
 ## Initial situation

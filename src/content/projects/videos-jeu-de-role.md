@@ -16,9 +16,9 @@ description_short: "L’enseignant a inversé certaines séances de cours en cr�
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/208147
-  - https://mediaserver.unige.ch/embed/208145
-  - https://mediaserver.unige.ch/embed/192922
+  - https://mediaserver.unige.ch/proxy/208147/VN5-5255-12-04-B.mp4
+  - https://mediaserver.unige.ch/proxy/208145/VN5-5255-12-04.mp4
+  - https://mediaserver.unige.ch/proxy/208146/VN5-5255-12-04-A.mp4
 ---
 
 ## Situation de départ

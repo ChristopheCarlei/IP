@@ -17,7 +17,7 @@ description_short: Dans ce cours, les étudiant-es reçoivent un mandat fictif (
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/139302
+  - https://mediaserver.unige.ch/proxy/139302/VN3-207a-2020-2021-C-11-20.mp4
 images:
   - /images/gallery/proj-116-1.png
 ---

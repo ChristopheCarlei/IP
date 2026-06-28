@@ -14,7 +14,7 @@ description_short: "Dans ce cours, les étudiant-es présentent leur travail sou
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/embed/123219
+  - https://mediaserver.unige.ch/proxy/123219/VN3-314c-2019-2020-B-11-13.mp4
 ---
 
 ## Situation de départ
