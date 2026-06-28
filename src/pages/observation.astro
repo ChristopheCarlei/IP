@@ -1,57 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getCollection } from 'astro:content';
-
-const projects = await getCollection('projects', p => p.data.observation_accepted === true);
 ---
-<Base title="Observation entre pairs">
+<Base title="Observation entre pairs" lang="fr">
   <div class="max-w-4xl mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-4">Observation entre collègues</h1>
-    <p class="text-xl text-gray-500 mb-2 italic">Peer-to-peer observation</p>
 
-    <div class="grid md:grid-cols-2 gap-8 mb-10">
-      <div>
-        <p class="text-gray-700 mb-4">
-          Vous avez repéré une innovation, un outil ou une pratique parmi les projets de la plateforme
-          et souhaitez mieux la connaître pour l'implémenter dans vos cours ?
-        </p>
-        <p class="text-gray-700">
-          Les enseignant·es listé·es ci-dessous ont accepté d'ouvrir la porte de leur salle de cours
-          aux collègues de l'UNIGE. Contactez-les directement pour proposer une observation ou
-          obtenir des informations sur leurs projets.
-        </p>
-      </div>
-      <div>
-        <p class="text-gray-700 mb-4 italic">
-          You have spotted an innovation, tool or practice among the platform's projects and would
-          like to learn more about it to implement it in your courses?
-        </p>
-        <p class="text-gray-700 italic">
-          The teachers listed below have accepted to open the door of their classroom to UNIGE colleagues.
-          Contact them directly to suggest an observation.
-        </p>
-      </div>
-    </div>
+    <p class="text-gray-700 mb-4">
+      Vous avez repéré une innovation, un outil ou une pratique parmi les projets de la plateforme
+      et souhaitez mieux la connaître pour l'implémenter dans vos cours ?
+    </p>
+    <p class="text-gray-700 mb-8">
+      Les enseignant·es qui ont accepté d'ouvrir la porte de leur salle de cours aux collègues de
+      l'UNIGE le signalent sur leur fiche projet (mention « Observation entre pairs »). Contactez-les
+      directement pour proposer une observation ou obtenir des informations sur leurs projets.
+    </p>
 
     <a href="https://www.unige.ch/sea/ressources/observation-entre-pairs" target="_blank" rel="noopener"
-       class="inline-block mb-8 text-sm text-unige-red hover:underline">
+       class="inline-block text-sm text-unige-red hover:underline">
       → En savoir plus sur l'observation entre pairs
     </a>
-
-    {projects.length > 0 ? (
-      <div class="grid md:grid-cols-2 gap-4">
-        {projects.map(p => (
-          <a href={`/projets/${p.slug}`} class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
-            <div>
-              <p class="font-medium text-gray-900">{p.data.title}</p>
-              {p.data.author && <p class="text-sm text-gray-500">{p.data.author}</p>}
-              {p.data.faculty && <p class="text-xs text-gray-400">{p.data.faculty}</p>}
-            </div>
-          </a>
-        ))}
-      </div>
-    ) : (
-      <p class="text-gray-500 italic">Les projets ouverts à l'observation seront listés ici après migration des données.</p>
-    )}
   </div>
 </Base>
