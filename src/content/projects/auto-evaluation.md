@@ -32,3 +32,4 @@ Les résolutions de problème et les groupes de lecture ne sont pas obligatoires
 
 - [Syllabus du cours](https://www.unige.ch/innovations-pedagogiques/download_file/462/350)
 - [Exemple de lectures pour la présentation](https://www.unige.ch/innovations-pedagogiques/download_file/463/350)
+- [Exemple de problèmes](https://www.unige.ch/innovations-pedagogiques/application/files/6015/9050/3691/Michele_Pelizzari_Exemple_de_problemes.pdf)

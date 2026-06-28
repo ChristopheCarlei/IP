@@ -41,3 +41,4 @@ Avant et après chaque module d’enseignement, l’ensemble des intervenant-es 
 
 - [Fiche technique sur l'usage de la plateforme](https://www.unige.ch/innovations-pedagogiques/application/files/6016/4683/3677/Tony_Berrada_A43_PedagogicalInnovation.pdf)
 - [Présentation du GFRI](https://www.unige.ch/gfri/)
+- [Plateforme A54](https://www.unige.ch/innovations-pedagogiques/application/files/2816/4683/3677/Tony_Berrada_A54_Platform.pdf)

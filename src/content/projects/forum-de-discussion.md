@@ -40,3 +40,4 @@ Les apprenant-es sont organisé-es en groupes gérés par des tuteurs/trices pou
 ## Annexes
 
 - [Travaux de fin d'études](https://www.unige.ch/cide/fr/formations/formation-continue/cas-en-justice-juvenile/travaux-de-fin-detudes-du-casjj/)
+- [Plaquette du CAS](https://www.unige.ch/innovations-pedagogiques/application/files/3515/8920/7036/Philip_Jaffe_Plaquette_CAS.pdf)
