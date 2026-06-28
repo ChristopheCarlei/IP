@@ -91,8 +91,8 @@ const hasCarousel = carouselImages.length > 0;
 
 /* Panneau gauche : vidéo ou image principale — ratio 16:9 fixe */
 .proj-media{border-right:1px solid var(--line);position:relative;overflow:hidden;background:#000;aspect-ratio:16/9;width:100%}
-.proj-media .media-embed{position:absolute;inset:0}
-.proj-media .media-embed iframe{width:100%;height:100%;border:0;display:block}
+.proj-media .media-embed{position:absolute;inset:0;overflow:hidden}
+.proj-media .media-embed iframe{position:absolute;top:0;left:0;width:1280px;height:720px;border:0;display:block;transform-origin:top left}
 .proj-media img.main-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .proj-media img.cat-img{object-fit:contain;background:#fff;padding:8px}
 .proj-media .media-placeholder{position:absolute;inset:0;width:100%;height:100%;background:var(--fac,var(--rose));display:flex;align-items:center;justify-content:center}
@@ -483,10 +483,10 @@ details.acc-item[open] .acc-chevron{
       <hr class="annexes-rule" />
       <div style="display:flex;flex-direction:column;gap:20px">
         {d.videos.slice(1).map((video, i) => (
-          <div style="width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid #E4E7EC">
+          <div class="more-vid" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid #E4E7EC">
             <iframe
               src={video}
-              style="width:100%;height:100%;border:none"
+              style="position:absolute;top:0;left:0;width:1280px;height:720px;border:none;transform-origin:top left"
               allowfullscreen
               loading="lazy"
               title={`Vidéo supplémentaire ${i + 2}`}
@@ -514,6 +514,21 @@ details.acc-item[open] .acc-chevron{
 </div><!-- /--fac wrapper -->
 
 <script>
+/* ---- Mise à l'échelle des lecteurs vidéo (iframe 1280×720 fixe → remplit le cadre 16:9) ---- */
+(function () {
+  function scaleEmbeds() {
+    const boxes = document.querySelectorAll<HTMLElement>('.proj-media .media-embed, .more-vid');
+    boxes.forEach(box => {
+      const f = box.querySelector('iframe') as HTMLIFrameElement | null;
+      if (!f) return;
+      f.style.transform = 'scale(' + (box.clientWidth / 1280) + ')';
+    });
+  }
+  scaleEmbeds();
+  window.addEventListener('resize', scaleEmbeds);
+  window.addEventListener('load', scaleEmbeds);
+})();
+
 /* ---- Carousel ---- */
 (function () {
   const track  = document.getElementById('carousel-track') as HTMLElement | null;
