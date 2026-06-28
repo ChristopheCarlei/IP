@@ -1,6 +1,5 @@
 ﻿---
 id: 133
-youtube: https://www.youtube.com/embed/Vnm9oGKI5Pk
 title: "Posters & podcasts"
 author: "Barbara Fouquet-Chauprade & Kristine Balslev"
 photo: /images/projet/Barbara_Fouquet-Chauprade.jpg
