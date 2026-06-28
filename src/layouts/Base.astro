@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { navItems, instItems, ui, localizePath, altLangPath, type Lang } from '../i18n';
+import { navItems, ui, localizePath, altLangPath, type Lang } from '../i18n';
 
 interface Props {
   title: string;
@@ -41,32 +41,29 @@ const enHref = altLangPath(currentPath, 'en');
 </head>
 <body>
 
-  <!-- Filet rose institutionnel 5 px -->
-  <div class="topstrip"></div>
-
-  <!-- Barre institutionnelle UNIGE -->
-  <div class="instbar">
-    <div class="instbar-inner">
-      <nav class="instbar-nav" aria-label={t.instAria}>
-        <a class="instbar-logo" href="https://www.unige.ch" target="_blank" rel="noopener" aria-label="Université de Genève">
-          <span class="instbar-u">UNIGE</span>
-          <span class="instbar-g">Université de Genève</span>
-        </a>
-        <span class="instbar-sep" aria-hidden="true"></span>
-        <div class="instbar-links">
-          {instItems.map(item => (
-            <a href={lang === 'en' ? item.href_en : item.href_fr} target="_blank" rel="noopener">
-              {lang === 'en' ? item.en : item.fr}
-            </a>
-          ))}
-        </div>
+  <!-- En-tête institutionnel UNIGE (charte officielle) -->
+  <header class="unige-header" id="top">
+    <div class="unige-header-inner">
+      <a class="unige-logo" href="https://www.unige.ch" target="_blank" rel="noopener" aria-label="Université de Genève">
+        <img src="/images/unige/unige-logo.svg" alt="Université de Genève" width="164" height="47" />
+      </a>
+      <nav class="unige-nav" aria-label="Navigation Université de Genève">
+        <a href="https://www.unige.ch/universite/" target="_blank" rel="noopener">Université</a>
+        <a href="https://www.unige.ch/facultes/" target="_blank" rel="noopener">Facultés</a>
+        <a href="https://www.unige.ch/etudiants/" target="_blank" rel="noopener">Études</a>
+        <a href="https://www.unige.ch/collaborateurs/" target="_blank" rel="noopener">Collaborateurs</a>
+        <a href="https://www.unige.ch/services/" target="_blank" rel="noopener">Services</a>
+        <a href="https://www.unige.ch/alumni/" target="_blank" rel="noopener">Alumni</a>
       </nav>
-      <span class="instbar-langpick">
-        <a href={frHref} class={lang === 'fr' ? 'on' : ''}>FR</a>
-        <a href={enHref} class={lang === 'en' ? 'on' : ''}>EN</a>
-      </span>
+      <div class="unige-tools">
+        <span class="unige-langpick">
+          <a href={frHref} class={lang === 'fr' ? 'on' : ''}>FR</a>
+          <a href={enHref} class={lang === 'en' ? 'on' : ''}>EN</a>
+        </span>
+        <a class="unige-help" href="https://www.unige.ch/contact/" target="_blank" rel="noopener" aria-label="Aide / Contact">?</a>
+      </div>
     </div>
-  </div>
+  </header>
 
   <!-- En-tête section Innovations Pédagogiques -->
   <header class="topbar">
@@ -100,90 +97,89 @@ const enHref = altLangPath(currentPath, 'en');
     <slot />
   </main>
 
-  <!-- Pied de page institutionnel -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer-inner">
+  <!-- Pied de page institutionnel UNIGE (charte officielle) -->
+  <footer class="unige-footer" role="contentinfo">
+    <div class="unige-footer-inner">
+      <div class="unige-footer-grid">
 
-      <!-- Grille principale -->
-      <div class="footer-grid">
-
-        <!-- Col 1 : UNIGE + IP -->
-        <div class="footer-col footer-col--brand">
-          <div class="footer-brand">
-            <span class="footer-u">UNIGE</span>
-            <span class="footer-g">{t.footerColUnige}</span>
-          </div>
-          <p class="footer-about">{t.footerAbout}</p>
-          <address class="footer-address">
+        <!-- Col 1 : Université de Genève -->
+        <div class="uf-col">
+          <h2 class="uf-title">Université de Genève</h2>
+          <address class="uf-address">
             24 rue du Général-Dufour<br />
             1211 Genève 4<br />
-            T. +41 (0)22 379 71 11
+            T. +41 (0)22 379 71 11<br />
+            F. +41 (0)22 379 11 34
           </address>
-        </div>
-
-        <!-- Col 2 : Innovations Pédagogiques -->
-        <div class="footer-col">
-          <h4 class="footer-title">{t.footerColIP}</h4>
-          <ul class="footer-links">
-            <li><a href={localizePath('/catalogue', lang)}>{t.footerCatalogue}</a></li>
-            <li><a href={localizePath('/ia', lang)}>{t.footerIA}</a></li>
-            <li><a href={localizePath('/videos', lang)}>{t.footerVideos}</a></li>
-            <li><a href={localizePath('/soutien', lang)}>{t.footerSoutien}</a></li>
-            <li><a href={localizePath('/observation', lang)}>{t.footerObservation}</a></li>
-            <li><a href={localizePath('/prix', lang)}>{t.footerPrix}</a></li>
-            <li><a href={localizePath('/commission', lang)}>{t.footerCommission}</a></li>
-            <li><a href={localizePath('/contact', lang)}>{t.footerContact}</a></li>
+          <ul class="uf-links">
+            <li><a href="https://www.unige.ch/contact/" target="_blank" rel="noopener">Contact</a></li>
+            <li><a href="https://www.unige.ch/presse/plans" target="_blank" rel="noopener">Plans d'accès aux bâtiments</a></li>
+            <li><a href="https://www.unige.ch/-/a-z" target="_blank" rel="noopener">L'UNIGE de A à Z</a></li>
+            <li><a href="https://www.unige.ch/-/cookies" target="_blank" rel="noopener">Politique et configuration des cookies</a></li>
           </ul>
         </div>
 
-        <!-- Col 3 : UNIGE -->
-        <div class="footer-col">
-          <h4 class="footer-title">{t.footerColUnige}</h4>
-          <ul class="footer-links">
-            <li><a href="https://www.unige.ch" target="_blank" rel="noopener">unige.ch</a></li>
-            <li><a href="https://www.unige.ch/sea/" target="_blank" rel="noopener">Pôle SEA</a></li>
+        <!-- Col 2 : S'inscrire à l'UNIGE -->
+        <div class="uf-col">
+          <h2 class="uf-title">S'inscrire à l'UNIGE</h2>
+          <ul class="uf-links">
+            <li><a href="https://www.unige.ch/immatriculations/" target="_blank" rel="noopener">Immatriculations</a></li>
+            <li><a href="https://vie-de-campus.unige.ch/demarches-administratives" target="_blank" rel="noopener">Démarches administratives</a></li>
+            <li><a href="https://admissions.unige.ch/kayako/index.php?/Tickets/Submit" target="_blank" rel="noopener">Poser une question</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 : L'UNIGE vous informe -->
+        <div class="uf-col">
+          <h2 class="uf-title">L'UNIGE vous informe</h2>
+          <ul class="uf-links">
+            <li><a href="https://www.unige.ch/mobile/" target="_blank" rel="noopener">UNIGE Mobile</a></li>
             <li><a href="https://www.unige.ch/medias/" target="_blank" rel="noopener">Médias</a></li>
             <li><a href="https://unige.ch/-/emplois" target="_blank" rel="noopener">Offres d'emploi</a></li>
             <li><a href="https://www.unige.ch/biblio/" target="_blank" rel="noopener">Bibliothèque</a></li>
-            <li><a href="/admin/">{t.footerAdmin}</a></li>
+            <li><a href="https://www.unige.ch/calendrier" target="_blank" rel="noopener">Calendrier académique</a></li>
           </ul>
         </div>
 
-        <!-- Col 4 : Réseaux sociaux + accréditation -->
-        <div class="footer-col">
-          <h4 class="footer-title">{t.footerColSocial}</h4>
-          <div class="footer-social">
-            <a href="https://www.facebook.com/unigeneve" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-link">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <!-- Col 4 : Médias sociaux + accréditation -->
+        <div class="uf-col">
+          <h2 class="uf-title">Médias sociaux UNIGE</h2>
+          <div class="uf-social">
+            <a href="https://www.facebook.com/unigeneve" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="https://www.linkedin.com/company/university-of-geneva" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-link">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            <a href="https://twitter.com/UNIGEnews" target="_blank" rel="noopener" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://www.youtube.com/channel/UCLVD78-qZV06ULrJ6eKJIiQ" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-link">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff"/></svg>
+            <a href="https://www.linkedin.com/company/university-of-geneva" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="https://instagram.com/unigeneve/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.youtube.com/channel/UCLVD78-qZV06ULrJ6eKJIiQ" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://instagram.com/unigeneve/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.unige.ch/rss/" target="_blank" rel="noopener" aria-label="RSS">
+              <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83C19.56 11.41 12.59 4.44 4 4.44zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83C13.9 14.53 9.47 10.1 4 10.1z"/></svg>
+            </a>
+            <a href="https://www.coursera.org/unige" target="_blank" rel="noopener" aria-label="Coursera">
+              <svg viewBox="0 0 24 24"><text x="12" y="17" text-anchor="middle" font-size="17" fill="currentColor">∞</text></svg>
+            </a>
+            <a href="https://www.unige.ch/mobile/" target="_blank" rel="noopener" aria-label="UNIGE Mobile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18.5" x2="13" y2="18.5"/></svg>
             </a>
           </div>
-          <div class="footer-accred">
-            <img src="https://www.unige.ch/files/4416/5210/1573/SAR-Label_Institutionen_22-29_EN.png"
-                 alt="Accréditation SAR" width="120" loading="lazy" />
-          </div>
+          <h2 class="uf-accred-title">Accréditation</h2>
+          <img class="uf-accred" src="/images/unige/accreditation.png"
+               alt="Swiss Accreditation Council — Institution accréditée selon la LEHE pour 2022-2029" loading="lazy" />
         </div>
       </div>
-
-      <!-- Bas de page -->
-      <div class="footer-base">
-        <span>© {new Date().getFullYear()} Université de Genève</span>
-        <div class="footer-base-links">
-          <a href="https://www.unige.ch/contact/" target="_blank" rel="noopener">{t.footerContactLink}</a>
-          <a href="https://www.unige.ch/cookies/" target="_blank" rel="noopener">{t.footerCookies}</a>
-          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
-        </div>
-      </div>
-
     </div>
+
+    <a class="uf-top" href="#top" aria-label="Haut de page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </a>
   </footer>
 
   <script>
