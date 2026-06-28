@@ -1,0 +1,27 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ProjectDetail from '../../../components/ProjectDetail.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  const en = await getCollection('projects_en');
+  const enById = new Map(en.map(e => [e.data.id, e]));
+  return projects.map(p => ({
+    params: { slug: p.slug },
+    props: { project: p, enEntry: enById.get(p.data.id) ?? null },
+  }));
+}
+
+const { project, enEntry } = Astro.props;
+const source = enEntry ?? project;          // fallback to FR content if no EN translation
+const { Content } = await render(source);
+const d = {
+  ...project.data,                          // FR metadata / media
+  title: enEntry?.data.title ?? project.data.title,
+  description_short: enEntry?.data.description_short ?? project.data.description_short,
+};
+---
+<Base title={d.title} description={d.description_short} lang="en">
+  <ProjectDetail d={d} lang="en"><Content /></ProjectDetail>
+</Base>

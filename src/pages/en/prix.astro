@@ -209,7 +209,7 @@ function facVar(f: string): string {
           </>
         );
         return w.slug
-          ? <a class="px-win" href={`/projets/${w.slug}`} style={`--fac:${facVar(w.faculty)}`}>{inner}</a>
+          ? <a class="px-win" href={`/en/projets/${w.slug}`} style={`--fac:${facVar(w.faculty)}`}>{inner}</a>
           : <div class="px-win" style={`--fac:${facVar(w.faculty)}`}>{inner}</div>;
       })}
     </div>

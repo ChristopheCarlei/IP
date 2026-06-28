@@ -94,7 +94,7 @@ const videosWithSlug = videos.map(v => ({ ...v, slug: bySlug.get(norm(v.match)) 
           <h2>{v.name}</h2>
           <p class="vid-author">{v.author}</p>
           <p class="vid-desc">{v.desc}</p>
-          {v.slug && <a class="vid-link" href={`/projets/${v.slug}`}>See the project →</a>}
+          {v.slug && <a class="vid-link" href={`/en/projets/${v.slug}`}>See the project →</a>}
         </div>
       </div>
     ))}

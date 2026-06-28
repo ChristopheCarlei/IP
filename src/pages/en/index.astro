@@ -152,7 +152,7 @@ function isLightFac(fac?: string | null): boolean {
               {p.data.award && <span class="award">★ {p.data.award}</span>}
             </div>
             <div class="card-body">
-              <h3><a href={`/projets/${p.slug}`}>{p.data.title}</a></h3>
+              <h3><a href={`/en/projets/${p.slug}`}>{p.data.title}</a></h3>
             </div>
             {p.data.faculty && (
               <div class={`card-fac${isLightFac(p.data.faculty) ? ' light' : ''}`}>{p.data.faculty}</div>
