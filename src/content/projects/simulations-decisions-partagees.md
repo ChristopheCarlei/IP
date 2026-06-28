@@ -17,8 +17,8 @@ description_short: "Des scénarios de simulation sont utilisés pour les exercic
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/188416/VN5-5255-02-27.mp4
-  - https://mediaserver.unige.ch/proxy/188417/VN5-5255-02-27-A.mp4
+  - https://mediaserver.unige.ch/proxy/188416/VN5-5255-02-27.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/188417/VN5-5255-02-27-A.mp4?width=1280&height=720&start=0
 ---
 
 ## Situation de départ

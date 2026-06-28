@@ -15,8 +15,8 @@ description_short: "Dans ce cours, les étudiant-es ont la possibilité de crée
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/215790/VN5-5255-03-14-A.mp4
-  - https://mediaserver.unige.ch/proxy/215791/VN5-5255-03-14-B.mp4
+  - https://mediaserver.unige.ch/proxy/215790/VN5-5255-03-14-A.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/215791/VN5-5255-03-14-B.mp4?width=1280&height=720&start=0
 ---
 
 ## Situation de départ

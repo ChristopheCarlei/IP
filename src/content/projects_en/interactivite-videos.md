@@ -3,7 +3,7 @@ id: 35
 title: "Interactivity & videos by Kléa Faniko"
 description_short: To foster student interaction and engagement, the teacher used interactive digital platforms such as Kahoot and Padlet. In addition, optional participation modalities, such as the creation of video clips and participation in round tables, were offered to smaller groups of students.
 videos:
-  - https://mediaserver.unige.ch/proxy/120287/VN3-31b4-2019-2020-A-06-18.mp4
+  - https://mediaserver.unige.ch/proxy/120287/VN3-31b4-2019-2020-A-06-18.mp4?width=1280&height=720&start=0
 images:
   - /images/gallery/proj-35-1.jpg
 ---

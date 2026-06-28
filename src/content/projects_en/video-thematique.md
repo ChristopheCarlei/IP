@@ -3,7 +3,7 @@ id: 2
 title: Thematic video by Rita Trigo Trindade
 description_short: "In this course, students present their work in the form of videos. In order to make the presentations more dynamic, the teacher suggests that they do it in the form of a battle: two groups each present their video on the same theme and the class analyzes them by comparing them."
 videos:
-  - https://mediaserver.unige.ch/proxy/123219/VN3-314c-2019-2020-B-11-13.mp4
+  - https://mediaserver.unige.ch/proxy/123219/VN3-314c-2019-2020-B-11-13.mp4?width=1280&height=720&start=0
 ---
 
 ## Initial situation

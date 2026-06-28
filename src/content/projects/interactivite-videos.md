@@ -15,7 +15,7 @@ description_short: "Pour favoriser l'interaction et l'implication des étudiant-
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/120287/VN3-31b4-2019-2020-A-06-18.mp4
+  - https://mediaserver.unige.ch/proxy/120287/VN3-31b4-2019-2020-A-06-18.mp4?width=1280&height=720&start=0
 images:
   - /images/gallery/proj-35-1.jpg
 ---

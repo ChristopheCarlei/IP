@@ -16,8 +16,8 @@ description_short: Dans ce cours, les étudiant-es sélectionnent un sujet lié 
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/169115/VN3-482b-2021-2022-03-01.mp4
-  - https://mediaserver.unige.ch/proxy/169117/VN3-482b-2021-2022-03-01-A.mp4
+  - https://mediaserver.unige.ch/proxy/169115/VN3-482b-2021-2022-03-01.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/169117/VN3-482b-2021-2022-03-01-A.mp4?width=1280&height=720&start=0
 ---
 
 ## Situation de départ

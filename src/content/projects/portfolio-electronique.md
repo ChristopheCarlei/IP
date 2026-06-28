@@ -16,7 +16,7 @@ description_short: Une application portfolio permet aux étudiant-es de document
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/147544/VN3-3791-2020-2021-04-09-A.mp4
+  - https://mediaserver.unige.ch/proxy/147544/VN3-3791-2020-2021-04-09-A.mp4?width=1280&height=720&start=0
 images:
   - /images/gallery/proj-143-1.png
   - /images/gallery/proj-143-2.png

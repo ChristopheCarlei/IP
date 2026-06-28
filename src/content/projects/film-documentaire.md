@@ -17,7 +17,7 @@ featured: false
 status: actif
 videos:
   - https://www.youtube.com/embed/Qe2R0FYcaYk
-  - https://mediaserver.unige.ch/proxy/193163/VN3-18c4-2022-2023-05-08-A.mp4
+  - https://mediaserver.unige.ch/proxy/193163/VN3-18c4-2022-2023-05-08-A.mp4?width=1280&height=720&start=0
 ---
 
 ## Situation de départ

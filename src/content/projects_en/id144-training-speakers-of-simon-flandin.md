@@ -4,10 +4,10 @@ title: Training speakers of Simon Flandin
 description_short: In this course, speakers involved in the subject matter co-teach the course while becoming more professional.
 videos:
   - https://www.youtube.com/embed/JSE-Lx1rQZQ
-  - https://mediaserver.unige.ch/proxy/211202/VN5-5255-01-15.mp4
-  - https://mediaserver.unige.ch/proxy/198550/VN5-5255-09-28.mp4
-  - https://mediaserver.unige.ch/proxy/198552/VN5-5255-09-28-B.mp4
-  - https://mediaserver.unige.ch/proxy/198553/VN5-5255-09-28-C.mp4
+  - https://mediaserver.unige.ch/proxy/211202/VN5-5255-01-15.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/198550/VN5-5255-09-28.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/198552/VN5-5255-09-28-B.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/198553/VN5-5255-09-28-C.mp4?width=1280&height=720&start=0
 ---
 
 ## Initial situation

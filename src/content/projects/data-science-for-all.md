@@ -17,9 +17,9 @@ description_short: "Ce projet offre une approche nouvelle de l'apprentissage de 
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/199027/VN5-5255-10-02-B.mp4
-  - https://mediaserver.unige.ch/proxy/199025/VN5-5255-10-02.mp4
-  - https://mediaserver.unige.ch/proxy/199026/VN5-5255-10-02-A.mp4
+  - https://mediaserver.unige.ch/proxy/199027/VN5-5255-10-02-B.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/199025/VN5-5255-10-02.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/199026/VN5-5255-10-02-A.mp4?width=1280&height=720&start=0
 images:
   - /images/gallery/proj-151-1.png
   - /images/gallery/proj-151-2.png

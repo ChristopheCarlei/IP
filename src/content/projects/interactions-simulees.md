@@ -16,7 +16,7 @@ description_short: "Des acteurs et actrices jouent le rôle de patient-es tandis
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/170122/VN3-482b-2021-2022-03-10.mp4
+  - https://mediaserver.unige.ch/proxy/170122/VN3-482b-2021-2022-03-10.mp4?width=1280&height=720&start=0
 ---
 
 ## Situation de départ

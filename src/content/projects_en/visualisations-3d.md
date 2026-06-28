@@ -3,7 +3,7 @@ id: 61
 title: 3D visualizations of René Daher
 description_short: The teacher uses excerpts from ethnographic, sociological and documentary films to present the theory. Students are then invited to make a documentary film individually or in groups, choosing their methodology and theme.
 videos:
-  - https://mediaserver.unige.ch/proxy/215784/VN5-5255-03-14.mp4
+  - https://mediaserver.unige.ch/proxy/215784/VN5-5255-03-14.mp4?width=1280&height=720&start=0
 ---
 
 ## Initial situation

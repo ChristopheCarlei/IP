@@ -15,7 +15,7 @@ description_short: "Ce cours propose une approche pédagogique basée sur l'anal
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/129538/VN3-314c-2019-2020-F-06-23.mp4
+  - https://mediaserver.unige.ch/proxy/129538/VN3-314c-2019-2020-F-06-23.mp4?width=1280&height=720&start=0
 ---
 
 ## Situation de départ

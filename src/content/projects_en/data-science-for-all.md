@@ -3,9 +3,9 @@ id: 151
 title: Data Science for All of Elsa-Line Huwyler
 description_short: This project offers a new approach to learning data science by providing a platform housing a collection of video vignettes, each focusing on essential skills in the field of data science, made available for self-study and reusable by teachers in their courses.
 videos:
-  - https://mediaserver.unige.ch/proxy/199027/VN5-5255-10-02-B.mp4
-  - https://mediaserver.unige.ch/proxy/199025/VN5-5255-10-02.mp4
-  - https://mediaserver.unige.ch/proxy/199026/VN5-5255-10-02-A.mp4
+  - https://mediaserver.unige.ch/proxy/199027/VN5-5255-10-02-B.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/199025/VN5-5255-10-02.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/199026/VN5-5255-10-02-A.mp4?width=1280&height=720&start=0
 images:
   - /images/gallery/proj-151-1.png
   - /images/gallery/proj-151-2.png

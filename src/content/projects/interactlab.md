@@ -17,8 +17,8 @@ description_short: "En alliant classe inversée et apprentissage par projet, ces
 featured: false
 status: actif
 videos:
-  - https://mediaserver.unige.ch/proxy/299479/MLhlSiTT3K2vIhQZ.mp4
-  - https://mediaserver.unige.ch/proxy/299480/QfIRug61tRKhWp5Y.mp4
+  - https://mediaserver.unige.ch/proxy/299479/MLhlSiTT3K2vIhQZ.mp4?width=1280&height=720&start=0
+  - https://mediaserver.unige.ch/proxy/299480/QfIRug61tRKhWp5Y.mp4?width=1280&height=720&start=0
 images:
   - /images/gallery/proj-158-1.png
 ---
