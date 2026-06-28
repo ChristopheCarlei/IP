@@ -1,5 +1,18 @@
 ﻿---
 id: 55
+title: Escape the lab
+author: Bibliothèque de l’Université de Genève
+faculty: Transversal
+course: ""
+level: ""
+students: Moins de 25
+year: 2018
+category: Rendre actifs
+innovation_type: Faire collaborer
+observation_accepted: false
+description_short: "« Escape the Lab » est un jeu de plateau qui forme les jeunes chercheurs et chercheuses à l'Open Access. Les joueur/euses doivent répondre à des questions dans différentes catégories pour obtenir les clés de l'évasion, tout en évitant que les bactéries ne s'échappent."
+featured: false
+status: actif
 images:
   - /images/gallery/proj-55-1.jpg
   - /images/gallery/proj-55-2.jpg

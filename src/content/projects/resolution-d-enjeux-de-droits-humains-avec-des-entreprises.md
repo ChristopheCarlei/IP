@@ -1,5 +1,20 @@
 ﻿---
 id: 148
+title: "Résolution d'enjeux de droits humains avec des entreprises"
+author: "Dorothée Baumann-Pauly & Berit Knaak"
+photo: /images/projet/Baumann-Pauly-Knaak.jpg
+contact: "Pascale.chavaz@unige.ch"
+faculty: GSEM
+course: Business and Human Rights Clinic
+level: Master
+students: Moins de 25
+year: 2021
+category: Faire créer
+innovation_type: Faire conceptualiser un projet
+observation_accepted: true
+description_short: Ce projet donne l’opportunité aux étudiant-es de travailler sur des études de cas concrètes en collaboration avec une organisation (entreprise ou organisation non gouvernementale - ONG) sur une thématique liée aux droits humains. Ils/elles peuvent appliquer ainsi développer leurs compétences, apprendre à communiquer de manière professionnelle et proposer une solution concrète à un défi auquel fait face une entreprise.
+featured: false
+status: actif
 images:
   - /images/projet/proj-148.png
   - /images/gallery/proj-148-1.jpg

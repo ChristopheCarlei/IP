@@ -1,5 +1,6 @@
 ﻿---
 id: 78
+photo: /images/projet/proj-78-photo.jpg
 title: "Fiches techniques & logiciel interactif"
 author: Evelina Trutnevyte
 faculty: Sciences

@@ -1,5 +1,19 @@
 ﻿---
 id: 49
+photo: /images/projet/Priscilla_Soulie.jpg
+title: Zoom en présentiel
+author: "Priscilla Soulie & Jackie Perrin-Simonnot"
+faculty: Médecine
+course: ""
+level: ""
+students: Moins de 25
+year: 2021
+category: Responsabiliser
+innovation_type: Exposer des cas pratiques
+observation_accepted: false
+description_short: "Pendant les travaux pratiques en présentiel, les étudiant-es utilisent Zoom pour partager leur écran avec l'enseignant-e et leurs pairs. Cela leur permet d'annoter les coupes histologiques ensemble, de poser des questions en direct et de participer à des défis interactifs, favorisant ainsi une expérience d'apprentissage collaborative."
+featured: false
+status: actif
 images:
   - /images/projet/proj-49.jpg
   - /images/gallery/proj-49-1.jpg

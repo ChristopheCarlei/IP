@@ -1,5 +1,21 @@
 ﻿---
 id: 129
+award: GSEM Pedagogical Innovation initiative
+title: Escape Game sur Genially
+author: "Marta Pittavino & Anastasia Floru"
+photo: /images/projet/Marta_Pittavino.jpg
+contact: "Marta.Pittavino@unige.ch"
+faculty: GSEM
+course: Forecasting with Applications in Business, Statistical Modelling
+level: Master
+students: Moins de 25
+year: 2022
+category: Rendre actifs
+innovation_type: Faire collaborer
+observation_accepted: false
+description_short: "L'équipe enseignante a créé deux escape games en ligne basés sur des thèmes historiques et criminels, en tant qu'évaluations intermédiaires et finales, visant à renforcer les compétences spécifiques de la discipline ainsi que les compétences transversales telles que la résolution de problèmes et le travail d'équipe."
+featured: false
+status: actif
 images:
   - /images/projet/proj-129.png
   - /images/gallery/proj-129-1.jpg

@@ -1,5 +1,6 @@
 ﻿---
 id: 136
+photo: /images/projet/proj-136-photo.jpg
 team: Thomas Fassier, Marie-Paule Schneider
 title: "Simulations & Shadowing"
 author: Patricia Picchiottino

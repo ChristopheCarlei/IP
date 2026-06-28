@@ -1,5 +1,6 @@
 ﻿---
 id: 21
+photo: /images/projet/proj-21-photo.jpg
 title: Compétences génériques
 author: Lammert Vrieling
 faculty: GSEM

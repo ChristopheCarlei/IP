@@ -1,5 +1,6 @@
 ﻿---
 id: 119
+photo: /images/projet/proj-119-photo.jpg
 team: Audrey Blein, Laura Herrero, Kamila Kashaeva, Dmitry Krachun, Solenn Estier
 title: Résolution de problèmes
 author: Anton Alexeev

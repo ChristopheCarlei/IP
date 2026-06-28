@@ -1,5 +1,18 @@
 ﻿---
 id: 156
+title: EcoSlam
+author: Chloé Baruffa
+faculty: SDS
+course: ""
+level: ""
+students: Moins de 25
+year: 2022
+category: Faire créer
+innovation_type: Faire réaliser une production originale
+observation_accepted: false
+description_short: Ce format d’enseignement propose de créer des espaces d’échange et de créativité autour de sujets d’actualités.
+featured: false
+status: actif
 images:
   - /images/projet/proj-156.jpg
   - /images/gallery/proj-156-1.jpg

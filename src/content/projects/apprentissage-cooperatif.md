@@ -1,5 +1,19 @@
 ﻿---
 id: 34
+title: Apprentissage coopératif
+author: Céline Buchs
+photo: /images/projet/Celine_Buchs.jpg
+faculty: FPSE
+course: ""
+level: ""
+students: Moins de 25
+year: 2010
+category: Rendre actifs
+innovation_type: Faire collaborer
+observation_accepted: false
+description_short: "Le cours met en pratique les principes de la pédagogie coopérative en favorisant les interactions sociales et le travail de groupe. L'évaluation se fait à travers un dossier individuel qui propose une activité d'apprentissage coopérative, basée sur la justification théorique et empirique de l'étudiant-e."
+featured: false
+status: archivé
 images:
   - /images/gallery/proj-34-1.jpg
 ---

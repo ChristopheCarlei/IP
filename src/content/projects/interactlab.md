@@ -1,5 +1,21 @@
 ﻿---
 id: 158
+title: InteractLab
+author: Nicolas Burra
+photo: /images/projet/Nicolas_Burra.jpeg
+contact: "Nicolas.Burra@unige.ch"
+faculty: FPSE
+course: Méthode expérimentale en psychologie
+course_code: 74151
+level: Bachelor
+students: 100 - 300
+year: 2023
+category: Rendre actifs
+innovation_type: Faire collaborer
+observation_accepted: true
+description_short: "En alliant classe inversée et apprentissage par projet, ces travaux pratiques initient les apprenant-es à la démarche de recherche et de publication en psychologie dès le bachelor. La méthode proposée facilite les communications et la rédaction collaborative grâce à l'utilisation d’outils numériques."
+featured: false
+status: actif
 videos:
   - https://mediaserver.unige.ch/embed/299479
   - https://mediaserver.unige.ch/embed/299480

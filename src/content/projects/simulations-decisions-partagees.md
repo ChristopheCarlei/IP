@@ -1,5 +1,6 @@
 ﻿---
 id: 135
+photo: /images/projet/proj-135-photo.jpg
 team: Thomas Fassier, Marie-Paule Schneider
 title: "Simulations & décisions partagées"
 author: Patricia Picchiottino

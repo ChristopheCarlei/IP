@@ -1,5 +1,6 @@
 ﻿---
 id: 82
+photo: /images/projet/proj-82-photo.jpg
 team: Anne-Catherine Baudoin
 title: Encadrement à distance
 author: Andréas Dettwiler

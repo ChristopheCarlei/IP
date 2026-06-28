@@ -1,5 +1,6 @@
 ﻿---
 id: 26
+photo: /images/projet/proj-26-photo.jpg
 title: Coaching universitaire
 author: Gabrielle Sophie Rivier
 faculty: FTI

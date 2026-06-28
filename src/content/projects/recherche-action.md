@@ -1,5 +1,18 @@
 ﻿---
 id: 11
+title: Recherche action
+author: Diana Volonakis
+faculty: FPSE
+course: ""
+level: ""
+students: 50 - 100
+year: 2016
+category: Faire créer
+innovation_type: Faire conceptualiser un projet
+observation_accepted: false
+description_short: "Ce cours adopte le modèle du Service-Learning, combinant apprentissage et service communautaire pour répondre aux besoins de la société. Les étudiant-es s'engagent dans des projets de recherche proposés par des professionnel-les du domaine et présentent leurs résultats sous forme de posters ou d'émissions radio."
+featured: false
+status: archivé
 images:
   - /images/gallery/proj-11-1.jpg
 ---

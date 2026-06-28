@@ -1,5 +1,6 @@
 ﻿---
 id: 100
+photo: /images/projet/proj-100-photo.jpg
 title: Start-up Training
 author: Lan Zuo Gillet
 contact: "bettina.palazzo@unige.ch"

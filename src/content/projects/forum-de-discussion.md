@@ -1,5 +1,6 @@
 ﻿---
 id: 25
+photo: /images/projet/proj-25-photo.png
 title: Forum de discussion
 author: Philip Jaffé
 faculty: FPSE

@@ -1,5 +1,19 @@
 ﻿---
 id: 47
+title: "Quiz & feedback"
+author: Marianne Starlander
+photo: /images/projet/Susan_Pickford_Marianne_Starlander.jpg
+faculty: FTI
+course: ""
+level: ""
+students: 50 - 100
+year: 2017
+category: Préparer
+innovation_type: Faire réagir
+observation_accepted: false
+description_short: "L’enseignante propose des quiz formatifs et sommatifs accessibles depuis l’espace Moodle du cours. Un des travaux pratiques inclut une évaluation par les pairs pour laquelle les étudiant-es utilisent une grille d'évaluation pour noter et commenter les travaux de leurs camarades."
+featured: false
+status: actif
 images:
   - /images/gallery/proj-47-1.jpg
 ---

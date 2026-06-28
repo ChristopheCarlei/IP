@@ -1,5 +1,6 @@
 ﻿---
 id: 137
+photo: /images/projet/proj-137-photo.jpg
 team: Thomas Fassier, Marie-Paule Schneider
 title: Pursuit Game
 author: Patricia Picchiottino

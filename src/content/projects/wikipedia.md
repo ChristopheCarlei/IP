@@ -1,5 +1,6 @@
 ﻿---
 id: 123
+photo: /images/projet/proj-123-photo.jpg
 team: Flor Méchain et Amandine Cabrio
 title: Wikipédia
 author: "Simon-Pierre Chevarie-Cossette & Antoine Vuille"

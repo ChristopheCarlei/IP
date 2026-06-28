@@ -1,5 +1,6 @@
 ﻿---
 id: 6
+photo: /images/projet/proj-6-photo.jpg
 title: "MOOC & coaching"
 author: "Rafael Ruiz de Castañeda & Isabelle Bolon"
 faculty: Médecine

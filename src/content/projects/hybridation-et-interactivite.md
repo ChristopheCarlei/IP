@@ -1,5 +1,20 @@
 ﻿---
 id: 91
+title: Hybridation et interactivité
+author: "Lorenz Baumer & Patrizia Birchler Emery"
+photo: /images/projet/Birchler-Emery_Baumer.jpg
+contact: "Patrizia.Birchler@unige.ch"
+faculty: Lettres
+course: "Modules CAS “Archéologie classique: une introduction”"
+level: Formation Continue
+students: Moins de 25
+year: 2010
+category: Rendre actifs
+innovation_type: Faire collaborer
+observation_accepted: false
+description_short: Cette formation s’articule sous un format hybride avec une alternance d’un jour de présentiel et de 6 semaines à distance. Chaque module comporte 3 journées en présence et 12 semaines d’enseignement à distance incluant cours, activités, ressources documentaires, travaux de groupe et tutorat personnalisé.
+featured: false
+status: actif
 images:
   - /images/gallery/proj-91-1.png
   - /images/gallery/proj-91-2.png

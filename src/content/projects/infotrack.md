@@ -1,5 +1,6 @@
 ﻿---
 id: 5
+photo: /images/projet/proj-5-photo.jpg
 title: InfoTrack
 author: Bibliothèque de l’Université de Genève
 faculty: Transversal

@@ -1,5 +1,6 @@
 ﻿---
 id: 94
+photo: /images/projet/proj-94-photo.jpg
 title: Google Education
 author: Jasmina Travnjak
 contact: "Jasmina.Travnjak@unige.ch"

@@ -1,5 +1,19 @@
 ﻿---
 id: 84
+title: Retours formatifs
+author: Céline Buchs
+photo: /images/projet/Celine_Buchs.jpg
+faculty: FPSE
+course: ""
+level: ""
+students: 50 - 100
+year: 2017
+category: Rendre actifs
+innovation_type: Faire collaborer
+observation_accepted: false
+description_short: "Ce cours sur la pédagogie coopérative propose des activités interactives et pratiques pour approfondir les principes d'apprentissage coopératif. Les étudiants préparent des planifications d'activités, bénéficient de retours formatifs en équipe et participent à des discussions collectives pour améliorer leurs compétences en enseignement coopératif."
+featured: false
+status: archivé
 images:
   - /images/projet/proj-84.jpg
   - /images/gallery/proj-84-1.jpg

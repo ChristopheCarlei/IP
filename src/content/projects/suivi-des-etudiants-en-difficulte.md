@@ -1,5 +1,6 @@
 ﻿---
 id: 121
+photo: /images/projet/proj-121-photo.jpg
 team: Annick Galetto-Lacour
 title: Suivi des étudiants en difficulté
 author: Marie-Claude Audétat

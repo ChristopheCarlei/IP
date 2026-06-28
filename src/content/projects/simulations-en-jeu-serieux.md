@@ -1,5 +1,6 @@
 ﻿---
 id: 90
+photo: /images/projet/proj-90-photo.jpg
 title: Simulations en jeu sérieux
 author: Dominique Jaccard
 contact: "Dominique.Jaccard@heig-vd.ch"
