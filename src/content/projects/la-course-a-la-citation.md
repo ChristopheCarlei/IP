@@ -1,5 +1,6 @@
 ﻿---
 id: 150
+photo: /images/projet/proj-150-photo.png
 title: La course à la citation
 author: Bibliothèque de l’Université de Genève
 contact: "biblio-formation@unige.ch"

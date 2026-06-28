@@ -1,4 +1,4 @@
----
+﻿---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
@@ -220,6 +220,61 @@ function isLightFac(fac?: string | null): boolean {
   </div>
 </section>
 
+<!-- 4 AXES -->
+<div class="axes-section" id="axes">
+  <div class="axes-section-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:12px">
+      <div>
+        <span class="eyebrow">Cadre pédagogique</span>
+        <h2 style="font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-.02em;margin:8px 0 0">Quatre axes d'innovation</h2>
+      </div>
+      <a class="sec-link" href="/catalogue" style="white-space:nowrap">Voir tous les projets →</a>
+    </div>
+    <div class="axes">
+      <a class="axe" href="/axes/preparer" style="--ax:var(--fac-lettres)">
+        <div class="axe-visual">
+          <img src="/images/sections/Preparer.svg" alt="Préparer" />
+        </div>
+        <div class="axe-body">
+          <h3>Préparer</h3>
+          <p>Demander aux étudiant·es d'effectuer une tâche avant le cours.</p>
+          <span class="go">Explorer →</span>
+        </div>
+      </a>
+      <a class="axe" href="/axes/rendre-actif" style="--ax:var(--fac-sciences)">
+        <div class="axe-visual">
+          <img src="/images/sections/RendreActif.svg" alt="Rendre actif" />
+        </div>
+        <div class="axe-body">
+          <h3>Rendre actif</h3>
+          <p>Engager les étudiant·es pendant la séance, en présence comme à distance.</p>
+          <span class="go">Explorer →</span>
+        </div>
+      </a>
+      <a class="axe" href="/axes/responsabiliser" style="--ax:#C28A00">
+        <div class="axe-visual">
+          <img src="/images/sections/Responsabiliser.svg" alt="Responsabiliser" />
+        </div>
+        <div class="axe-body">
+          <h3>Responsabiliser</h3>
+          <p>Développer l'autonomie et la responsabilité dans l'apprentissage.</p>
+          <span class="go">Explorer →</span>
+        </div>
+      </a>
+      <a class="axe" href="/axes/faire-creer" style="--ax:var(--rose)">
+        <div class="axe-visual">
+          <img src="/images/sections/FaireCreer.svg" alt="Faire créer" />
+        </div>
+        <div class="axe-body">
+          <h3>Faire créer</h3>
+          <p>Inviter les étudiant·es à produire quelque chose d'original et d'utile.</p>
+          <span class="go">Explorer →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- SECTION EXPLORER -->
 <div id="explorer" style="position:relative;top:-100px;pointer-events:none"></div>
 <section class="ip-section">
@@ -282,61 +337,6 @@ function isLightFac(fac?: string | null): boolean {
     </a>
   </div>
 </section>
-
-<!-- 4 AXES -->
-<div class="axes-section" id="axes">
-  <div class="axes-section-inner">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:12px">
-      <div>
-        <span class="eyebrow">Cadre pédagogique</span>
-        <h2 style="font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-.02em;margin:8px 0 0">Quatre axes d'innovation</h2>
-      </div>
-      <a class="sec-link" href="/catalogue" style="white-space:nowrap">Voir tous les projets →</a>
-    </div>
-    <div class="axes">
-      <a class="axe" href="/axes/preparer" style="--ax:var(--fac-lettres)">
-        <div class="axe-visual">
-          <img src="/images/sections/Preparer.svg" alt="Préparer" />
-        </div>
-        <div class="axe-body">
-          <h3>Préparer</h3>
-          <p>Demander aux étudiant·es d'effectuer une tâche avant le cours.</p>
-          <span class="go">Explorer →</span>
-        </div>
-      </a>
-      <a class="axe" href="/axes/rendre-actif" style="--ax:var(--fac-sciences)">
-        <div class="axe-visual">
-          <img src="/images/sections/RendreActif.svg" alt="Rendre actif" />
-        </div>
-        <div class="axe-body">
-          <h3>Rendre actif</h3>
-          <p>Engager les étudiant·es pendant la séance, en présence comme à distance.</p>
-          <span class="go">Explorer →</span>
-        </div>
-      </a>
-      <a class="axe" href="/axes/responsabiliser" style="--ax:#C28A00">
-        <div class="axe-visual">
-          <img src="/images/sections/Responsabiliser.svg" alt="Responsabiliser" />
-        </div>
-        <div class="axe-body">
-          <h3>Responsabiliser</h3>
-          <p>Développer l'autonomie et la responsabilité dans l'apprentissage.</p>
-          <span class="go">Explorer →</span>
-        </div>
-      </a>
-      <a class="axe" href="/axes/faire-creer" style="--ax:var(--rose)">
-        <div class="axe-visual">
-          <img src="/images/sections/FaireCreer.svg" alt="Faire créer" />
-        </div>
-        <div class="axe-body">
-          <h3>Faire créer</h3>
-          <p>Inviter les étudiant·es à produire quelque chose d'original et d'utile.</p>
-          <span class="go">Explorer →</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
 
 <!-- CHIFFRES CLÉS -->
 <div class="figures">

@@ -1,5 +1,6 @@
 ﻿---
 id: 124
+photo: /images/projet/proj-124-photo.jpg
 title: "Grasp & Jupyter notebook"
 author: "Adrian Holzer & Pascal Felber"
 contact: "adrian.holzer@unine.ch"

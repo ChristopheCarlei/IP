@@ -1,5 +1,6 @@
 ﻿---
 id: 156
+photo: /images/projet/proj-156-photo.jpg
 title: EcoSlam
 author: Chloé Baruffa
 faculty: SDS

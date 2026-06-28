@@ -1,5 +1,6 @@
 ﻿---
 id: 11
+photo: /images/projet/proj-11-photo.jpg
 title: Recherche action
 author: Diana Volonakis
 faculty: FPSE

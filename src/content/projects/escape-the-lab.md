@@ -1,5 +1,6 @@
 ﻿---
 id: 55
+photo: /images/projet/proj-55-photo.jpg
 title: Escape the lab
 author: Bibliothèque de l’Université de Genève
 faculty: Transversal
