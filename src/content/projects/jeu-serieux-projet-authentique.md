@@ -1,25 +1,11 @@
 ﻿---
 id: 108
 images:
+  - /images/projet/proj-108.jpg
   - /images/gallery/proj-108-1.jpg
   - /images/gallery/proj-108-2.jpg
   - /images/gallery/proj-108-3.jpg
   - /images/gallery/proj-108-4.jpg
-title: "Jeu sérieux & projet authentique"
-author: "Laurent Matthey & Marta Alonso"
-photo: /images/projet/Matthey_Alonso.jpg
-contact: "Laurent.Matthey@unige.ch"
-faculty: SDS
-course: Atelier de projet urbain
-level: Master
-students: 25 - 50
-year: 2017
-category: Rendre actifs
-innovation_type: Simuler une situation
-observation_accepted: false
-description_short: "Ce cours propose un serious game qui simule la vie professionnelle dans un bureau d'urbanisme, offrant aux étudiant-es la possibilité d'expérimenter les étapes de la gestion de projets d'urbanisme et de prendre des décisions impactant le scénario du jeu, une expérience difficile à reproduire dans un contexte réel de projet en classe."
-featured: false
-status: actif
 ---
 
 ## Situation de départ

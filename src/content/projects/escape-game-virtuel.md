@@ -1,5 +1,7 @@
 ﻿---
 id: 152
+videos:
+  - https://www.youtube.com/embed/wNdYR-M16ls
 images:
   - /images/gallery/proj-152-1.png
   - /images/gallery/proj-152-2.png
@@ -7,24 +9,6 @@ images:
   - /images/gallery/proj-152-4.png
   - /images/gallery/proj-152-5.png
   - /images/gallery/proj-152-6.png
-title: Escape game virtuel
-author: Rita Trigo Trindade
-photo: /images/projet/Rita_Trigo_Trindade.jpg
-contact: "Rita.TrigoTrindade@unige.ch"
-faculty: Droit
-course: Droit des sociétés
-course_code: 5025
-level: Bachelor
-students: 100 - 300
-year: 2023
-category: Rendre actifs
-innovation_type: Simuler une situation
-observation_accepted: false
-description_short: "Le projet prend la forme d’un escape game : les étudiant-es sont placé-es dans la situation d’une héritière d’un associé « parachutée » dans une société dont elle veut s’échapper sans pour autant perdre son héritage."
-featured: false
-status: actif
-videos:
-  - https://www.youtube.com/embed/wNdYR-M16ls
 ---
 
 ## Situation de départ

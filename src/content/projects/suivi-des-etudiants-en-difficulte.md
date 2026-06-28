@@ -1,4 +1,4 @@
----
+﻿---
 id: 121
 team: Annick Galetto-Lacour
 title: Suivi des étudiants en difficulté
@@ -15,6 +15,9 @@ observation_accepted: false
 description_short: "Pour répondre au défi de l'identification précoce et du soutien des étudiant-es en difficulté, un processus institutionnel engage enseignant-es et conseillers/conseillères académiques. Des entretiens diagnostiques permettent d'élaborer des plans d'apprentissage personnalisés, associant étudiant-es et enseignant-es pour des étapes pédagogiques particulières."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-121.jpg
+  - /images/gallery/proj-121-1.png
 ---
 
 ## Situation de départ

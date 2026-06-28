@@ -1,7 +1,11 @@
----
+﻿---
 id: 142
 title: Linguistic Serious Game of Genoveva Puskas
 description_short: "In the first instance, the students created a serious game based on the famous game \"Who is this?”. In the following classes, the students are asked to develop the first version of this game."
+images:
+  - /images/projet/proj-142.png
+  - /images/gallery/proj-142-1.jpg
+  - /images/gallery/proj-142-2.jpg
 ---
 
 ## Initial situation

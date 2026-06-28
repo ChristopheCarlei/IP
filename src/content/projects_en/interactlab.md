@@ -5,6 +5,8 @@ description_short: By combining the flipped classroom approach with project-base
 videos:
   - https://mediaserver.unige.ch/embed/299479
   - https://mediaserver.unige.ch/embed/299480
+images:
+  - /images/gallery/proj-158-1.png
 ---
 
 ## Initial situation

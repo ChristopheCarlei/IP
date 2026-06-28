@@ -4,6 +4,17 @@ title: SketchNote 3D by Christophe Lamy
 description_short: "Anatomy practical work in medicine has adopted the flipped classroom approach, with e-learning modules as a prerequisite. To enhance this method, the \"SketchNote 3D\" web tool has been developed to annotate and visualize interactive 3D anatomical models in teaching."
 videos:
   - https://www.youtube.com/embed/wqddan7BFHs
+  - https://www.unige.ch/innovations-pedagogiques/application/files/3116/8413/9010/sketchnote-v2-medium.mp4
+images:
+  - /images/gallery/proj-115-2.jpg
+  - /images/gallery/proj-115-3.png
+  - /images/gallery/proj-115-4.jpg
+  - /images/gallery/proj-115-5.png
+  - /images/gallery/proj-115-6.jpg
+  - /images/gallery/proj-115-7.png
+  - /images/gallery/proj-115-8.png
+  - /images/gallery/proj-115-9.jpg
+  - /images/gallery/proj-115-10.png
 ---
 
 ## Initial situation

@@ -14,6 +14,9 @@ observation_accepted: false
 description_short: Les ateliers participatifs encouragent les étudiant-es à réfléchir à leurs pratiques de consommation et de mobilité, à partager leurs expériences en groupe et à envisager des changements durables. Ils/elles rédigent ensuite des synthèses sur le soutien aux initiatives de consommation durable en se basant sur des études de cas et des discussions collectives.
 featured: false
 status: actif
+images:
+  - /images/projet/proj-72.jpg
+  - /images/gallery/proj-72-1.jpg
 ---
 
 ## Situation de départ

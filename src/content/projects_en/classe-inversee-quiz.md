@@ -1,7 +1,16 @@
----
+﻿---
 id: 97
 title: "Flipped Classroom & Quiz by Enrico Chavez"
 description_short: "This course has been transformed into a flipped classroom: students prepare the content before the course via Moodle. Course elements such as explanatory videos, self-assessment quizzes and practical work are provided. During the course, interactive questions are asked via the Wooclap platform."
+images:
+  - /images/gallery/proj-97-1.png
+  - /images/gallery/proj-97-2.png
+  - /images/gallery/proj-97-3.png
+  - /images/gallery/proj-97-4.png
+  - /images/gallery/proj-97-5.png
+  - /images/gallery/proj-97-6.png
+  - /images/gallery/proj-97-7.png
+  - /images/gallery/proj-97-8.png
 ---
 
 ## Initial situation

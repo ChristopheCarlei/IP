@@ -1,7 +1,11 @@
----
+﻿---
 id: 84
 title: "Céline Buchs' Formative feedback"
 description_short: This course on cooperative pedagogy offers interactive and hands-on activities to deepen the principles of cooperative learning. Students prepare activity planning, receive formative team feedback, and participate in group discussions to improve their co-operative education skills.
+images:
+  - /images/projet/proj-84.jpg
+  - /images/gallery/proj-84-1.jpg
+  - /images/gallery/proj-84-2.jpg
 ---
 
 ## Initial situation

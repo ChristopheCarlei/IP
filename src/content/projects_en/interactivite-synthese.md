@@ -1,7 +1,9 @@
----
+﻿---
 id: 33
 title: "Interactivity & synthesis by Lucile Davier"
 description_short: The teacher set up SpeakUp to encourage student participation, small group exchanges and spontaneous written reflections. She also uses Padlet for the organization of the review session and SEB for the online evaluation of the course.
+images:
+  - /images/gallery/proj-33-1.jpg
 ---
 
 ## Initial situation

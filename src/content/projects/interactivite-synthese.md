@@ -2,20 +2,6 @@
 id: 33
 images:
   - /images/gallery/proj-33-1.jpg
-title: "Interactivité & synthèse"
-author: Lucile Davier
-photo: /images/projet/Lucile_Davier.jpg
-faculty: FTI
-course: ""
-level: ""
-students: 50 - 100
-year: 2019
-category: Rendre actifs
-innovation_type: Donner la parole
-observation_accepted: false
-description_short: "L'enseignante a mis en place SpeakUp pour encourager la participation des étudiant-es, des échanges en petits groupes et des réflexions écrites spontanées. Elle utilise également Padlet pour l'organisation de la séance de révision et le SEB pour l'évaluation en ligne du cours."
-featured: false
-status: actif
 ---
 
 ## Situation de départ

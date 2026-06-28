@@ -13,6 +13,8 @@ observation_accepted: false
 description_short: "Ce cours sur le mix énergétique offre aux étudiants des fiches d'information et un outil interactif pour explorer les technologies d'approvisionnement en électricité et créer un mix électrique pour la Suisse en 2035, favorisant ainsi une réflexion éclairée sur le sujet."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-78.jpg
 ---
 
 ## Situation de départ

@@ -6,6 +6,14 @@ videos:
   - https://mediaserver.unige.ch/embed/199027
   - https://mediaserver.unige.ch/embed/199025
   - https://mediaserver.unige.ch/embed/199026
+images:
+  - /images/gallery/proj-151-1.png
+  - /images/gallery/proj-151-2.png
+  - /images/gallery/proj-151-3.png
+  - /images/gallery/proj-151-4.png
+  - /images/gallery/proj-151-5.png
+  - /images/gallery/proj-151-6.png
+  - /images/gallery/proj-151-7.png
 ---
 
 ## Initial situation

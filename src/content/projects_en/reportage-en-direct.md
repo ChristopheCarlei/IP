@@ -4,6 +4,9 @@ title: Live reporting of Nicolas Szilas
 description_short: In order to disseminate knowledge about places that are difficult to access in large groups, the project team offers courses in the form of reports broadcast in real time on Zoom.
 videos:
   - https://www.youtube.com/embed/GCYtPRAOQpE
+images:
+  - /images/gallery/proj-145-1.jpg
+  - /images/gallery/proj-145-2.jpg
 ---
 
 ## Initial situation

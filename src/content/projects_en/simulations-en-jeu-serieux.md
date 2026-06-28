@@ -4,6 +4,12 @@ title: Serious game simulations by Dominique Jaccard
 description_short: The teacher has developed a serious game in project management to allow students to concretely apply theoretical concepts, thus promoting a better understanding and integration of the subjects taught.
 videos:
   - https://www.youtube.com/embed/xjChZFRmjwQ
+images:
+  - /images/gallery/proj-90-1.png
+  - /images/gallery/proj-90-2.png
+  - /images/gallery/proj-90-3.png
+  - /images/gallery/proj-90-4.png
+  - /images/gallery/proj-90-5.png
 ---
 
 ## Initial situation

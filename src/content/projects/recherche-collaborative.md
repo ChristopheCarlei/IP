@@ -16,6 +16,8 @@ observation_accepted: false
 description_short: Les étudiant-es développent des compétences de recherche en technologies éducatives en concevant des plans de recherche pour des projets de financement et en collaborant sur un lexique « EduTech Wiki ».
 featured: false
 status: actif
+images:
+  - /images/gallery/proj-117-1.jpg
 ---
 
 ## Situation de départ

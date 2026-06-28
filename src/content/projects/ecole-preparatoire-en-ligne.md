@@ -1,5 +1,8 @@
 ﻿---
 id: 138
+videos:
+  - https://gsem-epm-be.innprogress.ch/uploads/video/intro__VF-1661955700116.mp4
+  - https://gsem-epm-be.innprogress.ch/uploads/video/Georgia_VF-1662115677386.mp4
 images:
   - /images/gallery/proj-138-1.png
   - /images/gallery/proj-138-2.png
@@ -9,25 +12,6 @@ images:
   - /images/gallery/proj-138-6.png
   - /images/gallery/proj-138-7.png
   - /images/gallery/proj-138-8.png
-team: Octavian Petru Strimbu, Flavio Battaglini, Charlie Ormond, Daryna Bilodid
-title: Ecole préparatoire en ligne
-author: Oumaima Ajmi
-photo: /images/projet/Oumaima_Ajmi.jpg
-contact: "oumaima.ajmi@unige.ch"
-faculty: GSEM
-course: Ecole Préparatoire de Mathématiques
-level: Bachelor
-students: 300 - 500
-year: 2022
-category: Préparer
-innovation_type: Questionner
-observation_accepted: true
-description_short: "L'École Préparatoire de Mathématiques propose aux nouvelles volées estudiantines de mettre à niveau leurs connaissances en mathématiques. Principalement en ligne, elle permet aux étudiant-es de progresser à leur propre rythme, avec des tests de positionnement, des modules personnalisés, une boîte de dialogue pour les questions et des sessions en personne."
-featured: false
-status: actif
-videos:
-  - https://gsem-epm-be.innprogress.ch/uploads/video/intro__VF-1661955700116.mp4
-  - https://gsem-epm-be.innprogress.ch/uploads/video/Georgia_VF-1662115677386.mp4
 ---
 
 ## Situation de départ

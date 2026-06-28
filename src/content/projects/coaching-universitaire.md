@@ -13,6 +13,12 @@ observation_accepted: false
 description_short: "L'enseignante utilise une approche de coaching académique, encourageant les étudiant-es à prendre en main leur apprentissage, favorisant le sens critique et la réflexion en petits groupes. L'évaluation se fait sur ordinateur avec accès aux outils de recherche, simulant les conditions réelles de travail."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-26.jpg
+  - /images/gallery/proj-26-1.jpg
+  - /images/gallery/proj-26-2.jpg
+  - /images/gallery/proj-26-3.jpg
+  - /images/gallery/proj-26-4.jpg
 ---
 
 ## Situation de départ

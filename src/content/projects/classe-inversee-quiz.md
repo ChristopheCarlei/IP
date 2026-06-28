@@ -15,6 +15,15 @@ observation_accepted: false
 description_short: "Ce cours a été transformé en classe inversée : les étudiant-es préparent le contenu avant le cours via Moodle. Des éléments de cours tels que des vidéos explicatives, des quiz d'auto-évaluation et des travaux pratiques leur sont fournis. Pendant le cours, des questions interactives sont posées via la plateforme Wooclap."
 featured: false
 status: actif
+images:
+  - /images/gallery/proj-97-1.png
+  - /images/gallery/proj-97-2.png
+  - /images/gallery/proj-97-3.png
+  - /images/gallery/proj-97-4.png
+  - /images/gallery/proj-97-5.png
+  - /images/gallery/proj-97-6.png
+  - /images/gallery/proj-97-7.png
+  - /images/gallery/proj-97-8.png
 ---
 
 ## Situation de départ

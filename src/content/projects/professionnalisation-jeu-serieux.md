@@ -15,6 +15,11 @@ observation_accepted: false
 description_short: "L'un des exercices facultatifs proposés dans le cours est un serious game joué sur ordinateur. Dans celui-ci, les étudiant-es se mettent dans la peau d'un-e avocat-e stagiaire et doivent résoudre des problèmes juridiques, recevant des commentaires de la part du/de la maître de stage et du/de la cliente."
 featured: false
 status: actif
+images:
+  - /images/gallery/proj-98-1.jpg
+  - /images/gallery/proj-98-2.jpg
+  - /images/gallery/proj-98-3.jpg
+  - /images/gallery/proj-98-4.jpg
 ---
 
 ## Situation de départ

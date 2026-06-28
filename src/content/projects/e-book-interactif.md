@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Un e-book interactif contenant tout le matériel du cours, créé à partir de RStudio, a été mis à la disposition des étudiant-es sur GitHub. Il permet aux étudiant-e de préparer les chapitres à l'avance, puis d’utiliser le temps en classe pour approfondir les concepts et répondre aux questions."
 featured: false
 status: actif
+images:
+  - /images/gallery/proj-66-1.jpg
 ---
 
 ## Situation de départ

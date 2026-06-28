@@ -1,7 +1,12 @@
----
+﻿---
 id: 49
 title: Zoom in classroom by Priscilla Soulie
 description_short: During face-to-face practical work, students use Zoom to share their screen with the teacher and their peers. This enables them to annotate histological sections together, ask questions live and take part in interactive challenges, promoting a collaborative learning experience.
+images:
+  - /images/projet/proj-49.jpg
+  - /images/gallery/proj-49-1.jpg
+  - /images/gallery/proj-49-2.jpg
+  - /images/gallery/proj-49-3.jpg
 ---
 
 ## Initial situation

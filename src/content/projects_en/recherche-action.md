@@ -1,7 +1,9 @@
----
+﻿---
 id: 11
 title: Action research by Diana Volonakis
 description_short: This course adopts the Service-Learning model, combining learning and community service to meet the needs of society. Students engage in research projects proposed by professionals in the field and present their results in the form of posters or radio broadcasts.
+images:
+  - /images/gallery/proj-11-1.jpg
 ---
 
 ## Project implementation

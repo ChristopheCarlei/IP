@@ -15,6 +15,9 @@ observation_accepted: false
 description_short: "Ce cours a adopté une pédagogie par projet depuis 2014, utilisant l'environnement techno-pédagogique Sqily pour encourager le développement de compétences et de connaissances à travers une trentaine d’activités représentées visuellement sous forme d’une arborescence permettant aux étudiant-es d’organiser leur parcours d’apprentissage de manière cohérente."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-104.png
+  - /images/gallery/proj-104-1.jpg
 ---
 
 ## Situation de départ

@@ -1,5 +1,7 @@
 ﻿---
 id: 143
+videos:
+  - https://mediaserver.unige.ch/embed/147544
 images:
   - /images/gallery/proj-143-1.png
   - /images/gallery/proj-143-2.png
@@ -7,23 +9,6 @@ images:
   - /images/gallery/proj-143-4.png
   - /images/gallery/proj-143-5.jpg
   - /images/gallery/proj-143-6.png
-title: Portfolio électronique
-author: Frédéric Geoffroy
-photo: /images/projet/Frederic_Geoffroy.jpg
-contact: "Frederic.Geoffroy@unige.ch"
-faculty: Médecine
-course: Tous
-level: Tous
-students: Supérieur à 1000
-year: 2019
-category: Responsabiliser
-innovation_type: Développer des compétences
-observation_accepted: false
-description_short: Une application portfolio permet aux étudiant-es de documenter l’ensemble des activités effectuées lors de leur stage et autres activités d’apprentissage. Elle permet également aux responsables de stage d’évaluer et valider les degrés d’autonomie atteints par les étudiant-es dans les différentes activités.
-featured: false
-status: actif
-videos:
-  - https://mediaserver.unige.ch/embed/147544
 ---
 
 ## Situation de départ

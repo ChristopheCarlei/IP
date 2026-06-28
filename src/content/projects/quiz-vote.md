@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Pendant les séances, les enseignants encouragent l'interaction et la participation des étudiant-es en utilisant des outils tels que Mentimeter pour poser des questions en direct. De plus, des quiz formatifs facultatifs sont proposés aux étudiant-es après les lectures préalables, leur permettant de s'auto-évaluer et de renforcer leur compréhension des sujets abordés."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-58.png
 ---
 
 ## Situation de départ

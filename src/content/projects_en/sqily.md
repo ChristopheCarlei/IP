@@ -1,7 +1,10 @@
----
+﻿---
 id: 104
 title: Sqily by Barbara Class
 description_short: This course has adopted a project-based pedagogy since 2014, using the Sqily techno-pedagogical environment to encourage the development of skills and knowledge through thirty activities visually represented in the form of a tree structure allowing students to organize their learning path in a coherent way.
+images:
+  - /images/projet/proj-104.png
+  - /images/gallery/proj-104-1.jpg
 ---
 
 ## Initial situation

@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Le cours a été transformé en utilisant le principe de Team-based learning (TBL) : les étudiant-es se préparent individuellement avant chaque séance en suivant des lectures et des vidéos, passent ensuite un test individuel puis en groupe et travaillent en équipe sur des exercices pour résoudre des problèmes complexes."
 featured: false
 status: actif
+images:
+  - /images/gallery/proj-126-1.png
 ---
 
 ## Situation de départ

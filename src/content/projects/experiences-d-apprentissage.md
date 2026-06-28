@@ -16,6 +16,8 @@ observation_accepted: true
 description_short: L’enseignant fait vivre à ses étudiant-es des expériences d’apprentissage à chaque séance de cours. Celles-ci sont en lien direct avec des situations didactiques et pédagogiques auxquelles ils/elles seront confronté-es en tant que jeunes professionnel-es. L’objectif est de développer leurs compétences transversales notamment en gestion de projet avec le suivi de projets issus de « vrais » commanditaires.
 featured: false
 status: actif
+images:
+  - /images/projet/proj-163.jpg
 ---
 
 ## Situation de départ

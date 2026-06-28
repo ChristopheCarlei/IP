@@ -4,6 +4,10 @@ title: Project of Video Learning Lab de Valérie Lussi Borer
 description_short: The Video Learning Lab engages students in analyzing authentic, filmed teaching situations and designing training scenarios. It promotes the integration of theory and practice, active learning, and the development of a reflective mindset.
 videos:
   - https://www.youtube.com/embed/1dAgT87F-0E
+images:
+  - /images/gallery/proj-169-1.png
+  - /images/gallery/proj-169-2.png
+  - /images/gallery/proj-169-3.png
 ---
 
 ## Initial situation

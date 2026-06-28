@@ -1,25 +1,10 @@
 ﻿---
 id: 128
-images:
-  - /images/gallery/proj-128-1.jpg
-award: Prix innovation pédagogique
-title: Fiches médicales
-author: "Priscilla Soulie & Monica Didier"
-photo: /images/projet/Priscilla_Soulie.jpg
-contact: "Priscilla.Soulie@unige.ch"
-faculty: Médecine
-course: Création de fiches Orphanet (22BM083)
-level: Bachelor
-students: 25 - 50
-year: 2019
-category: Faire créer
-innovation_type: Faire réaliser une production originale
-observation_accepted: false
-description_short: "Dans ce projet mené en autonomie, les étudiant-es rédigent des fiches de maladies rares pour une base de données, en assumant des rôles spécifiques, s'auto-évaluant et s'évaluant mutuellement."
-featured: false
-status: actif
 videos:
   - https://www.youtube.com/embed/ZECUQojxp_8
+images:
+  - /images/gallery/proj-128-1.jpg
+  - /images/gallery/proj-128-2.jpg
 ---
 
 ## Situation de départ

@@ -1,7 +1,10 @@
----
+﻿---
 id: 121
 title: Follow-up of students in difficulty by M-C Audétat and Annick Galetto-Lacour
 description_short: To meet the challenge of early identification and support of students in difficulty, an institutional process involves teachers and academic advisors. Diagnostic interviews enable personalized learning plans to be drawn up, involving students and teachers in particular pedagogical stages.
+images:
+  - /images/projet/proj-121.jpg
+  - /images/gallery/proj-121-1.png
 ---
 
 ## Initial situation

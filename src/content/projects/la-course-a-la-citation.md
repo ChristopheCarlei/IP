@@ -1,6 +1,7 @@
 ﻿---
 id: 150
 images:
+  - /images/projet/proj-150.png
   - /images/gallery/proj-150-1.png
   - /images/gallery/proj-150-2.png
   - /images/gallery/proj-150-3.png
@@ -8,20 +9,6 @@ images:
   - /images/gallery/proj-150-5.png
   - /images/gallery/proj-150-6.png
   - /images/gallery/proj-150-7.png
-title: La course à la citation
-author: Bibliothèque de l’Université de Genève
-contact: "biblio-formation@unige.ch"
-faculty: Transversal
-course: "-"
-level: Bachelor
-students: 25 - 50
-year: 2017
-category: Rendre actifs
-innovation_type: Faire collaborer
-observation_accepted: true
-description_short: « La Course à la citation » est un jeu de plateau qui sensibilise les étudiant-es aux bonnes pratiques de citation et au risque de plagiat. Pour progresser dans le jeu, les joueur/euses doivent répondre correctement à des questions de type « vrai/faux » ou « à choix multiple ».
-featured: false
-status: actif
 ---
 
 ## Situation de départ

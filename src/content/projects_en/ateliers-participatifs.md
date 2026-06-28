@@ -1,7 +1,10 @@
----
+﻿---
 id: 72
 title: Participative workshops by Marlyne Sahakian
 description_short: Participatory workshops encourage students to reflect on their consumption and mobility practices, share their experiences in groups and consider sustainable changes. They then write syntheses on supporting sustainable consumption initiatives based on case studies and collective discussions.
+images:
+  - /images/projet/proj-72.jpg
+  - /images/gallery/proj-72-1.jpg
 ---
 
 ## Initial situation

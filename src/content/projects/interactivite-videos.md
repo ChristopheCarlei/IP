@@ -1,23 +1,9 @@
 ﻿---
 id: 35
-images:
-  - /images/gallery/proj-35-1.jpg
-title: "Interactivité & vidéos"
-author: Klea Faniko
-photo: /images/projet/Klea_Faniko.jpg
-faculty: FPSE
-course: ""
-level: ""
-students: 300 - 500
-year: 2019
-category: Faire créer
-innovation_type: Faire réaliser une production originale
-observation_accepted: false
-description_short: "Pour favoriser l'interaction et l'implication des étudiant-es, l'enseignante a utilisé des plateformes numériques interactives telles que Kahoot et Padlet. De plus, des modalités de participation facultatives, telles que la création de capsules vidéo et la participation à des tables rondes, ont été proposées à des groupes plus restreints d'étudiant-es."
-featured: false
-status: actif
 videos:
   - https://mediaserver.unige.ch/embed/120287
+images:
+  - /images/gallery/proj-35-1.jpg
 ---
 
 ## Situation de départ

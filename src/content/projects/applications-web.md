@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Le cours \"STIC I\" se base sur la pédagogie par projet : les étudiant-es conçoivent des dispositifs interactifs pour résoudre des problématiques d'apprentissage et contribuent à l'EduTech Wiki."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-114.png
 ---
 
 ## Situation de départ

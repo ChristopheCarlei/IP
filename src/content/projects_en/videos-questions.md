@@ -5,6 +5,10 @@ description_short: "This project aims to provide basics in mathematics via video
 videos:
   - https://www.youtube.com/embed/m-7NmevfX8E
   - https://www.unige.ch/fapse/vll/application/files/6815/7839/0295/Kasparian.mp4
+  - https://www.unige.ch/innovations-pedagogiques/application/files/3816/8424/2117/SpeakUpAnimation.mp4
+  - https://www.unige.ch/innovations-pedagogiques/application/files/5316/8424/2349/room-key-s.mp4
+  - https://www.unige.ch/innovations-pedagogiques/application/files/1016/8424/2348/intro-en-3.mp4
+  - https://www.unige.ch/innovations-pedagogiques/application/files/1316/8424/2348/admin-key-s.mp4
 ---
 
 ## Initial situation

@@ -1,7 +1,16 @@
----
+﻿---
 id: 153
 title: Sensor design Game of Jérôme Kasparian
 description_short: In this course, the teaching approach focuses on the design and production of simple sensors by students.
+images:
+  - /images/projet/proj-153.png
+  - /images/gallery/proj-153-1.png
+  - /images/gallery/proj-153-2.png
+  - /images/gallery/proj-153-3.png
+  - /images/gallery/proj-153-4.png
+  - /images/gallery/proj-153-5.png
+  - /images/gallery/proj-153-6.png
+  - /images/gallery/proj-153-7.png
 ---
 
 ## Initial situation

@@ -14,6 +14,11 @@ observation_accepted: false
 description_short: "L'approche pédagogique de l'enseignante consiste à personnifier les théories en présentant aux étudiant-es des personnages incarnant différentes perspectives de la sociologie de la consommation. Ces personnages débattent et prennent position sur des objets du cours, offrant ainsi une compréhension vivante et contrastée des théories abordées."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-73.jpg
+  - /images/gallery/proj-73-1.jpg
+  - /images/gallery/proj-73-2.jpg
+  - /images/gallery/proj-73-3.jpg
 ---
 
 ## Situation de départ

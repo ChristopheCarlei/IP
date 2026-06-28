@@ -1,7 +1,12 @@
----
+﻿---
 id: 91
 title: Hybridization and interactivity of Lorenz Baumer and Patrizia Birchler Emery
 description_short: This training is articulated in a hybrid format with an alternation of one day of face-to-face and 6 weeks remotely. Each module consists of 3 face-to-face days and 12 weeks of distance learning including courses, activities, documentary resources, group work and personalized tutoring.
+images:
+  - /images/gallery/proj-91-1.png
+  - /images/gallery/proj-91-2.png
+  - /images/gallery/proj-91-3.png
+  - /images/gallery/proj-91-4.png
 ---
 
 ## Initial situation

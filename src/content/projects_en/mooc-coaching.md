@@ -4,6 +4,8 @@ title: "MOOC & coaching by Isabelle Bolon"
 description_short: Students are exposed to a MOOC before the course, then interact with refugees to apply the concepts taught, and finally evaluate their contribution via an online questionnaire.
 videos:
   - https://www.youtube.com/embed/b0lj9jftDy4
+images:
+  - /images/gallery/proj-6-1.jpg
 ---
 
 ## Initial situation

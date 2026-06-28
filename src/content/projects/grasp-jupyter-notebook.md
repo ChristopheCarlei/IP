@@ -1,26 +1,12 @@
 ﻿---
 id: 124
+videos:
+  - https://www.youtube.com/embed/qvYvqb5tB8M
+  - https://www.youtube.com/embed/videoseries
 images:
   - /images/gallery/proj-124-1.png
   - /images/gallery/proj-124-2.png
   - /images/gallery/proj-124-3.png
-title: "Grasp & Jupyter notebook"
-author: "Adrian Holzer & Pascal Felber"
-contact: "adrian.holzer@unine.ch"
-faculty: Sciences
-course: Technologies de l’Information en FSE et Programmation I en FS
-level: Bachelor
-students: 100 - 300
-year: 2021
-category: Responsabiliser
-innovation_type: Développer des compétences
-observation_accepted: false
-description_short: Ce projet permet aux étudiant-es d’effectuer en autonomie l’apprentissage et la révision de concepts de programmation à travers de courtes capsules vidéo sur les concepts, des ressources interactives additionnelles pour approfondir ces concepts (selon leur niveau et leurs besoins) ainsi que des exercices auto-évalués.
-featured: false
-status: actif
-videos:
-  - https://www.youtube.com/embed/qvYvqb5tB8M
-  - https://www.youtube.com/embed/videoseries
 ---
 
 ## Situation de départ

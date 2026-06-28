@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Ce séminaire d'archéologie classique est proposé en présentiel à l'université de Lausanne et de Genève, avec des cours en visioconférence partagés entre les deux établissements. Les étudiant-es travaillent en binômes mixtes et réalisent des exposés projetés en direct dans les deux salles."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-51.jpg
 ---
 
 ## Situation de départ

@@ -1,6 +1,7 @@
 ﻿---
 id: 166
 images:
+  - /images/projet/proj-166.jpg
   - /images/gallery/proj-166-1.jpg
   - /images/gallery/proj-166-2.jpg
   - /images/gallery/proj-166-3.jpg
@@ -9,22 +10,7 @@ images:
   - /images/gallery/proj-166-6.jpg
   - /images/gallery/proj-166-7.jpg
   - /images/gallery/proj-166-8.jpg
-title: Apprentissage par le corps
-author: Apolline Torregrosa
-photo: /images/projet/Apolline_Torregrosa_.jpg
-contact: "apolline.torregrosa@unige.ch"
-faculty: FPSE
-course: Corporéité, art et développement
-course_code: F4P10104
-level: Master
-students: 25 - 50
-year: 2024
-category: Rendre actifs
-innovation_type: Simuler une situation
-observation_accepted: true
-description_short: Le cours vise à prendre conscience du rôle du corps dans l’enseignement/apprentissage et à expérimenter des activités qui mobilisent le corps des élèves, à partir d’approches artistiques utilisables dans différents contextes.
-featured: false
-status: actif
+  - /images/gallery/proj-166-9.jpg
 ---
 
 ## Situation de départ

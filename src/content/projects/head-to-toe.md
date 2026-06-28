@@ -18,6 +18,12 @@ featured: false
 status: actif
 videos:
   - https://www.unige.ch/innovations-pedagogiques/application/files/4116/0586/2909/HeadtoToe_final.mp4
+images:
+  - /images/gallery/proj-7-1.png
+  - /images/gallery/proj-7-2.png
+  - /images/gallery/proj-7-3.png
+  - /images/gallery/proj-7-4.png
+  - /images/gallery/proj-7-5.png
 ---
 
 ## Situation de départ

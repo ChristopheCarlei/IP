@@ -1,22 +1,7 @@
----
+﻿---
 id: 42
 images:
   - /images/gallery/proj-42-1.jpg
-team: Ian Florin
-title: Round robin
-author: Jörg Balsiger
-photo: /images/projet/Jorg_Balsiger.jpg
-faculty: Sciences
-course: ""
-level: ""
-students: 50 - 100
-year: 2017
-category: Faire créer
-innovation_type: Faire conceptualiser un projet
-observation_accepted: false
-description_short: Les étudiant-es présentent leurs projets finaux sous forme de round robin durant lesquels chaque groupe alterne entre les présentations, les questions et les observations.
-featured: false
-status: actif
 ---
 
 ## Situation de départ

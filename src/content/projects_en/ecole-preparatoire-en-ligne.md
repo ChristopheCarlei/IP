@@ -5,6 +5,15 @@ description_short: The Preparatory School of Mathematics offers new student grou
 videos:
   - https://gsem-epm-be.innprogress.ch/uploads/video/intro__VF-1661955700116.mp4
   - https://gsem-epm-be.innprogress.ch/uploads/video/Georgia_VF-1662115677386.mp4
+images:
+  - /images/gallery/proj-138-1.png
+  - /images/gallery/proj-138-2.png
+  - /images/gallery/proj-138-3.png
+  - /images/gallery/proj-138-4.png
+  - /images/gallery/proj-138-5.png
+  - /images/gallery/proj-138-6.png
+  - /images/gallery/proj-138-7.png
+  - /images/gallery/proj-138-8.png
 ---
 
 ## Initial situation

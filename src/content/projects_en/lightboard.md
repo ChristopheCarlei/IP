@@ -5,6 +5,12 @@ description_short: The teacher uses a lightboard, a transparent glass board back
 videos:
   - https://mediaserver.unige.ch/embed/243758
   - https://mediaserver.unige.ch/embed/243757
+images:
+  - /images/gallery/proj-162-1.jpg
+  - /images/gallery/proj-162-2.jpg
+  - /images/gallery/proj-162-3.jpg
+  - /images/gallery/proj-162-4.jpg
+  - /images/gallery/proj-162-5.jpg
 ---
 
 ## Initial situation

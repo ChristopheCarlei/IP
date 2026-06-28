@@ -1,7 +1,18 @@
----
+﻿---
 id: 166
 title: Learning through the body of Appoline Torregrosa
 description_short: The course aims to raise awareness of the role of the body in teaching and learning and to explore activities that engage students’ bodies, using artistic approaches that can be applied in various contexts.
+images:
+  - /images/projet/proj-166.jpg
+  - /images/gallery/proj-166-1.jpg
+  - /images/gallery/proj-166-2.jpg
+  - /images/gallery/proj-166-3.jpg
+  - /images/gallery/proj-166-4.jpg
+  - /images/gallery/proj-166-5.jpg
+  - /images/gallery/proj-166-6.jpg
+  - /images/gallery/proj-166-7.jpg
+  - /images/gallery/proj-166-8.jpg
+  - /images/gallery/proj-166-9.jpg
 ---
 
 ## Initial situation

@@ -14,6 +14,8 @@ observation_accepted: false
 description_short: "Les étudiant-es, non francophones, sélectionnent un élément culturel qui les intéresse (une chanson, une bande dessinée ou un conte) et créent des fiches pédagogiques adaptées à un public d'élèves non francophones de niveau inférieur."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-50.jpg
 ---
 
 ## Situation de départ

@@ -15,6 +15,10 @@ observation_accepted: true
 description_short: Lors de la première occurrence du cours, les étudiant-es ont créé un jeu sérieux en se basant sur le célèbre jeu « Qui est-ce ? ». Dans les volées suivantes, les étudiant-es sont amené-es à faire évoluer la première version de ce jeu.
 featured: false
 status: actif
+images:
+  - /images/projet/proj-142.png
+  - /images/gallery/proj-142-1.jpg
+  - /images/gallery/proj-142-2.jpg
 ---
 
 ## Situation de départ

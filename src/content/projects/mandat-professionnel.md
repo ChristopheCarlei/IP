@@ -18,6 +18,8 @@ featured: false
 status: actif
 videos:
   - https://mediaserver.unige.ch/embed/139302
+images:
+  - /images/gallery/proj-116-1.png
 ---
 
 ## Situation de départ

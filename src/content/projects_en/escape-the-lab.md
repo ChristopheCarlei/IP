@@ -1,7 +1,13 @@
----
+﻿---
 id: 55
 title: Escape the lab by DIS
 description_short: "\"Escape the Lab\" is a board game that trains young researchers in Open Access. Players must answer questions in different categories to obtain the keys to the escape, while preventing bacteria from escaping."
+images:
+  - /images/gallery/proj-55-1.jpg
+  - /images/gallery/proj-55-2.jpg
+  - /images/gallery/proj-55-3.jpg
+  - /images/gallery/proj-55-4.png
+  - /images/gallery/proj-55-5.png
 ---
 
 ## Initial situation

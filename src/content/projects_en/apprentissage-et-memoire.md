@@ -1,7 +1,12 @@
----
+﻿---
 id: 146
 title: Learning and memory of Monica Riegel et Ulrike Rimmele
 description_short: Students work on the course material while applying the principles studied through the activities offered (quizzes, article presentations, discussion and moderation, etc.), the structured rhythm of the weeks and the assessment methods. Their participation is active, and the learning methods used enable them to develop long-term learning and cross-disciplinary skills.
+images:
+  - /images/projet/proj-146.jpg
+  - /images/gallery/proj-146-1.jpg
+  - /images/gallery/proj-146-2.jpg
+  - /images/gallery/proj-146-3.jpg
 ---
 
 ## Initial situation

@@ -1,7 +1,9 @@
----
+﻿---
 id: 132
 title: Thinking (through) the voice by Noemi Michel
 description_short: "This course explores the concept of \"voice politics\" through interactions and audio creations, with an emphasis on the issue of representativeness in political and academic communities. Students form groups to create audio essays based on oral presentations."
+images:
+  - /images/projet/proj-132.png
 ---
 
 ## Initial situation

@@ -1,30 +1,14 @@
 ﻿---
 id: 162
+videos:
+  - https://mediaserver.unige.ch/embed/243758
+  - https://mediaserver.unige.ch/embed/243757
 images:
   - /images/gallery/proj-162-1.jpg
   - /images/gallery/proj-162-2.jpg
   - /images/gallery/proj-162-3.jpg
   - /images/gallery/proj-162-4.jpg
   - /images/gallery/proj-162-5.jpg
-title: Lightboard
-author: Jérôme Lacour
-photo: /images/projet/Jerome_Lacour.jpg
-contact: "Jerome.Lacour@unige.ch"
-faculty: Sciences
-course: Chimie organique pour étudiant-es en biologie et sciences pharmaceutiques
-course_code: 11C103
-level: Bachelor
-students: 100 - 300
-year: 2024
-category: Rendre actifs
-innovation_type: Démontrer
-observation_accepted: true
-description_short: L’enseignant utilise un lightboard, un tableau en verre transparent rétroéclairé avec des marqueurs fluorescents, pour corriger les exercices en se filmant face à la caméra, ce qui lui permet d’écrire tout en restant visible pour les étudiant-es.
-featured: false
-status: actif
-videos:
-  - https://mediaserver.unige.ch/embed/243758
-  - https://mediaserver.unige.ch/embed/243757
 ---
 
 ## Situation de départ

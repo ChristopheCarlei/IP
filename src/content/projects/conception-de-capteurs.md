@@ -1,6 +1,7 @@
 ﻿---
 id: 153
 images:
+  - /images/projet/proj-153.png
   - /images/gallery/proj-153-1.png
   - /images/gallery/proj-153-2.png
   - /images/gallery/proj-153-3.png
@@ -8,20 +9,6 @@ images:
   - /images/gallery/proj-153-5.png
   - /images/gallery/proj-153-6.png
   - /images/gallery/proj-153-7.png
-title: Conception de capteurs
-author: Jérôme Kasparian
-photo: /images/projet/Jerome_Kasparian.jpg
-faculty: Sciences
-course: ""
-level: ""
-students: 25 - 50
-year: 2023
-category: Faire créer
-innovation_type: Faire gérer un projet
-observation_accepted: false
-description_short: "Dans ce cours, l'approche pédagogique met l'accent sur la conception et la réalisation de capteurs simples par les étudiant-es."
-featured: false
-status: actif
 ---
 
 ## Situation de départ

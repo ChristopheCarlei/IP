@@ -14,6 +14,18 @@ observation_accepted: false
 description_short: Les cartes conceptuelles aident à résumer un texte en mettant en évidence les idées clés et leurs relations. Les étudiant-es créent leurs cartes individuellement, les comparent en groupe et discutent des approches et des erreurs pour une meilleure compréhension globale.
 featured: false
 status: actif
+images:
+  - /images/projet/proj-92.jpg
+  - /images/gallery/proj-92-1.jpg
+  - /images/gallery/proj-92-2.jpg
+  - /images/gallery/proj-92-3.jpg
+  - /images/gallery/proj-92-4.jpg
+  - /images/gallery/proj-92-5.jpg
+  - /images/gallery/proj-92-6.jpg
+  - /images/gallery/proj-92-7.jpg
+  - /images/gallery/proj-92-8.jpg
+  - /images/gallery/proj-92-9.jpg
+  - /images/gallery/proj-92-10.jpg
 ---
 
 ## Situation de départ

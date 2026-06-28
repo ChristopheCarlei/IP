@@ -5,6 +5,10 @@ description_short: This project enables students to learn and revise programming
 videos:
   - https://www.youtube.com/embed/qvYvqb5tB8M
   - https://www.youtube.com/embed/videoseries
+images:
+  - /images/gallery/proj-124-1.png
+  - /images/gallery/proj-124-2.png
+  - /images/gallery/proj-124-3.png
 ---
 
 ## Initial situation

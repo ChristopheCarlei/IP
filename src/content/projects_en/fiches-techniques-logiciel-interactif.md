@@ -1,7 +1,9 @@
----
+﻿---
 id: 78
 title: "Fact sheet & interactive software by Evelina Trutnevyte"
 description_short: This course on the energy mix provides students with fact sheets and an interactive tool to explore electricity supply technologies and create an electricity mix for Switzerland in 2035, thus promoting informed reflection on the subject.
+images:
+  - /images/projet/proj-78.jpg
 ---
 
 ## Initial situation

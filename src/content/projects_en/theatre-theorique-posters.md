@@ -1,7 +1,12 @@
----
+﻿---
 id: 73
 title: "Marlyne Sahakian's Theoretical Theatre & Posters"
 description_short: The pedagogical approach of the teacher consists in personifying the theories by presenting to the students characters embodying different perspectives of the sociology of consumption. These characters debate and take positions on objects in the course, thus offering a vivid and contrasting understanding of the theories discussed.
+images:
+  - /images/projet/proj-73.jpg
+  - /images/gallery/proj-73-1.jpg
+  - /images/gallery/proj-73-2.jpg
+  - /images/gallery/proj-73-3.jpg
 ---
 
 ## Initial situation

@@ -14,6 +14,8 @@ observation_accepted: false
 description_short: "Ce cours propose des visites culturelles à Genève. Les étudiant-es explorent ensuite les liens entre ces visites et leur projet de recherche, avec le choix de rédiger un dossier pédagogique ou de présenter leurs travaux lors d'une conférence publique."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-54.jpg
 ---
 
 ## Situation de départ

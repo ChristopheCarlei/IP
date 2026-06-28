@@ -1,7 +1,17 @@
----
+﻿---
 id: 148
 title: Resolving human rights issues with companies from Baumann-Pauly
 description_short: This project gives students the opportunity to work on concrete case studies in collaboration with an organisation (company or non-governmental organisation - NGO) on a human rights issue. In this way, they can develop their skills, learn to communicate in a professional manner and propose a concrete solution to a challenge faced by a company.
+images:
+  - /images/projet/proj-148.png
+  - /images/gallery/proj-148-1.jpg
+  - /images/gallery/proj-148-2.jpg
+  - /images/gallery/proj-148-3.jpg
+  - /images/gallery/proj-148-4.jpg
+  - /images/gallery/proj-148-5.jpg
+  - /images/gallery/proj-148-6.jpg
+  - /images/gallery/proj-148-7.jpg
+  - /images/gallery/proj-148-8.jpg
 ---
 
 ## Initial situation

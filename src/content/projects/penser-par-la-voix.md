@@ -15,6 +15,8 @@ observation_accepted: false
 description_short: "Ce cours explore le concept de la \"politique de la voix\" à travers des interactions et des créations audio, en mettant l'accent sur la question de la représentativité dans les collectivités politiques et académiques. Les étudiant-es forment des groupes pour créer des essais audios basés sur des présentations orales."
 featured: false
 status: actif
+images:
+  - /images/projet/proj-132.png
 ---
 
 ## Situation de départ

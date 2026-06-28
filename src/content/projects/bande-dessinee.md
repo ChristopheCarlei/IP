@@ -14,6 +14,14 @@ observation_accepted: false
 description_short: Dans ce cours, les étudiant-es apprennent à combiner texte et image pour mettre en scène leur vision du monde à travers des supports tels que la bande dessinée, le roman-photo, ou le collage.
 featured: false
 status: actif
+images:
+  - /images/projet/proj-85.jpg
+  - /images/gallery/proj-85-1.jpg
+  - /images/gallery/proj-85-2.jpg
+  - /images/gallery/proj-85-3.jpg
+  - /images/gallery/proj-85-4.jpg
+  - /images/gallery/proj-85-5.jpg
+  - /images/gallery/proj-85-6.jpg
 ---
 
 ## Situation de départ

@@ -19,6 +19,10 @@ featured: false
 status: actif
 videos:
   - https://www.youtube.com/embed/1dAgT87F-0E
+images:
+  - /images/gallery/proj-169-1.png
+  - /images/gallery/proj-169-2.png
+  - /images/gallery/proj-169-3.png
 ---
 
 ## Situation de départ
