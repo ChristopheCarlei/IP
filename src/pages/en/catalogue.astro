@@ -46,6 +46,17 @@ const AXES = [
   { slug: 'faire-creer',     label: 'Create',          color: '#ffa248' },
 ];
 
+// Student-count buckets (value = raw FR data, label = EN)
+const STUDENTS = [
+  { value: 'Moins de 25',     label: 'Under 25' },
+  { value: '25 - 50',         label: '25 - 50' },
+  { value: '50 - 100',        label: '50 - 100' },
+  { value: '100 - 300',       label: '100 - 300' },
+  { value: '300 - 500',       label: '300 - 500' },
+  { value: '500 - 1000',      label: '500 - 1000' },
+  { value: 'Supérieur à 1000', label: 'Over 1000' },
+];
+
 function axeSlug(cat?: string | null): string {
   const c = (cat ?? '').toLowerCase();
   if (c.includes('prépar') || c.includes('prepar'))   return 'preparer';
@@ -71,6 +82,7 @@ const projects = all
       category: d.category ?? '',
       course: d.course ?? '',
       innovation: d.innovation_type ?? '',
+      students: d.students ?? '',
       year: d.year ? Number(d.year) || 0 : 0,
       photo: d.photo ?? '',
       award: d.award ?? '',
@@ -165,6 +177,14 @@ const searchData = projects.map(p => ({
         </button>
       ))}
     </div>
+    <div class="cat-filter-row" id="stud-row">
+      <span class="cat-filter-label">Students</span>
+      {STUDENTS.map(s => (
+        <button class="pill" type="button" data-students={s.value} aria-pressed="false" style="--p:#64748b">
+          <span class="dot"></span>{s.label}
+        </button>
+      ))}
+    </div>
   </div>
 </div>
 
@@ -186,6 +206,7 @@ const searchData = projects.map(p => ({
   <div class="cards cat-grid" id="cat-grid">
     {projects.map(p => (
       <article class="card" data-slug={p.slug} data-axe={p.axe} data-fac={p.facCodes.join('|')}
+               data-students={p.students}
                data-title={p.title} data-year={p.year} data-faculty={p.faculty} style={`--fac:${p.facVar}`}>
         <div class={`cover${!p.photo ? ' no-photo' : ''}`}
              style={p.photo ? `background-image:url(${p.photo})` : ''}>
@@ -220,6 +241,7 @@ const searchData = projects.map(p => ({
   const sortEl  = document.getElementById('cat-sortby');
   const axeBtns = Array.from(document.querySelectorAll('#axe-row .pill'));
   const facBtns = Array.from(document.querySelectorAll('#fac-row .pill'));
+  const studBtns = Array.from(document.querySelectorAll('#stud-row .pill'));
 
   const data = JSON.parse(document.getElementById('cat-data').textContent || '[]');
   const fuse = new Fuse(data, {
@@ -237,13 +259,14 @@ const searchData = projects.map(p => ({
     ],
   });
 
-  const state = { q: '', axe: '', fac: '' };
+  const state = { q: '', axe: '', fac: '', students: '' };
 
   function syncUrl() {
     const u = new URL(location.href);
-    state.q   ? u.searchParams.set('q', state.q)     : u.searchParams.delete('q');
-    state.axe ? u.searchParams.set('axe', state.axe) : u.searchParams.delete('axe');
-    state.fac ? u.searchParams.set('fac', state.fac) : u.searchParams.delete('fac');
+    state.q        ? u.searchParams.set('q', state.q)               : u.searchParams.delete('q');
+    state.axe      ? u.searchParams.set('axe', state.axe)           : u.searchParams.delete('axe');
+    state.fac      ? u.searchParams.set('fac', state.fac)           : u.searchParams.delete('fac');
+    state.students ? u.searchParams.set('students', state.students) : u.searchParams.delete('students');
     history.replaceState(null, '', u);
   }
 
@@ -254,17 +277,18 @@ const searchData = projects.map(p => ({
 
     let visible = 0;
     for (const c of cards) {
-      const okQ   = !matched || matched.has(c.dataset.slug);
-      const okAxe = !state.axe || c.dataset.axe === state.axe;
-      const okFac = !state.fac || (c.dataset.fac || '').split('|').indexOf(state.fac) !== -1;
-      const show  = okQ && okAxe && okFac;
+      const okQ    = !matched || matched.has(c.dataset.slug);
+      const okAxe  = !state.axe || c.dataset.axe === state.axe;
+      const okFac  = !state.fac || (c.dataset.fac || '').split('|').indexOf(state.fac) !== -1;
+      const okStud = !state.students || c.dataset.students === state.students;
+      const show   = okQ && okAxe && okFac && okStud;
       c.hidden = !show;
       if (show) visible++;
     }
 
     countEl.innerHTML = '<strong>' + visible + '</strong> project' + (visible > 1 ? 's' : '');
     emptyEl.hidden = visible !== 0;
-    resetEl.hidden = !(state.q || state.axe || state.fac);
+    resetEl.hidden = !(state.q || state.axe || state.fac || state.students);
     syncUrl();
   }
 
@@ -295,11 +319,18 @@ const searchData = projects.map(p => ({
     facBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.fac === state.fac)));
     apply();
   }));
+  studBtns.forEach(btn => btn.addEventListener('click', () => {
+    const v = btn.dataset.students;
+    state.students = state.students === v ? '' : v;
+    studBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.students === state.students)));
+    apply();
+  }));
   resetEl.addEventListener('click', () => {
-    state.q = ''; state.axe = ''; state.fac = '';
+    state.q = ''; state.axe = ''; state.fac = ''; state.students = '';
     input.value = '';
     axeBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
     facBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+    studBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
     apply();
   });
 
@@ -308,6 +339,7 @@ const searchData = projects.map(p => ({
     const q = p.get('q');
     const axe = p.get('axe');
     const fac = p.get('fac');
+    const students = p.get('students');
     if (q) { state.q = q; input.value = q; }
     if (axe && axeBtns.some(b => b.dataset.axe === axe)) {
       state.axe = axe;
@@ -316,6 +348,10 @@ const searchData = projects.map(p => ({
     if (fac && facBtns.some(b => b.dataset.fac === fac)) {
       state.fac = fac;
       facBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.fac === fac)));
+    }
+    if (students && studBtns.some(b => b.dataset.students === students)) {
+      state.students = students;
+      studBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.students === students)));
     }
     apply();
   })();

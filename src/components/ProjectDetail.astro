@@ -1,4 +1,5 @@
 ---
+import { innovations, normType } from '../innovations';
 interface Props { d: any; lang?: 'fr' | 'en'; }
 const { d, lang = 'fr' } = Astro.props;
 
@@ -73,6 +74,22 @@ const INNOV_EN: Record<string,string> = {
 const trCat    = (v?: string | null) => !v ? v : (lang === 'en' ? (CAT_EN[v] ?? v) : v);
 const trInnov  = (v?: string | null) => !v ? v : (lang === 'en' ? (INNOV_EN[v] ?? v) : v);
 const trStud   = (v?: string | null) => !v ? v : (lang === 'en' ? v.replace('Moins de','Under').replace(/Sup[ée]rieur à/,'Over').replace('Plus de','Over') : v);
+
+// Liens cliquables de la barre d'infos
+const base = lang === 'en' ? '/en' : '';
+function axeSlugOf(cat?: string | null): string {
+  const c = (cat ?? '').toLowerCase();
+  if (c.includes('prépar') || c.includes('prepar')) return 'preparer';
+  if (c.includes('rendre'))                          return 'rendre-actif';
+  if (c.includes('responsabilis'))                   return 'responsabiliser';
+  if (c.includes('cré') || c.includes('cre'))        return 'faire-creer';
+  return '';
+}
+const _axeSlug = axeSlugOf(d.category);
+const _innov   = d.innovation_type ? innovations.find(i => normType(i.typeFr) === normType(d.innovation_type)) : null;
+const axeHref   = _axeSlug ? (lang === 'en' ? `/en/catalogue?axe=${_axeSlug}` : `/axes/${_axeSlug}`) : undefined;
+const innovHref = _innov ? `${base}/innovations/${_innov.slug}` : undefined;
+const studHref  = d.students ? `${base}/catalogue?students=${encodeURIComponent(d.students)}` : undefined;
 ---
 <style>
 .crumb-bar{background:var(--bg-soft);border-bottom:1px solid var(--line)}
@@ -121,7 +138,8 @@ const trStud   = (v?: string | null) => !v ? v : (lang === 'en' ? v.replace('Moi
 
 .proj-card-foot{background:var(--fac,var(--rose));display:flex;align-items:stretch}
 .proj-card-foot.light .foot-item{color:var(--ink)}
-.foot-item{flex:1;display:flex;align-items:center;gap:10px;padding:14px 20px;color:#fff;font-size:14px;font-weight:700}
+.foot-item{flex:1;display:flex;align-items:center;gap:10px;padding:14px 20px;color:#fff;font-size:14px;font-weight:700;text-decoration:none;cursor:pointer;transition:background .15s}
+a.foot-item:hover{background:rgba(0,0,0,.16)}
 .foot-item:not(:last-child){border-right:1px solid rgba(255,255,255,.2)}
 .foot-item svg{width:20px;height:20px;flex-shrink:0;opacity:.85}
 .foot-item .fi-label{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;opacity:.75;margin-bottom:2px}
@@ -312,29 +330,29 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
 
   <div class={`proj-card-foot${light ? ' light' : ''}`}>
     {d.category && (
-      <div class="foot-item">
+      <a class="foot-item" href={axeHref}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
         </svg>
         <div><div class="fi-label">{L.area}</div><div class="fi-val">{trCat(d.category)}</div></div>
-      </div>
+      </a>
     )}
     {d.innovation_type && (
-      <div class="foot-item">
+      <a class="foot-item" href={innovHref}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 2a7 7 0 0 1 7 7c0 3-1.8 5.4-4.5 6.5V17a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-1.5C6.8 14.4 5 12 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/>
         </svg>
         <div><div class="fi-label">{L.innovationType}</div><div class="fi-val">{trInnov(d.innovation_type)}</div></div>
-      </div>
+      </a>
     )}
     {d.students && (
-      <div class="foot-item">
+      <a class="foot-item" href={studHref}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
           <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
         <div><div class="fi-label">{L.students}</div><div class="fi-val">{trStud(d.students)}</div></div>
-      </div>
+      </a>
     )}
   </div>
 </div>
