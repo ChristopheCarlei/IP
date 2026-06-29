@@ -88,7 +88,8 @@ export function altLangPath(currentPath: string, target: Lang): string {
   const isEn = currentPath === '/en' || currentPath.startsWith('/en/');
   if (target === 'en') {
     if (isEn) return currentPath;
-    if (currentPath.startsWith('/projets/')) return '/en' + currentPath;   // fiche projet
+    if (currentPath.startsWith('/projets/')) return '/en' + currentPath;        // fiche projet
+    if (currentPath.startsWith('/innovations/')) return '/en' + currentPath;    // page innovation
     return translatedPaths.has(currentPath) ? localizePath(currentPath, 'en') : '/en';
   }
   // target fr — toute page EN possède son origine FR

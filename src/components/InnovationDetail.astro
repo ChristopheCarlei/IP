@@ -1,0 +1,147 @@
+---
+import { innovations, type Innovation } from '../innovations';
+
+interface Props { innov: Innovation; lang?: 'fr' | 'en'; projects: any[]; }
+const { innov, lang = 'fr', projects } = Astro.props;
+
+const isEn = lang === 'en';
+const name = isEn ? innov.en : innov.fr;
+const desc = isEn ? innov.descEn : innov.descFr;
+const axisName = isEn ? innov.axisEn : innov.axisFr;
+const img = isEn ? innov.icon : innov.banner;          // EN: pictogramme neutre · FR: bannière
+const imgKind = isEn ? 'icon' : 'banner';
+const base = isEn ? '/en' : '';
+
+const siblings = innovations.filter(i => i.axisSlug === innov.axisSlug && i.slug !== innov.slug);
+
+const L = isEn ? {
+  eyebrow: 'Pedagogical framework', related: 'Related projects', allProjects: 'See all projects →',
+  back: 'Back to the catalogue', noProjects: 'No project is currently associated with this approach.',
+  others: 'Other innovations', explore: 'Explore →', home: 'Home', crumb: 'Innovations',
+} : {
+  eyebrow: 'Cadre pédagogique', related: 'Projets associés', allProjects: 'Voir tous les projets →',
+  back: 'Retour au catalogue', noProjects: "Aucun projet n'est associé à cette approche pour le moment.",
+  others: 'Autres innovations', explore: 'Explorer →', home: 'Accueil', crumb: 'Innovations',
+};
+
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE')) return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                       return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD')) return 'var(--fac-fti)';
+  if (f.includes('SCIEN')&& !f.includes('SOC')) return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))  return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))  return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                       return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))  return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO')) return 'var(--fac-theologie)';
+  return 'var(--rose)';
+}
+---
+<style define:vars={{ ax: innov.color }}>
+.inn-crumb-bar{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.inn-crumb{width:var(--content);margin:auto;padding:14px 0;font-size:13px;color:var(--faint);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.inn-crumb a{text-decoration:none;color:inherit}
+.inn-crumb a:hover{color:var(--ax)}
+.inn-crumb .sep{opacity:.5}
+.inn-crumb .cur{color:var(--muted);font-weight:600}
+
+.inn-hero{border-bottom:1px solid var(--line);background:#fff}
+.inn-hero-inner{width:var(--content);margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:clamp(36px,4.5vw,60px) 0}
+.inn-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ax);margin-bottom:18px}
+.inn-eyebrow span{display:inline-block;width:32px;height:3px;background:var(--ax);border-radius:2px}
+.inn-hero h1{font-size:clamp(34px,4.5vw,58px);line-height:1;font-weight:800;letter-spacing:-.025em;color:var(--ax);margin:0 0 18px}
+.inn-hero-desc{font-size:17px;line-height:1.7;color:var(--muted);margin:0;max-width:54ch}
+.inn-hero-img-banner{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
+.inn-hero-img-icon{width:100%;height:auto;display:block;aspect-ratio:740/200;object-fit:contain;padding:26px;border-radius:var(--radius);background:color-mix(in srgb,var(--ax) 8%,#fff);border:1px solid color-mix(in srgb,var(--ax) 22%,#fff)}
+
+.inn-body{width:var(--content);margin:auto;padding:clamp(40px,5vw,68px) 0}
+.inn-section-title{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ax);margin:0 0 24px}
+.inn-projets-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px}
+.inn-projets-head a{font-size:14px;font-weight:700;color:var(--ax);text-decoration:none}
+.inn-projets-head a:hover{text-decoration:underline}
+.inn-noproj{color:var(--muted);font-size:16px;font-style:italic}
+
+.inn-others{border-top:1px solid var(--line);padding-top:48px;margin-top:56px}
+.inn-others-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:20px}
+.inn-other{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s,border-color .18s}
+.inn-other:hover{box-shadow:var(--shadow);transform:translateY(-2px);border-color:color-mix(in srgb,var(--ax) 40%,var(--line))}
+.inn-other-ic{width:54px;height:34px;flex-shrink:0;object-fit:contain}
+.inn-other b{display:block;font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.2}
+
+.inn-back{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none;margin-top:40px}
+.inn-back:hover{color:var(--ax)}
+
+@media(max-width:860px){ .inn-hero-inner{grid-template-columns:1fr;gap:28px} }
+</style>
+
+<div class="inn-crumb-bar">
+  <nav class="inn-crumb" aria-label="Fil d'Ariane">
+    <a href={base + '/'}>{L.home}</a>
+    <span class="sep">/</span>
+    <a href={`/axes/${innov.axisSlug}`}>{axisName}</a>
+    <span class="sep">/</span>
+    <span class="cur">{name}</span>
+  </nav>
+</div>
+
+<div class="inn-hero">
+  <div class="inn-hero-inner">
+    <div>
+      <div class="inn-eyebrow"><span></span>{axisName}</div>
+      <h1>{name}</h1>
+      <p class="inn-hero-desc">{desc}</p>
+    </div>
+    {imgKind === 'banner'
+      ? <img class="inn-hero-img-banner" src={img} alt={name} />
+      : <img class="inn-hero-img-icon" src={img} alt={name} />}
+  </div>
+</div>
+
+<div class="inn-body">
+  <div class="inn-projets-head">
+    <p class="inn-section-title" style="margin:0">{L.related}</p>
+    {projects.length > 0 && <a href={`${base}/catalogue`}>{L.allProjects}</a>}
+  </div>
+
+  {projects.length > 0 ? (
+    <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+      {projects.map(p => {
+        const facVar = getFacVar(p.data.faculty);
+        const hasPhoto = !!p.data.photo;
+        const initials = (p.data.author ?? p.data.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase();
+        return (
+          <article class="card" style={`--fac:${facVar}`}>
+            <div class={`cover${!hasPhoto ? ' no-photo' : ''}`} style={hasPhoto ? `background-image:url(${p.data.photo})` : ''}>
+              {!hasPhoto && <span class="cover-initials">{initials}</span>}
+            </div>
+            <div class="card-body">
+              <h3><a href={`${base}/projets/${p.slug}`}>{p.data.title}</a></h3>
+            </div>
+            {p.data.faculty && <div class="card-fac">{p.data.faculty}</div>}
+          </article>
+        );
+      })}
+    </div>
+  ) : (
+    <p class="inn-noproj">{L.noProjects}</p>
+  )}
+
+  <div class="inn-others">
+    <p class="inn-section-title">{L.others} · {axisName}</p>
+    <div class="inn-others-grid">
+      {siblings.map(s => (
+        <a class="inn-other" href={`${base}/innovations/${s.slug}`}>
+          <img class="inn-other-ic" src={s.icon} alt="" aria-hidden="true" />
+          <b>{isEn ? s.en : s.fr}</b>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <a class="inn-back" href={`${base}/catalogue`}>
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19l-7-7 7-7"/></svg>
+    {L.back}
+  </a>
+</div>
