@@ -8,20 +8,18 @@ const isEn = lang === 'en';
 const name = isEn ? innov.en : innov.fr;
 const desc = isEn ? innov.descEn : innov.descFr;
 const axisName = isEn ? innov.axisEn : innov.axisFr;
-const img = isEn ? innov.icon : innov.banner;          // EN: pictogramme neutre · FR: bannière
+const img = isEn ? innov.icon : innov.banner;          // EN: pictogramme neutre · FR: bannière illustrée
 const imgKind = isEn ? 'icon' : 'banner';
 const base = isEn ? '/en' : '';
 
 const siblings = innovations.filter(i => i.axisSlug === innov.axisSlug && i.slug !== innov.slug);
 
 const L = isEn ? {
-  eyebrow: 'Pedagogical framework', related: 'Related projects', allProjects: 'See all projects →',
-  back: 'Back to the catalogue', noProjects: 'No project is currently associated with this approach.',
-  others: 'Other innovations', explore: 'Explore →', home: 'Home', crumb: 'Innovations',
+  related: 'Related projects', allProjects: 'See all projects →', back: 'Back to the catalogue',
+  noProjects: 'No project is currently associated with this approach.', others: 'Other innovations', home: 'Home',
 } : {
-  eyebrow: 'Cadre pédagogique', related: 'Projets associés', allProjects: 'Voir tous les projets →',
-  back: 'Retour au catalogue', noProjects: "Aucun projet n'est associé à cette approche pour le moment.",
-  others: 'Autres innovations', explore: 'Explorer →', home: 'Accueil', crumb: 'Innovations',
+  related: 'Projets associés', allProjects: 'Voir tous les projets →', back: 'Retour au catalogue',
+  noProjects: "Aucun projet n'est associé à cette approche pour le moment.", others: 'Autres innovations', home: 'Accueil',
 };
 
 function getFacVar(fac?: string | null): string {
@@ -47,16 +45,20 @@ function getFacVar(fac?: string | null): string {
 .inn-crumb .sep{opacity:.5}
 .inn-crumb .cur{color:var(--muted);font-weight:600}
 
-.inn-hero{border-bottom:1px solid var(--line);background:#fff}
-.inn-hero-inner{width:var(--content);margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:clamp(36px,4.5vw,60px) 0}
-.inn-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ax);margin-bottom:18px}
-.inn-eyebrow span{display:inline-block;width:32px;height:3px;background:var(--ax);border-radius:2px}
-.inn-hero h1{font-size:clamp(34px,4.5vw,58px);line-height:1;font-weight:800;letter-spacing:-.025em;color:var(--ax);margin:0 0 18px}
-.inn-hero-desc{font-size:17px;line-height:1.7;color:var(--muted);margin:0;max-width:54ch}
-.inn-hero-img-banner{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
-.inn-hero-img-icon{width:100%;height:auto;display:block;aspect-ratio:740/200;object-fit:contain;padding:26px;border-radius:var(--radius);background:color-mix(in srgb,var(--ax) 8%,#fff);border:1px solid color-mix(in srgb,var(--ax) 22%,#fff)}
+/* ---- Image en grand, pleine largeur, en haut ---- */
+.inn-top{width:var(--content);margin:clamp(20px,3vw,34px) auto 0}
+.inn-banner{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
+.inn-iconbox{width:100%;aspect-ratio:1568/360;background:color-mix(in srgb,var(--ax) 9%,#fff);border:1px solid color-mix(in srgb,var(--ax) 22%,#fff);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;padding:clamp(20px,3.5vw,44px)}
+.inn-iconbox img{width:100%;max-width:880px;height:auto;display:block}
 
-.inn-body{width:var(--content);margin:auto;padding:clamp(40px,5vw,68px) 0}
+/* ---- Titre + description (dessous l'image) ---- */
+.inn-head{width:var(--content);margin:auto;padding:clamp(26px,3.5vw,40px) 0 0}
+.inn-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ax);margin-bottom:14px}
+.inn-eyebrow span{display:inline-block;width:32px;height:3px;background:var(--ax);border-radius:2px}
+.inn-head h1{font-size:clamp(34px,4.6vw,60px);line-height:1;font-weight:800;letter-spacing:-.025em;color:var(--ax);margin:0 0 18px}
+.inn-head-desc{font-size:18px;line-height:1.75;color:var(--muted);margin:0;max-width:72ch}
+
+.inn-body{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
 .inn-section-title{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ax);margin:0 0 24px}
 .inn-projets-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px}
 .inn-projets-head a{font-size:14px;font-weight:700;color:var(--ax);text-decoration:none}
@@ -72,8 +74,6 @@ function getFacVar(fac?: string | null): string {
 
 .inn-back{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--muted);text-decoration:none;margin-top:40px}
 .inn-back:hover{color:var(--ax)}
-
-@media(max-width:860px){ .inn-hero-inner{grid-template-columns:1fr;gap:28px} }
 </style>
 
 <div class="inn-crumb-bar">
@@ -86,17 +86,18 @@ function getFacVar(fac?: string | null): string {
   </nav>
 </div>
 
-<div class="inn-hero">
-  <div class="inn-hero-inner">
-    <div>
-      <div class="inn-eyebrow"><span></span>{axisName}</div>
-      <h1>{name}</h1>
-      <p class="inn-hero-desc">{desc}</p>
-    </div>
-    {imgKind === 'banner'
-      ? <img class="inn-hero-img-banner" src={img} alt={name} />
-      : <img class="inn-hero-img-icon" src={img} alt={name} />}
-  </div>
+<!-- Image en grand, en haut -->
+<div class="inn-top">
+  {imgKind === 'banner'
+    ? <img class="inn-banner" src={img} alt={name} />
+    : <div class="inn-iconbox"><img src={img} alt={name} /></div>}
+</div>
+
+<!-- Titre + description, dessous -->
+<div class="inn-head">
+  <div class="inn-eyebrow"><span></span>{axisName}</div>
+  <h1>{name}</h1>
+  <p class="inn-head-desc">{desc}</p>
 </div>
 
 <div class="inn-body">
