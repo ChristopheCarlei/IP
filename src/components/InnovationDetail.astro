@@ -1,10 +1,11 @@
 ---
-import { innovations, type Innovation } from '../innovations';
+import { innovations, capsEn, type Innovation } from '../innovations';
 
 interface Props { innov: Innovation; lang?: 'fr' | 'en'; projects: any[]; }
 const { innov, lang = 'fr', projects } = Astro.props;
 
 const isEn = lang === 'en';
+const caps = isEn ? (capsEn[innov.slug] ?? []) : [];
 const name = isEn ? innov.en : innov.fr;
 const desc = isEn ? innov.descEn : innov.descFr;
 const axisName = isEn ? innov.axisEn : innov.axisFr;
@@ -48,8 +49,10 @@ function getFacVar(fac?: string | null): string {
 /* ---- Image en grand, pleine largeur, en haut ---- */
 .inn-top{width:var(--content);margin:clamp(20px,3vw,34px) auto 0}
 .inn-banner{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
-.inn-iconbox{width:100%;aspect-ratio:1568/360;background:color-mix(in srgb,var(--ax) 9%,#fff);border:1px solid color-mix(in srgb,var(--ax) 22%,#fff);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;padding:clamp(20px,3.5vw,44px)}
+.inn-iconbox{width:100%;background:color-mix(in srgb,var(--ax) 9%,#fff);border:1px solid color-mix(in srgb,var(--ax) 22%,#fff);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:clamp(22px,3.5vw,46px)}
 .inn-iconbox img{width:100%;max-width:880px;height:auto;display:block}
+.inn-caps{display:flex;justify-content:space-around;align-items:flex-start;width:100%;max-width:880px;gap:8px;flex-wrap:wrap}
+.inn-caps span{flex:1;min-width:64px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--ax);text-align:center;line-height:1.2}
 
 /* ---- Titre + description (dessous l'image) ---- */
 .inn-head{width:var(--content);margin:auto;padding:clamp(26px,3.5vw,40px) 0 0}
@@ -90,7 +93,10 @@ function getFacVar(fac?: string | null): string {
 <div class="inn-top">
   {imgKind === 'banner'
     ? <img class="inn-banner" src={img} alt={name} />
-    : <div class="inn-iconbox"><img src={img} alt={name} /></div>}
+    : <div class="inn-iconbox">
+        <img src={img} alt={name} />
+        {caps.length > 0 && <div class="inn-caps">{caps.map(c => <span>{c}</span>)}</div>}
+      </div>}
 </div>
 
 <!-- Titre + description, dessous -->

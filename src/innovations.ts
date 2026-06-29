@@ -118,3 +118,22 @@ export const innovationBySlug = new Map(innovations.map(i => [i.slug, i]));
 export function normType(s: string): string {
   return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 }
+
+// Légendes d'étapes (EN) affichées sous le pictogramme des pages anglaises.
+// 4 jeux exacts extraits du site UNIGE EN ; les autres sont une formulation cohérente.
+export const capsEn: Record<string, string[]> = {
+  'questionner': ['Questioning', 'Responses', 'Feedback'],
+  'faire-reagir': ['Resource', 'Reactions', 'Discussion'],
+  'demontrer': ['Handling', 'Explanation', 'Modeling'],
+  'donner-la-parole': ['Questioning', 'Restitution', 'Debate'],
+  'simuler-une-situation': ['Questioning', 'Team formation', 'Simulation', 'Debriefing'],
+  'faire-collaborer': ['Questioning', 'Team formation', 'Discussion', 'Debriefing'],
+  'faire-voter': ['Question', 'Vote', 'Results', 'Discussion'],
+  'impliquer-dans-l-enseignement': ['Preparation', 'Presentation', 'Feedback'],
+  'exposer-des-cas-pratiques': ['Case study', 'Analysis', 'Resolution'],
+  'impliquer-dans-la-recherche': ['Question', 'Experimentation', 'Restitution'],
+  'developper-des-competences': ['Objectives', 'Practice', 'Feedback'],
+  'faire-conceptualiser-un-projet': ['Problem', 'Ideation', 'Planning'],
+  'faire-gerer-un-projet': ['Planning', 'Management', 'Delivery'],
+  'faire-realiser-une-production-originale': ['Brief', 'Production', 'Presentation'],
+};
