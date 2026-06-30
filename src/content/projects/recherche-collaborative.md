@@ -1,4 +1,4 @@
-﻿---
+---
 id: 117
 team: Elsa Paukovics
 title: Recherche collaborative
@@ -7,6 +7,7 @@ photo: /images/projet/Sanchez_Eric.jpg
 contact: "Eric.sanchez@unige.ch"
 faculty: FPSE
 course: Conduite de la recherche sur les technologies numériques en éducation
+course_code: "75310"
 level: Master
 students: Moins de 25
 year: 2021

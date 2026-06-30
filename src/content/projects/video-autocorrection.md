@@ -1,10 +1,11 @@
-﻿---
+---
 id: 19
 photo: /images/projet/Rita_Trigo_Trindade.jpg
 title: "Vidéo & autocorrection"
 author: Rita Trigo Trindade
 faculty: Droit
 course: ""
+course_code: "5134"
 level: ""
 students: 100 - 300
 year: 2014

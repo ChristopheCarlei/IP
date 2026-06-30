@@ -1,4 +1,4 @@
-﻿---
+---
 id: 133
 title: "Posters & podcasts"
 author: "Barbara Fouquet-Chauprade & Kristine Balslev"
@@ -6,6 +6,7 @@ photo: /images/projet/Barbara_Fouquet-Chauprade.jpg
 contact: "barbara.fouquet-chauprade@unige.ch"
 faculty: FPSE
 course: Analyse et intervention dans les systèmes éducatifs
+course_code: "752547"
 level: Master
 students: Moins de 25
 year: 2021

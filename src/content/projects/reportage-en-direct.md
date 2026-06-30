@@ -1,4 +1,4 @@
-﻿---
+---
 id: 145
 title: Reportage en direct
 author: "Nicolas Szilas & Kim Le"
@@ -6,6 +6,7 @@ photo: /images/projet/Kim__Le_Nicolas_Szilas_2023.jpg
 contact: "nicolas.szilas@unige.ch"
 faculty: FPSE
 course: Introduction aux technologies éducatives
+course_code: "74111"
 level: Bachelor
 students: 100 - 300
 year: 2021

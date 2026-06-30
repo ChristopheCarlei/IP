@@ -1,10 +1,11 @@
-﻿---
+---
 id: 34
 title: Apprentissage coopératif
 author: Céline Buchs
 photo: /images/projet/Celine_Buchs.jpg
 faculty: FPSE
 course: ""
+course_code: "F4P10202"
 level: ""
 students: Moins de 25
 year: 2010

@@ -1,10 +1,11 @@
-﻿---
+---
 id: 39
 title: Projet interdisciplinaire
 author: Frédéric Darbellay
 photo: /images/projet/Frederic_Darbellay.jpg
 faculty: FPSE
 course: ""
+course_code: "K4007"
 level: ""
 students: 50 - 100
 year: 2020

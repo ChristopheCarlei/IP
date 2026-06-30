@@ -1,10 +1,11 @@
-﻿---
+---
 id: 89
 title: "MOOC & cas pratiques"
 author: Michel Hottelier
 photo: /images/projet/Michel_Hottelier_2_petite.jpg
 faculty: Droit
 course: ""
+course_code: "5051"
 level: ""
 students: 500 - 1000
 year: 2016

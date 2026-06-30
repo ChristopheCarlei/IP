@@ -1,4 +1,4 @@
-﻿---
+---
 id: 106
 team: Emilie Rosenstein
 title: Court-métrage
@@ -7,6 +7,7 @@ photo: /images/projet/Cornelia_Hummel.jpg
 contact: "Cornelia.Hummel@unige.ch"
 faculty: SDS
 course: Epistémologie des sciences sociales
+course_code: "T205041"
 level: Bachelor
 students: 25 - 50
 year: 2021

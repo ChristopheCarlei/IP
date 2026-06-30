@@ -1,4 +1,4 @@
-﻿---
+---
 id: 94
 photo: /images/projet/proj-94-photo.jpg
 title: Google Education
@@ -6,6 +6,7 @@ author: Jasmina Travnjak
 contact: "Jasmina.Travnjak@unige.ch"
 faculty: FPSE
 course: Usage et approche critique des MITIC
+course_code: "F4S2015"
 level: Master
 students: Moins de 25
 year: 2019

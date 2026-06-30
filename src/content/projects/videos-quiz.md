@@ -1,10 +1,11 @@
-﻿---
+---
 id: 3
 photo: /images/projet/Guillarme_Veuthey.jpg
 title: "Vidéos & quiz"
 author: "Jean-Luc Veuthey & Davy Guillarme"
 faculty: Sciences
 course: ""
+course_code: "13H009"
 level: ""
 students: 100 - 300
 year: 2017

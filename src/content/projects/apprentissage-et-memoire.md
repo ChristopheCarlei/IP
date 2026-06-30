@@ -1,4 +1,4 @@
-﻿---
+---
 id: 146
 title: Apprentissage et mémoire
 author: "Monika Riegel & Ulrike Rimmele"
@@ -6,6 +6,7 @@ photo: /images/projet/Ulrike_Rimmele_Monika_Riegel.jpg
 contact: "ulrike.rimmele@unige.ch"
 faculty: FPSE
 course: "How emotion affects memory over the lifespan (code cours : 751343)"
+course_code: "751343"
 level: Master, doctorat
 students: Moins de 25
 year: 2022

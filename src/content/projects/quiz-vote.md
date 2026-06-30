@@ -1,4 +1,4 @@
-﻿---
+---
 id: 58
 team: Eric Allémann, Norbert Lange et Pascal Furrer
 title: "Quiz & vote"
@@ -6,6 +6,7 @@ author: Olivier Jordan
 photo: /images/projet/Olivier_Jordan.jpg
 faculty: Sciences
 course: ""
+course_code: "11H020"
 level: ""
 students: 100 - 300
 year: 2018

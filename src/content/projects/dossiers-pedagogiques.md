@@ -1,10 +1,11 @@
-﻿---
+---
 id: 50
 title: Dossiers pédagogiques
 author: Nadine Bordessoule Gilliéron
 photo: /images/projet/Nadine_Bordessoule.jpg
 faculty: Lettres
 course: ""
+course_code: "31EL050"
 level: ""
 students: Moins de 25
 year: 2018

@@ -1,10 +1,11 @@
-﻿---
+---
 id: 29
 title: Réplication d’article
 author: Michele Pellizzari
 photo: /images/projet/Michele_Pellizzari.jpg
 faculty: GSEM
 course: ""
+course_code: "S403018"
 level: ""
 students: Moins de 25
 year: 2018

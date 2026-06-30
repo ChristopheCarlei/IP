@@ -1,10 +1,11 @@
-﻿---
+---
 id: 57
 title: "Vote & exercices"
 author: Hélène Delage
 photo: /images/projet/Helene_Delage.jpg
 faculty: FPSE
 course: ""
+course_code: "74190"
 level: ""
 students: 50 - 100
 year: 2018

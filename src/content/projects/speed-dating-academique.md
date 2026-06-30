@@ -1,10 +1,11 @@
-﻿---
+---
 id: 13
 photo: /images/projet/Jean-Paul_Payet.jpg
 title: Speed dating académique
 author: Jean-Paul Payet
 faculty: FPSE
 course: ""
+course_code: "742060"
 level: ""
 students: 100 - 300
 year: 2017

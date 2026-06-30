@@ -1,10 +1,11 @@
-﻿---
+---
 id: 54
 title: Production publique
 author: Giulia Riili
 photo: /images/projet/Giulia_Riili.jpg
 faculty: Lettres
 course: ""
+course_code: "32K2131"
 level: ""
 students: Moins de 25
 year: 2015

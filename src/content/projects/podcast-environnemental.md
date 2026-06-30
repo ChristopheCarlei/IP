@@ -1,4 +1,4 @@
-﻿---
+---
 id: 62
 award: Prix innovation pédagogique
 team: Karine Duplan
@@ -7,6 +7,7 @@ author: Juliet Fall
 photo: /images/projet/Juliet_Fall.jpg
 faculty: SDS
 course: ""
+course_code: "T206060"
 level: ""
 students: 50 - 100
 year: 2016

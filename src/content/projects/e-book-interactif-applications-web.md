@@ -1,4 +1,4 @@
-﻿---
+---
 id: 140
 team: Ioannis Galdadas, Luca Insolia, Lionel Voirol, Yuming Zhang
 photo: /images/projet/Guerrier_Voirol_Zhang.jpg
@@ -7,6 +7,7 @@ author: "Stéphane Guerrier & Francesco Luigi Gervasio"
 contact: "stephane.guerrier@unige.ch"
 faculty: Sciences
 course: Modélisation et analyse de données
+course_code: "14H120"
 level: Master
 students: 50 - 100
 year: 2022

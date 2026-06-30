@@ -1,4 +1,4 @@
-﻿---
+---
 id: 142
 title: Variantes d’un jeu sérieux
 author: "Genoveva Puskas & Margherita Pallottino"
@@ -6,6 +6,7 @@ photo: /images/projet/Genoveva_Puskas_Margherita_Pallotino.jpg
 contact: "Genoveva.puskas@unige.ch"
 faculty: Lettres
 course: "Introduction to language variation: an active learning approach."
+course_code: "34E0237"
 level: Master
 students: Moins de 25
 year: 2021

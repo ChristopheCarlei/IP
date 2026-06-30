@@ -1,4 +1,4 @@
-﻿---
+---
 id: 27
 title: "Vidéos & jeu de rôle"
 author: "Jérôme Berger & Damien Cateau"
@@ -6,6 +6,7 @@ photo: /images/projet/Berger_Cateau.jpg
 contact: "Jerome.Berger@unige.ch"
 faculty: Sciences
 course: "Introduction aux prestations pharmaceutiques : 12H700"
+course_code: "14H055"
 level: Bachelor
 students: 50 - 100
 year: 2016

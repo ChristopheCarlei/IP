@@ -1,4 +1,4 @@
-﻿---
+---
 id: 130
 title: Projets numériques
 author: "Yaniv Benhamou & Seth Mediateur Tuyisabe"
@@ -6,6 +6,7 @@ photo: /images/projet/Yaniv_Benhamou_2023.jpg
 contact: "comprendre-le-numerique@unige.ch"
 faculty: Transversal
 course: "Comprendre le numérique: cours transversal"
+course_code: "5869"
 level: Bachelor
 students: 100 - 300
 year: 2020

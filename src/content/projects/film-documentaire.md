@@ -1,4 +1,4 @@
-﻿---
+---
 id: 40
 team: Annie Goudeaux, Germain Poizat
 title: Film documentaire
@@ -6,6 +6,7 @@ author: Nicolas Senn
 photo: /images/projet/Nicolas_senn_2022.jpg
 faculty: FPSE
 course: ""
+course_code: "752766"
 level: ""
 students: Moins de 25
 year: 2017

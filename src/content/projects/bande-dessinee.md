@@ -1,10 +1,11 @@
-﻿---
+---
 id: 85
 title: Bande dessinée
 author: Juliet Fall
 photo: /images/projet/Juliet_Fall.jpg
 faculty: SDS
 course: ""
+course_code: "T406036"
 level: ""
 students: Moins de 25
 year: 2017

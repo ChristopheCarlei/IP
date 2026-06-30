@@ -1,10 +1,11 @@
-﻿---
+---
 id: 92
 title: Carte conceptuelle
 author: Mathilde Fontanet
 photo: /images/projet/Mathilde_Fontanet.jpg
 faculty: FTI
 course: ""
+course_code: "BTM0370"
 level: ""
 students: Moins de 25
 year: 2017

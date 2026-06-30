@@ -1,4 +1,4 @@
-﻿---
+---
 id: 116
 team: Donatella Pulitano, Julie Humbert-Droz, Emma Thibert
 title: Mandat professionnel
@@ -7,6 +7,7 @@ photo: /images/projet/Aurelie_Picton.jpg
 contact: "aurelie.picton@unige.ch"
 faculty: FTI
 course: Terminologie
+course_code: "BTM0905"
 level: Master
 students: 25 - 50
 year: 2018

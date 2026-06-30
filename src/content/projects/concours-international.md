@@ -1,4 +1,4 @@
-﻿---
+---
 id: 112
 team: Eloise Pelaud, Matteo Tarantino et Raphael Languillon
 title: Concours international
@@ -7,6 +7,7 @@ photo: /images/projet/Choplin_-_Hedjazi.jpg
 contact: "claudia.berger@unige.ch"
 faculty: SDS
 course: "Cours eTandem Wuhan - Genève & Paris"
+course_code: "T406011"
 level: Bachelor
 students: 25 - 50
 year: 2021

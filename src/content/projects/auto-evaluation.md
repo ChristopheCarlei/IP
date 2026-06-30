@@ -1,10 +1,11 @@
-﻿---
+---
 id: 30
 title: Auto-évaluation
 author: Michele Pellizzari
 photo: /images/projet/Michele_Pellizzari.jpg
 faculty: GSEM
 course: ""
+course_code: "S210009"
 level: ""
 students: 100 - 300
 year: 2018

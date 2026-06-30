@@ -1,4 +1,4 @@
-﻿---
+---
 id: 132
 title: Penser (par) la voix
 author: Noémi Michel
@@ -6,6 +6,7 @@ photo: /images/projet/Noemi_Michel.jpg
 contact: "noemi.michel@unige.ch"
 faculty: SDS
 course: "Théories critiques de la \"race\" et de la postcolonialité"
+course_code: "T414035"
 level: Master
 students: 25 - 50
 year: 2020

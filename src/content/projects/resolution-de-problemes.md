@@ -1,4 +1,4 @@
-﻿---
+---
 id: 119
 photo: /images/projet/proj-119-photo.jpg
 team: Audrey Blein, Laura Herrero, Kamila Kashaeva, Dmitry Krachun, Solenn Estier
@@ -7,6 +7,7 @@ author: Anton Alexeev
 contact: "Anton.Alekseev@unige.ch"
 faculty: Sciences
 course: Méthodes élémentaires
+course_code: "14M080"
 level: ""
 students: 25 - 50
 year: 2010

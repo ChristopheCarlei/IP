@@ -1,4 +1,4 @@
-﻿---
+---
 id: 139
 team: Lionel Voirol et Yuming Zhang
 photo: /images/projet/Guerrier_Voirol_Zhang.jpg
@@ -6,6 +6,7 @@ title: "E-book interactif & Piazza"
 author: Stéphane Guerrier
 faculty: GSEM
 course: ""
+course_code: "S230023"
 level: ""
 students: 50 - 100
 year: 2020

@@ -1,4 +1,4 @@
-﻿---
+---
 id: 24
 award: Prix innovation pédagogique
 title: Exerciseur en statistiques
@@ -6,6 +6,7 @@ author: Matthias Studer
 photo: /images/projet/Matthias_Studer.jpg
 faculty: SDS
 course: ""
+course_code: "T100000"
 level: ""
 students: 100 - 300
 year: 2016

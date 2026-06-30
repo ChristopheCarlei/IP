@@ -1,10 +1,11 @@
-﻿---
+---
 id: 153
 title: Conception de capteurs
 author: Jérôme Kasparian
 photo: /images/projet/Jerome_Kasparian.jpg
 faculty: Sciences
 course: ""
+course_code: "14E251"
 level: ""
 students: 25 - 50
 year: 2023

@@ -1,10 +1,11 @@
-﻿---
+---
 id: 46
 title: Wiki de groupe
 author: Marianne Starlander
 photo: /images/projet/Susan_Pickford_Marianne_Starlander.jpg
 faculty: FTI
 course: ""
+course_code: "BTM0913"
 level: ""
 students: 50 - 100
 year: 2018

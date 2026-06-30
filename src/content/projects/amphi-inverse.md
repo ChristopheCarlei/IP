@@ -1,4 +1,4 @@
-﻿---
+---
 id: 107
 title: Amphi inversé
 author: "Eduardo Solana & Alexandre-Quentin Berger"
@@ -6,6 +6,7 @@ photo: /images/projet/Eduardo_Solana_Alexandre-Quentin_Berger.jpg
 contact: "eduardo.solana@unige.ch"
 faculty: Sciences
 course: Information Systems Security
+course_code: "14X040"
 level: Master
 students: 25 - 50
 year: 2012

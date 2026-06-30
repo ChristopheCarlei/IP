@@ -1,4 +1,4 @@
-﻿---
+---
 id: 128
 award: Prix innovation pédagogique
 title: Fiches médicales
@@ -7,6 +7,7 @@ photo: /images/projet/Priscilla_Soulie.jpg
 contact: "Priscilla.Soulie@unige.ch"
 faculty: Médecine
 course: Création de fiches Orphanet (22BM083)
+course_code: "22BM083"
 level: Bachelor
 students: 25 - 50
 year: 2019

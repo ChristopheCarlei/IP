@@ -1,10 +1,11 @@
-﻿---
+---
 id: 56
 title: Classe inversée
 author: Julie Franck
 photo: /images/projet/Julie_Franck.jpg
 faculty: FPSE
 course: ""
+course_code: "751201"
 level: ""
 students: 25 - 50
 year: 2015

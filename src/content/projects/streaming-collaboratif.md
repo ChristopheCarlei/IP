@@ -1,4 +1,4 @@
-﻿---
+---
 id: 51
 team: Michel Fuchs (UNIL)
 photo: /images/projet/Birchler-Emery_Baumer.jpg
@@ -6,6 +6,7 @@ title: Streaming collaboratif
 author: Lorenz Baumer
 faculty: Lettres
 course: ""
+course_code: "32H5005"
 level: ""
 students: 25 - 50
 year: 2019

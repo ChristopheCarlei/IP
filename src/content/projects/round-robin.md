@@ -1,4 +1,4 @@
-﻿---
+---
 id: 42
 team: Ian Florin
 title: Round robin
@@ -6,6 +6,7 @@ author: Jörg Balsiger
 photo: /images/projet/Jorg_Balsiger.jpg
 faculty: Sciences
 course: ""
+course_code: "14E206"
 level: ""
 students: 50 - 100
 year: 2017

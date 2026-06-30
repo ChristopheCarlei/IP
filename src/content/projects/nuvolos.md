@@ -1,4 +1,4 @@
-﻿---
+---
 id: 102
 title: Nuvolos
 author: Olivier Scaillet
@@ -6,6 +6,7 @@ photo: /images/projet/Olivier_Scaillet.jpg
 contact: "olivier.scaillet@unige.ch"
 faculty: GSEM
 course: Financial Econometrics
+course_code: "S413056"
 level: Master
 students: 50 - 100
 year: 2020

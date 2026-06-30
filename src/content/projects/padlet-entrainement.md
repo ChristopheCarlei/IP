@@ -1,10 +1,11 @@
-﻿---
+---
 id: 44
 title: "Padlet & entrainement"
 author: Aurélie Picton
 photo: /images/projet/Aurelie_Picton.jpg
 faculty: FTI
 course: ""
+course_code: "BT0002"
 level: ""
 students: 50 - 100
 year: 2016

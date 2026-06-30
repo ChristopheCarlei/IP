@@ -1,4 +1,4 @@
-﻿---
+---
 id: 79
 team: Nicolas Senn
 title: Atelier vidéo
@@ -6,6 +6,7 @@ author: Juliet Fall
 photo: /images/projet/Juliet_Fall.jpg
 faculty: SDS
 course: ""
+course_code: "T406040"
 level: ""
 students: 25 - 50
 year: 2011

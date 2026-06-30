@@ -1,4 +1,4 @@
-﻿---
+---
 id: 129
 award: GSEM Pedagogical Innovation initiative
 title: Escape Game sur Genially
@@ -7,6 +7,7 @@ photo: /images/projet/Marta_Pittavino.jpg
 contact: "Marta.Pittavino@unige.ch"
 faculty: GSEM
 course: Forecasting with Applications in Business, Statistical Modelling
+course_code: "S411031"
 level: Master
 students: Moins de 25
 year: 2022

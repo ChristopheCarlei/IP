@@ -1,10 +1,11 @@
-﻿---
+---
 id: 52
 title: "Implication & transfert"
 author: Isabel Voirol-Rubido
 photo: /images/projet/Maria-Isabel_Voirol.jpg
 faculty: FPSE
 course: ""
+course_code: "752752"
 level: ""
 students: Moins de 25
 year: 2014

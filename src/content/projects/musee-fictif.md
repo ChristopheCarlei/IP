@@ -1,4 +1,4 @@
-﻿---
+---
 id: 120
 title: Musée fictif
 author: "Silvia Naef & Maddalena Zaglio"
@@ -6,6 +6,7 @@ photo: /images/projet/Zaglio_2022.jpg
 contact: "Maddalena.Zaglio@unige.ch"
 faculty: Lettres
 course: "Globalisation et enjeux culturels au Moyen-Orient : l’essor d’une scène artistique et muséale"
+course_code: "34G1516"
 level: Master
 students: 25 - 50
 year: 2020

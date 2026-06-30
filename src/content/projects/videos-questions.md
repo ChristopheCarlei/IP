@@ -1,10 +1,11 @@
-﻿---
+---
 id: 15
 title: "Vidéos & questions"
 author: Jérôme Kasparian
 photo: /images/projet/Jerome_Kasparian.jpg
 faculty: Médecine
 course: ""
+course_code: "11P075"
 level: ""
 students: 500 - 1000
 year: 2016

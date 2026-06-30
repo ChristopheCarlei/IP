@@ -1,4 +1,4 @@
-﻿---
+---
 id: 97
 title: "Classe inversée & quiz"
 author: Enrico Chavez
@@ -6,6 +6,7 @@ photo: /images/projet/Enrico_Chavez.jpg
 contact: "Enrico.Chavez@unige.ch"
 faculty: GSEM
 course: Statistics I
+course_code: "S210016"
 level: Bachelor
 students: 300 - 500
 year: 2020

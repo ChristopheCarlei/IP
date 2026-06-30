@@ -1,10 +1,11 @@
-﻿---
+---
 id: 73
 title: "Théâtre théorique & posters"
 author: Marlyne Sahakian
 photo: /images/projet/Marlyne_Sahakian_petite.jpg
 faculty: SDS
 course: ""
+course_code: "T205004"
 level: ""
 students: 100 - 300
 year: 2018

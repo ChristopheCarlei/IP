@@ -1,10 +1,11 @@
-﻿---
+---
 id: 78
 photo: /images/projet/proj-78-photo.jpg
 title: "Fiches techniques & logiciel interactif"
 author: Evelina Trutnevyte
 faculty: Sciences
 course: ""
+course_code: "14E244"
 level: ""
 students: Moins de 25
 year: 2018

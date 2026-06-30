@@ -1,4 +1,4 @@
-﻿---
+---
 id: 93
 team: Stéphane Guerrier, Guillaume Blanc, Benjamin Poilane, Hervégil Voegeli
 title: "Site web pédagogique & quiz"
@@ -7,6 +7,7 @@ photo: /images/projet/Mucyo_Karemera.jpg
 contact: "Mucyo.Karemera@unige.ch"
 faculty: GSEM
 course: Mathématiques I
+course_code: "S103005"
 level: Bachelor
 students: 500 - 1000
 year: 2020

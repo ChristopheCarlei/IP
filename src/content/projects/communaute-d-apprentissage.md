@@ -1,10 +1,11 @@
-﻿---
+---
 id: 53
 title: "Communauté d'apprentissage"
 author: Pamela Ohene-Nyako
 photo: /images/projet/Pamela_Ohene-Nyako.jpg
 faculty: Lettres
 course: ""
+course_code: "J1H214"
 level: ""
 students: Moins de 25
 year: 2018

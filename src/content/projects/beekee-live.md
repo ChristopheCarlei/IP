@@ -1,10 +1,11 @@
-﻿---
+---
 id: 23
 title: Beekee Live
 author: "Mireille Bétrancourt & Vincent Widmer"
 photo: /images/projet/Mireille_Betrancourt.jpg
 faculty: FPSE
 course: ""
+course_code: "75307"
 level: ""
 students: 25 - 50
 year: 2017

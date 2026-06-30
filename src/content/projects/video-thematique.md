@@ -1,10 +1,11 @@
-﻿---
+---
 id: 2
 photo: /images/projet/Rita_Trigo_Trindade.jpg
 title: Vidéo thématique
 author: Rita Trigo Trindade
 faculty: Droit
 course: ""
+course_code: "5356"
 level: ""
 students: 50 - 100
 category: Faire créer

@@ -1,4 +1,4 @@
-﻿---
+---
 id: 108
 title: "Jeu sérieux & projet authentique"
 author: "Laurent Matthey & Marta Alonso"
@@ -6,6 +6,7 @@ photo: /images/projet/Matthey_Alonso.jpg
 contact: "Laurent.Matthey@unige.ch"
 faculty: SDS
 course: Atelier de projet urbain
+course_code: "T406231"
 level: Master
 students: 25 - 50
 year: 2017

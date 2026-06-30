@@ -1,4 +1,4 @@
-﻿---
+---
 id: 10
 team: Helen Curtis, Julien Forbat, Charlotte Poussin
 photo: /images/projet/Louise_Gallagher.jpg
@@ -6,6 +6,7 @@ title: Projet environnemental
 author: Louise Gallagher
 faculty: SDS
 course: ""
+course_code: "T406006"
 level: ""
 students: 50 - 100
 year: 2018

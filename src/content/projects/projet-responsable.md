@@ -1,10 +1,11 @@
-﻿---
+---
 id: 4
 photo: /images/projet/Michelle_Bergadaa.jpg
 title: Projet responsable
 author: Michelle Bergadaà
 faculty: GSEM
 course: ""
+course_code: "S230006"
 level: ""
 students: 50 - 100
 year: 2012

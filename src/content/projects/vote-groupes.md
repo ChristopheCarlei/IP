@@ -1,4 +1,4 @@
-﻿---
+---
 id: 64
 team: Rebecca Duroulet, Sandro Loi, Hervé Roquet
 title: "Vote & groupes"
@@ -6,6 +6,7 @@ author: Jörg Balsiger
 photo: /images/projet/Jorg_Balsiger.jpg
 faculty: SDS
 course: ""
+course_code: "T206054"
 level: ""
 students: 100 - 300
 year: 2015

@@ -1,10 +1,11 @@
-﻿---
+---
 id: 16
 title: Tutorat
 author: Ines Chaieb
 photo: /images/projet/Ines_Chaieb.jpg
 faculty: GSEM
 course: ""
+course_code: "S413059"
 level: ""
 students: 50 - 100
 year: 2015

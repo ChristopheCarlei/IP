@@ -1,10 +1,11 @@
-﻿---
+---
 id: 35
 title: "Interactivité & vidéos"
 author: Klea Faniko
 photo: /images/projet/Klea_Faniko.jpg
 faculty: FPSE
 course: ""
+course_code: "7414H"
 level: ""
 students: 300 - 500
 year: 2019

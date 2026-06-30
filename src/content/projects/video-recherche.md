@@ -1,10 +1,11 @@
-﻿---
+---
 id: 59
 title: Vidéo recherche
 author: Rovena Troqe
 photo: /images/projet/Rovena_Troqe.jpg
 faculty: FTI
 course: ""
+course_code: "BT0003"
 level: ""
 students: 50 - 100
 year: 2018

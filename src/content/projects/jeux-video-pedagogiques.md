@@ -1,4 +1,4 @@
-﻿---
+---
 id: 103
 title: Jeux vidéo pédagogiques
 author: Nicolas Szilas
@@ -6,6 +6,7 @@ photo: /images/projet/Kim__Le_Nicolas_Szilas_2023.jpg
 contact: "nicolas.szilas@unige.ch"
 faculty: FPSE
 course: Jeux vidéo pédagogiques (VIP)
+course_code: "75303"
 level: Master
 students: Moins de 25
 year: 2006

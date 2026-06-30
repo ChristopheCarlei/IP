@@ -1,10 +1,11 @@
-﻿---
+---
 id: 6
 photo: /images/projet/proj-6-photo.jpg
 title: "MOOC & coaching"
 author: "Rafael Ruiz de Castañeda & Isabelle Bolon"
 faculty: Médecine
 course: ""
+course_code: "J4M274"
 level: ""
 students: 50 - 100
 year: 2017

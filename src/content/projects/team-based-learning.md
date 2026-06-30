@@ -1,4 +1,4 @@
-﻿---
+---
 id: 126
 title: Team-based Learning
 author: "Jean-François Etter & Daniel Scherly"
@@ -6,6 +6,7 @@ photo: /images/projet/Jean-Francois_Etter.jpg
 contact: "Jean-Francois.Etter@unige.ch"
 faculty: Médecine
 course: Cours de santé publique, santé globale et médecine du travail
+course_code: "243T500"
 level: Master
 students: 50 - 100
 year: 2016

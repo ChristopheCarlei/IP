@@ -1,10 +1,11 @@
-﻿---
+---
 id: 21
 photo: /images/projet/proj-21-photo.jpg
 title: Compétences génériques
 author: Lammert Vrieling
 faculty: GSEM
 course: ""
+course_code: "S240008"
 level: ""
 students: 50 - 100
 year: 2020

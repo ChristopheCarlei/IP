@@ -1,4 +1,4 @@
-﻿---
+---
 id: 101
 team: Laurent Moccozet
 title: Fabrication au Faclab
@@ -7,6 +7,7 @@ photo: /images/projet/Jean-Henry_Morin.jpg
 contact: "jean-henry.morin@unige.ch"
 faculty: SDS
 course: "Service Innovation Lab; Service to the Public : A Design Approach"
+course_code: "D400001"
 level: Master
 students: Moins de 25
 year: 2008
