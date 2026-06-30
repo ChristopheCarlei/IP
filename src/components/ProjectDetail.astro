@@ -91,6 +91,17 @@ const _innov   = d.innovation_type ? innovations.find(i => normType(i.typeFr) ==
 const axeHref   = _axeSlug ? (lang === 'en' ? `/en/catalogue?axe=${_axeSlug}` : `/axes/${_axeSlug}`) : undefined;
 const innovHref = _innov ? `${base}/innovations/${_innov.slug}` : undefined;
 const studHref  = d.students ? `${base}/catalogue?students=${encodeURIComponent(d.students)}` : undefined;
+
+// Lien vers le catalogue des cours UNIGE (pgc) — format de l'ancien site :
+// https://pgc.unige.ch/main/teachings/details/{ANNÉE}-{CODE}. Uniquement si un code existe.
+const courseRe = /\(\s*code\s*(?:de\s*)?cours\s*:?\s*([A-Za-z0-9]+)\s*\)/i;
+const rawCourse = (d.course ?? '').toString();
+const _codeMatch = rawCourse.match(courseRe);
+const courseCode = (d.course_code ?? (_codeMatch ? _codeMatch[1] : '')).toString().trim();
+const courseLabel = rawCourse.replace(courseRe, '').trim();
+const courseHref = courseCode
+  ? `https://pgc.unige.ch/main/teachings/details/${new Date().getFullYear()}-${courseCode}`
+  : undefined;
 ---
 <style>
 .crumb-bar{background:var(--bg-soft);border-bottom:1px solid var(--line)}
@@ -310,7 +321,12 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
         {d.course && (
           <div class="row">
             <strong>{L.course}</strong>
-            <span><a href="#">{d.course}</a>{d.level ? ` / ${d.level}` : ''}</span>
+            <span>
+              {courseHref
+                ? <a href={courseHref} target="_blank" rel="noopener">{courseLabel}</a>
+                : courseLabel}
+              {d.level ? ` / ${d.level}` : ''}
+            </span>
           </div>
         )}
         {d.contact && (
