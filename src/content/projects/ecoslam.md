@@ -1,10 +1,10 @@
-﻿---
+---
 id: 156
 photo: /images/projet/proj-156-photo.jpg
 title: EcoSlam
 author: Chloé Baruffa
 faculty: SDS
-course: ""
+course: "Activités culturelles"
 level: ""
 students: Moins de 25
 year: 2022

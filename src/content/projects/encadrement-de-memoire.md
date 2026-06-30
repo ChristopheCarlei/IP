@@ -1,10 +1,10 @@
-﻿---
+---
 id: 32
 title: Encadrement de mémoire
 author: Lucile Davier
 photo: /images/projet/Lucile_Davier.jpg
 faculty: FTI
-course: ""
+course: "Encadrement de mémoire"
 level: ""
 students: Moins de 25
 year: 2019

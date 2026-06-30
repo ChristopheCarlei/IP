@@ -1,10 +1,10 @@
-﻿---
+---
 id: 65
 title: "Vote & discussions"
 author: Gérard Hopfgartner
 photo: /images/projet/Gerard_Hopfgartner.jpg
 faculty: Sciences
-course: ""
+course: "Chimie analytique pharmaceutique, spectrométrie de masse"
 level: ""
 students: 100 - 300
 year: 2014

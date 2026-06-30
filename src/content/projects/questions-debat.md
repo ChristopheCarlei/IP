@@ -1,10 +1,10 @@
-﻿---
+---
 id: 45
 photo: /images/projet/SEA_Chappuis.jpg
 title: "Questions & débat"
 author: Benoît Chappuis
 faculty: Droit
-course: ""
+course: "Droit et pratique du métier d’avocat"
 level: ""
 students: 100 - 300
 year: 2017

@@ -5,7 +5,7 @@ photo: /images/projet/Guerrier_Voirol_Zhang.jpg
 title: "E-book interactif & Piazza"
 author: Stéphane Guerrier
 faculty: GSEM
-course: ""
+course: "Introduction to data science"
 course_code: "S230023"
 level: ""
 students: 50 - 100

@@ -6,7 +6,7 @@ title: Podcast environnemental
 author: Juliet Fall
 photo: /images/projet/Juliet_Fall.jpg
 faculty: SDS
-course: ""
+course: "Enjeux environnementaux : nature, paysage, ressources"
 course_code: "T206060"
 level: ""
 students: 50 - 100

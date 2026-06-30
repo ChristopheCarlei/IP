@@ -5,7 +5,7 @@ title: Round robin
 author: Jörg Balsiger
 photo: /images/projet/Jorg_Balsiger.jpg
 faculty: Sciences
-course: ""
+course: "Société et durabilité"
 course_code: "14E206"
 level: ""
 students: 50 - 100

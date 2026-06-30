@@ -1,10 +1,10 @@
-﻿---
+---
 id: 68
 title: "Interactivité & outils Moodle"
 author: Claudia Berger
 photo: /images/projet/Claudia_Berger.jpg
 faculty: Lettres
-course: ""
+course: "Initiation au chinois moderne I"
 level: ""
 students: 25 - 50
 year: 2008

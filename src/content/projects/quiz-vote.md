@@ -5,7 +5,7 @@ title: "Quiz & vote"
 author: Olivier Jordan
 photo: /images/projet/Olivier_Jordan.jpg
 faculty: Sciences
-course: ""
+course: "Sciences pharmaceutiques II"
 course_code: "11H020"
 level: ""
 students: 100 - 300

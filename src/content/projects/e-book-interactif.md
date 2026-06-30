@@ -1,11 +1,11 @@
-﻿---
+---
 id: 66
 team: Cesare Miglioli
 title: E-book interactif
 author: Maria-Pia Victoria-Feser
 photo: /images/projet/Maria-Pia_Victoria-Feser.jpg
 faculty: GSEM
-course: ""
+course: "Model selection in high dimensions"
 level: ""
 students: Moins de 25
 year: 2018

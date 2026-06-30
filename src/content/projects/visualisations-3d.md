@@ -1,11 +1,11 @@
-﻿---
+---
 id: 61
 team: Ivo Krejci
 title: Visualisations 3D
 author: René Daher
 photo: /images/projet/Rene_Daher.jpg
 faculty: Médecine
-course: ""
+course: "Anatomie dentaire"
 level: ""
 students: 25 - 50
 year: 2019

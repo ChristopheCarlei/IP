@@ -4,7 +4,7 @@ title: "Communauté d'apprentissage"
 author: Pamela Ohene-Nyako
 photo: /images/projet/Pamela_Ohene-Nyako.jpg
 faculty: Lettres
-course: ""
+course: "Introduction aux méthodes d’histoire internationale"
 course_code: "J1H214"
 level: ""
 students: Moins de 25

@@ -1,10 +1,10 @@
-﻿---
+---
 id: 38
 title: World café
 author: Frédéric Darbellay
 photo: /images/projet/Frederic_Darbellay.jpg
 faculty: FPSE
-course: ""
+course: "Droit de l’enfant, éducation et créativité"
 level: ""
 students: 50 - 100
 year: 2020

@@ -1,11 +1,11 @@
-﻿---
+---
 id: 70
 team: Philippe Wanner
 title: Classe puzzle
 author: Ruxandra Oana Ciobanu
 photo: /images/projet/Oana_Ciobanu.jpg
 faculty: SDS
-course: ""
+course: "Enjeux des migrations internationales"
 level: ""
 students: Moins de 25
 year: 2019

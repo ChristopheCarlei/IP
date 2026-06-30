@@ -4,7 +4,7 @@ title: Mur végétal
 author: Emilie Demarsy
 photo: /images/projet/Emilie_Demarsy.jpg
 faculty: Sciences
-course: ""
+course: "Biologie fondamentale III"
 course_code: "11B003"
 level: ""
 students: 100 - 300

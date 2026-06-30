@@ -4,7 +4,7 @@ title: "Démo & vidéos"
 author: Anna Sfyrla
 photo: /images/projet/Anna_Sfyrla.jpg
 faculty: Sciences
-course: ""
+course: "Physique générale C"
 course_code: "11P090"
 level: ""
 students: 50 - 100

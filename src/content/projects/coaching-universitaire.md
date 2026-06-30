@@ -4,7 +4,7 @@ photo: /images/projet/proj-26-photo.jpg
 title: Coaching universitaire
 author: Gabrielle Sophie Rivier
 faculty: FTI
-course: ""
+course: "Pratique de la traduction EN/FR"
 course_code: "BT0501"
 level: ""
 students: 50 - 100

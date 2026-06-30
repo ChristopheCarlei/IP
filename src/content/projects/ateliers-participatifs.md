@@ -1,10 +1,10 @@
-﻿---
+---
 id: 72
 title: Ateliers participatifs
 author: Marlyne Sahakian
 photo: /images/projet/Marlyne_Sahakian_petite.jpg
 faculty: SDS
-course: ""
+course: "Sustainable consumption and social change"
 level: ""
 students: 50 - 100
 year: 2017

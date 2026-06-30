@@ -4,7 +4,7 @@ photo: /images/projet/proj-6-photo.jpg
 title: "MOOC & coaching"
 author: "Rafael Ruiz de Castañeda & Isabelle Bolon"
 faculty: Médecine
-course: ""
+course: "Global Health at the Human-Animal-Ecosystem Interface"
 course_code: "J4M274"
 level: ""
 students: 50 - 100

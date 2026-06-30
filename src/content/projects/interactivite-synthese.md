@@ -4,7 +4,7 @@ title: "Interactivité & synthèse"
 author: Lucile Davier
 photo: /images/projet/Lucile_Davier.jpg
 faculty: FTI
-course: ""
+course: "Introduction à la traductologie"
 course_code: "BTM0002"
 level: ""
 students: 50 - 100

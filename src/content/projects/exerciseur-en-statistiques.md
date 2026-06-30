@@ -5,7 +5,7 @@ title: Exerciseur en statistiques
 author: Matthias Studer
 photo: /images/projet/Matthias_Studer.jpg
 faculty: SDS
-course: ""
+course: "Introduction aux méthodes quantitatives"
 course_code: "T100000"
 level: ""
 students: 100 - 300

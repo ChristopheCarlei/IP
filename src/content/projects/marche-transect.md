@@ -5,7 +5,7 @@ title: Marche-transect
 author: Pauline Plagnat
 photo: /images/projet/Pauline_Plagnat.jpg
 faculty: Sciences
-course: ""
+course: "Atelier Interdisciplinarité"
 course_code: "14E200"
 level: ""
 students: 50 - 100

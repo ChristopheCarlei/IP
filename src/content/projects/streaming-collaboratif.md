@@ -5,7 +5,7 @@ photo: /images/projet/Birchler-Emery_Baumer.jpg
 title: Streaming collaboratif
 author: Lorenz Baumer
 faculty: Lettres
-course: ""
+course: "Séminaire d'introduction à l’archéologie classique"
 course_code: "32H5005"
 level: ""
 students: 25 - 50

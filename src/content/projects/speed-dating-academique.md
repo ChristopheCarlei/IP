@@ -4,7 +4,7 @@ photo: /images/projet/Jean-Paul_Payet.jpg
 title: Speed dating académique
 author: Jean-Paul Payet
 faculty: FPSE
-course: ""
+course: "Introduction critique à la sociologie de l’éducation"
 course_code: "742060"
 level: ""
 students: 100 - 300

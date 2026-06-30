@@ -5,7 +5,7 @@ title: Atelier vidéo
 author: Juliet Fall
 photo: /images/projet/Juliet_Fall.jpg
 faculty: SDS
-course: ""
+course: "Atelier de réalisation de films documentaires"
 course_code: "T406040"
 level: ""
 students: 25 - 50

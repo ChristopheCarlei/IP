@@ -1,10 +1,10 @@
-﻿---
+---
 id: 5
 photo: /images/projet/proj-5-photo.jpg
 title: InfoTrack
 author: Bibliothèque de l’Université de Genève
 faculty: Transversal
-course: ""
+course: "Formation des bibliothèques"
 level: ""
 students: Supérieur à 1000
 year: 2016

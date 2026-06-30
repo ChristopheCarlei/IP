@@ -4,7 +4,7 @@ title: Projet entrepreneurial
 author: Judith Schrempf-Stirling
 photo: /images/projet/Judith_Schrempf-Stirling.jpg
 faculty: GSEM
-course: ""
+course: "Responsible Management"
 course_code: "S401003"
 level: ""
 students: 25 - 50

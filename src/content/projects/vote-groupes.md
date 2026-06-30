@@ -5,7 +5,7 @@ title: "Vote & groupes"
 author: Jörg Balsiger
 photo: /images/projet/Jorg_Balsiger.jpg
 faculty: SDS
-course: ""
+course: "Géographie politique"
 course_code: "T206054"
 level: ""
 students: 100 - 300

@@ -4,7 +4,7 @@ title: "Pratique & quiz"
 author: Aurélie Picton
 photo: /images/projet/Aurelie_Picton.jpg
 faculty: FTI
-course: ""
+course: "Corpus pour la traduction"
 course_code: "BTM0911"
 level: ""
 students: 25 - 50

@@ -1,10 +1,10 @@
-﻿---
+---
 id: 67
 title: Interview de spécialistes
 author: Michel Grandjean
 photo: /images/projet/Grandjean_Michel.jpg
 faculty: Théologie
-course: ""
+course: "MOOC Violences et religions"
 level: ""
 students: Supérieur à 1000
 year: 2018

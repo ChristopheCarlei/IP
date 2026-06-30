@@ -4,7 +4,7 @@ photo: /images/projet/Guillarme_Veuthey.jpg
 title: "Vidéos & quiz"
 author: "Jean-Luc Veuthey & Davy Guillarme"
 faculty: Sciences
-course: ""
+course: "Chimie analytique pharmaceutique"
 course_code: "13H009"
 level: ""
 students: 100 - 300

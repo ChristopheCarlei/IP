@@ -5,7 +5,7 @@ photo: /images/projet/Louise_Gallagher.jpg
 title: Projet environnemental
 author: Louise Gallagher
 faculty: SDS
-course: ""
+course: "Workshop : Innovation for Sustainable Development"
 course_code: "T406006"
 level: ""
 students: 50 - 100

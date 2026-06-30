@@ -4,7 +4,7 @@ title: "MOOC & cas pratiques"
 author: Michel Hottelier
 photo: /images/projet/Michel_Hottelier_2_petite.jpg
 faculty: Droit
-course: ""
+course: "Droit Constitutionnel"
 course_code: "5051"
 level: ""
 students: 500 - 1000

@@ -4,7 +4,7 @@ photo: /images/projet/proj-21-photo.jpg
 title: Compétences génériques
 author: Lammert Vrieling
 faculty: GSEM
-course: ""
+course: "Soft Skills"
 course_code: "S240008"
 level: ""
 students: 50 - 100

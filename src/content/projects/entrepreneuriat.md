@@ -1,10 +1,10 @@
-﻿---
+---
 id: 20
 title: Entrepreneuriat
 author: Roni Michaely
 photo: /images/projet/Roni_MICHAELY.jpeg
 faculty: GSEM
-course: ""
+course: "iTrek Startup Project"
 level: ""
 students: 50 - 100
 year: 2018

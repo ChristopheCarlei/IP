@@ -4,7 +4,7 @@ title: Tutorat
 author: Ines Chaieb
 photo: /images/projet/Ines_Chaieb.jpg
 faculty: GSEM
-course: ""
+course: "Learning to teach finance"
 course_code: "S413059"
 level: ""
 students: 50 - 100

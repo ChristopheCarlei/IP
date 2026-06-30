@@ -4,7 +4,7 @@ title: Production publique
 author: Giulia Riili
 photo: /images/projet/Giulia_Riili.jpg
 faculty: Lettres
-course: ""
+course: "Introduction à la recherche musicologique"
 course_code: "32K2131"
 level: ""
 students: Moins de 25

@@ -4,7 +4,7 @@ title: "Applications R&D"
 author: "Leonardo Scapozza & Sébastien Tardy"
 photo: /images/projet/Leonardo_Scapozza.jpg
 faculty: Sciences
-course: ""
+course: "Chimie pharmaceutique"
 course_code: "12H006"
 level: ""
 students: 100 - 300

@@ -1,11 +1,11 @@
-﻿---
+---
 id: 104
 team: Julien Venni, Philippe Ruffieux
 photo: /images/projet/Barbara_Class.jpg
 title: Sqily
 author: Barbara Class
 faculty: FPSE
-course: ""
+course: "Méthodologies de recherche en technologies éducatives (module de recherche qualitative)"
 level: ""
 students: Moins de 25
 year: 2020

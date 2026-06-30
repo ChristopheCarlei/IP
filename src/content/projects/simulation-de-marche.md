@@ -1,10 +1,10 @@
-﻿---
+---
 id: 75
 title: Simulation de marché
 author: Frédéric Robert-Nicoud
 photo: /images/projet/Frederic_Robert-Nicoud.jpg
 faculty: GSEM
-course: ""
+course: "Business Economics"
 level: ""
 students: 25 - 50
 year: 2018

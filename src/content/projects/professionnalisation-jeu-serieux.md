@@ -5,7 +5,7 @@ photo: /images/projet/Rita_Trigo_Trindade.jpg
 title: "Professionnalisation & jeu sérieux"
 author: Rita Trigo Trindade
 faculty: Droit
-course: ""
+course: "Droit des sociétés"
 course_code: "5025"
 level: ""
 students: 100 - 300

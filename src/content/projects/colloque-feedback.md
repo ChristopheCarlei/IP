@@ -4,7 +4,7 @@ title: "Colloque & feedback"
 author: Sergio Gonzalez
 photo: /images/projet/Sergio_Gonzalez_Sevilla.jpg
 faculty: Sciences
-course: ""
+course: "Modern Detector"
 course_code: "16P017"
 level: ""
 students: Moins de 25

@@ -1,10 +1,10 @@
-﻿---
+---
 id: 55
 photo: /images/projet/proj-55-photo.jpg
 title: Escape the lab
 author: Bibliothèque de l’Université de Genève
 faculty: Transversal
-course: ""
+course: "Formation des bibliothèques"
 level: ""
 students: Moins de 25
 year: 2018

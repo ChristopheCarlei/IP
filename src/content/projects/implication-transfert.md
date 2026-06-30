@@ -4,7 +4,7 @@ title: "Implication & transfert"
 author: Isabel Voirol-Rubido
 photo: /images/projet/Maria-Isabel_Voirol.jpg
 faculty: FPSE
-course: ""
+course: "Approche économique de la formation en entreprise"
 course_code: "752752"
 level: ""
 students: Moins de 25

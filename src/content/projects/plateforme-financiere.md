@@ -1,11 +1,11 @@
-﻿---
+---
 id: 9
 team: Rajna Gibson Brandon, Philipp Krueger, Inès Chaieb, Olivier Scaillet, Fabio Trojani
 title: Plateforme financière
 author: Tony Berrada
 photo: /images/projet/Tony_Berrada.jpg
 faculty: GSEM
-course: ""
+course: "Doctorat Professionel de Formation Continue en Finance Appliquée"
 level: ""
 students: 50 - 100
 year: 2018

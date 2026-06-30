@@ -1,10 +1,10 @@
-﻿---
+---
 id: 84
 title: Retours formatifs
 author: Céline Buchs
 photo: /images/projet/Celine_Buchs.jpg
 faculty: FPSE
-course: ""
+course: "Structurer les interactions sociales entre élèves grâce à la pédagogie coopérative"
 level: ""
 students: 50 - 100
 year: 2017

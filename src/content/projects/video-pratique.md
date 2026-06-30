@@ -4,7 +4,7 @@ title: "Vidéo & pratique"
 author: Valérie Lussi Borer
 photo: /images/projet/Valerie_Lussi_Borer.jpg
 faculty: FPSE
-course: ""
+course: "Dossier de développement professionnel"
 course_code: "F4S2011"
 level: ""
 students: 50 - 100

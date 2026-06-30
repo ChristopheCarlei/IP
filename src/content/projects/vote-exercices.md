@@ -4,7 +4,7 @@ title: "Vote & exercices"
 author: Hélène Delage
 photo: /images/projet/Helene_Delage.jpg
 faculty: FPSE
-course: ""
+course: "Introduction à la linguistique clinique"
 course_code: "74190"
 level: ""
 students: 50 - 100

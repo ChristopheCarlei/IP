@@ -4,7 +4,7 @@ title: "Vidéos & questions"
 author: Jérôme Kasparian
 photo: /images/projet/Jerome_Kasparian.jpg
 faculty: Médecine
-course: ""
+course: "Physique Générale"
 course_code: "11P075"
 level: ""
 students: 500 - 1000

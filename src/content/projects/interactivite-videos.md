@@ -4,7 +4,7 @@ title: "Interactivité & vidéos"
 author: Klea Faniko
 photo: /images/projet/Klea_Faniko.jpg
 faculty: FPSE
-course: ""
+course: "Comprendre et combattre les préjugés à l’Université"
 course_code: "7414H"
 level: ""
 students: 300 - 500

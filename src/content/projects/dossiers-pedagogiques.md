@@ -4,7 +4,7 @@ title: Dossiers pédagogiques
 author: Nadine Bordessoule Gilliéron
 photo: /images/projet/Nadine_Bordessoule.jpg
 faculty: Lettres
-course: ""
+course: "CultureS de la Francophonie"
 course_code: "31EL050"
 level: ""
 students: Moins de 25

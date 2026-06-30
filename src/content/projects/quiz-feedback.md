@@ -1,10 +1,10 @@
-﻿---
+---
 id: 47
 title: "Quiz & feedback"
 author: Marianne Starlander
 photo: /images/projet/Susan_Pickford_Marianne_Starlander.jpg
 faculty: FTI
-course: ""
+course: "Gestion et recherche documentaires"
 level: ""
 students: 50 - 100
 year: 2017

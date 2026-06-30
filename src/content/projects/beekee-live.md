@@ -4,7 +4,7 @@ title: Beekee Live
 author: "Mireille Bétrancourt & Vincent Widmer"
 photo: /images/projet/Mireille_Betrancourt.jpg
 faculty: FPSE
-course: ""
+course: "Design Centré Utilisateur et Ergonomie"
 course_code: "75307"
 level: ""
 students: 25 - 50

@@ -4,7 +4,7 @@ title: "Théâtre théorique & posters"
 author: Marlyne Sahakian
 photo: /images/projet/Marlyne_Sahakian_petite.jpg
 faculty: SDS
-course: ""
+course: "Sociologie de la consommation"
 course_code: "T205004"
 level: ""
 students: 100 - 300

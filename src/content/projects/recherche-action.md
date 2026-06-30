@@ -1,10 +1,10 @@
-﻿---
+---
 id: 11
 photo: /images/projet/proj-11-photo.jpg
 title: Recherche action
 author: Diana Volonakis
 faculty: FPSE
-course: ""
+course: "CREA : module collaboratif de recherche extra-académique"
 level: ""
 students: 50 - 100
 year: 2016

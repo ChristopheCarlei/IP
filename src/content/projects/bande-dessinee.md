@@ -4,7 +4,7 @@ title: Bande dessinée
 author: Juliet Fall
 photo: /images/projet/Juliet_Fall.jpg
 faculty: SDS
-course: ""
+course: "Culture visuelle"
 course_code: "T406036"
 level: ""
 students: Moins de 25

@@ -4,7 +4,7 @@ title: Conception de capteurs
 author: Jérôme Kasparian
 photo: /images/projet/Jerome_Kasparian.jpg
 faculty: Sciences
-course: ""
+course: "Méthodes - Capteurs et mesures de terrain"
 course_code: "14E251"
 level: ""
 students: 25 - 50

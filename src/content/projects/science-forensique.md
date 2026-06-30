@@ -1,11 +1,11 @@
-﻿---
+---
 id: 77
 team: Silke Grabherr
 title: Science forensique
 author: Ghislain Patrick Lessène
 photo: /images/projet/Ghislain_Patrick_Lessene.jpg
 faculty: Médecine
-course: ""
+course: "Tous les modules du CAS : Droit, médecine légale et science forensique en Afrique"
 level: ""
 students: Moins de 25
 year: 2029

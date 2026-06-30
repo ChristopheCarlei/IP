@@ -1,10 +1,10 @@
-﻿---
+---
 id: 69
 title: Projets en binôme
 author: Ruxandra Oana Ciobanu
 photo: /images/projet/Oana_Ciobanu.jpg
 faculty: SDS
-course: ""
+course: "Méthodes mixtes"
 level: ""
 students: Moins de 25
 year: 2019

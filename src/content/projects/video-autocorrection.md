@@ -4,7 +4,7 @@ photo: /images/projet/Rita_Trigo_Trindade.jpg
 title: "Vidéo & autocorrection"
 author: Rita Trigo Trindade
 faculty: Droit
-course: ""
+course: "Droit des sociétés et comptabilité"
 course_code: "5134"
 level: ""
 students: 100 - 300

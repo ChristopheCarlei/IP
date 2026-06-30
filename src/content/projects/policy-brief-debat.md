@@ -5,7 +5,7 @@ title: "Policy brief & débat"
 author: Jörg Balsiger
 photo: /images/projet/Jorg_Balsiger.jpg
 faculty: SDS
-course: ""
+course: "Sustainable Development and political agendas + bootcamp"
 level: ""
 students: 25 - 50
 year: 2017

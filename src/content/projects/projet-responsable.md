@@ -4,7 +4,7 @@ photo: /images/projet/Michelle_Bergadaa.jpg
 title: Projet responsable
 author: Michelle Bergadaà
 faculty: GSEM
-course: ""
+course: "Projets Responsables I et Projets Responsables II"
 course_code: "S230006"
 level: ""
 students: 50 - 100
