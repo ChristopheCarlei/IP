@@ -2,22 +2,46 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Observation entre pairs" lang="fr">
-  <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-4">Observation entre collègues</h1>
+<style>
+.ob-hero{background:#fff;border-bottom:1px solid var(--line)}
+.ob-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0;display:flex;align-items:center;gap:clamp(24px,5vw,56px)}
+.ob-hero-text{flex:1;min-width:0}
+.ob-hero-illus{width:min(360px,40%);height:auto;flex-shrink:0}
+@media(max-width:820px){.ob-hero-illus{display:none}}
+.ob-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.ob-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
+.ob-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
+.ob-hero p{color:var(--muted);font-size:17px;line-height:1.65;max-width:64ch;margin:20px 0 0}
 
-    <p class="text-gray-700 mb-4">
-      Vous avez repéré une innovation, un outil ou une pratique parmi les projets de la plateforme
-      et souhaitez mieux la connaître pour l'implémenter dans vos cours ?
-    </p>
-    <p class="text-gray-700 mb-8">
-      Les enseignant·es qui ont accepté d'ouvrir la porte de leur salle de cours aux collègues de
-      l'UNIGE le signalent sur leur fiche projet (mention « Observation entre pairs »). Contactez-les
-      directement pour proposer une observation ou obtenir des informations sur leurs projets.
-    </p>
+.ob-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,56px) 0;max-width:780px}
+.ob-wrap p{color:var(--ink);font-size:17px;line-height:1.7;margin:0 0 18px}
+.ob-link{display:inline-flex;align-items:center;gap:7px;margin-top:8px;font-size:15px;font-weight:700;color:var(--rose);text-decoration:none}
+.ob-link:hover{color:var(--rose-deep);text-decoration:underline}
+</style>
 
-    <a href="https://www.unige.ch/sea/ressources/observation-entre-pairs" target="_blank" rel="noopener"
-       class="inline-block text-sm text-unige-red hover:underline">
-      → En savoir plus sur l'observation entre pairs
-    </a>
+<!-- Hero -->
+<div class="ob-hero">
+  <div class="ob-hero-inner">
+    <div class="ob-hero-text">
+      <span class="ob-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
+      <h1>Observation<span class="sub">entre pairs</span></h1>
+      <p>
+        Vous avez repéré une innovation, un outil ou une pratique parmi les projets de la plateforme
+        et souhaitez mieux la connaître pour l'implémenter dans vos cours ?
+      </p>
+    </div>
+    <img class="ob-hero-illus" src="/images/sections/Observation.svg" alt="" aria-hidden="true" loading="lazy" />
   </div>
+</div>
+
+<div class="ob-wrap">
+  <p>
+    Les enseignant·es qui ont accepté d'ouvrir la porte de leur salle de cours aux collègues de
+    l'UNIGE le signalent sur leur fiche projet (mention « Observation entre pairs »). Contactez-les
+    directement pour proposer une observation ou obtenir des informations sur leurs projets.
+  </p>
+  <a class="ob-link" href="https://www.unige.ch/sea/ressources/observation-entre-pairs" target="_blank" rel="noopener">
+    En savoir plus sur l'observation entre pairs →
+  </a>
+</div>
 </Base>

@@ -33,7 +33,10 @@ const videosWithSlug = videos.map(v => ({ ...v, slug: bySlug.get(norm(v.match)) 
 <Base title="Video promotion" lang="en">
 <style>
 .vid-hero{background:#fff;border-bottom:1px solid var(--line)}
-.vid-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.vid-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0;display:flex;align-items:center;gap:clamp(24px,5vw,56px)}
+.vid-hero-text{flex:1;min-width:0}
+.vid-hero-illus{width:min(360px,40%);height:auto;flex-shrink:0}
+@media(max-width:820px){.vid-hero-illus{display:none}}
 .vid-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
 .vid-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
 .vid-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
@@ -57,13 +60,16 @@ const videosWithSlug = videos.map(v => ({ ...v, slug: bySlug.get(norm(v.match)) 
 
 <div class="vid-hero">
   <div class="vid-hero-inner">
-    <span class="vid-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
-    <h1>Promotional<span class="sub">videos</span></h1>
-    <p>
-      We regularly produce videos to further highlight innovative projects. Browse them to
-      discover projects in pictures, commented by the teachers, students and teaching
-      assistants of the courses.
-    </p>
+    <div class="vid-hero-text">
+      <span class="vid-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
+      <h1>Promotional<span class="sub">videos</span></h1>
+      <p>
+        We regularly produce videos to further highlight innovative projects. Browse them to
+        discover projects in pictures, commented by the teachers, students and teaching
+        assistants of the courses.
+      </p>
+    </div>
+    <img class="vid-hero-illus" src="/images/sections/videosIP.svg" alt="" aria-hidden="true" loading="lazy" />
   </div>
 </div>
 

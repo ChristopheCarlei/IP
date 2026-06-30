@@ -35,7 +35,10 @@ function facVar(f: string): string {
 <Base title="Pedagogical support" lang="en">
 <style>
 .so-hero{background:#fff;border-bottom:1px solid var(--line)}
-.so-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.so-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0;display:flex;align-items:center;gap:clamp(24px,5vw,56px)}
+.so-hero-text{flex:1;min-width:0}
+.so-hero-illus{width:min(360px,40%);height:auto;flex-shrink:0}
+@media(max-width:820px){.so-hero-illus{display:none}}
 .so-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
 .so-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
 .so-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
@@ -66,16 +69,19 @@ function facVar(f: string): string {
 
 <div class="so-hero">
   <div class="so-hero-inner">
-    <span class="so-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
-    <h1>Pedagogical<span class="sub">support</span></h1>
-    <p>
-      We support teaching teams and their students in the creation of educational videos and
-      learning spaces. Our team can be called upon internally on request. Below are concrete
-      examples of productions we have created.
-    </p>
-    <div class="cta">
-      <a class="btn primary" href="mailto:sea@unige.ch">Talk about your project</a>
+    <div class="so-hero-text">
+      <span class="so-hero-eyebrow">Pedagogical Innovations · UNIGE</span>
+      <h1>Pedagogical<span class="sub">support</span></h1>
+      <p>
+        We support teaching teams and their students in the creation of educational videos and
+        learning spaces. Our team can be called upon internally on request. Below are concrete
+        examples of productions we have created.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:sea@unige.ch">Talk about your project</a>
+      </div>
     </div>
+    <img class="so-hero-illus" src="/images/sections/ProjetPeda.svg" alt="" aria-hidden="true" loading="lazy" />
   </div>
 </div>
 

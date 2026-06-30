@@ -34,11 +34,14 @@ const videosWithSlug = videos.map(v => ({ ...v, slug: bySlug.get(norm(v.name)) ?
 <Base title="Promotion vidéo">
 <style>
 .vid-hero{background:#fff;border-bottom:1px solid var(--line)}
-.vid-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.vid-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0;display:flex;align-items:center;gap:clamp(24px,5vw,56px)}
+.vid-hero-text{flex:1;min-width:0}
+.vid-hero-illus{width:min(360px,40%);height:auto;flex-shrink:0}
 .vid-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
 .vid-hero h1{font-size:clamp(38px,5vw,64px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
 .vid-hero h1 .sub{display:block;font-weight:300;color:var(--muted)}
 .vid-hero p{color:var(--muted);font-size:17px;line-height:1.65;max-width:64ch;margin:20px 0 0}
+@media(max-width:820px){.vid-hero-illus{display:none}}
 
 .vid-wrap{width:var(--content);margin:auto;padding:clamp(36px,5vw,64px) 0}
 .vid-count{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin:0 0 24px}
@@ -64,13 +67,16 @@ const videosWithSlug = videos.map(v => ({ ...v, slug: bySlug.get(norm(v.name)) ?
 <!-- Hero -->
 <div class="vid-hero">
   <div class="vid-hero-inner">
-    <span class="vid-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
-    <h1>Vidéos<span class="sub">de promotion</span></h1>
-    <p>
-      Nous réalisons régulièrement des vidéos afin de mettre davantage en lumière les
-      projets innovants. Parcourez ces vidéos pour découvrir des projets en image,
-      commentés par les enseignant·es, les étudiant·es et les assistant·es des cours.
-    </p>
+    <div class="vid-hero-text">
+      <span class="vid-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
+      <h1>Vidéos<span class="sub">de promotion</span></h1>
+      <p>
+        Nous réalisons régulièrement des vidéos afin de mettre davantage en lumière les
+        projets innovants. Parcourez ces vidéos pour découvrir des projets en image,
+        commentés par les enseignant·es, les étudiant·es et les assistant·es des cours.
+      </p>
+    </div>
+    <img class="vid-hero-illus" src="/images/sections/videosIP.svg" alt="" aria-hidden="true" loading="lazy" />
   </div>
 </div>
 

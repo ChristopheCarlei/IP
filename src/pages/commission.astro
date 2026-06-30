@@ -65,6 +65,10 @@ const initials = (n: string) => n.split(' ').slice(0, 2).map(s => s[0] ?? '').jo
 <style>
 .cm-hero{background:#fff;border-bottom:1px solid var(--line)}
 .cm-hero-inner{width:var(--content);margin:auto;padding:clamp(40px,5vw,64px) 0}
+.cm-hero-top{display:flex;align-items:center;gap:clamp(24px,5vw,56px)}
+.cm-hero-text{flex:1;min-width:0}
+.cm-hero-illus{width:min(320px,36%);height:auto;flex-shrink:0}
+@media(max-width:820px){.cm-hero-illus{display:none}}
 .cm-hero-eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
 .cm-hero h1{font-size:clamp(34px,4.4vw,58px);line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin:0}
 .cm-hero h1 .sub{display:block;font-weight:300;color:var(--muted);font-size:.64em}
@@ -101,15 +105,20 @@ const initials = (n: string) => n.split(' ').slice(0, 2).map(s => s[0] ?? '').jo
 <!-- Hero -->
 <div class="cm-hero">
   <div class="cm-hero-inner">
-    <span class="cm-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
-    <h1>Commission<span class="sub">d'innovations pédagogiques</span></h1>
-    <p>
-      La Commission innovations pédagogiques (CIP) est une commission interfacultaire de soutien
-      aux innovations pédagogiques. Nous sommes une équipe alliant diverses disciplines, cultures
-      et expertises, composée de collaborateurs·trices de différentes facultés et de services communs.
-      Ensemble, nous réfléchissons, débattons et critiquons dans un climat de respect, au service
-      d'un enseignement progressiste et d'un apprentissage stimulant.
-    </p>
+    <div class="cm-hero-top">
+      <div class="cm-hero-text">
+        <span class="cm-hero-eyebrow">Innovations Pédagogiques · UNIGE</span>
+        <h1>Commission<span class="sub">d'innovations pédagogiques</span></h1>
+        <p>
+          La Commission innovations pédagogiques (CIP) est une commission interfacultaire de soutien
+          aux innovations pédagogiques. Nous sommes une équipe alliant diverses disciplines, cultures
+          et expertises, composée de collaborateurs·trices de différentes facultés et de services communs.
+          Ensemble, nous réfléchissons, débattons et critiquons dans un climat de respect, au service
+          d'un enseignement progressiste et d'un apprentissage stimulant.
+        </p>
+      </div>
+      <img class="cm-hero-illus" src="/images/sections/Commission.svg" alt="" aria-hidden="true" loading="lazy" />
+    </div>
 
     <div class="cm-axes">
       <div class="cm-axe">
