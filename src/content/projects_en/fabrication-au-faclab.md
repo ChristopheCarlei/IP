@@ -1,6 +1,6 @@
-﻿---
+---
 id: 101
-title: Manufacturing at the Faclab by Jean-Henry Morin
+title: Manufacturing at the Faclab
 description_short: This pedagogical project aims to modernize teaching methods by integrating approaches based on manufacturing (tangible and intangible) and Design Thinking, in order to promote active and interdisciplinary learning, thus responding to changes in the digital society.
 videos:
   - https://www.youtube.com/embed/S2kjCUVBQMc

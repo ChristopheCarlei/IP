@@ -1,6 +1,6 @@
 ---
 id: 9
-title: "Tony Berrada's financial platform"
+title: "Financial platform"
 description_short: A bilingual English/Chinese digital platform offers students in Geneva and Beijing easy access to powerful tools to experiment with concepts studied in class, without requiring advanced mathematical knowledge.
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: 30
-title: "Michele Pellizzari's Self-Evaluation"
+title: "Self-Evaluation"
 description_short: "The teacher proposes a \"self-grading\" system where students evaluate their own problem solutions, subject to random control. The presentations of the reading groups take place over a day at the headquarters of the International Labour Office, with a grade awarded by the teachers."
 ---
 

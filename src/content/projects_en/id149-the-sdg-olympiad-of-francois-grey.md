@@ -1,6 +1,6 @@
-﻿---
+---
 id: 149
-title: The SDG Olympiad of François Grey
+title: The SDG Olympiad
 description_short: At the end of this summer school, students were invited to take part in an international competition in the form of an “Olympiad”, during which the best local team presented its project to a panel of judges.
 videos:
   - https://www.youtube.com/embed/A07cB_8n9F0

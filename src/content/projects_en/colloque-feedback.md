@@ -1,6 +1,6 @@
 ---
 id: 83
-title: "Symposium & feedback of Sergio Gonzalez"
+title: "Symposium & feedback"
 description_short: In this course, the teacher regularly solicits students through satisfaction questionnaires to ensure the interest and relevance of the content, allowing him to adapt the course according to the comments received and to improve the learning experience.
 ---
 

@@ -1,6 +1,6 @@
-﻿---
+---
 id: 98
-title: Serious game by Rita Trigo Trindade
+title: Serious game
 description_short: One of the optional exercises offered in the course is a serious game played on a computer. In it, students put themselves in the shoes of a trainee lawyer and have to solve legal problems, receiving feedback from the training supervisor and the client.
 images:
   - /images/gallery/proj-98-1.jpg

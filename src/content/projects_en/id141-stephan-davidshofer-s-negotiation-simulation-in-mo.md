@@ -1,6 +1,6 @@
 ---
 id: 141
-title: "Stephan Davidshofer's negotiation simulation [in modification]."
+title: "Negotiation simulation"
 description_short: ""
 ---
 

@@ -1,6 +1,6 @@
-﻿---
+---
 id: 147
-title: Partner projects of Raphaël Thézé
+title: Partner projects
 description_short: "The Partner Projects Program set up by the UNIGE Rector's Office offers students the chance to participate jointly with university staff in concrete projects carried out within the institution."
 videos:
   - https://www.youtube.com/embed/Kf2AXsVXkPM

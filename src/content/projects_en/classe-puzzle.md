@@ -1,6 +1,6 @@
 ---
 id: 70
-title: Puzzle class of Ruxandra Oana Ciobanu
+title: Puzzle class
 description_short: "The teacher sets up an activity called \"puzzle class\" where each student becomes an expert in a specific research method, often unknown. Students then share their knowledge with their peers, promoting information retention and exploring innovative methods for their research projects."
 ---
 

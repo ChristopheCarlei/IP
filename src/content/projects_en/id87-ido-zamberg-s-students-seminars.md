@@ -1,6 +1,6 @@
 ---
 id: 87
-title: "Ido Zamberg's Students seminars"
+title: "Students seminars"
 description_short: "These seminars in small groups, supervised by Master's students trained and supervised by a doctor, allow students to practice medical history, physical examination and technical gestures, promoting the exchange of content and the revision of learning with their peers."
 ---
 

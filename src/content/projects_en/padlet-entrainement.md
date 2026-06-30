@@ -1,6 +1,6 @@
 ---
 id: 44
-title: "Padlet & training by Aurélie Picton"
+title: "Padlet & training"
 description_short: The teacher uses several tools to facilitate teaching, such as the Padlet for discussions and sharing ideas, colored papers for class votes and Moodle for interactive exercises and formative quizzes.
 ---
 

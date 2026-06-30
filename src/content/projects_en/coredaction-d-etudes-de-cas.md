@@ -1,6 +1,6 @@
-﻿---
+---
 id: 131
-title: Co-authoring of case studies by Emmanuelle Reuter
+title: Co-authoring of case studies
 description_short: In order to have at their disposal case studies closer to the reality of the local field, to strengthen links with local actors and to involve students in the study and management of practical cases, the teacher and her team decided to create case studies with local actors.
 videos:
   - https://www.youtube.com/embed/e32ZsDxjQsw

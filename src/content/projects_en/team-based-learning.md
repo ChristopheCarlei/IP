@@ -1,6 +1,6 @@
-﻿---
+---
 id: 126
-title: Team-based Learning by Jean-François Etter
+title: Team-based Learning
 description_short: "The course has been transformed using the principle of Team-based learning (TBL): students prepare individually before each session by following readings and videos, then take an individual and group test and work in teams on exercises to solve complex problems."
 images:
   - /images/gallery/proj-126-1.png

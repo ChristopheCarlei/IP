@@ -1,6 +1,6 @@
 ---
 id: 133
-title: "Posters & podcasts by Barbara Fouquet-Chauprade"
+title: "Posters & podcasts"
 description_short: This course aims to teach students the various forms of intervention in educational sciences, to prepare, analyze and implement them. Students interact with external speakers and are required to design intervention projects in response to fictitious mandates, as well as to present their proposals through posters and podcasts.
 ---
 

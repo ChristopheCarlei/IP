@@ -1,6 +1,6 @@
 ---
 id: 94
-title: Google Education by Jasmina Travnjak
+title: Google Education
 description_short: The course uses Google Classroom as its primary platform to deliver digitally focused teaching in education. Students explore a theoretical framework on the subject and create their own digital device for their classroom, collaborating and communicating using the tools of the Google suite.
 ---
 

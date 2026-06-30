@@ -1,6 +1,6 @@
-﻿---
+---
 id: 114
-title: Web applications by Mattia Fritz
+title: Web applications
 description_short: "The \"STIC I\" course is based on project-based pedagogy: students design interactive devices to solve learning problems and contribute to the EduTech Wiki."
 images:
   - /images/projet/proj-114.png

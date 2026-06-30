@@ -1,6 +1,6 @@
-﻿---
+---
 id: 42
-title: Round robin by Jörg Balsiger
+title: Round robin
 description_short: Students present their final projects in the form of a round robin during which each group alternates between presentations, questions and observations.
 images:
   - /images/gallery/proj-42-1.jpg

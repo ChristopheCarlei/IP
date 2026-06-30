@@ -1,6 +1,6 @@
 ---
 id: 17
-title: Streaming of Jérémy Lucchetti
+title: Streaming
 description_short: During in-person lessons, the teacher is filmed and appears in a video insert in the PowerPoint presentation, which adds a dynamic dimension. In addition, online tools such as SpeakUp and Pingo promote interaction and allow students to ask questions and participate in votes.
 ---
 

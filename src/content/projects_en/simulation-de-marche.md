@@ -1,6 +1,6 @@
 ---
 id: 75
-title: Market simulation by Frédéric Robert Nicoud
+title: Market simulation
 description_short: "The teacher uses a market simulation to allow students to directly experience the theoretical concepts studied in class. By assigning them the roles of buyers and sellers, students negotiate with each other in order to discover the point of equilibrium of the market, thus confirming the teacher's initial prediction."
 ---
 

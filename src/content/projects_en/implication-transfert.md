@@ -1,6 +1,6 @@
 ---
 id: 52
-title: "Involvement & transfer of Isabel Voirol-Rubido"
+title: "Involvement & transfer"
 description_short: "This course uses various pedagogical tools, such as press articles and role plays, to facilitate the transfer of theoretical knowledge in professional contexts and promote students' learning as future trainers in companies."
 ---
 

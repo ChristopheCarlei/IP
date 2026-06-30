@@ -1,6 +1,6 @@
-﻿---
+---
 id: 92
-title: "Mathilde Fontanet's concept map"
+title: "Concept map"
 description_short: Concept maps help summarize a text by highlighting key ideas and their relationships. Students create their maps individually, compare them in groups and discuss approaches and mistakes for a better overall understanding.
 images:
   - /images/projet/proj-92.jpg

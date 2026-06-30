@@ -1,6 +1,6 @@
 ---
 id: 53
-title: "Pamela Ohen-Nyako's Learning Community"
+title: "Learning Community"
 description_short: This seminar offers an interactive approach to teaching, encouraging group discussions and active student participation. It offers activities such as expressing expectations and goals, reading articles with the surveying method, individual research on their topic, oral presentations with feedback and stimulating role plays.
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: 41
-title: "Policy brief & debate by Jörg Balsiger"
+title: "Policy brief & debate"
 description_short: In a course simulating professional challenges, students work in groups on sustainable development issues, propose recommendations and participate in debates with stakeholders.
 ---
 

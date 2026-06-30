@@ -1,6 +1,6 @@
 ---
 id: 20
-title: Entrepreneurship by Roni Michaely
+title: Entrepreneurship
 description_short: Students work in groups on real business issues selected by the teacher, communicating regularly with Israeli startups via Skype.
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: 111
-title: eTandem by Claudia Berger
+title: eTandem
 description_short: Each week, students meet virtually to exchange in Chinese and French on various topics, thus promoting the development of oral and written skills, with bilingual summaries of the discussions posted on a forum, and questionnaires evaluating the quality of the exchanges.
 ---
 

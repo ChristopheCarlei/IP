@@ -1,6 +1,6 @@
-﻿---
+---
 id: 62
-title: "Juliet Fall's Environmental Podcast"
+title: "Environmental Podcast"
 description_short: This teaching allows students to train in the analysis of podcasts on environmental issues. They listen to and critique existing podcasts, then produce their own podcast as a group, practicing their teamwork skills.
 videos:
   - https://www.youtube.com/embed/FahjppRC2X8

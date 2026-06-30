@@ -1,6 +1,6 @@
 ---
 id: 39
-title: "Fréderic Darbellay's interdisciplinary project"
+title: "Interdisciplinary project"
 description_short: The students, coming from various disciplines, come together to develop a creative and innovative interdisciplinary project. The constitution in groups allows students to define and value their own skills.
 ---
 

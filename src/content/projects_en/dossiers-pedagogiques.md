@@ -1,6 +1,6 @@
-﻿---
+---
 id: 50
-title: "Nadine Bordessoule's pedagogical files"
+title: "Pedagogical files"
 description_short: Non-French-speaking students select a cultural element that interests them (a song, a comic strip or a story) and create pedagogical sheets adapted to a non-francophone audience of lower-level students.
 images:
   - /images/projet/proj-50.jpg

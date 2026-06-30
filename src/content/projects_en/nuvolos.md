@@ -1,6 +1,6 @@
 ---
 id: 102
-title: "Nuvolos by Olivier Scaillet's platform"
+title: Nuvolos
 description_short: The Financial Econometrics course has been modernized online via the Nuvolos platform. It offers flexible and interactive learning, allowing students to acquire practical skills in programming and financial data analysis, meeting the requirements of the professional market.
 ---
 

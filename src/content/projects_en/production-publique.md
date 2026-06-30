@@ -1,6 +1,6 @@
-﻿---
+---
 id: 54
-title: Public production by Julia Riili
+title: Public production
 description_short: This course offers cultural visits in Geneva. Students then explore the links between these visits and their research project, with the choice of writing a pedagogical dossier or presenting their work at a public conference.
 images:
   - /images/projet/proj-54.jpg

@@ -1,6 +1,6 @@
-﻿---
+---
 id: 150
-title: La course à la citation of DIS
+title: La course à la citation
 description_short: "\"La Course à la citation\" is a board game that raises students' awareness of good citation practices and the risk of plagiarism. To progress through the game, players have to answer \"true/false\" or \"multiple choice\" questions correctly."
 images:
   - /images/projet/proj-150.png

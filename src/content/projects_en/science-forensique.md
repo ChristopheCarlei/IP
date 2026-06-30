@@ -1,6 +1,6 @@
-﻿---
+---
 id: 77
-title: Forensic Science by Ghislain Patrick Lessène
+title: Forensic Science
 description_short: The participants, African doctors, magistrates and police officers, follow four thematic modules covering areas such as forensic medicine, forensic science, law and setting up medico-legal projects.
 videos:
   - https://www.youtube.com/embed/H7rtd-jHNNc

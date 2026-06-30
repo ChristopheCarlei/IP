@@ -1,6 +1,6 @@
 ---
 id: 43
-title: Film analysis of Gérard Calzada
+title: Film analysis
 description_short: This course offers a pedagogical approach based on the analysis of films depicting psychiatric disorders. Each session includes the presentation of the film, the screening of excerpts, a diagnostic questionnaire, a debate on the representation of disorders and an evaluation questionnaire.
 ---
 

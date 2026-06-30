@@ -1,6 +1,6 @@
-﻿---
+---
 id: 15
-title: "Videos & questions from Jérôme Kasparian"
+title: "Videos & questions"
 description_short: "This project aims to provide basics in mathematics via video capsules and to promote interactivity by asking questions during the course, using a live Q&A platform."
 videos:
   - https://www.youtube.com/embed/m-7NmevfX8E

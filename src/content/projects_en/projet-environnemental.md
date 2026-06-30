@@ -1,6 +1,6 @@
 ---
 id: 10
-title: "Louise Gallagher's Environmental Project"
+title: "Environmental Project"
 description_short: "This intensive master's workshop brings together students from various backgrounds, who explore a general problem before dividing into groups to develop their projects. Evaluation is done through oral presentations and technical reports."
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: 140
-title: "Interactive e-book & web applications of Stéphane Guerrier"
+title: "Interactive e-book & web applications"
 description_short: This course focuses on the practical application of statistical methods in a medical context, using an interactive approach with an interactive website and a Shiny application integrating GPT-3 for R-code generation.
 ---
 

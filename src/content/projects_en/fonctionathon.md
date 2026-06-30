@@ -1,6 +1,6 @@
 ---
 id: 96
-title: Functionathon by Lydie Lane
+title: Functionathon
 description_short: In groups of 3-4, students create multiple-choice questions based on biomedical science courses they have previously attended. Corrected questions are used for interdisciplinary training exams.
 ---
 

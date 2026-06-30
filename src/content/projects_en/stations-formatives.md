@@ -1,6 +1,6 @@
-﻿---
+---
 id: 88
-title: Formative Stations of Eduardo Schiffer
+title: Formative Stations
 description_short: "This course offers simulated consultations in three formats: direct observation, video observation and in-office observation. Students can thus train in clinical and relational skills during consultations with standardized patients."
 videos:
   - https://www.youtube.com/embed/i3qyhjipoCw

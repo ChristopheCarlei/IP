@@ -1,6 +1,6 @@
-﻿---
+---
 id: 163
-title: Learning experiences of Christophe Carlei
+title: Learning experiences
 description_short: Teachers provide their students with learning experiences during each class session. These are directly linked to the didactic and pedagogical situations they will face as young professionals. The aim is to develop their cross-disciplinary skills, particularly in project management, by monitoring projects from “real” client.
 images:
   - /images/projet/proj-163.jpg

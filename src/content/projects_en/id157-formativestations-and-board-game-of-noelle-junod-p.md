@@ -1,6 +1,6 @@
 ---
 id: 157
-title: Formative Stations and board game of Noëlle Junod Perron
+title: Formative Stations and board game
 description_short: Senior students mentor junior students to develop their clinical skills through role-playing and a collaborative board game.
 ---
 

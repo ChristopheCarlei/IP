@@ -1,6 +1,6 @@
-﻿---
+---
 id: 8
-title: "Video & practice of Valerie Lussi Borer"
+title: "Video & practice"
 description_short: "This course aims to enhance students' professional expertise by promoting a benevolent and formative exchange between peers. Students film themselves during their professional practice and the video sequences are objectively analyzed and evaluated at each stage."
 videos:
   - https://www.youtube.com/embed/6QlAQePPAGI

@@ -1,6 +1,6 @@
 ---
 id: 16
-title: Tutoring of Ines Chaieb
+title: Tutoring
 description_short: "In this course, Master students have the opportunity to apply for assistantship projects, where they lead exercise or Q&A sessions in collaboration with the teachers and assistants of the course."
 ---
 

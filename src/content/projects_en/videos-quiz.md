@@ -1,6 +1,6 @@
-﻿---
+---
 id: 3
-title: "Videos & quiz by Jean-Luc Veuthey"
+title: "Videos & quiz"
 description_short: Several assistants were in charge of giving the explanations and demonstrations at the beginning of the practical work. To standardize them, they are now offered to students in the form of videos created by the teaching team. The comprehension of their content is verified through quizzes.
 videos:
   - https://www.youtube.com/embed/L3qF7yUgs3c

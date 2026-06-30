@@ -1,6 +1,6 @@
-﻿---
+---
 id: 47
-title: "Quiz & feedback from Marianne Starlander"
+title: "Quiz & feedback"
 description_short: "The teacher offers formative and summative quizzes accessible from the Moodle space of the course. One of the practical assignments includes a peer review in which students use an evaluation grid to grade and comment on their classmates' work."
 images:
   - /images/gallery/proj-47-1.jpg

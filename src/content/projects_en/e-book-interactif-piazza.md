@@ -1,6 +1,6 @@
-﻿---
+---
 id: 139
-title: "E-book interactif & Piazza of Stéphane Guerrier"
+title: "E-book interactif & Piazza"
 description_short: This course is structured around an interactive ebook with detailed and curated content, suitable for online participation. During the in-person sessions, the teacher uses a website offering, for each chapter, theoretical content articulated with practical exercises.
 videos:
   - https://www.youtube.com/embed/0zlWcHDKCFw

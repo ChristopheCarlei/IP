@@ -1,6 +1,6 @@
 ---
 id: 32
-title: "Supervision thesis by Lucile Davier's"
+title: "Supervision thesis"
 description_short: The teacher offers structured follow-up to students for their dissertation, with a learning contract, an evaluation grid and minutes, as well as seminars and the use of multimedia resources in flipped classroom.
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: 13
-title: "Jean-Paul Payet's academic speed dating"
+title: "Academic speed dating"
 description_short: "This project encourages students' active attitude by using \"sociological speed dating\" to form working groups, thus promoting active learning and collaboration between peers."
 ---
 

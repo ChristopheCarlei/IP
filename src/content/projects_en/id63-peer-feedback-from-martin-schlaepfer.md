@@ -1,6 +1,6 @@
 ---
 id: 63
-title: Peer Feedback from Martin Schlaepfer
+title: Peer Feedback
 description_short: The teacher used the flipped classroom method and blended learning technology with Moodle to set up classroom and remote activities. It has also created a quiz system allowing students to self-assess as well as an anonymous peer review of articles.
 ---
 

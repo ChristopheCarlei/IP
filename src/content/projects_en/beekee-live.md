@@ -1,6 +1,6 @@
-﻿---
+---
 id: 23
-title: Beekee Live by Mireille Bétrancourt
+title: Beekee Live
 description_short: Teachers use Beekee Live, an online tool that allows students to share and discuss their productions without having to create an account or install an app. This facilitates student collaboration and evaluation.
 videos:
   - https://www.youtube.com/embed/jS6GCEjdnik

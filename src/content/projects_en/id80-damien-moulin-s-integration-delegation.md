@@ -1,6 +1,6 @@
 ---
 id: 80
-title: "Damien Moulin's integration delegation"
+title: "Integration delegation"
 description_short: The Academic Horizon programme prepares people in asylum and migration to pursue higher education by offering them a French course with academic objectives and a workshop focusing on language and university skills.
 ---
 

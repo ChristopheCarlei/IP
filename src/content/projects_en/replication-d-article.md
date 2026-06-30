@@ -1,6 +1,6 @@
 ---
 id: 29
-title: Replication of article by Michele Pellizzari
+title: Replication of article
 description_short: In this course, students choose a scientific article using a specific methodology, then replicate it by redoing the statistical analyses. Oral replication presentations are the main assessment of the course, with groups redesigned each 3-week cycle.
 ---
 

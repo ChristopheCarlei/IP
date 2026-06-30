@@ -1,6 +1,6 @@
 ---
 id: 38
-title: "Fréderic Darbellay's World café"
+title: "World café"
 description_short: "To design a \"child-friendly\" school, students participate in an educational world café offering a role play in which students work in teams on a common theme, each with a specific role."
 ---
 

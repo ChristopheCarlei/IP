@@ -1,6 +1,6 @@
-﻿---
+---
 id: 34
-title: Cooperative Learning by Céline Buchs
+title: Cooperative Learning
 description_short: The course puts into practice the principles of cooperative pedagogy by promoting social interactions and group work. The evaluation is done through an individual file that proposes a cooperative learning activity, based on the theoretical and empirical justification of the student.
 images:
   - /images/gallery/proj-34-1.jpg

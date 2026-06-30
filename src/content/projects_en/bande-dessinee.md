@@ -1,6 +1,6 @@
-﻿---
+---
 id: 85
-title: Comic book by Juliet Fall
+title: Comic book
 description_short: In this course, students learn to combine text and image to stage their vision of the world through media such as comics, photo-novels, or collage.
 images:
   - /images/projet/proj-85.jpg

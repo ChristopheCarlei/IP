@@ -1,6 +1,6 @@
-﻿---
+---
 id: 152
-title: Virtual Escape Game of Rita Trigo Trindade
+title: Virtual Escape Game
 description_short: In this law course, students experience a concrete case of company law through a virtual escape game that plunges them into a story of inheritance law.
 videos:
   - https://www.youtube.com/embed/wNdYR-M16ls

@@ -1,6 +1,6 @@
 ---
 id: 37
-title: "Pauline Plagnat's walk-transect"
+title: "Walk-transect"
 description_short: This interdisciplinary workshop in environmental science encourages students to conduct field observation and collaborate in groups to solve environmental problems, integrating their disciplinary knowledge and making a final oral presentation with constructive peer feedback.
 ---
 

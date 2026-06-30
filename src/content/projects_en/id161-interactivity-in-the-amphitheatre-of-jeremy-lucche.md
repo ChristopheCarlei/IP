@@ -1,6 +1,6 @@
-﻿---
+---
 id: 161
-title: Interactivity in the amphitheatre of Jérémy Lucchetti
+title: Interactivity in the amphitheatre
 description_short: To energize his lectures to large audiences, the teacher uses software to annotate his presentation material live, as well as an online voting tool. He also offers live retransmission of his lecture, while alerting students to the risks and benefits of a recorded lecture.
 videos:
   - https://www.youtube.com/embed/A0nGgelhT2k

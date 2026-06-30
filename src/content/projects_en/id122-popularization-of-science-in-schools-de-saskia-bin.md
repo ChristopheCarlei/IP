@@ -1,6 +1,6 @@
-﻿---
+---
 id: 122
-title: Popularization of science in schools de Saskia Bindschedler
+title: Popularization of science in schools
 description_short: The Biology Service-Learning course offers a pedagogical approach in which students collaborate with school teachers to create microbiology-related educational activities for pupils aged 6 to 12.
 videos:
   - https://www.youtube.com/embed/PmjdXNV8lLM

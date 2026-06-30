@@ -1,6 +1,6 @@
 ---
 id: 25
-title: Discussion forum of Philip Jaffé
+title: Discussion forum
 description_short: This 12-month training aims to improve interventions with children in conflict with the law. It offers online teaching led by international experts and personalized support by experienced tutors.
 ---
 

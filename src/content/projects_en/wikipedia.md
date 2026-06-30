@@ -1,6 +1,6 @@
-﻿---
+---
 id: 123
-title: Wikipedia in philosophy by Simon-Pierre Chevarie-Cossette
+title: Wikipedia in philosophy
 description_short: "Master's students are encouraged to publish contributions on Wikipedia related to the seminar topics, in teams or individually, after familiarization, project submission and supervision by expert Wikipedia publishers."
 videos:
   - https://www.youtube.com/embed/8A0JJiGQeTo

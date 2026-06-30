@@ -1,6 +1,6 @@
 ---
 id: 167
-title: Student role-play of Kari de Pryck
+title: Student role-play
 description_short: This activity encourages students to analyze environmental controversy by identifying its key players and issues, and then to convey its complexity through a structured oral presentation.
 ---
 

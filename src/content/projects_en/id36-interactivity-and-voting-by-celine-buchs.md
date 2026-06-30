@@ -1,6 +1,6 @@
 ---
 id: 36
-title: "Interactivity & voting by Céline Buchs"
+title: "Interactivity & voting"
 description_short: This course presents experimental approaches in education. Students actively participate by categorizing research questions, engaging in group discussions, and using quizzes to strengthen their understanding.
 ---
 

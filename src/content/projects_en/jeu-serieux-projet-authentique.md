@@ -1,6 +1,6 @@
-﻿---
+---
 id: 108
-title: "Serious game & authentic project of Laurent Matthey"
+title: "Serious game & authentic project"
 description_short: This course offers a serious game that simulates professional life in an urban planning office, offering students the opportunity to experience the stages of urban planning project management and make decisions impacting the scenario of the game, an experience difficult to reproduce in a real context of a project in class.
 images:
   - /images/projet/proj-108.jpg

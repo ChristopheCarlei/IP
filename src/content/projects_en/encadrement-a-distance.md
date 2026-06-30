@@ -1,6 +1,6 @@
 ---
 id: 82
-title: Remote coaching by Andréas Dettwiler
+title: Remote coaching
 description_short: The pedagogical activities of this distance learning course are varied and interactive, including quizzes, written assignments and oral presentations, to meet the needs of a diverse audience and promote active learning.
 ---
 

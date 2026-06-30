@@ -1,6 +1,6 @@
 ---
 id: 57
-title: "Voting & Exercises by Hélène Delage"
+title: "Voting & Exercises"
 description_short: "The teacher uses Votamatic surveys during classes to assess students' level of understanding, identify poorly mastered concepts and allow direct feedback. It also offers optional exercises on Moodle, with corrections available later."
 ---
 

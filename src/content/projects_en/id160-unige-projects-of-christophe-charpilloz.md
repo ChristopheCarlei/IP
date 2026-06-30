@@ -1,6 +1,6 @@
 ---
 id: 160
-title: Unige projects of Christophe Charpilloz
+title: Unige projects
 description_short: In this course, students carry out a concrete IT development project submitted by a “client” from the university community.
 ---
 

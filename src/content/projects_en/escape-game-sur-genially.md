@@ -1,6 +1,6 @@
-﻿---
+---
 id: 129
-title: "Escape Game on Genially by Marta Pittavino and Anastasia Floru [Relu LC 11/22]."
+title: "Escape Game on Genially"
 description_short: The teaching team created two online escape games based on historical and criminal themes, as intermediate and final assessments, aimed at reinforcing discipline-specific skills as well as cross-curricular skills such as problem-solving and teamwork.
 images:
   - /images/projet/proj-129.png

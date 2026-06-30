@@ -1,6 +1,6 @@
 ---
 id: 48
-title: "Group & feedback from Frédéric Robert-Nicoud"
+title: "Group & feedback"
 description_short: "The course takes a flipped classroom approach: students have access to prerequisite resources such as articles and videos. They then write individual or group essays and exchange their work to receive constructive feedback."
 ---
 

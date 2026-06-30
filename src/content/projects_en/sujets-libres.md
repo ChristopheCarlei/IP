@@ -1,6 +1,6 @@
 ---
 id: 118
-title: Project development by Kerstin Preuschoff
+title: Project development
 description_short: This interdisciplinary course offers an innovative format in which students are involved in creating their own learning materials by choosing their research topics and defining their objectives.
 ---
 

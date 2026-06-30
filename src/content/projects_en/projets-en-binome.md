@@ -1,6 +1,6 @@
 ---
 id: 69
-title: Projects in pairs by Ruxandra Oana Ciobanu
+title: Projects in pairs
 description_short: The teacher sets up various pedagogical activities, such as debates, oral presentations based on scientific articles and research projects in pairs using mixed methods.
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: 14
-title: "R&D applications of Leonardo Scapozza"
+title: "R&D applications"
 description_short: Students participate in practical work where they synthesize innovative pharmaceutical compounds, in collaboration with the DNDi (Drugs for Neglected Diseases initiative). Their achievements are tested in biological models of neglected diseases.
 ---
 

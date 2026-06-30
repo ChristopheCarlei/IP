@@ -1,6 +1,6 @@
-﻿---
+---
 id: 136
-title: Simulations and shadowing de Patricia Picchiottino
+title: Simulations and shadowing
 description_short: "This module focuses on the analysis of interprofessional collaborations in healthcare. Students participate in group simulations supervised by tutors and can also take part in a large-scale simulation called \"ValTra\"."
 videos:
   - https://www.rts.ch/play/embed?urn=urn:rts:video:9011359&subdivisions=false

@@ -1,6 +1,6 @@
 ---
 id: 71
-title: "Judith Schrempf-Stirling's entrepreneurial project [06/20]."
+title: "Entrepreneurial project"
 description_short: The Impact Consultancy project, in partnership with B Lab Switzerland, gives students the opportunity to become consultants in social and environmental impact assessment, carrying out BIA assessments for Swiss companies and offering recommendations to improve their performance.
 ---
 

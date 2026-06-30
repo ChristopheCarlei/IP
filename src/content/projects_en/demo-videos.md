@@ -1,6 +1,6 @@
-﻿---
+---
 id: 28
-title: "Anna Sfyrla's demo & videos"
+title: "Demo & videos"
 description_short: The teacher uses live demonstrations and videos to make the lesson more interactive. The exercise sessions were reorganized with students presenting their solutions in front of the class, which improved exam results.
 videos:
   - https://www.youtube.com/embed/VRAXK4QKJ1Q

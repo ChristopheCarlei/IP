@@ -1,6 +1,6 @@
 ---
 id: 137
-title: Pursuit Game de Patricia Picchiottino
+title: Pursuit Game
 description_short: In this medical pursuit game in the city, students form interprofessional teams to solve missions and find a missing patient by exploring various places of care. They are thus confronted with real professional situations thus promoting playful learning and collaboration between different sectors.
 ---
 

@@ -1,6 +1,6 @@
-﻿---
+---
 id: 124
-title: "Grasp & Jupyter notebook by Adrian Holzer and Pascal Felber"
+title: "Grasp & Jupyter notebook"
 description_short: This project enables students to learn and revise programming concepts independently, through short video clips on the concepts, additional interactive resources to explore these concepts in greater depth (according to their level and needs) and self-assessment exercises.
 videos:
   - https://www.youtube.com/embed/qvYvqb5tB8M

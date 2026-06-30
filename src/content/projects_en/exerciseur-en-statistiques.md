@@ -1,6 +1,6 @@
-﻿---
+---
 id: 24
-title: "Matthias Studer's Statistics Exerciser"
+title: "Statistics Exerciser"
 description_short: The teacher added to his course randomly generated practical exercises on Moodle with automatic correction, as well as the realization of interpretation exercises in small groups during the seminars.
 videos:
   - https://www.youtube.com/embed/m52TceyEOAY

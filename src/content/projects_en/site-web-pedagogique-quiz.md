@@ -1,6 +1,6 @@
-﻿---
+---
 id: 93
-title: "Pedagogical website & quiz of Mucyo Karemera"
+title: "Pedagogical website & quiz"
 description_short: Inspired by the dynamism of YouTube videos that simplify mathematical concepts, the teacher adopted a similar format for his online course during the 2020-21 academic year. Students had access to pre-recorded videos, divided into short and dynamic chapters, embellished with interactive animations, to make the material more digestible, pleasant and accessible.
 videos:
   - https://www.youtube.com/embed/cw3cKoQDyAA

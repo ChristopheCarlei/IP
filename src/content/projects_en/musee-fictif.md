@@ -1,6 +1,6 @@
 ---
 id: 120
-title: Fictional museum by Silvia Naef
+title: Fictional museum
 description_short: Working in pairs or individually, students are tasked with creating a fictitious international museum project to develop cultural diplomacy and economic diversification, using concepts learned in class.
 ---
 

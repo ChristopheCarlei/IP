@@ -1,6 +1,6 @@
-﻿---
+---
 id: 151
-title: Data Science for All of Elsa-Line Huwyler
+title: Data Science for All
 description_short: This project offers a new approach to learning data science by providing a platform housing a collection of video vignettes, each focusing on essential skills in the field of data science, made available for self-study and reusable by teachers in their courses.
 videos:
   - https://mediaserver.unige.ch/proxy/199027/VN5-5255-10-02-B.mp4?width=1280&height=720&start=0

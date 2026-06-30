@@ -1,6 +1,6 @@
 ---
 id: 164
-title: Data analysis via ChatGPT of Eva Cantoni
+title: Data analysis via ChatGPT
 description_short: In this project, students will interact with ChatGPT to perform a statistical analysis, while providing a critical report on the results obtained. They are encouraged to explore the potential and limitations of using generative artificial intelligence in data analysis.
 ---
 

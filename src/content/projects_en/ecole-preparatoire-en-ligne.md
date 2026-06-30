@@ -1,6 +1,6 @@
-﻿---
+---
 id: 138
-title: E-School training of Oumaima Ajmi
+title: E-School training
 description_short: The Preparatory School of Mathematics offers new student groups the opportunity to upgrade their knowledge of mathematics. Mostly online, it allows students to progress at their own pace, with placement tests, custom modules, a question dialog, and in-person sessions.
 videos:
   - https://gsem-epm-be.innprogress.ch/uploads/video/intro__VF-1661955700116.mp4

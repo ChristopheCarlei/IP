@@ -1,6 +1,6 @@
 ---
 id: 21
-title: Soft skills of Lammert Vrieling
+title: Soft skills
 description_short: The course is an intensive one-week programme comprising six workshops covering different modules such as leadership, public communication, teamwork and planning. Students participate in practical activities, complete questionnaires and write reports to assess their personal development and acquired skills.
 ---
 

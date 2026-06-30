@@ -1,6 +1,6 @@
 ---
 id: 155
-title: Crossed viewpoints of Vera Slaveykova
+title: Crossed viewpoints
 description_short: To tackle a subject that is still controversial in the literature, the teacher chose to offer her course in the format of a world café, inviting experts with divergent points of view on the subject.
 ---
 

@@ -1,6 +1,6 @@
-﻿---
+---
 id: 58
-title: "Quiz & vote by Olivier Jordan"
+title: "Quiz & vote"
 description_short: During the sessions, teachers encourage student interaction and participation by using tools such as Mentimeter to ask questions live. In addition, optional formative quizzes are offered to students after the preliminary readings, allowing them to self-assess and strengthen their understanding of the topics covered.
 images:
   - /images/projet/proj-58.png

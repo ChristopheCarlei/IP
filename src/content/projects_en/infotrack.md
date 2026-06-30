@@ -1,6 +1,6 @@
-﻿---
+---
 id: 5
-title: InfoTrack by DIS
+title: InfoTrack
 description_short: InfoTrack is the online training platform in information literacy of the University of Geneva Library (searching for and selecting documents, sharing and using information ethically). It is aimed primarily at Bachelor’s students in all disciplines.
 videos:
   - https://www.youtube.com/embed/YM8g7DqHEug

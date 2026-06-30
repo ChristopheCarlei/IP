@@ -1,6 +1,6 @@
-﻿---
+---
 id: 66
-title: Interactive E-book by Maria-Pia Victoria-Feser
+title: Interactive E-book
 description_short: An interactive e-book containing all course material, created from RStudio, has been made available to students on GitHub. It allows students to prepare chapters in advance and then use class time to delve deeper into concepts and answer questions.
 images:
   - /images/gallery/proj-66-1.jpg

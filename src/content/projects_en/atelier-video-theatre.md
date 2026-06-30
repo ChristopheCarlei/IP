@@ -1,6 +1,6 @@
 ---
 id: 110
-title: Video Theatre Workshop by Neele Heiser
+title: Video Theatre Workshop
 description_short: "Students participate in two interactive activities with visually impaired people: during the \"shared visits\", they accompany them on cultural outings to discover everyday reality, during the \"creation of prototypes\" they design innovative adaptations of everyday objects to improve their accessibility."
 ---
 

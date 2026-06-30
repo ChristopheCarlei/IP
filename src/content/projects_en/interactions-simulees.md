@@ -1,6 +1,6 @@
-﻿---
+---
 id: 113
-title: Simulated interactions by Barbara Kaiser
+title: Simulated interactions
 description_short: "Actors and actresses act as patients while students act as psychologists, creating simulated interactions for learning. The Stop&Go format promotes regular debriefings, allowing students to embody actors and active spectators successively."
 videos:
   - https://mediaserver.unige.ch/proxy/170122/VN3-482b-2021-2022-03-10.mp4?width=1280&height=720&start=0

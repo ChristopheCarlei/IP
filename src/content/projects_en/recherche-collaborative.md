@@ -1,6 +1,6 @@
-﻿---
+---
 id: 117
-title: Collaborative research by Eric Sanchez
+title: Collaborative research
 description_short: "Students develop research skills in educational technologies by designing research plans for funding projects and collaborating on an \"EduTech Wiki\" lexicon."
 images:
   - /images/gallery/proj-117-1.jpg

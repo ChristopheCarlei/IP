@@ -1,6 +1,6 @@
 ---
 id: 22
-title: "Sebastian Engelke's prediction model"
+title: "Prediction model"
 description_short: The course offers students the opportunity to participate in a competition on the Kaggle platform, where they develop prediction models using databases provided by companies. They receive feedback to improve their models.
 ---
 

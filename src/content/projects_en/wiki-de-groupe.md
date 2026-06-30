@@ -1,6 +1,6 @@
 ---
 id: 46
-title: "Marianne Starlander's Group Wiki"
+title: "Group Wiki"
 description_short: Students form groups to compare translation software on a common wiki. The best wiki is selected for the final report evaluated collectively by the teacher.
 ---
 

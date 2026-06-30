@@ -1,6 +1,6 @@
-﻿---
+---
 id: 107
-title: Inverted amphitheatre by Eduardo Solana students
+title: Inverted amphitheatre
 description_short: In this course, students select a topic related to computer security and present it in an informative way, lasting 20 to 30 minutes, thus offering enriching knowledge sharing for the whole class.
 videos:
   - https://mediaserver.unige.ch/proxy/169115/VN3-482b-2021-2022-03-01.mp4?width=1280&height=720&start=0

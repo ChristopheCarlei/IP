@@ -1,6 +1,6 @@
 ---
 id: 119
-title: Elementary methods of Anton Alexeev
+title: Elementary methods
 description_short: "Rather than traditional lectures, the teacher has adopted a reverse approach to teaching mathematics: students solve problems before and during class to discover concepts for themselves. They work individually at home and in groups in class on problems of increasing complexity."
 ---
 

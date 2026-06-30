@@ -1,6 +1,6 @@
-﻿---
+---
 id: 7
-title: Head to Toe by Ido Zamberg
+title: Head to Toe
 description_short: HeadToToe is an application developed by two medical students at the University of Geneva, designed to promote access at all times to quality medical equipment, with an intuitive, logical and easy-to-access tool.
 videos:
   - https://www.unige.ch/innovations-pedagogiques/application/files/4116/0586/2909/HeadtoToe_final.mp4

@@ -1,6 +1,6 @@
-﻿---
+---
 id: 125
-title: Interdisciplinary videos by Valerie Wyssbrod
+title: Interdisciplinary videos
 description_short: In this course, students are divided into groups and create video vignettes on biodiversity conservation, focusing on the legal framework. They are supported by coaching sessions and interim reports.
 videos:
   - https://www.youtube.com/embed/kigst0kkj9o

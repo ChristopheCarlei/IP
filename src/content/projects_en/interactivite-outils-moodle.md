@@ -1,6 +1,6 @@
 ---
 id: 68
-title: "Interactivity & Moodle tools by Claudia Berger"
+title: "Interactivity & Moodle tools"
 description_short: The teacher encourages the active participation of students by encouraging them to dialogue with each other, help each other and correct each other on given themes. She stands back, observes the exchanges, and notes the discussion items to display them in Chinese characters on a screen.
 ---
 

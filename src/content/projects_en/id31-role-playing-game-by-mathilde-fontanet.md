@@ -1,6 +1,6 @@
 ---
 id: 31
-title: Role-playing game by Mathilde Fontanet
+title: Role-playing game
 description_short: This course aims to train students in translation revision by introducing them to rules and attitudes to adopt or avoid. Role plays are then used to train them to manage the difficult interactions between reviewer and reviewer.
 ---
 

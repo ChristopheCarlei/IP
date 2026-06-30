@@ -1,6 +1,6 @@
-﻿---
+---
 id: 156
-title: EcoSlam of Chloé Baruffa
+title: EcoSlam
 description_short: This teaching format creates spaces for exchange and creativity around topical issues.
 images:
   - /images/projet/proj-156.jpg

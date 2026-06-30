@@ -1,6 +1,6 @@
-﻿---
+---
 id: 144
-title: Training speakers of Simon Flandin
+title: Training speakers
 description_short: In this course, speakers involved in the subject matter co-teach the course while becoming more professional.
 videos:
   - https://www.youtube.com/embed/JSE-Lx1rQZQ

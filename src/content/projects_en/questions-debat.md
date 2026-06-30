@@ -1,6 +1,6 @@
 ---
 id: 45
-title: "Questions & debate by Benoît Chappuis"
+title: "Questions & debate"
 description_short: Students participate in interactive debates online via the SpeakUp platform, where they choose between two pleadings presented by lawyers and can exchange anonymously. These discussions then feed into an in-depth debate on the practical cases with the teacher.
 ---
 

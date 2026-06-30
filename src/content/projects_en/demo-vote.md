@@ -1,6 +1,6 @@
-﻿---
+---
 id: 1
-title: "Demo & vote by Jérémy Lucchetti"
+title: "Demo & vote"
 description_short: In the large lecture, the course lacked rhythm. The teacher set up a software that permitted live annotation of his presentation material as well as a voting platform.
 videos:
   - https://www.youtube.com/embed/A0nGgelhT2k

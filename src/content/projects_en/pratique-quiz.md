@@ -1,6 +1,6 @@
-﻿---
+---
 id: 74
-title: "Practice & quiz by Aurélie Picton"
+title: "Practice & quiz"
 description_short: The course offers formative videos to familiarize students with the Sketch Engine tool, including the concordancer and the corpus creation tool. Students watch these videos, followed by quizzes, in order to gain an understanding and mastery of the tool.
 videos:
   - https://www.youtube.com/embed/f4eszLB47Qk

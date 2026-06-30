@@ -1,6 +1,6 @@
 ---
 id: 100
-title: Start-up Training of Lan Zuo Gillet
+title: Start-up Training
 description_short: The teacher redesigned her online course by adopting a flipped classroom approach, reducing online class time to 1h30 and devoting the rest of the time to the autonomous preparation of students via material provided on Moodle.
 ---
 

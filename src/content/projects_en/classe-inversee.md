@@ -1,6 +1,6 @@
 ---
 id: 56
-title: "Julie Franck's flipped classroom"
+title: "Flipped classroom"
 description_short: "The course adopts the flipped classroom method: students are prepared for the material before face-to-face classes using materials such as PowerPoint with audio comments, articles annotated by the teacher or videos. In class, they participate in group activities accompanied by the teacher, promoting exchanges between peers."
 ---
 

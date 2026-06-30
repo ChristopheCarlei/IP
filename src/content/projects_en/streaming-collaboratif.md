@@ -1,6 +1,6 @@
-﻿---
+---
 id: 51
-title: Collaborative Streaming by Lorenz Baumer
+title: Collaborative Streaming
 description_short: This classical archaeology seminar is offered face-to-face at the University of Lausanne and Geneva, with videoconference courses shared between the two institutions. Students work in mixed pairs and make presentations projected live in both rooms.
 images:
   - /images/projet/proj-51.jpg
