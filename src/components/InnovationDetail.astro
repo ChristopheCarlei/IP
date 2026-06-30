@@ -9,8 +9,8 @@ const caps = isEn ? (capsEn[innov.slug] ?? []) : [];
 const name = isEn ? innov.en : innov.fr;
 const desc = isEn ? innov.descEn : innov.descFr;
 const axisName = isEn ? innov.axisEn : innov.axisFr;
-const img = isEn ? innov.icon : innov.banner;          // EN: pictogramme neutre · FR: bannière illustrée
-const imgKind = isEn ? 'icon' : 'banner';
+const img = innov.icon;                                // FR + EN : nouvelle illustration SVG (/images/innovations)
+const imgKind = 'icon';
 const base = isEn ? '/en' : '';
 
 const siblings = innovations.filter(i => i.axisSlug === innov.axisSlug && i.slug !== innov.slug);
