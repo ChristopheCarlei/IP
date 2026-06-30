@@ -4,6 +4,9 @@ import { getCollection } from 'astro:content';
 
 const all = (await getCollection('projects')).filter(p => p.data.status === 'actif');
 
+// English translations, matched by slug (same filename as FR)
+const enBySlug = new Map((await getCollection('projects_en')).map(p => [p.slug, p.data]));
+
 function getFacVar(fac?: string | null): string {
   if (!fac) return 'var(--rose)';
   const f = fac.toUpperCase();
@@ -69,11 +72,13 @@ function axeSlug(cat?: string | null): string {
 const projects = all
   .map(p => {
     const d = p.data;
+    const en = enBySlug.get(p.slug);
+    const title = en?.title ?? d.title;
     const initials = (d.author ?? d.title ?? '')
       .split(' ').slice(0, 2).map((w: string) => w[0] ?? '').join('').toUpperCase();
     return {
       slug: p.slug,
-      title: d.title,
+      title,
       author: d.author ?? '',
       faculty: d.faculty ?? '',
       facCodes: facCodes(d.faculty),
@@ -87,7 +92,7 @@ const projects = all
       photo: d.photo ?? '',
       award: d.award ?? '',
       initials,
-      description: d.description_short ?? '',
+      description: en?.description_short ?? d.description_short ?? '',
     };
   })
   .sort((a, b) => a.title.localeCompare(b.title, 'en'));
