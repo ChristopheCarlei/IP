@@ -109,7 +109,7 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,84px) 0}
 .card:focus-within{box-shadow:var(--shadow);outline:2px solid var(--rose);outline-offset:2px}
 
 /* Photo plein-cadre — portrait visible, aucun overlay */
-.cover{height:200px;background:var(--fac,#ccc);background-size:cover;background-position:center top;flex-shrink:0;position:relative}
+.cover{height:200px;background:var(--fac,#ccc);background-size:cover;background-position:center 25%;flex-shrink:0;position:relative}
 /* Sans photo : fond couleur + initiales */
 .cover.no-photo{display:flex;align-items:center;justify-content:center}
 .cover-initials{font-size:64px;font-weight:800;color:rgba(255,255,255,.3);letter-spacing:-.02em;line-height:1}
