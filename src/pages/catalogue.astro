@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { cdnImg } from '../lib/img';
 
 // Tous les projets actifs (statuts « archivé » / « supprimé » exclus)
 const all = (await getCollection('projects')).filter(p => p.data.status === 'actif');
@@ -212,7 +213,7 @@ const searchData = projects.map(p => ({
                data-students={p.students}
                data-title={p.title} data-year={p.year} data-faculty={p.faculty} style={`--fac:${p.facVar}`}>
         <div class={`cover${!p.photo ? ' no-photo' : ''}`}
-             style={p.photo ? `background-image:url(${p.photo})` : ''}>
+             style={p.photo ? `background-image:url(${cdnImg(p.photo, 600, { fit: 'cover' })})` : ''}>
           {p.award && <span class="award">★ Prix</span>}
           {!p.photo && <span class="cover-initials">{p.initials}</span>}
         </div>

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { cdnImg } from '../../lib/img';
 
 export async function getStaticPaths() {
   return [
@@ -331,7 +332,7 @@ function getFacVar(fac?: string | null): string {
           return (
             <article class="card" style={`--fac:${facVar}`}>
               <div class={`cover${!hasPhoto ? ' no-photo' : ''}`}
-                   style={hasPhoto ? `background-image:url(${p.data.photo})` : ''}>
+                   style={hasPhoto ? `background-image:url(${cdnImg(p.data.photo, 600, { fit: 'cover' })})` : ''}>
                 {!hasPhoto && <span class="cover-initials">{initials}</span>}
               </div>
               <div class="card-body">

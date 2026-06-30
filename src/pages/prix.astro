@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { cdnImg } from '../lib/img';
 
 const allProjects = await getCollection('projects');
 const norm = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/&/g, ' et ').replace(/[^a-z0-9]+/g, ' ').trim();
@@ -218,7 +219,7 @@ function facVar(f: string): string {
           <>
             <span class="px-win-year">★ {w.annee}</span>
             {w.photo
-              ? <img class="px-win-img" src={w.photo} alt={w.name} loading="lazy" />
+              ? <img class="px-win-img" src={cdnImg(w.photo, 600, { fit: 'cover' })} alt={w.name} loading="lazy" />
               : <div class="px-win-img" style="display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:rgba(255,255,255,.35)">{initials}</div>}
             <div class="px-win-body">
               <h3>{w.name}</h3>

@@ -1,16 +1,19 @@
 ---
 import '../styles/global.css';
-import { navItems, ui, localizePath, altLangPath, type Lang } from '../i18n';
+import { navItems, instItems, ui, localizePath, altLangPath, type Lang } from '../i18n';
+import { cdnImg } from '../lib/img';
 
 interface Props {
   title: string;
   description?: string;
   lang?: Lang;
+  image?: string;          // chemin absolu d'origine (ex. /images/projet/x.jpg)
 }
 const {
   title,
   description,
   lang = 'fr',
+  image,
 } = Astro.props;
 
 const t = ui[lang];
@@ -18,6 +21,7 @@ const defaultDesc = lang === 'en'
   ? 'A platform for recording and showcasing the pedagogical innovation projects of the University of Geneva.'
   : "Plateforme de recensement et de valorisation des projets d'innovation pédagogique de l'Université de Genève.";
 const desc = description ?? defaultDesc;
+const fullTitle = `${title} — Innovations Pédagogiques · Université de Genève`;
 
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 
@@ -28,16 +32,63 @@ function isActive(path: string): boolean {
 
 const frHref = altLangPath(currentPath, 'fr');
 const enHref = altLangPath(currentPath, 'en');
+
+// URLs absolues pour SEO / partage (Astro.site défini dans astro.config.mjs)
+const site = Astro.site ?? new URL('https://innovuni.netlify.app');
+const abs = (p: string) => new URL(p, site).href;
+const canonical = abs(currentPath);
+const ogImageSrc = image
+  ? cdnImg(image, 1200, { h: 630, fit: 'cover', fm: 'jpg', q: 75 })
+  : cdnImg('/images/sections/header.jpg', 1200, { h: 630, fit: 'cover', fm: 'jpg', q: 75 });
+const ogImage = abs(ogImageSrc);
+
+// Libellés du pied de page institutionnel UNIGE (les URL UNIGE gèrent elles-mêmes leur langue)
+const fL = lang === 'en' ? {
+  enroll: 'Enrol at UNIGE', informs: 'UNIGE keeps you informed', social: 'UNIGE social media',
+  contact: 'Contact', plans: 'Building access maps', az: 'UNIGE from A to Z', cookies: 'Cookie policy and settings',
+  immat: 'Enrolment', admin: 'Administrative procedures', ask: 'Ask a question',
+  mobile: 'UNIGE Mobile', media: 'Media', jobs: 'Job offers', library: 'Library', calendar: 'Academic calendar',
+  accred: 'Accreditation', top: 'Back to top',
+} : {
+  enroll: "S'inscrire à l'UNIGE", informs: "L'UNIGE vous informe", social: 'Médias sociaux UNIGE',
+  contact: 'Contact', plans: "Plans d'accès aux bâtiments", az: "L'UNIGE de A à Z", cookies: 'Politique et configuration des cookies',
+  immat: 'Immatriculations', admin: 'Démarches administratives', ask: 'Poser une question',
+  mobile: 'UNIGE Mobile', media: 'Médias', jobs: "Offres d'emploi", library: 'Bibliothèque', calendar: 'Calendrier académique',
+  accred: 'Accréditation', top: 'Haut de page',
+};
 ---
 <!doctype html>
 <html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{title} — Innovations Pédagogiques · Université de Genève</title>
+  <title>{fullTitle}</title>
   <meta name="description" content={desc} />
   <meta name="theme-color" content="#CF0063" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Canonical + alternances de langue -->
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="fr" href={abs(frHref)} />
+  <link rel="alternate" hreflang="en" href={abs(enHref)} />
+  <link rel="alternate" hreflang="x-default" href={abs(frHref)} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Innovations Pédagogiques · UNIGE" />
+  <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'fr_FR'} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={desc} />
+  <meta name="twitter:image" content={ogImage} />
 </head>
 <body>
 
@@ -47,20 +98,18 @@ const enHref = altLangPath(currentPath, 'en');
       <a class="unige-logo" href="https://www.unige.ch" target="_blank" rel="noopener" aria-label="Université de Genève">
         <img src="/images/unige/unige-logo.svg" alt="Université de Genève" width="164" height="47" />
       </a>
-      <nav class="unige-nav" aria-label="Navigation Université de Genève">
-        <a href="https://www.unige.ch/universite/" target="_blank" rel="noopener">Université</a>
-        <a href="https://www.unige.ch/facultes/" target="_blank" rel="noopener">Facultés</a>
-        <a href="https://www.unige.ch/etudiants/" target="_blank" rel="noopener">Études</a>
-        <a href="https://www.unige.ch/collaborateurs/" target="_blank" rel="noopener">Collaborateurs</a>
-        <a href="https://www.unige.ch/services/" target="_blank" rel="noopener">Services</a>
-        <a href="https://www.unige.ch/alumni/" target="_blank" rel="noopener">Alumni</a>
+      <nav class="unige-nav" aria-label={lang === 'en' ? 'University of Geneva navigation' : 'Navigation Université de Genève'}>
+        {instItems.map(i => (
+          <a href={lang === 'en' ? i.href_en : i.href_fr} target="_blank" rel="noopener">{lang === 'en' ? i.en : i.fr}</a>
+        ))}
+        <a href={lang === 'en' ? 'https://www.unige.ch/en/alumni/' : 'https://www.unige.ch/alumni/'} target="_blank" rel="noopener">Alumni</a>
       </nav>
       <div class="unige-tools">
         <span class="unige-langpick">
           <a href={frHref} class={lang === 'fr' ? 'on' : ''}>FR</a>
           <a href={enHref} class={lang === 'en' ? 'on' : ''}>EN</a>
         </span>
-        <a class="unige-help" href="https://www.unige.ch/contact/" target="_blank" rel="noopener" aria-label="Aide / Contact">?</a>
+        <a class="unige-help" href="https://www.unige.ch/contact/" target="_blank" rel="noopener" aria-label={lang === 'en' ? 'Help / Contact' : 'Aide / Contact'}>?</a>
       </div>
     </div>
   </header>
@@ -112,38 +161,38 @@ const enHref = altLangPath(currentPath, 'en');
             F. +41 (0)22 379 11 34
           </address>
           <ul class="uf-links">
-            <li><a href="https://www.unige.ch/contact/" target="_blank" rel="noopener">Contact</a></li>
-            <li><a href="https://www.unige.ch/presse/plans" target="_blank" rel="noopener">Plans d'accès aux bâtiments</a></li>
-            <li><a href="https://www.unige.ch/-/a-z" target="_blank" rel="noopener">L'UNIGE de A à Z</a></li>
-            <li><a href="https://www.unige.ch/-/cookies" target="_blank" rel="noopener">Politique et configuration des cookies</a></li>
+            <li><a href="https://www.unige.ch/contact/" target="_blank" rel="noopener">{fL.contact}</a></li>
+            <li><a href="https://www.unige.ch/presse/plans" target="_blank" rel="noopener">{fL.plans}</a></li>
+            <li><a href="https://www.unige.ch/-/a-z" target="_blank" rel="noopener">{fL.az}</a></li>
+            <li><a href="https://www.unige.ch/-/cookies" target="_blank" rel="noopener">{fL.cookies}</a></li>
           </ul>
         </div>
 
         <!-- Col 2 : S'inscrire à l'UNIGE -->
         <div class="uf-col">
-          <h2 class="uf-title">S'inscrire à l'UNIGE</h2>
+          <h2 class="uf-title">{fL.enroll}</h2>
           <ul class="uf-links">
-            <li><a href="https://www.unige.ch/immatriculations/" target="_blank" rel="noopener">Immatriculations</a></li>
-            <li><a href="https://vie-de-campus.unige.ch/demarches-administratives" target="_blank" rel="noopener">Démarches administratives</a></li>
-            <li><a href="https://admissions.unige.ch/kayako/index.php?/Tickets/Submit" target="_blank" rel="noopener">Poser une question</a></li>
+            <li><a href="https://www.unige.ch/immatriculations/" target="_blank" rel="noopener">{fL.immat}</a></li>
+            <li><a href="https://vie-de-campus.unige.ch/demarches-administratives" target="_blank" rel="noopener">{fL.admin}</a></li>
+            <li><a href="https://admissions.unige.ch/kayako/index.php?/Tickets/Submit" target="_blank" rel="noopener">{fL.ask}</a></li>
           </ul>
         </div>
 
         <!-- Col 3 : L'UNIGE vous informe -->
         <div class="uf-col">
-          <h2 class="uf-title">L'UNIGE vous informe</h2>
+          <h2 class="uf-title">{fL.informs}</h2>
           <ul class="uf-links">
-            <li><a href="https://www.unige.ch/mobile/" target="_blank" rel="noopener">UNIGE Mobile</a></li>
-            <li><a href="https://www.unige.ch/medias/" target="_blank" rel="noopener">Médias</a></li>
-            <li><a href="https://unige.ch/-/emplois" target="_blank" rel="noopener">Offres d'emploi</a></li>
-            <li><a href="https://www.unige.ch/biblio/" target="_blank" rel="noopener">Bibliothèque</a></li>
-            <li><a href="https://www.unige.ch/calendrier" target="_blank" rel="noopener">Calendrier académique</a></li>
+            <li><a href="https://www.unige.ch/mobile/" target="_blank" rel="noopener">{fL.mobile}</a></li>
+            <li><a href="https://www.unige.ch/medias/" target="_blank" rel="noopener">{fL.media}</a></li>
+            <li><a href="https://unige.ch/-/emplois" target="_blank" rel="noopener">{fL.jobs}</a></li>
+            <li><a href="https://www.unige.ch/biblio/" target="_blank" rel="noopener">{fL.library}</a></li>
+            <li><a href="https://www.unige.ch/calendrier" target="_blank" rel="noopener">{fL.calendar}</a></li>
           </ul>
         </div>
 
         <!-- Col 4 : Médias sociaux + accréditation -->
         <div class="uf-col">
-          <h2 class="uf-title">Médias sociaux UNIGE</h2>
+          <h2 class="uf-title">{fL.social}</h2>
           <div class="uf-social">
             <a href="https://www.facebook.com/unigeneve" target="_blank" rel="noopener" aria-label="Facebook">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -170,14 +219,14 @@ const enHref = altLangPath(currentPath, 'en');
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18.5" x2="13" y2="18.5"/></svg>
             </a>
           </div>
-          <h2 class="uf-accred-title">Accréditation</h2>
+          <h2 class="uf-accred-title">{fL.accred}</h2>
           <img class="uf-accred" src="/images/unige/accreditation.png"
                alt="Swiss Accreditation Council — Institution accréditée selon la LEHE pour 2022-2029" loading="lazy" />
         </div>
       </div>
     </div>
 
-    <a class="uf-top" href="#top" aria-label="Haut de page">
+    <a class="uf-top" href="#top" aria-label={fL.top}>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
     </a>
   </footer>

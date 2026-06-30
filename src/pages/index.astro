@@ -1,6 +1,7 @@
 ﻿---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { cdnImg } from '../lib/img';
 
 const allProjects = await getCollection('projects');
 const featured = allProjects.filter(p => p.data.featured).slice(0, 6);
@@ -176,7 +177,7 @@ function isLightFac(fac?: string | null): boolean {
         return (
           <article class="card" style={`--fac:${facVar}`}>
             <div class={`cover${!hasPhoto ? ' no-photo' : ''}`}
-                 style={hasPhoto ? `background-image:url(${p.data.photo})` : ''}>
+                 style={hasPhoto ? `background-image:url(${cdnImg(p.data.photo, 600, { fit: 'cover' })})` : ''}>
               {!hasPhoto && <span class="cover-initials">{initials}</span>}
               {p.data.award && <span class="award">★ {p.data.award}</span>}
             </div>

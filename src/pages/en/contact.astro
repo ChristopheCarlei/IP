@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { cdnImg } from '../../lib/img';
 
 const equipe = [
   { nom: "Mallory Schaub", fonction: "Head of unit", role: "Steering committee", photo: "/images/equipe/mallory-schaub.jpg" },
@@ -104,7 +105,7 @@ const initials = (n: string) => n.split(' ').slice(0, 2).map(s => s[0] ?? '').jo
     {equipe.map(m => (
       <article class="ct-card">
         {m.photo
-          ? <img class="ct-photo" src={m.photo} alt={m.nom} loading="lazy" />
+          ? <img class="ct-photo" src={cdnImg(m.photo, 320, { h: 320, fit: 'cover' })} alt={m.nom} loading="lazy" />
           : <div class="ct-photo ph">{initials(m.nom)}</div>}
         <div class="ct-body">
           <h3>{m.nom}</h3>

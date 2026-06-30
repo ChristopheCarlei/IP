@@ -1,5 +1,6 @@
 ---
 import { innovations, normType } from '../innovations';
+import { cdnImg } from '../lib/img';
 interface Props { d: any; lang?: 'fr' | 'en'; }
 const { d, lang = 'fr' } = Astro.props;
 
@@ -245,7 +246,7 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
 <div class="proj-card">
   <div class="proj-header">
     {d.photo
-      ? <img src={d.photo} alt={d.author ?? d.title} class="proj-header-photo" />
+      ? <img src={cdnImg(d.photo, 400, { h: 400, fit: 'cover' })} alt={d.author ?? d.title} class="proj-header-photo" />
       : <div class="proj-header-photo-placeholder">
           <span>{(d.author ?? d.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase()}</span>
         </div>
@@ -292,7 +293,7 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
           <iframe src={d.youtube} allowfullscreen loading="lazy" title={`${L.videoOf} — ${d.title}`} />
         </div>
       ) : (d.images && d.images.length > 0) ? (
-        <img src={d.images[0]} alt={d.title} class="main-img" loading="lazy" />
+        <img src={cdnImg(d.images[0], 1200, { fit: 'cover' })} alt={d.title} class="main-img" loading="lazy" />
       ) : catImg ? (
         <img src={catImg} alt={d.category} class="main-img cat-img" loading="lazy" />
       ) : (
@@ -364,7 +365,7 @@ details.acc-item[open] .acc-chevron{transform:rotate(180deg);color:#CF0063}
       <div class="carousel-track" id="carousel-track">
         {carouselImages.map((img, i) => (
           <div class="carousel-slide" data-index={i}>
-            <img src={img} alt={`${L.illustrationAlt} ${i + 1} — ${d.title}`} loading="lazy" />
+            <img src={cdnImg(img, 960)} alt={`${L.illustrationAlt} ${i + 1} — ${d.title}`} loading="lazy" />
           </div>
         ))}
       </div>

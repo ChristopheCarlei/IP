@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { cdnImg } from '../../lib/img';
 
 type Member = { nom: string; faculte: string; fonction: string; fonctionIP: string; photo: string };
 
@@ -175,7 +176,7 @@ const initials = (n: string) => n.split(' ').slice(0, 2).map(s => s[0] ?? '').jo
       {equipe.map(m => (
         <article class="cm-card" style={`--fac:${facVar(m.faculte)}`}>
           {m.photo
-            ? <img class="cm-photo" src={m.photo} alt={m.nom} loading="lazy" />
+            ? <img class="cm-photo" src={cdnImg(m.photo, 320, { h: 320, fit: 'cover' })} alt={m.nom} loading="lazy" />
             : <div class="cm-photo ph">{initials(m.nom)}</div>}
           <div class="cm-body">
             <h3>{m.nom}</h3>
@@ -199,7 +200,7 @@ const initials = (n: string) => n.split(' ').slice(0, 2).map(s => s[0] ?? '').jo
       {cip.map(m => (
         <article class="cm-card" style={`--fac:${facVar(m.faculte)}`}>
           {m.photo
-            ? <img class="cm-photo" src={m.photo} alt={m.nom} loading="lazy" />
+            ? <img class="cm-photo" src={cdnImg(m.photo, 320, { h: 320, fit: 'cover' })} alt={m.nom} loading="lazy" />
             : <div class="cm-photo ph">{initials(m.nom)}</div>}
           <div class="cm-body">
             <h3>{m.nom}</h3>

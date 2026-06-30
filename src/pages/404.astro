@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Page introuvable" description="Cette page n'existe pas ou a été déplacée." lang="fr">
+  <section class="nf-wrap">
+    <p class="nf-code">404</p>
+    <h1 class="nf-title">Page introuvable</h1>
+    <p class="nf-sub">La page que vous cherchez n'existe pas ou a été déplacée.</p>
+    <p class="nf-sub nf-en"><em>The page you are looking for does not exist or has been moved.</em></p>
+    <div class="nf-actions">
+      <a class="nf-btn" href="/">Accueil</a>
+      <a class="nf-btn nf-btn-ghost" href="/catalogue">Catalogue des projets</a>
+    </div>
+  </section>
+
+  <style>
+    .nf-wrap{width:var(--content);margin:auto;padding:clamp(60px,12vw,140px) 0;text-align:center}
+    .nf-code{font-size:clamp(64px,14vw,140px);font-weight:800;line-height:1;color:var(--rose);letter-spacing:-.04em;margin:0}
+    .nf-title{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.02em;margin:8px 0 12px;color:var(--ink)}
+    .nf-sub{font-size:17px;color:var(--muted);margin:0 0 4px}
+    .nf-en{opacity:.75}
+    .nf-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+    .nf-btn{display:inline-flex;align-items:center;padding:11px 22px;border-radius:var(--radius-sm);background:var(--rose);color:#fff;font-weight:700;text-decoration:none;transition:background .15s}
+    .nf-btn:hover{background:var(--rose-deep)}
+    .nf-btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+    .nf-btn-ghost:hover{background:var(--bg-soft)}
+  </style>
+</Base>
