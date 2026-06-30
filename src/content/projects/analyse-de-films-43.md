@@ -4,7 +4,8 @@ title: Analyse de films
 author: Gérard Calzada
 photo: /images/projet/Gerard_Calzada.jpg
 faculty: Médecine
-course: ""
+course: "La psychiatrie dans le cinéma"
+course_code: "223O123"
 level: ""
 students: Moins de 25
 year: 2014
