@@ -9,7 +9,11 @@ export function cdnImg(
   if (!src || !src.startsWith('/')) return src ?? '';          // externe / vide : inchangé
   if (import.meta.env.DEV) return src;                          // dev local : pas de CDN
   const p = new URLSearchParams({ url: src, w: String(w), fm: opts.fm ?? 'webp', q: String(opts.q ?? 70) });
-  if (opts.h) p.set('h', String(opts.h));
-  if (opts.fit) p.set('fit', opts.fit);
+  // fit=cover ne recadre correctement que si une hauteur est fournie ; sinon Netlify
+  // produit un crop zoomé indésirable. Sans h, on se limite à un redimensionnement proportionnel.
+  if (opts.h) {
+    p.set('h', String(opts.h));
+    if (opts.fit) p.set('fit', opts.fit);
+  }
   return `/.netlify/images?${p.toString()}`;
 }
