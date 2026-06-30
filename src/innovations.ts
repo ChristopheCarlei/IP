@@ -119,6 +119,24 @@ export function normType(s: string): string {
   return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
+// Légendes d'étapes (FR) affichées sous le pictogramme des pages françaises.
+export const capsFr: Record<string, string[]> = {
+  'questionner': ['Questionnement', 'Réponses', 'Feedback'],
+  'faire-reagir': ['Ressource', 'Réactions', 'Discussion'],
+  'demontrer': ['Manipulation', 'Explication', 'Modélisation'],
+  'donner-la-parole': ['Questionnement', 'Restitution', 'Débat'],
+  'simuler-une-situation': ['Questionnement', "Constitution d'équipes", 'Simulation', 'Débriefing'],
+  'faire-collaborer': ['Questionnement', "Constitution d'équipes", 'Discussion', 'Débriefing'],
+  'faire-voter': ['Question', 'Vote', 'Résultats', 'Discussion'],
+  'impliquer-dans-l-enseignement': ['Préparation', 'Présentation', 'Feedback'],
+  'exposer-des-cas-pratiques': ['Cas pratique', 'Analyse', 'Résolution'],
+  'impliquer-dans-la-recherche': ['Question', 'Expérimentation', 'Restitution'],
+  'developper-des-competences': ['Objectifs', 'Pratique', 'Feedback'],
+  'faire-conceptualiser-un-projet': ['Problème', 'Idéation', 'Planification'],
+  'faire-gerer-un-projet': ['Planification', 'Gestion', 'Livraison'],
+  'faire-realiser-une-production-originale': ['Brief', 'Production', 'Présentation'],
+};
+
 // Légendes d'étapes (EN) affichées sous le pictogramme des pages anglaises.
 // 4 jeux exacts extraits du site UNIGE EN ; les autres sont une formulation cohérente.
 export const capsEn: Record<string, string[]> = {

@@ -1,11 +1,11 @@
 ---
-import { innovations, capsEn, type Innovation } from '../innovations';
+import { innovations, capsEn, capsFr, type Innovation } from '../innovations';
 
 interface Props { innov: Innovation; lang?: 'fr' | 'en'; projects: any[]; }
 const { innov, lang = 'fr', projects } = Astro.props;
 
 const isEn = lang === 'en';
-const caps = isEn ? (capsEn[innov.slug] ?? []) : [];
+const caps = isEn ? (capsEn[innov.slug] ?? []) : (capsFr[innov.slug] ?? []);
 const name = isEn ? innov.en : innov.fr;
 const desc = isEn ? innov.descEn : innov.descFr;
 const axisName = isEn ? innov.axisEn : innov.axisFr;
