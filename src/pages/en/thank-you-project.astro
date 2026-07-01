@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Thank you" lang="en" description="Your project submission has been sent.">
+<style>
+.mp-wrap{width:var(--content);margin:auto;padding:clamp(64px,10vw,120px) 0;text-align:center}
+.mp-ic{width:64px;height:64px;border-radius:999px;background:var(--bg-rose);color:var(--rose-deep);display:grid;place-items:center;margin:0 auto 24px}
+.mp-ic svg{width:32px;height:32px}
+.mp-wrap h1{font-size:clamp(28px,3.4vw,40px);font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:0 0 14px}
+.mp-wrap p{color:var(--muted);font-size:16px;line-height:1.7;max-width:56ch;margin:0 auto 28px}
+</style>
+<div class="mp-wrap">
+  <div class="mp-ic">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  </div>
+  <h1>Thank you for your submission!</h1>
+  <p>
+    Your project has been sent to the Pedagogical Innovations platform team. We will review it and
+    get back to you if needed before publication.
+  </p>
+  <a class="btn primary" href="/en/catalogue">Browse the project catalogue</a>
+</div>
+</Base>
