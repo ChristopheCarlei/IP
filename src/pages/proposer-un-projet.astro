@@ -1,10 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import { innovations } from '../innovations';
 
 const facultes = ['Sciences', 'Médecine', 'Lettres', 'SDS', 'GSEM', 'Droit', 'Théologie', 'FPSE', 'FTI', 'SEA', 'DISTIC', 'Rectorat', 'Autre'];
 const niveaux = ['Bachelor', 'Master', 'Doctorat', 'Formation continue', 'Tous'];
 const effectifs = ['Moins de 25', '25-75', '75-150', 'Plus de 150'];
 const categories = ['Préparer', 'Rendre actif', 'Responsabiliser', 'Faire créer'];
+
+// Types d'innovation proposés dynamiquement selon la catégorie pédagogique choisie (cf. src/innovations.ts)
+const innovationsByCategory: Record<string, { value: string; label: string }[]> = {};
+for (const cat of categories) {
+  innovationsByCategory[cat] = innovations.filter(i => i.axisFr === cat).map(i => ({ value: i.typeFr, label: i.fr }));
+}
 ---
 <Base title="Proposer un projet" description="Proposez votre projet d'innovation pédagogique pour publication sur la plateforme Innovations Pédagogiques de l'Université de Genève.">
 <style>
@@ -85,6 +92,10 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);bo
     <div class="pp-sec">
       <h2>Vos coordonnées</h2>
       <div class="pp-grid">
+        <div class="pp-field full">
+          <label for="photo">Votre photo <span class="opt">portrait, idéalement carré — sera publiée à côté du projet</span></label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </div>
         <div class="pp-field">
           <label for="submitter_name">Votre nom et prénom *</label>
           <input type="text" id="submitter_name" name="submitter_name" required />
@@ -160,8 +171,10 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);bo
           </select>
         </div>
         <div class="pp-field">
-          <label for="innovation_type">Type d'innovation <span class="opt">mots-clés libres</span></label>
-          <input type="text" id="innovation_type" name="innovation_type" />
+          <label for="innovation_type">Type d'innovation <span class="opt">choisissez d'abord la catégorie</span></label>
+          <select id="innovation_type" name="innovation_type" disabled>
+            <option value="" selected>Choisir d'abord une catégorie…</option>
+          </select>
         </div>
       </div>
     </div>
@@ -178,8 +191,16 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);bo
           <textarea id="description_short_en" name="description_short_en"></textarea>
         </div>
         <div class="pp-field full">
-          <label for="body">Présentation détaillée <span class="opt">déroulement, objectifs, dispositif, retours d'expérience…</span></label>
-          <textarea id="body" name="body" style="min-height:160px"></textarea>
+          <label for="situation_depart">Situation de départ <span class="opt">contexte, problème rencontré avant la mise en place</span></label>
+          <textarea id="situation_depart" name="situation_depart" style="min-height:120px"></textarea>
+        </div>
+        <div class="pp-field full">
+          <label for="mise_en_place">Mise en place et déroulement <span class="opt">comment le dispositif fonctionne concrètement</span></label>
+          <textarea id="mise_en_place" name="mise_en_place" style="min-height:120px"></textarea>
+        </div>
+        <div class="pp-field full">
+          <label for="avis_etudiants">Avis des étudiant·es <span class="opt">retours, citations, ressenti recueillis</span></label>
+          <textarea id="avis_etudiants" name="avis_etudiants" style="min-height:100px"></textarea>
         </div>
       </div>
     </div>
@@ -224,4 +245,38 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);bo
     </div>
   </form>
 </div>
+
+<script define:vars={{ innovationsByCategory }}>
+  const categorySelect = document.getElementById('category');
+  const typeSelect = document.getElementById('innovation_type');
+
+  categorySelect.addEventListener('change', () => {
+    const types = innovationsByCategory[categorySelect.value] || [];
+    typeSelect.innerHTML = '';
+
+    if (!types.length) {
+      typeSelect.disabled = true;
+      const opt = document.createElement('option');
+      opt.value = '';
+      opt.textContent = "Choisir d'abord une catégorie…";
+      typeSelect.appendChild(opt);
+      return;
+    }
+
+    typeSelect.disabled = false;
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    placeholder.textContent = 'Choisir…';
+    typeSelect.appendChild(placeholder);
+
+    for (const t of types) {
+      const opt = document.createElement('option');
+      opt.value = t.value;
+      opt.textContent = t.label;
+      typeSelect.appendChild(opt);
+    }
+  });
+</script>
 </Base>

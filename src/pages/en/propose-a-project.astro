@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { innovations } from '../../innovations';
 
 // Les valeurs restent en français : elles alimentent la même collection CMS (src/content/projects)
 const facultes = [
@@ -36,6 +37,12 @@ const categories = [
   { value: 'Responsabiliser', label: 'Empower' },
   { value: 'Faire créer', label: 'Create' },
 ];
+
+// Types d'innovation proposés dynamiquement selon la catégorie choisie — valeur en FR (partagée avec le CMS), libellé en EN
+const innovationsByCategory: Record<string, { value: string; label: string }[]> = {};
+for (const cat of categories) {
+  innovationsByCategory[cat.value] = innovations.filter(i => i.axisFr === cat.value).map(i => ({ value: i.typeFr, label: i.en }));
+}
 ---
 <Base title="Propose a project" lang="en" description="Submit your pedagogical innovation project for publication on the University of Geneva's Pedagogical Innovations platform.">
 <style>
@@ -116,6 +123,10 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);bo
     <div class="pp-sec">
       <h2>Your contact details</h2>
       <div class="pp-grid">
+        <div class="pp-field full">
+          <label for="photo">Your photo <span class="opt">portrait, ideally square — will be published alongside the project</span></label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </div>
         <div class="pp-field">
           <label for="submitter_name">Your full name *</label>
           <input type="text" id="submitter_name" name="submitter_name" required />
@@ -191,8 +202,10 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);bo
           </select>
         </div>
         <div class="pp-field">
-          <label for="innovation_type">Type of innovation <span class="opt">free keywords</span></label>
-          <input type="text" id="innovation_type" name="innovation_type" />
+          <label for="innovation_type">Type of innovation <span class="opt">choose a category first</span></label>
+          <select id="innovation_type" name="innovation_type" disabled>
+            <option value="" selected>Choose a category first…</option>
+          </select>
         </div>
       </div>
     </div>
@@ -209,8 +222,16 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);bo
           <textarea id="description_short" name="description_short"></textarea>
         </div>
         <div class="pp-field full">
-          <label for="body">Detailed description <span class="opt">process, goals, setup, feedback…</span></label>
-          <textarea id="body" name="body" style="min-height:160px"></textarea>
+          <label for="initial_situation">Initial situation <span class="opt">context, issue that existed beforehand</span></label>
+          <textarea id="initial_situation" name="initial_situation" style="min-height:120px"></textarea>
+        </div>
+        <div class="pp-field full">
+          <label for="project_implementation">Project implementation <span class="opt">how the set-up works in practice</span></label>
+          <textarea id="project_implementation" name="project_implementation" style="min-height:120px"></textarea>
+        </div>
+        <div class="pp-field full">
+          <label for="student_feedback">Student feedback <span class="opt">quotes, impressions gathered</span></label>
+          <textarea id="student_feedback" name="student_feedback" style="min-height:100px"></textarea>
         </div>
       </div>
     </div>
@@ -255,4 +276,38 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);bo
     </div>
   </form>
 </div>
+
+<script define:vars={{ innovationsByCategory }}>
+  const categorySelect = document.getElementById('category');
+  const typeSelect = document.getElementById('innovation_type');
+
+  categorySelect.addEventListener('change', () => {
+    const types = innovationsByCategory[categorySelect.value] || [];
+    typeSelect.innerHTML = '';
+
+    if (!types.length) {
+      typeSelect.disabled = true;
+      const opt = document.createElement('option');
+      opt.value = '';
+      opt.textContent = 'Choose a category first…';
+      typeSelect.appendChild(opt);
+      return;
+    }
+
+    typeSelect.disabled = false;
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    placeholder.textContent = 'Choose…';
+    typeSelect.appendChild(placeholder);
+
+    for (const t of types) {
+      const opt = document.createElement('option');
+      opt.value = t.value;
+      opt.textContent = t.label;
+      typeSelect.appendChild(opt);
+    }
+  });
+</script>
 </Base>
