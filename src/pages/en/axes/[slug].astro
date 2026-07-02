@@ -1,0 +1,371 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { cdnImg } from '../../../lib/img';
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'preparer' } },
+    { params: { slug: 'rendre-actif' } },
+    { params: { slug: 'responsabiliser' } },
+    { params: { slug: 'faire-creer' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+type Innovation = { name: string; img: string; href: string };
+type AxeData = {
+  title: string;
+  color: string;
+  colorDark: string;
+  img: string;
+  description: string;
+  savoir: string;
+  innovations: Innovation[];
+};
+
+const axes: Record<string, AxeData> = {
+  'preparer': {
+    title: "Prepare",
+    color: "#9966ff",
+    colorDark: "#613fa4",
+    img: "/images/sections/Preparer.svg",
+    description: "Preparing your students means asking them to complete a task before coming to a class session. This frees up time during the session to practise, apply concepts and check your students' understanding.",
+    savoir: "We often hear about the flipped classroom in higher education. While the term is fashionable, the principle has been used for a long time. It consists of reversing the traditional way of teaching a course. Students are exposed to educational content (e.g. readings, videos, podcasts…) ahead of a class session. During the session, students are then in a position to appropriate the concepts by putting them into practice, which leads to better learning.\n\nThe flipped classroom is a form of so-called active pedagogy: it is learner-centred and aims to stimulate students' learning and engagement during the course. One of the added values of this pedagogical innovation is the time it frees up in class — for example, to create interactions between your students and you, or between peers.\n\nThe flipped classroom is not a method but a concept that comes in several forms and can easily be combined with other types of pedagogy.\n\nHow will you check that students have properly engaged with the resources made available? Will you question them or ask them to react? This homework can lead, for example, to a remote activity in the form of a quiz, a self-assessment, peer assessment or participation in a forum.",
+    innovations: [
+      { name: "Prompt reactions", img: "/images/innovations/1.FaireReagir.svg", href: "/en/innovations/faire-reagir" },
+      { name: "Question",         img: "/images/innovations/1.Questionner.svg", href: "/en/innovations/questionner" },
+    ],
+  },
+  'rendre-actif': {
+    title: "Engage",
+    color: "#33cc99",
+    colorDark: "#269973",
+    img: "/images/sections/RendreActif.svg",
+    description: "Getting your students to participate in class… a real challenge in higher education! The aim is to move from a traditional lecture, in which students are passive recipients of knowledge, to an interactive course in which your students become active participants.",
+    savoir: "Engaging your students will in particular allow you to spark interest in your discipline, hold your students' attention and motivate them to learn regularly (as opposed to simple intensive cramming before an exam).\n\nHow do you set up these interactive lectures? Alongside your presentations of classic theoretical content, you can integrate learning activities to mobilise your students on a particular topic from time to time. These activities, of varying complexity and duration, should be adapted to your learning objectives.",
+    innovations: [
+      { name: "Demonstrate",          img: "/images/innovations/2.Demontrer.svg",       href: "/en/innovations/demontrer" },
+      { name: "Give a voice",         img: "/images/innovations/2.DonnerParole.svg",    href: "/en/innovations/donner-la-parole" },
+      { name: "Simulate a situation", img: "/images/innovations/2.Simuler.svg",         href: "/en/innovations/simuler-une-situation" },
+      { name: "Foster collaboration", img: "/images/innovations/2.FaireCollaborer.svg", href: "/en/innovations/faire-collaborer" },
+      { name: "Run votes",            img: "/images/innovations/2.FaireVoter.svg",      href: "/en/innovations/faire-voter" },
+    ],
+  },
+  'responsabiliser': {
+    title: "Make responsible",
+    color: "#0099ff",
+    colorDark: "#297eb6",
+    img: "/images/sections/Responsabiliser.svg",
+    description: "If you want your students to remember the content you teach in the long term, aim for deep learning spread over time. To achieve this, we advise you to make your students responsible for their own learning.",
+    savoir: "Putting theoretical knowledge into practice, in a more or less concrete way, is an excellent means of making students responsible for their learning.\n\nInvolving students in hands-on activities often requires setting aside specific time for developing transversal and/or disciplinary skills. Your students will be more motivated if their work is valued beyond the simple objective of receiving a grade.",
+    innovations: [
+      { name: "Involve in teaching",   img: "/images/innovations/3.ImpliquerEnseignement.svg", href: "/en/innovations/impliquer-dans-l-enseignement" },
+      { name: "Present case studies",  img: "/images/innovations/3.ExposerCasPratiques.svg",   href: "/en/innovations/exposer-des-cas-pratiques" },
+      { name: "Involve in research",   img: "/images/innovations/3.ImpliquerRecherche.svg",    href: "/en/innovations/impliquer-dans-la-recherche" },
+      { name: "Develop skills",        img: "/images/innovations/3.DevelopperCompetences.svg", href: "/en/innovations/developper-des-competences" },
+    ],
+  },
+  'faire-creer': {
+    title: "Create",
+    color: "#ffa248",
+    colorDark: "#bc7c3c",
+    img: "/images/sections/FaireCreer.svg",
+    description: "This form of active teaching is student-centred, stimulating engagement and motivation. You are no longer simply transmitting content: you take on the role of tutor, supporting your students and giving them feedback as their projects progress.",
+    savoir: "Project-based teaching is an excellent way to develop your students' skills.\n\nIn addition to any skills specific to your discipline, generic skills related to group work and project management will be mobilised.\n\nDepending on your learning objectives, the support and tools provided, and your assessment criteria, you can place particular emphasis on the skills you consider most important to develop.\n\nThe choice of the format(s) to be created can be made by you or by your students: website, video, podcast, blog, report, poster, article, etc.\n\nTo obtain quality productions, it is important to be clear from the start about the expected final work, by providing assessment criteria and/or examples of good and bad productions.",
+    innovations: [
+      { name: "Have students conceptualise a project",       img: "/images/innovations/4.FaireConceptualiserProjet.svg", href: "/en/innovations/faire-conceptualiser-un-projet" },
+      { name: "Have students manage a project",              img: "/images/innovations/4.FaireGererProjet.svg",          href: "/en/innovations/faire-gerer-un-projet" },
+      { name: "Have students create an original production", img: "/images/innovations/4.FaireRealiser.svg",             href: "/en/innovations/faire-realiser-une-production-originale" },
+    ],
+  },
+};
+
+const axe = axes[slug ?? ''];
+
+const subnavAxes = [
+  { slug: "preparer",        title: "Prepare",          img: "/images/sections/Preparer.svg",        color: "#9966ff" },
+  { slug: "rendre-actif",    title: "Engage",           img: "/images/sections/RendreActif.svg",     color: "#33cc99" },
+  { slug: "responsabiliser", title: "Make responsible", img: "/images/sections/Responsabiliser.svg", color: "#0099ff" },
+  { slug: "faire-creer",     title: "Create",           img: "/images/sections/FaireCreer.svg",      color: "#ffa248" },
+];
+const otherAxes = subnavAxes.filter(a => a.slug !== slug);
+
+const allProjects = await getCollection('projects');
+const enBySlug = new Map((await getCollection('projects_en')).map(p => [p.slug, p.data]));
+const axeProjects = allProjects.filter(p => {
+  const cat = (p.data.category ?? '').toLowerCase();
+  const slugMap: Record<string, string[]> = {
+    'preparer':        ['préparer', 'preparer'],
+    'rendre-actif':    ['rendre actif', 'rendre-actif'],
+    'responsabiliser': ['responsabiliser'],
+    'faire-creer':     ['faire créer', 'faire creer', 'faire-creer'],
+  };
+  return (slugMap[slug ?? ''] ?? []).some(k => cat.includes(k));
+}).slice(0, 6);
+
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE')) return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                       return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD')) return 'var(--fac-fti)';
+  if (f.includes('SCIEN')&& !f.includes('SOC')) return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))  return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))  return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                       return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))  return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO')) return 'var(--fac-theologie)';
+  return 'var(--rose)';
+}
+function isLightFac(fac?: string | null): boolean {
+  const f = fac?.toUpperCase() ?? '';
+  return f.includes('SOC') || f.includes('SDS') || f.includes('FTI') || f.includes('TRAD') || f.includes('PSE') || f.includes('PSYCH');
+}
+---
+<Base title={axe?.title ?? ''} lang="en">
+<style define:vars={{ ax: axe?.color ?? '#000', axDark: axe?.colorDark ?? '#000' }}>
+
+/* ---- Hero -------------------------------------------------- */
+.axe-hero{border-bottom:1px solid var(--line);overflow:hidden;background:#fff}
+.axe-hero-inner{
+  width:var(--content);margin:auto;
+  display:grid;grid-template-columns:1fr 320px;gap:48px;
+  align-items:center;padding:clamp(40px,5vw,64px) 0;
+}
+.axe-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ax);margin-bottom:20px
+}
+.axe-hero-eyebrow span{
+  display:inline-block;width:32px;height:3px;background:var(--ax);border-radius:2px
+}
+.axe-hero h1{
+  font-size:clamp(40px,5.5vw,72px);line-height:.95;font-weight:800;
+  letter-spacing:-.03em;color:var(--ax);margin:0 0 20px
+}
+.axe-hero-desc{
+  font-size:18px;line-height:1.65;color:var(--muted);max-width:52ch;margin:0
+}
+.axe-hero-img{
+  width:100%;height:auto;display:block;
+  aspect-ratio:300/190;object-fit:contain;padding:20px;
+  background:color-mix(in srgb,var(--ax) 8%,#fff);
+  border-radius:var(--radius);
+  border:1px solid color-mix(in srgb,var(--ax) 20%,#fff)
+}
+
+/* ---- Sticky inter-category bar ------------------------------ */
+.axe-subnav{
+  background:#fff;border-bottom:1px solid var(--line);
+  position:sticky;top:100px;z-index:20
+}
+.axe-subnav-inner{
+  width:var(--content);margin:auto;
+  display:flex;align-items:stretch;gap:0;
+  overflow-x:auto;scrollbar-width:none
+}
+.axe-subnav-inner::-webkit-scrollbar{display:none}
+.axe-subnav-link{
+  display:flex;align-items:center;gap:8px;
+  padding:14px 22px;font-size:13.5px;font-weight:700;
+  color:var(--muted);text-decoration:none;white-space:nowrap;
+  border-bottom:3px solid transparent;transition:color .15s,border-color .15s
+}
+.axe-subnav-link:hover{color:var(--ink)}
+.axe-subnav-link.active{border-bottom-color:var(--subnav-ax)}
+.axe-subnav-link.active{color:var(--subnav-ax)}
+.axe-subnav-link img{width:28px;height:28px;object-fit:contain}
+
+/* ---- Body --------------------------------------------------- */
+.axe-body{width:var(--content);margin:auto;padding:clamp(48px,6vw,80px) 0}
+
+.section-title{
+  font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ax);margin:0 0 28px
+}
+
+/* Innovations — coloured pills */
+.innov-section{
+  border-top:1px solid var(--axDark);
+  border-bottom:1px solid var(--axDark);
+  padding:36px 0;margin-bottom:56px
+}
+.innov-section .section-title{text-align:center;margin:0 0 28px}
+.innov-pills{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px
+}
+.innov-pill{
+  display:inline-block;padding:12px 28px;
+  background:var(--ax);color:#fff;
+  border-radius:6px;font-size:17px;font-weight:700;
+  text-decoration:none;text-align:center;
+  box-shadow:1px 1px 3px rgba(0,0,0,.2);
+  transition:filter .2s,box-shadow .2s,transform .2s
+}
+.innov-pill:hover{
+  filter:brightness(1.1);transform:translateY(-2px);
+  box-shadow:1px 3px 8px rgba(0,0,0,.25)
+}
+
+/* Learn more */
+.savoir-box{
+  background:var(--bg-soft);border-radius:var(--radius);
+  border-left:4px solid var(--ax);
+  padding:clamp(28px,4vw,44px);margin-bottom:56px
+}
+.savoir-box h2{
+  font-size:22px;font-weight:800;letter-spacing:-.01em;
+  color:var(--ax);margin:0 0 20px
+}
+.savoir-box p{
+  color:var(--muted);font-size:16px;line-height:1.75;margin:0 0 16px
+}
+.savoir-box p:last-child{margin:0}
+
+/* Projects */
+.projets-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:24px
+}
+.projets-head a{font-size:14px;font-weight:700;color:var(--ax);text-decoration:none}
+.projets-head a:hover{text-decoration:underline}
+
+/* Other categories */
+.autres-axes{border-top:1px solid var(--line);padding-top:48px;margin-top:56px}
+.autres-axes-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px
+}
+.autre-axe{
+  display:flex;flex-direction:column;background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s
+}
+.autre-axe:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.autre-axe-visual{
+  aspect-ratio:300/190;display:flex;align-items:center;justify-content:center;
+  padding:16px
+}
+.autre-axe-visual img{width:100%;height:100%;object-fit:contain}
+.autre-axe-body{padding:16px 18px;border-top:3px solid var(--ac)}
+.autre-axe-body h3{font-size:16px;font-weight:800;margin:0 0 8px}
+.autre-axe-go{font-size:13px;font-weight:700;display:inline-block}
+
+/* Responsive */
+@media(max-width:900px){
+  .axe-hero-inner{grid-template-columns:1fr}
+  .axe-hero-img{max-width:260px}
+  .axe-subnav{top:58px}
+  .autres-axes-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .innov-grid{grid-template-columns:repeat(2,1fr)}
+  .autres-axes-grid{grid-template-columns:1fr}
+}
+</style>
+
+<!-- Hero -->
+<div class="axe-hero">
+  <div class="axe-hero-inner">
+    <div>
+      <div class="axe-hero-eyebrow">
+        <span></span>
+        Pedagogical framework
+      </div>
+      <h1>{axe?.title}</h1>
+      <p class="axe-hero-desc">{axe?.description}</p>
+    </div>
+    <img class="axe-hero-img" src={axe?.img} alt={axe?.title} />
+  </div>
+</div>
+
+<!-- Inter-category navigation -->
+<nav class="axe-subnav" aria-label="Pedagogical categories">
+  <div class="axe-subnav-inner">
+    {subnavAxes.map(a => (
+      <a
+        href={`/en/axes/${a.slug}`}
+        class={`axe-subnav-link${a.slug === slug ? ' active' : ''}`}
+        style={`--subnav-ax:${a.color}`}
+      >
+        <img src={a.img} alt="" aria-hidden="true" />
+        {a.title}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<!-- Body -->
+<div class="axe-body">
+
+  <!-- Innovations -->
+  <div class="innov-section">
+    <p class="section-title">Innovations that helped address this situation</p>
+    <div class="innov-pills">
+      {(axe?.innovations ?? []).map(inn => (
+        <a class="innov-pill" href={inn.href}>{inn.name}</a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Learn more -->
+  <div class="savoir-box">
+    <h2>Learn more</h2>
+    {(axe?.savoir ?? '').split('\n\n').map(para => (
+      <p>{para}</p>
+    ))}
+  </div>
+
+  <!-- Related projects -->
+  {axeProjects.length > 0 && (
+    <div style="margin-bottom:56px">
+      <div class="projets-head">
+        <p class="section-title" style="margin:0">Related projects</p>
+        <a href="/en/catalogue">View all projects →</a>
+      </div>
+      <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+        {axeProjects.map(p => {
+          const facVar = getFacVar(p.data.faculty);
+          const hasPhoto = !!p.data.photo;
+          const title = enBySlug.get(p.slug)?.title ?? p.data.title;
+          const initials = (p.data.author ?? p.data.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase();
+          return (
+            <article class="card" style={`--fac:${facVar}`}>
+              <div class={`cover${!hasPhoto ? ' no-photo' : ''}`}
+                   style={hasPhoto ? `background-image:url(${cdnImg(p.data.photo, 600, { fit: 'cover' })})` : ''}>
+                {!hasPhoto && <span class="cover-initials">{initials}</span>}
+              </div>
+              <div class="card-body">
+                <h3><a href={`/en/projets/${p.slug}`}>{title}</a></h3>
+              </div>
+              {p.data.faculty && <div class={`card-fac${isLightFac(p.data.faculty) ? ' light' : ''}`}>{p.data.faculty}</div>}
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  )}
+
+  <!-- Other categories -->
+  <div class="autres-axes">
+    <p class="section-title">Other problematic situations</p>
+    <div class="autres-axes-grid">
+      {otherAxes.map(a => (
+        <a class="autre-axe" href={`/en/axes/${a.slug}`} style={`--ac:${a.color}`}>
+          <div class="autre-axe-visual"
+               style={`background:color-mix(in srgb,${a.color} 8%,#fff)`}>
+            <img src={a.img} alt={a.title} />
+          </div>
+          <div class="autre-axe-body">
+            <h3 style={`color:${a.color}`}>{a.title}</h3>
+            <span class="autre-axe-go" style={`color:${a.color}`}>Explore →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</div>
+</Base>

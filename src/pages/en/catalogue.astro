@@ -24,6 +24,25 @@ function getFacVar(fac?: string | null): string {
   return 'var(--rose)';
 }
 
+function isLightFac(fac?: string | null): boolean {
+  const f = fac?.toUpperCase() ?? '';
+  return f.includes('SOC') || f.includes('SDS') || f.includes('FTI') || f.includes('TRAD') || f.includes('PSE') || f.includes('PSYCH');
+}
+
+// Plain text of the project body (lightened markdown) for full-text search
+function stripMd(s: string): string {
+  return s
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/[#>*_`~|-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 3000);
+}
+
+// A project is flagged "new" for 90 days after being added
+const NEW_WINDOW_MS = 90 * 24 * 3600 * 1000;
+
 const FACULTIES = [
   { code: 'FPSE',        cssVar: 'var(--fac-fapse)',     test: (f: string) => f.includes('FPSE') || f.includes('PSE') },
   { code: 'Sciences',    cssVar: 'var(--fac-sciences)',  test: (f: string) => f.includes('SCIEN') && !f.includes('SOC') },
@@ -94,6 +113,9 @@ const projects = all
       award: d.award ?? '',
       initials,
       description: en?.description_short ?? d.description_short ?? '',
+      body: stripMd(p.body ?? ''),
+      light: isLightFac(d.faculty),
+      isNew: !!d.date_added && Date.now() - d.date_added.getTime() < NEW_WINDOW_MS,
     };
   })
   .sort((a, b) => a.title.localeCompare(b.title, 'en'));
@@ -107,6 +129,7 @@ const searchData = projects.map(p => ({
   innovation: p.innovation,
   category: p.category,
   description: p.description,
+  body: p.body,
 }));
 ---
 <Base title="Catalogue" lang="en">
@@ -216,13 +239,14 @@ const searchData = projects.map(p => ({
                data-title={p.title} data-year={p.year} data-faculty={p.faculty} style={`--fac:${p.facVar}`}>
         <div class={`cover${!p.photo ? ' no-photo' : ''}`}
              style={p.photo ? `background-image:url(${cdnImg(p.photo, 600, { fit: 'cover' })})` : ''}>
+          {p.isNew && <span class="new-badge">New</span>}
           {p.award && <span class="award">★ Award</span>}
           {!p.photo && <span class="cover-initials">{p.initials}</span>}
         </div>
         <div class="card-body">
           <h3><a href={`/en/projets/${p.slug}`}>{p.title}</a></h3>
         </div>
-        {p.faculty && <div class="card-fac">{p.faculty}</div>}
+        {p.faculty && <div class={`card-fac${p.light ? ' light' : ''}`}>{p.faculty}</div>}
       </article>
     ))}
   </div>
@@ -253,7 +277,7 @@ const searchData = projects.map(p => ({
   const fuse = new Fuse(data, {
     includeScore: false,
     threshold: 0.2,
-    ignoreLocation: false,
+    ignoreLocation: true,
     minMatchCharLength: 2,
     keys: [
       { name: 'title', weight: 0.4 },
@@ -262,6 +286,7 @@ const searchData = projects.map(p => ({
       { name: 'innovation', weight: 0.1 },
       { name: 'course', weight: 0.07 },
       { name: 'description', weight: 0.06 },
+      { name: 'body', weight: 0.05 },
     ],
   });
 

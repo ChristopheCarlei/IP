@@ -80,7 +80,7 @@ export function localizePath(path: string, lang: Lang): string {
   return '/en' + path;
 }
 
-// Pages disposant d'une version EN (les autres — axes, projets — retombent sur l'accueil EN)
+// Pages disposant d'une version EN (les autres retombent sur l'accueil EN)
 const translatedPaths = new Set(['/', ...navItems.map(n => n.path)]);
 
 // Équivalent dans l'autre langue de la page courante
@@ -90,6 +90,7 @@ export function altLangPath(currentPath: string, target: Lang): string {
     if (isEn) return currentPath;
     if (currentPath.startsWith('/projets/')) return '/en' + currentPath;        // fiche projet
     if (currentPath.startsWith('/innovations/')) return '/en' + currentPath;    // page innovation
+    if (currentPath.startsWith('/axes/')) return '/en' + currentPath;           // page axe
     return translatedPaths.has(currentPath) ? localizePath(currentPath, 'en') : '/en';
   }
   // target fr — toute page EN possède son origine FR

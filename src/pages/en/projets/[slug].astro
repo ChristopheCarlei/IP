@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import ProjectDetail from '../../../components/ProjectDetail.astro';
+import RelatedProjects from '../../../components/RelatedProjects.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -24,4 +25,5 @@ const d = {
 ---
 <Base title={d.title} description={d.description_short} lang="en">
   <ProjectDetail d={d} lang="en"><Content /></ProjectDetail>
+  <RelatedProjects currentSlug={project.slug} category={d.category} faculty={d.faculty} lang="en" />
 </Base>

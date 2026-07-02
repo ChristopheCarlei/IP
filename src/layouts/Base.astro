@@ -42,6 +42,25 @@ const ogImageSrc = image
   : cdnImg('/images/sections/header.jpg', 1200, { h: 630, fit: 'cover', fm: 'jpg', q: 75 });
 const ogImage = abs(ogImageSrc);
 
+// Analytics Matomo — actif uniquement si les variables d'environnement Netlify
+// PUBLIC_MATOMO_URL (ex. https://matomo.unige.ch) et PUBLIC_MATOMO_SITE_ID sont définies
+const matomoUrl = import.meta.env.PUBLIC_MATOMO_URL;
+const matomoSiteId = import.meta.env.PUBLIC_MATOMO_SITE_ID;
+
+// Données structurées schema.org (SEO)
+const siteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Innovations Pédagogiques · Université de Genève',
+  url: site.href,
+  inLanguage: ['fr', 'en'],
+  publisher: {
+    '@type': 'EducationalOrganization',
+    name: 'Université de Genève',
+    url: 'https://www.unige.ch',
+  },
+};
+
 // Libellés du pied de page institutionnel UNIGE (les URL UNIGE gèrent elles-mêmes leur langue)
 const fL = lang === 'en' ? {
   enroll: 'Enrol at UNIGE', informs: 'UNIGE keeps you informed', social: 'UNIGE social media',
@@ -89,8 +108,32 @@ const fL = lang === 'en' ? {
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={desc} />
   <meta name="twitter:image" content={ogImage} />
+
+  <!-- Flux RSS des derniers projets -->
+  <link rel="alternate" type="application/rss+xml"
+        title="Innovations Pédagogiques UNIGE — derniers projets" href={abs('/rss.xml')} />
+
+  <!-- Données structurées -->
+  <script type="application/ld+json" set:html={JSON.stringify(siteLd)} />
+
+  {matomoUrl && matomoSiteId && (
+    <script is:inline define:vars={{ matomoUrl, matomoSiteId }}>
+      var _paq = window._paq = window._paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function () {
+        var u = matomoUrl.endsWith('/') ? matomoUrl : matomoUrl + '/';
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
+        _paq.push(['setSiteId', matomoSiteId]);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+  )}
 </head>
 <body>
+
+  <a class="skip-link" href="#contenu">{lang === 'en' ? 'Skip to content' : 'Aller au contenu'}</a>
 
   <!-- En-tête institutionnel UNIGE (charte officielle) -->
   <header class="unige-header" id="top">
@@ -142,7 +185,7 @@ const fL = lang === 'en' ? {
   </header>
 
   <!-- Contenu de la page -->
-  <main>
+  <main id="contenu">
     <slot />
   </main>
 

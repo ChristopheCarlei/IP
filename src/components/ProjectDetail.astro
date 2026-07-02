@@ -20,7 +20,7 @@ function getFacVar(fac?: string | null): string {
 }
 function isLightFac(fac?: string | null): boolean {
   const f = fac?.toUpperCase() ?? '';
-  return f.includes('SOC') || f.includes('SDS');
+  return f.includes('SOC') || f.includes('SDS') || f.includes('FTI') || f.includes('TRAD') || f.includes('PSE') || f.includes('PSYCH');
 }
 
 const facVar = getFacVar(d.faculty);
@@ -88,7 +88,7 @@ function axeSlugOf(cat?: string | null): string {
 }
 const _axeSlug = axeSlugOf(d.category);
 const _innov   = d.innovation_type ? innovations.find(i => normType(i.typeFr) === normType(d.innovation_type)) : null;
-const axeHref   = _axeSlug ? (lang === 'en' ? `/en/catalogue?axe=${_axeSlug}` : `/axes/${_axeSlug}`) : undefined;
+const axeHref   = _axeSlug ? `${base}/axes/${_axeSlug}` : undefined;
 const innovHref = _innov ? `${base}/innovations/${_innov.slug}` : undefined;
 const studHref  = d.students ? `${base}/catalogue?students=${encodeURIComponent(d.students)}` : undefined;
 
@@ -102,7 +102,22 @@ const courseLabel = rawCourse.replace(courseRe, '').trim();
 const courseHref = courseCode
   ? `https://pgc.unige.ch/main/teachings/details/${new Date().getFullYear()}-${courseCode}`
   : undefined;
+
+// Données structurées schema.org de la fiche (SEO)
+const projectLd = {
+  '@context': 'https://schema.org',
+  '@type': ['CreativeWork', 'LearningResource'],
+  name: d.title,
+  description: d.description_short || undefined,
+  author: d.author ? { '@type': 'Person', name: d.author } : undefined,
+  provider: { '@type': 'EducationalOrganization', name: 'Université de Genève', url: 'https://www.unige.ch' },
+  inLanguage: lang,
+  url: new URL(Astro.url.pathname, Astro.site ?? 'https://innovuni.netlify.app').href,
+  image: d.photo ? new URL(cdnImg(d.photo, 1200, { fit: 'cover' }), Astro.site ?? 'https://innovuni.netlify.app').href : undefined,
+  dateCreated: d.year ? String(d.year) : undefined,
+};
 ---
+<script type="application/ld+json" set:html={JSON.stringify(projectLd)} />
 <style>
 .crumb-bar{background:var(--bg-soft);border-bottom:1px solid var(--line)}
 .crumb{width:var(--content);margin:auto;padding:14px 0;font-size:13px;color:var(--faint);display:flex;align-items:center;gap:8px;flex-wrap:wrap}

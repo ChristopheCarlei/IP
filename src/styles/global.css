@@ -53,6 +53,10 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{
   outline:3px solid rgba(207,0,99,.4);outline-offset:2px
 }
 
+/* ---- Lien d'évitement (accessibilité clavier) ------------- */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--ink);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;font-size:14px;font-weight:700;text-decoration:none}
+.skip-link:focus{left:0}
+
 /* ---- Boutons --------------------------------------------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:11px 22px;font-size:15px;font-weight:700;border:1.5px solid transparent;cursor:pointer;font-family:var(--font);transition:background-color .15s,border-color .15s,color .15s;text-decoration:none}
 .btn.primary{background:var(--rose);color:#fff}
@@ -115,6 +119,8 @@ section{width:var(--content);margin:auto;padding:clamp(48px,7vw,84px) 0}
 .cover-initials{font-size:64px;font-weight:800;color:rgba(255,255,255,.3);letter-spacing:-.02em;line-height:1}
 /* Badge Prix — coin haut-droite */
 .cover .award{position:absolute;top:10px;right:10px;background:#fff;color:var(--ink);border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;display:inline-flex;align-items:center;gap:4px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+/* Badge Nouveau — coin haut-gauche, projets ajoutés récemment */
+.cover .new-badge{position:absolute;top:10px;left:10px;background:var(--rose);color:#fff;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;box-shadow:0 1px 4px rgba(0,0,0,.18);z-index:6}
 
 /* Titre — fond blanc, centré */
 .card-body{padding:14px 16px 12px;text-align:center;flex:1;display:flex;align-items:center;justify-content:center}

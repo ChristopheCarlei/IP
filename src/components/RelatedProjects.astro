@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+import { cdnImg } from '../lib/img';
+
+interface Props {
+  currentSlug: string;
+  category?: string | null;
+  faculty?: string | null;
+  lang?: 'fr' | 'en';
+}
+const { currentSlug, category, faculty, lang = 'fr' } = Astro.props;
+
+function getFacVar(fac?: string | null): string {
+  if (!fac) return 'var(--rose)';
+  const f = fac.toUpperCase();
+  if (f.includes('FPSE') || f.includes('PSE') || f.includes('PSYCH')) return 'var(--fac-fapse)';
+  if (f.includes('GSEM'))                                               return 'var(--fac-gsem)';
+  if (f.includes('FTI')  || f.includes('TRAD'))                        return 'var(--fac-fti)';
+  if (f.includes('SCIEN') && !f.includes('SOC'))                       return 'var(--fac-sciences)';
+  if (f.includes('MED')  || f.includes('MÉD'))                         return 'var(--fac-medecine)';
+  if (f.includes('DROIT')|| f.includes('LAW'))                         return 'var(--fac-droit)';
+  if (f.includes('LETTR'))                                              return 'var(--fac-lettres)';
+  if (f.includes('SOC')  || f.includes('SDS'))                         return 'var(--fac-sds)';
+  if (f.includes('THEO') || f.includes('THÉO'))                        return 'var(--fac-theologie)';
+  return 'var(--rose)';
+}
+function isLightFac(fac?: string | null): boolean {
+  const f = fac?.toUpperCase() ?? '';
+  return f.includes('SOC') || f.includes('SDS') || f.includes('FTI') || f.includes('TRAD') || f.includes('PSE') || f.includes('PSYCH');
+}
+function axeSlugOf(cat?: string | null): string {
+  const c = (cat ?? '').toLowerCase();
+  if (c.includes('prépar') || c.includes('prepar')) return 'preparer';
+  if (c.includes('rendre'))                          return 'rendre-actif';
+  if (c.includes('responsabilis'))                   return 'responsabiliser';
+  if (c.includes('cré') || c.includes('cre'))        return 'faire-creer';
+  return '';
+}
+
+const currentAxe = axeSlugOf(category);
+const currentFacVar = faculty ? getFacVar(faculty) : '';
+
+const all = (await getCollection('projects')).filter(p => p.data.status === 'actif' && p.slug !== currentSlug);
+const enBySlug = lang === 'en'
+  ? new Map((await getCollection('projects_en')).map(p => [p.slug, p.data]))
+  : new Map();
+
+// Même axe = 2 points, même faculté = 1 point ; les mieux notés d'abord
+const related = all
+  .map(p => {
+    let score = 0;
+    if (currentAxe && axeSlugOf(p.data.category) === currentAxe) score += 2;
+    if (currentFacVar && p.data.faculty && getFacVar(p.data.faculty) === currentFacVar) score += 1;
+    return { p, score };
+  })
+  .filter(x => x.score > 0)
+  .sort((a, b) => b.score - a.score || b.p.data.id - a.p.data.id)
+  .slice(0, 3)
+  .map(({ p }) => {
+    const d = p.data;
+    const en = enBySlug.get(p.slug);
+    return {
+      slug: p.slug,
+      title: (lang === 'en' ? en?.title : undefined) ?? d.title,
+      faculty: d.faculty ?? '',
+      facVar: getFacVar(d.faculty),
+      light: isLightFac(d.faculty),
+      photo: d.photo ?? '',
+      award: d.award ?? '',
+      initials: (d.author ?? d.title ?? '').split(' ').slice(0, 2).map((w: string) => w[0] ?? '').join('').toUpperCase(),
+    };
+  });
+
+const base = lang === 'en' ? '/en' : '';
+const heading = lang === 'en' ? 'You may also like' : 'À découvrir aussi';
+const linkAll = lang === 'en' ? 'All projects →' : 'Tous les projets →';
+---
+{related.length > 0 && (
+  <section class="related-section" aria-labelledby="related-title">
+    <div class="related-head">
+      <h2 id="related-title">{heading}</h2>
+      <a class="sec-link" href={`${base}/catalogue`}>{linkAll}</a>
+    </div>
+    <div class="cards related-grid">
+      {related.map(p => (
+        <article class="card" style={`--fac:${p.facVar}`}>
+          <div class={`cover${!p.photo ? ' no-photo' : ''}`}
+               style={p.photo ? `background-image:url(${cdnImg(p.photo, 600, { fit: 'cover' })})` : ''}>
+            {!p.photo && <span class="cover-initials">{p.initials}</span>}
+            {p.award && <span class="award">★ {p.award}</span>}
+          </div>
+          <div class="card-body">
+            <h3><a href={`${base}/projets/${p.slug}`}>{p.title}</a></h3>
+          </div>
+          {p.faculty && <div class={`card-fac${p.light ? ' light' : ''}`}>{p.faculty}</div>}
+        </article>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+.related-section{padding:0 0 clamp(48px,6vw,72px)}
+.related-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+.related-head h2{font-size:clamp(20px,2.4vw,28px);font-weight:800;letter-spacing:-.02em}
+.related-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1080px){.related-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.related-grid{grid-template-columns:1fr}}
+</style>

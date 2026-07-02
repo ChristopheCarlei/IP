@@ -18,7 +18,7 @@ export const GET: APIRoute = async () => {
   const urls = new Set<string>(staticPaths);
   projects.forEach(p => { urls.add(`/projets/${p.slug}`); urls.add(`/en/projets/${p.slug}`); });
   innovations.forEach(i => { urls.add(`/innovations/${i.slug}`); urls.add(`/en/innovations/${i.slug}`); });
-  axes.forEach(a => urls.add(`/axes/${a}`));
+  axes.forEach(a => { urls.add(`/axes/${a}`); urls.add(`/en/axes/${a}`); });
 
   const body =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +

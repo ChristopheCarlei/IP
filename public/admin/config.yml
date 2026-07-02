@@ -63,6 +63,7 @@ collections:
       - { label: Prix, name: award, widget: string, required: false }
       - { label: Année du prix, name: award_year, widget: string, required: false }
       - { label: Projet en vedette, name: featured, widget: boolean, default: false }
+      - { label: "Date d'ajout", name: date_added, widget: datetime, format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, required: false, hint: "Affiche un badge « Nouveau » pendant 90 jours et alimente le flux RSS" }
       - label: Contenu (FR)
         name: body
         widget: markdown

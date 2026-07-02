@@ -24,7 +24,7 @@ function getFacVar(fac?: string | null): string {
 }
 function isLightFac(fac?: string | null): boolean {
   const f = fac?.toUpperCase() ?? '';
-  return f.includes('SOC') || f.includes('SDS');
+  return f.includes('SOC') || f.includes('SDS') || f.includes('FTI') || f.includes('TRAD') || f.includes('PSE') || f.includes('PSYCH');
 }
 ---
 <Base title="Accueil">
@@ -172,11 +172,13 @@ function isLightFac(fac?: string | null): boolean {
         const facVar   = getFacVar(p.data.faculty);
         const hasPhoto = !!p.data.photo;
         const initials = (p.data.author ?? p.data.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase();
+        const isNew    = !!p.data.date_added && Date.now() - p.data.date_added.getTime() < 90 * 24 * 3600 * 1000;
         return (
           <article class="card" style={`--fac:${facVar}`}>
             <div class={`cover${!hasPhoto ? ' no-photo' : ''}`}
                  style={hasPhoto ? `background-image:url(${cdnImg(p.data.photo, 600, { fit: 'cover' })})` : ''}>
               {!hasPhoto && <span class="cover-initials">{initials}</span>}
+              {isNew && <span class="new-badge">Nouveau</span>}
               {p.data.award && <span class="award">★ {p.data.award}</span>}
             </div>
             <div class="card-body">
@@ -289,14 +291,14 @@ function isLightFac(fac?: string | null): boolean {
       <div class="explorer-block">
         <h3>Facultés</h3>
         <div class="fac-pills">
-          <a class="fac-pill" href="/catalogue?fac=FPSE" style="background:var(--fac-fapse)">FPSE</a>
+          <a class="fac-pill" href="/catalogue?fac=FPSE" style="background:var(--fac-fapse);color:var(--ink)">FPSE</a>
           <a class="fac-pill" href="/catalogue?fac=Sciences" style="background:var(--fac-sciences)">Sciences</a>
           <a class="fac-pill" href="/catalogue?fac=Médecine" style="background:var(--fac-medecine)">Médecine</a>
           <a class="fac-pill" href="/catalogue?fac=Lettres" style="background:var(--fac-lettres)">Lettres</a>
           <a class="fac-pill" href="/catalogue?fac=Droit" style="background:var(--fac-droit)">Droit</a>
           <a class="fac-pill" href="/catalogue?fac=SDS" style="background:var(--fac-sds);color:var(--ink)">SDS</a>
           <a class="fac-pill" href="/catalogue?fac=GSEM" style="background:var(--fac-gsem)">GSEM</a>
-          <a class="fac-pill" href="/catalogue?fac=FTI" style="background:var(--fac-fti)">FTI</a>
+          <a class="fac-pill" href="/catalogue?fac=FTI" style="background:var(--fac-fti);color:var(--ink)">FTI</a>
           <a class="fac-pill" href="/catalogue?fac=Théologie" style="background:var(--fac-theologie)">Théologie</a>
         </div>
       </div>

@@ -24,7 +24,7 @@ function getFacVar(fac?: string | null): string {
 }
 function isLightFac(fac?: string | null): boolean {
   const f = fac?.toUpperCase() ?? '';
-  return f.includes('SOC') || f.includes('SDS');
+  return f.includes('SOC') || f.includes('SDS') || f.includes('FTI') || f.includes('TRAD') || f.includes('PSE') || f.includes('PSYCH');
 }
 ---
 <Base title="Home" lang="en">
@@ -143,11 +143,13 @@ function isLightFac(fac?: string | null): boolean {
         const facVar   = getFacVar(p.data.faculty);
         const hasPhoto = !!p.data.photo;
         const initials = (p.data.author ?? p.data.title ?? '').split(' ').slice(0,2).map((w: string) => w[0] ?? '').join('').toUpperCase();
+        const isNew    = !!p.data.date_added && Date.now() - p.data.date_added.getTime() < 90 * 24 * 3600 * 1000;
         return (
           <article class="card" style={`--fac:${facVar}`}>
             <div class={`cover${!hasPhoto ? ' no-photo' : ''}`}
                  style={hasPhoto ? `background-image:url(${cdnImg(p.data.photo, 600, { fit: 'cover' })})` : ''}>
               {!hasPhoto && <span class="cover-initials">{initials}</span>}
+              {isNew && <span class="new-badge">New</span>}
               {p.data.award && <span class="award">★ {p.data.award}</span>}
             </div>
             <div class="card-body">
@@ -192,23 +194,23 @@ function isLightFac(fac?: string | null): boolean {
       <div class="explorer-block">
         <h3>Action categories</h3>
         <div class="axes-pills">
-          <a class="axe-pill" href="/en/catalogue?axe=preparer" style="background:var(--fac-lettres)">Prepare</a>
-          <a class="axe-pill" href="/en/catalogue?axe=rendre-actif" style="background:var(--fac-sciences)">Engage</a>
-          <a class="axe-pill" href="/en/catalogue?axe=responsabiliser" style="background:#C28A00">Make responsible</a>
-          <a class="axe-pill" href="/en/catalogue?axe=faire-creer" style="background:var(--rose)">Create</a>
+          <a class="axe-pill" href="/en/axes/preparer" style="background:var(--fac-lettres)">Prepare</a>
+          <a class="axe-pill" href="/en/axes/rendre-actif" style="background:var(--fac-sciences)">Engage</a>
+          <a class="axe-pill" href="/en/axes/responsabiliser" style="background:#C28A00">Make responsible</a>
+          <a class="axe-pill" href="/en/axes/faire-creer" style="background:var(--rose)">Create</a>
         </div>
       </div>
       <div class="explorer-block">
         <h3>Faculties</h3>
         <div class="fac-pills">
-          <a class="fac-pill" href="/en/catalogue?fac=FPSE" style="background:var(--fac-fapse)">FPSE</a>
+          <a class="fac-pill" href="/en/catalogue?fac=FPSE" style="background:var(--fac-fapse);color:var(--ink)">FPSE</a>
           <a class="fac-pill" href="/en/catalogue?fac=Sciences" style="background:var(--fac-sciences)">Sciences</a>
           <a class="fac-pill" href="/en/catalogue?fac=Médecine" style="background:var(--fac-medecine)">Medicine</a>
           <a class="fac-pill" href="/en/catalogue?fac=Lettres" style="background:var(--fac-lettres)">Humanities</a>
           <a class="fac-pill" href="/en/catalogue?fac=Droit" style="background:var(--fac-droit)">Law</a>
           <a class="fac-pill" href="/en/catalogue?fac=SDS" style="background:var(--fac-sds);color:var(--ink)">SDS</a>
           <a class="fac-pill" href="/en/catalogue?fac=GSEM" style="background:var(--fac-gsem)">GSEM</a>
-          <a class="fac-pill" href="/en/catalogue?fac=FTI" style="background:var(--fac-fti)">FTI</a>
+          <a class="fac-pill" href="/en/catalogue?fac=FTI" style="background:var(--fac-fti);color:var(--ink)">FTI</a>
           <a class="fac-pill" href="/en/catalogue?fac=Théologie" style="background:var(--fac-theologie)">Theology</a>
         </div>
       </div>
@@ -247,7 +249,7 @@ function isLightFac(fac?: string | null): boolean {
       <a class="sec-link" href="/en/catalogue" style="white-space:nowrap">View all projects →</a>
     </div>
     <div class="axes">
-      <a class="axe" href="/en/catalogue?axe=preparer" style="--ax:var(--fac-lettres)">
+      <a class="axe" href="/en/axes/preparer" style="--ax:var(--fac-lettres)">
         <div class="axe-visual"><img src="/images/sections/Preparer.svg" alt="Prepare" /></div>
         <div class="axe-body">
           <h3>Prepare</h3>
@@ -255,7 +257,7 @@ function isLightFac(fac?: string | null): boolean {
           <span class="go">Explore →</span>
         </div>
       </a>
-      <a class="axe" href="/en/catalogue?axe=rendre-actif" style="--ax:var(--fac-sciences)">
+      <a class="axe" href="/en/axes/rendre-actif" style="--ax:var(--fac-sciences)">
         <div class="axe-visual"><img src="/images/sections/RendreActif.svg" alt="Engage" /></div>
         <div class="axe-body">
           <h3>Engage</h3>
@@ -263,7 +265,7 @@ function isLightFac(fac?: string | null): boolean {
           <span class="go">Explore →</span>
         </div>
       </a>
-      <a class="axe" href="/en/catalogue?axe=responsabiliser" style="--ax:#C28A00">
+      <a class="axe" href="/en/axes/responsabiliser" style="--ax:#C28A00">
         <div class="axe-visual"><img src="/images/sections/Responsabiliser.svg" alt="Make responsible" /></div>
         <div class="axe-body">
           <h3>Make responsible</h3>
@@ -271,7 +273,7 @@ function isLightFac(fac?: string | null): boolean {
           <span class="go">Explore →</span>
         </div>
       </a>
-      <a class="axe" href="/en/catalogue?axe=faire-creer" style="--ax:var(--rose)">
+      <a class="axe" href="/en/axes/faire-creer" style="--ax:var(--rose)">
         <div class="axe-visual"><img src="/images/sections/FaireCreer.svg" alt="Create" /></div>
         <div class="axe-body">
           <h3>Create</h3>
