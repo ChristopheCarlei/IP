@@ -52,8 +52,6 @@ function isLightFac(fac?: string | null): boolean {
 .ip-section-inner{width:var(--content);margin:auto}
 .ip-section h2{font-size:clamp(28px,3.8vw,46px);font-weight:800;text-align:center;letter-spacing:-.02em;margin-bottom:8px}
 .ip-section .sub{text-align:center;color:var(--muted);font-size:clamp(15px,1.5vw,18px);max-width:72ch;margin:0 auto 36px;line-height:1.6}
-.video-container{position:relative;padding-bottom:56.25%;height:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);max-width:860px;margin:0 auto 28px}
-.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
 .video-link{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 22px;max-width:400px;margin:0 auto;text-decoration:none;color:var(--ink);transition:box-shadow .18s,transform .18s}
 .video-link:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
 .video-link img{width:36px;height:36px;object-fit:contain;flex-shrink:0}
@@ -173,16 +171,6 @@ function isLightFac(fac?: string | null): boolean {
       Browse more than <strong>{activeCount} projects</strong> by teachers reinventing
       their courses at the University of Geneva.
     </p>
-
-    <div class="video-container">
-      <iframe
-        src="https://view.genial.ly/62388f9e05b3ae0011fa72c8"
-        allowfullscreen
-        frameborder="0"
-        title="Pedagogical innovations at UNIGE"
-        loading="lazy"
-      ></iframe>
-    </div>
 
     <a class="video-link" href="/en/videos">
       <img src="/images/sections/videoIcone.svg" alt="" aria-hidden="true" />
